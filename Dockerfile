@@ -11,6 +11,11 @@ RUN a2enmod rewrite \
  && printf "\n<Directory /var/www/html>\n    AllowOverride All\n    DirectoryIndex index.php index.html\n</Directory>\n" \
     >> /etc/apache2/apache2.conf
 
+# Configure Apache to serve XML files properly (prevent PHP processing)
+RUN echo '<FilesMatch "\.(xml|txt)$">' >> /etc/apache2/apache2.conf \
+ && echo '    SetHandler default-handler' >> /etc/apache2/apache2.conf \
+ && echo '</FilesMatch>' >> /etc/apache2/apache2.conf
+
 # App files
 WORKDIR /var/www/html
 
