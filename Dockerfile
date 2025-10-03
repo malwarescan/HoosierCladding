@@ -43,8 +43,22 @@ RUN echo '<?php phpinfo(); ?>' > /var/www/html/test.php
 # Create a simple fallback index if main one fails
 COPY index-simple.php /var/www/html/index-fallback.php
 
+# Create a simple index.html that redirects to PHP
+RUN echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=/test.php"></head><body>Redirecting to PHP test...</body></html>' > /var/www/html/index.html
+
 # Expose port 80
 EXPOSE 80
 
-# Start Apache with error logging
-CMD ["apache2-foreground"]
+# Create startup script
+RUN echo '#!/bin/bash' > /start.sh \
+    && echo 'echo "Starting Apache..."' >> /start.sh \
+    && echo 'apache2ctl start' >> /start.sh \
+    && echo 'echo "Apache started. Checking status..."' >> /start.sh \
+    && echo 'sleep 5' >> /start.sh \
+    && echo 'apache2ctl status' >> /start.sh \
+    && echo 'echo "Starting Apache foreground process..."' >> /start.sh \
+    && echo 'exec apache2-foreground' >> /start.sh \
+    && chmod +x /start.sh
+
+# Start with our custom script
+CMD ["/start.sh"]
