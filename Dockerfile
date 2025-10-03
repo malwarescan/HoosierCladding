@@ -37,8 +37,14 @@ RUN echo '<Directory /var/www/html>' >> /etc/apache2/apache2.conf \
     && echo '    AllowOverride All' >> /etc/apache2/apache2.conf \
     && echo '</Directory>' >> /etc/apache2/apache2.conf
 
+# Create a simple test PHP file
+RUN echo '<?php phpinfo(); ?>' > /var/www/html/test.php
+
+# Create a simple fallback index if main one fails
+COPY index-simple.php /var/www/html/index-fallback.php
+
 # Expose port 80
 EXPOSE 80
 
-# Start Apache
+# Start Apache with error logging
 CMD ["apache2-foreground"]
