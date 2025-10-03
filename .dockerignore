@@ -5,12 +5,14 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 package-lock.json
-package.json
 
 # Next.js files (not needed)
 .next/
 out/
 *.tsbuildinfo
+
+# Keep package.json for platform detection
+# package.json
 
 # Development files
 .git/
