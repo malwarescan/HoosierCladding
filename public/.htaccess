@@ -1,5 +1,9 @@
 RewriteEngine On
 
+# Serve sitemap.xml and robots.txt as static files (bypass PHP processing)
+RewriteRule ^sitemap\.xml$ sitemap.xml [L]
+RewriteRule ^robots\.txt$ robots.txt [L]
+
 # Redirect to index.php for all requests except existing files
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
