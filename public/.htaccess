@@ -1,6 +1,18 @@
+# Turn off content negotiation that can cause odd rewrites
+Options -MultiViews
+
 RewriteEngine On
 
-# Redirect to index.php for all requests except existing files
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [QSA,L]
+# 1) If the request maps to a real file/dir, serve it
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 2) Whitelist common non-PHP endpoints (no rewrite)
+RewriteRule ^(sitemap\.xml|robots\.txt|favicon\.ico)$ - [L]
+
+# 3) Point sitemap.xml to PHP script for proper headers
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# 4) Everything else → index.php (front controller)
+RewriteRule ^ index.php [L]

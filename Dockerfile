@@ -27,7 +27,8 @@ RUN echo '<?php header("Content-Type: text/plain"); echo "ok"; ?>' > /var/www/ht
 
 # Set proper permissions
 RUN chown -R www-data:www-data /var/www/html \
- && chmod -R 755 /var/www/html
+ && find /var/www/html -type f -exec chmod 644 {} \; \
+ && find /var/www/html -type d -exec chmod 755 {} \;
 
 # Startup script to bind Apache to $PORT at runtime
 COPY docker/apache-run.sh /usr/local/bin/apache-run
