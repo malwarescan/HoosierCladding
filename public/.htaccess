@@ -1,8 +1,8 @@
 RewriteEngine On
 
-# Serve sitemap.xml and robots.txt as static files (bypass PHP processing)
-RewriteRule ^sitemap\.xml$ sitemap.xml [L]
-RewriteRule ^robots\.txt$ robots.txt [L]
+# Explicitly serve static files without processing
+RewriteCond %{REQUEST_URI} \.(xml|txt|css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ [NC]
+RewriteRule ^(.*)$ - [L]
 
 # Redirect to index.php for all requests except existing files
 RewriteCond %{REQUEST_FILENAME} !-f
