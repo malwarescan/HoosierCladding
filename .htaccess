@@ -12,8 +12,8 @@ RewriteRule ^ - [L]
 # add more if needed (humans.txt, security.txt, etc.)
 RewriteRule ^(sitemap\.xml|robots\.txt|favicon\.ico)$ - [L]
 
-# Dynamic sitemap - point sitemap.xml to PHP script
-RewriteRule ^sitemap\.xml$ sitemap.php [L]
+# Dynamic sitemap - point sitemap.xml to PHP script in public directory
+RewriteRule ^sitemap\.xml$ public/sitemap.php [L]
 
 # --- Force HTTPS (optional) ---
 # Make sure to EXEMPT the whitelisted files to prevent loops
