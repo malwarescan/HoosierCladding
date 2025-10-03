@@ -13,13 +13,15 @@ RUN a2enmod rewrite \
 
 # App files
 WORKDIR /var/www/html
-# If you're building from a repo, prefer COPY . . so your app files go in:
-# COPY . /var/www/html
 
-# (Temporary) Basic landing + test files if you want them
-RUN echo '<?php echo "PHP Working! Version: " . phpversion(); ?>' > /var/www/html/index.php \
- && echo '<?php header("Content-Type: text/plain"); echo "ok"; ?>' > /var/www/html/health.php \
- && chown -R www-data:www-data /var/www/html \
+# Copy your actual website files
+COPY . /var/www/html
+
+# Create the fast health endpoint for Railway
+RUN echo '<?php header("Content-Type: text/plain"); echo "ok"; ?>' > /var/www/html/health.php
+
+# Set proper permissions
+RUN chown -R www-data:www-data /var/www/html \
  && chmod -R 755 /var/www/html
 
 # Startup script to bind Apache to $PORT at runtime
