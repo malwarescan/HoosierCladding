@@ -1,0 +1,265 @@
+/* ========================================
+   HOOSIER CLADDING DESIGN TOKENS
+   ========================================
+   Version: 2.0
+   Date: December 2024
+ */
+
+:root {
+  /* ========================================
+     BRAND COLORS - HOOSIER CLADDING
+     ======================================== */
+  
+  /* Primary Brand - Steel Blue (Midwest Trust) */
+  --color-primary: #0E3A5B;           /* Deep steel blue - main brand */
+  --color-primary-hover: #0A2F4A;     /* Darker steel blue for hover */
+  --color-primary-light: #144A74;     /* Lighter steel blue */
+  --color-primary-50: #F0F4F7;        /* Very light steel blue backgrounds */
+  --color-primary-100: #E1E9F0;       /* Light steel blue backgrounds */
+  --color-primary-200: #C2D3E1;       /* Light steel blue borders */
+  
+  /* Accent - Cedar/Copper Highlight */
+  --color-accent: #C66A19;            /* Cedar/copper accent */
+  --color-accent-hover: #B05A15;      /* Darker cedar for hover */
+  --color-accent-light: #D47A2A;      /* Lighter cedar */
+  --color-accent-50: #FDF6F0;         /* Very light cedar backgrounds */
+  --color-accent-100: #FBEDE1;        /* Light cedar backgrounds */
+  --color-accent-200: #F7DBC3;        /* Light cedar borders */
+  
+  /* Neutral Colors - Exterior Materials Palette */
+  --color-text-primary: #0B1320;      /* Ink - dark headlines */
+  --color-text-secondary: #445163;    /* Slate - body text */
+  --color-text-muted: #6B7280;        /* Muted text - secondary info */
+  --color-text-light: #9CA3AF;        /* Light text - captions */
+  
+  /* Background Colors */
+  --color-bg-primary: #FAFBFC;        /* Off-white - main background */
+  --color-bg-secondary: #F8FAFC;      /* Section backgrounds */
+  --color-bg-muted: #E6ECF2;          /* Siding shadow - subtle highlights */
+  --color-bg-dark: #0B1320;           /* Ink - dark sections */
+  
+  /* Border Colors */
+  --color-border-light: #E6EAF0;      /* Light borders */
+  --color-border-medium: #D1D5DB;     /* Medium borders */
+  --color-border-dark: #9CA3AF;       /* Dark borders */
+  
+  /* Semantic Colors - Construction Industry */
+  --color-success: #1E7F3B;           /* Success states - forest green */
+  --color-success-bg: #D1FAE5;        /* Success backgrounds */
+  --color-warning: #B7791F;           /* Warning states - amber */
+  --color-warning-bg: #FEF3C7;        /* Warning backgrounds */
+  --color-error: #9B1C1C;             /* Error states - brick red */
+  --color-error-bg: #FEE2E2;          /* Error backgrounds */
+  
+  /* Focus States */
+  --color-focus: rgba(14, 58, 91, 0.35);  /* Focus ring color */
+  
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+  
+  /* Font Families - Hoosier Cladding */
+  --font-family-headings: "Plus Jakarta Sans", "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Font Sizes - Hoosier Cladding Scale */
+  --font-size-small: 0.875rem;   /* 14px - minimum mobile body */
+  --font-size-body: 1rem;        /* 16px - body text */
+  --font-size-lg: 1.125rem;      /* 18px - lead text */
+  --font-size-xl: 1.25rem;       /* 20px - h5 */
+  --font-size-2xl: 1.5rem;       /* 24px - h4 */
+  --font-size-3xl: 1.875rem;     /* 30px - h3 */
+  --font-size-4xl: 2.25rem;      /* 36px - h2 */
+  --font-size-5xl: 3rem;         /* 48px - h1 */
+  
+  /* Typography Scale - Tight Line Heights */
+  --font-size-h1: 3rem;          /* 48px */
+  --font-size-h2: 2.25rem;       /* 36px */
+  --font-size-h3: 1.875rem;      /* 30px */
+  --font-size-h4: 1.5rem;        /* 24px */
+  --font-size-h5: 1.25rem;       /* 20px */
+  --font-size-lead: 1.125rem;    /* 18px */
+  
+  /* Line Heights - Hoosier Cladding */
+  --line-height-tight: 1.15;        /* Headings - tight, professional */
+  --line-height-body: 1.6;          /* Body text - readable */
+  --line-height-normal: 1.5;        /* General use */
+  --line-height-relaxed: 1.65;      /* Long-form content */
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+  
+  /* ========================================
+     SPACING SYSTEM
+     ======================================== */
+  
+  /* Spacing System - 4pt Grid (Hoosier Cladding) */
+  --space-0: 0;
+  --space-1: 0.25rem;     /* 4px */
+  --space-2: 0.5rem;      /* 8px */
+  --space-3: 0.75rem;     /* 12px */
+  --space-4: 1rem;        /* 16px */
+  --space-5: 1.5rem;      /* 24px */
+  --space-6: 2rem;        /* 32px */
+  --space-7: 3rem;        /* 48px */
+  --space-8: 4rem;        /* 64px */
+  
+  /* Responsive Spacing */
+  --space-section: clamp(2rem, 7vw, 4.5rem);     /* 32px → 72px */
+  --space-container: clamp(1rem, 4vw, 2.5rem);   /* 16px → 40px */
+  --space-grid: clamp(1rem, 2.4vw, 1.5rem);     /* 16px → 24px */
+  
+  /* ========================================
+     BORDER RADIUS - HOOSIER CLADDING
+     ======================================== */
+  
+  --radius-none: 0;
+  --radius: 0.5rem;         /* 8px - default */
+  --radius-card: 0.875rem;  /* 14px - cards */
+  --radius-pill: 9999px;    /* 9999px - pills/badges */
+  
+  /* Component Radius */
+  --radius-button: var(--radius-pill);
+  --radius-input: var(--radius);
+  --radius-badge: var(--radius-pill);
+  
+  /* ========================================
+     SHADOWS - OUTDOOR FEEL
+     ======================================== */
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Custom Shadows - Outdoor Construction Feel */
+  --shadow-outdoor: 0 6px 20px rgba(12, 20, 32, 0.08);
+  --shadow-card: var(--shadow-outdoor);
+  --shadow-card-hover: 0 8px 25px rgba(12, 20, 32, 0.12);
+  --shadow-button: var(--shadow-md);
+  --shadow-button-hover: var(--shadow-lg);
+  
+  /* ========================================
+     TRANSITIONS & ANIMATIONS
+     ======================================== */
+  
+  /* Transition Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  
+  /* Transition Timing Functions */
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* ========================================
+     BREAKPOINTS
+     ======================================== */
+  
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* ========================================
+     Z-INDEX SCALE
+     ======================================== */
+  
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+  
+  /* Component Z-Index */
+  --z-header: var(--z-sticky);
+  --z-sticky-actions: var(--z-fixed);
+  
+  /* ========================================
+     CONTAINER SIZES
+     ======================================== */
+  
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  --container-max: 1200px;
+  
+  /* ========================================
+     ICON SIZES
+     ======================================== */
+  
+  --icon-size-sm: 1rem;      /* 16px */
+  --icon-size-md: 1.25rem;   /* 20px */
+  --icon-size-lg: 1.5rem;    /* 24px */
+  --icon-size-xl: 1.75rem;   /* 28px */
+  --icon-size-2xl: 2rem;     /* 32px */
+  --icon-size-3xl: 2.5rem;   /* 40px */
+  
+  /* ========================================
+     ACCESSIBILITY
+     ======================================== */
+  
+  /* Focus Ring */
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-color: var(--color-focus);
+  
+  /* Minimum Touch Target */
+  --touch-target-min: 44px;
+  
+  /* ========================================
+     LEGACY SUPPORT - HOOSIER CLADDING
+     ======================================== */
+  
+  /* Legacy color mappings for gradual migration */
+  --blue: var(--color-primary);
+  --text: var(--color-text-primary);
+  --body: var(--color-text-secondary);
+  --muted: var(--color-bg-muted);
+  --surface: var(--color-bg-secondary);
+  --border: var(--color-border-light);
+  --focus: var(--color-focus);
+  --radius: var(--radius-card);
+  --shadow: var(--shadow-card);
+  --shadow-lg: var(--shadow-card-hover);
+  --max: var(--container-max);
+  
+  /* Hoosier Cladding specific mappings */
+  --brand-700: var(--color-primary);
+  --brand-600: var(--color-primary-light);
+  --brand-500: var(--color-primary-light);
+  --accent-600: var(--color-accent);
+  --ink: var(--color-text-primary);
+  --slate: var(--color-text-secondary);
+  --muted: var(--color-bg-muted);
+  --wash: var(--color-bg-primary);
+  --success: var(--color-success);
+  --warn: var(--color-warning);
+  --error: var(--color-error);
+}
+
+/* ========================================
+   DARK MODE SUPPORT (Future)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode overrides would go here */
+  }
+}

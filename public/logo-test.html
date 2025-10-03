@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Test - Hoosier Cladding</title>
+    <link rel="stylesheet" href="/styles/output.css">
+    <script>
+        function toggleNavbar() {
+            const navbarCollapse = document.getElementById('navbarSupportedContent');
+            navbarCollapse.classList.toggle('show');
+        }
+    </script>
+</head>
+<body class="bg-blue-50 text-gray-900">
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp" alt="Hoosier Cladding LLC" class="navbar-logo">
+                <span class="navbar-brand-text">Hoosier Cladding LLC</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" onclick="toggleNavbar()" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/service-area">Service Area</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="navbar-contact">
+                    <a href="tel:5749312119" class="navbar-phone">
+                        574-931-2119
+                    </a>
+                    <a href="mailto:David@Hoosier.works" class="navbar-email">
+                        David@Hoosier.works
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="container py-12">
+        <h1 class="h1 text-blue-600">Logo Test Page</h1>
+        <p class="lead text-gray-700">Testing the Hoosier Cladding logo in the navbar.</p>
+        
+        <div class="card">
+            <h3 class="h3 text-blue-600">Logo Features</h3>
+            <ul class="body text-gray-600">
+                <li>Logo positioned at top-left of navbar</li>
+                <li>Responsive sizing (50px desktop, 40px mobile)</li>
+                <li>Proper spacing from company name</li>
+                <li>Clickable link to homepage</li>
+                <li>Alt text for accessibility</li>
+                <li>WebP format for optimal performance</li>
+            </ul>
+        </div>
+        
+        <div class="mt-8">
+            <h3 class="h3 text-blue-600">Logo Specifications</h3>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h4 class="h4">Desktop</h4>
+                    <p class="body">Height: 50px<br>Margin: 12px right</p>
+                </div>
+                <div class="card">
+                    <h4 class="h4">Mobile</h4>
+                    <p class="body">Height: 40px<br>Margin: 8px right</p>
+                </div>
+                <div class="card">
+                    <h4 class="h4">Format</h4>
+                    <p class="body">WebP format<br>12KB file size</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

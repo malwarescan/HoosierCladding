@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Diagnostic - Hoosier Cladding</title>
+    <link rel="stylesheet" href="/styles/output.css?v=12345">
+    <style>
+        /* Inline test styles */
+        .inline-test {
+            background-color: red !important;
+            color: white !important;
+            padding: 20px !important;
+            margin: 20px 0 !important;
+            border: 3px solid black !important;
+        }
+        
+        .test-blue {
+            background-color: #eff6ff !important;
+            color: #111827 !important;
+            padding: 20px !important;
+            margin: 20px 0 !important;
+            border: 2px solid #2563eb !important;
+        }
+    </style>
+</head>
+<body class="bg-blue-50 text-gray-900">
+    <div class="container">
+        <div class="inline-test">
+            <h1>INLINE CSS TEST</h1>
+            <p>If you see this with red background and white text, inline CSS is working.</p>
+        </div>
+        
+        <div class="test-blue">
+            <h2>EXTERNAL CSS TEST</h2>
+            <p>If you see this with light blue background and dark text, external CSS is working.</p>
+        </div>
+        
+        <div class="card">
+            <h3 class="h3 text-blue-600">Hoosier Cladding Card Test</h3>
+            <p class="body text-gray-600">This should have proper card styling if CSS classes are working.</p>
+        </div>
+        
+        <div class="grid grid-3">
+            <div class="card">
+                <h4 class="h4">Grid Item 1</h4>
+                <p class="body">Test content 1</p>
+            </div>
+            <div class="card">
+                <h4 class="h4">Grid Item 2</h4>
+                <p class="body">Test content 2</p>
+            </div>
+            <div class="card">
+                <h4 class="h4">Grid Item 3</h4>
+                <p class="body">Test content 3</p>
+            </div>
+        </div>
+        
+        <div class="mt-8">
+            <button class="btn btn-primary">Primary Button</button>
+            <button class="btn btn-secondary">Secondary Button</button>
+            <button class="btn btn-outline">Outline Button</button>
+        </div>
+        
+        <div class="mt-8">
+            <div class="chip">Default Chip</div>
+            <div class="chip chip-accent">Accent Chip</div>
+            <div class="chip chip-success">Success Chip</div>
+        </div>
+        
+        <div class="mt-8">
+            <h3>CSS Loading Status:</h3>
+            <ul>
+                <li>Inline CSS: <span style="color: green;">✓ Working</span></li>
+                <li>External CSS: <span id="external-status">Testing...</span></li>
+                <li>CSS Classes: <span id="class-status">Testing...</span></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        // Test if external CSS is loaded
+        const testElement = document.querySelector('.test-blue');
+        const computedStyle = window.getComputedStyle(testElement);
+        const bgColor = computedStyle.backgroundColor;
+        
+        if (bgColor === 'rgb(239, 246, 255)') {
+            document.getElementById('external-status').innerHTML = '<span style="color: green;">✓ Working</span>';
+        } else {
+            document.getElementById('external-status').innerHTML = '<span style="color: red;">✗ Not Working</span>';
+        }
+        
+        // Test if CSS classes are working
+        const cardElement = document.querySelector('.card');
+        const cardStyle = window.getComputedStyle(cardElement);
+        const cardBg = cardStyle.backgroundColor;
+        
+        if (cardBg && cardBg !== 'rgba(0, 0, 0, 0)') {
+            document.getElementById('class-status').innerHTML = '<span style="color: green;">✓ Working</span>';
+        } else {
+            document.getElementById('class-status').innerHTML = '<span style="color: red;">✗ Not Working</span>';
+        }
+    </script>
+</body>
+</html>

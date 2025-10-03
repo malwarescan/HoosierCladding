@@ -1,0 +1,28 @@
+RewriteEngine On
+
+# Handle state/city/service URLs
+RewriteRule ^([a-z]{2})/([a-z-]+)/([a-z-]+)/?$ /app/[[...slug]]/page.php [L,QSA]
+
+# Handle state/city URLs (if needed)
+RewriteRule ^([a-z]{2})/([a-z-]+)/?$ /app/[[...slug]]/page.php [L,QSA]
+
+# Handle state URLs (if needed)
+RewriteRule ^([a-z]{2})/?$ /app/[[...slug]]/page.php [L,QSA]
+
+# Existing rules for other pages
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ /$1.php [L,QSA]
+
+# Force HTTPS (optional)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove trailing slashes (optional)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{THE_REQUEST} /+[^?\s]*?/
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+# Custom error pages
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php

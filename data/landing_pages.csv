@@ -1,0 +1,25 @@
+state,city,service_or_product,slug,url,intent
+IN,South Bend,siding replacement,siding-replacement,in/south-bend/siding-replacement/,transactional-local
+IN,South Bend,siding repair,siding-repair,in/south-bend/siding-repair/,transactional-local
+IN,South Bend,vinyl siding,vinyl-siding,in/south-bend/vinyl-siding/,product-comparison
+IN,South Bend,hardie board siding,hardie-board-siding,in/south-bend/hardie-board-siding/,brand-research
+IN,South Bend,fiber cement siding,fiber-cement-siding,in/south-bend/fiber-cement-siding/,brand-research
+IN,South Bend,energy efficient siding,energy-efficient-siding,in/south-bend/energy-efficient-siding/,pain-point-cost-savings
+IN,South Bend,siding installation,siding-installation,in/south-bend/siding-installation/,transactional
+IN,South Bend,siding cost,siding-cost,in/south-bend/siding-cost/,cost-ROI
+IN,South Bend,siding faqs,siding-faqs,in/south-bend/siding-faqs/,informational-FAQs
+IN,Mishawaka,hardie board siding,hardie-board-siding,in/mishawaka/hardie-board-siding/,brand-research
+IN,Elkhart,siding replacement,siding-replacement,in/elkhart/siding-replacement/,transactional-local
+IN,Granger,vinyl siding,vinyl-siding,in/granger/vinyl-siding/,product-local
+IN,Osceola,siding repair,siding-repair,in/osceola/siding-repair/,transactional-local
+IN,Fort Wayne,fiber cement siding,fiber-cement-siding,in/fort-wayne/fiber-cement-siding/,brand-education
+IN,Indianapolis,energy efficient siding,energy-efficient-siding,in/indianapolis/energy-efficient-siding/,pain-point-cost-savings
+IN,Bloomington,siding cost,siding-cost,in/bloomington/siding-cost/,cost-research
+MI,Niles,hardie board siding,hardie-board-siding,mi/niles/hardie-board-siding/,brand-local
+MI,Benton Harbor,siding replacement,siding-replacement,mi/benton-harbor/siding-replacement/,transactional
+MI,Sturgis,vinyl siding,vinyl-siding,mi/sturgis/vinyl-siding/,product
+MI,Kalamazoo,siding repair,siding-repair,mi/kalamazoo/siding-repair/,repair-service
+IL,Chicago,hardie board siding,hardie-board-siding,il/chicago/hardie-board-siding/,brand-metro
+IL,Ottawa,siding replacement,siding-replacement,il/ottawa/siding-replacement/,transactional
+IL,Moline,vinyl siding,vinyl-siding,il/moline/vinyl-siding/,product-city
+IL,Rockford,energy efficient siding,energy-efficient-siding,il/rockford/energy-efficient-siding/,pain-point-cost-savings

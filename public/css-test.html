@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Test - Hoosier Cladding</title>
+    <link rel="stylesheet" href="/styles/output.css">
+    <style>
+        /* Debug styles to verify CSS is loading */
+        .debug-test {
+            background-color: red !important;
+            color: yellow !important;
+            padding: 20px !important;
+            border: 5px solid blue !important;
+        }
+    </style>
+</head>
+<body class="bg-blue-50 text-gray-900">
+    <div class="container">
+        <h1 class="debug-test">CSS LOADING TEST</h1>
+        <p>If you see a red background with yellow text and blue border, CSS is loading.</p>
+        
+        <div class="card">
+            <h2 class="h2 text-blue-600">Hoosier Cladding Test</h2>
+            <p class="body text-gray-600">This should have proper styling if CSS is working.</p>
+        </div>
+        
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="h3">Test 1</h3>
+                <p class="body">Grid item 1</p>
+            </div>
+            <div class="card">
+                <h3 class="h3">Test 2</h3>
+                <p class="body">Grid item 2</p>
+            </div>
+            <div class="card">
+                <h3 class="h3">Test 3</h3>
+                <p class="body">Grid item 3</p>
+            </div>
+        </div>
+        
+        <div class="mt-8">
+            <button class="btn btn-primary">Primary Button</button>
+            <button class="btn btn-secondary">Secondary Button</button>
+        </div>
+    </div>
+</body>
+</html>
