@@ -1,21 +1,19 @@
 RewriteEngine On
 
-# Explicitly serve static files without processing
+# Remove trailing slashes (except for root)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/$
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Serve static files directly (bypass PHP processing)
+RewriteCond %{REQUEST_FILENAME} -f
 RewriteCond %{REQUEST_URI} \.(xml|txt|css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ [NC]
 RewriteRule ^(.*)$ - [L]
 
-# Redirect to index.php for all requests except existing files
+# Redirect to index.php for all other requests
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [QSA,L]
-
-# Force HTTPS in production (uncomment when deployed)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Remove trailing slashes
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/$ /$1 [L,R=301]
 
 
 
