@@ -1,18 +1,30 @@
-# Turn off content negotiation that can cause odd rewrites
+# Stop unexpected content negotiation
 Options -MultiViews
 
 RewriteEngine On
 
-# 1) If the request maps to a real file/dir, serve it
+# --- Always serve real files/dirs as-is ---
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# 2) Whitelist common non-PHP endpoints (no rewrite)
+# --- Whitelist things that must never hit the router ---
+# add more if needed (humans.txt, security.txt, etc.)
 RewriteRule ^(sitemap\.xml|robots\.txt|favicon\.ico)$ - [L]
 
-# 3) Point sitemap.xml to PHP script for proper headers
+# Dynamic sitemap - point sitemap.xml to PHP script
 RewriteRule ^sitemap\.xml$ sitemap.php [L]
 
-# 4) Everything else → index.php (front controller)
+# --- Force HTTPS (optional) ---
+# Make sure to EXEMPT the whitelisted files to prevent loops
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# --- Trailing slash normalization (optional) ---
+# Avoid applying to files like .xml/.ico
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,4}$
+#RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
+
+# --- Front controller: everything else to index.php ---
 RewriteRule ^ index.php [L]

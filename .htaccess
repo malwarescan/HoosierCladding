@@ -1,28 +1,30 @@
+# Stop unexpected content negotiation
+Options -MultiViews
+
 RewriteEngine On
 
-# Handle state/city/service URLs
-RewriteRule ^([a-z]{2})/([a-z-]+)/([a-z-]+)/?$ /app/[[...slug]]/page.php [L,QSA]
+# --- Always serve real files/dirs as-is ---
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
-# Handle state/city URLs (if needed)
-RewriteRule ^([a-z]{2})/([a-z-]+)/?$ /app/[[...slug]]/page.php [L,QSA]
+# --- Whitelist things that must never hit the router ---
+# add more if needed (humans.txt, security.txt, etc.)
+RewriteRule ^(sitemap\.xml|robots\.txt|favicon\.ico)$ - [L]
 
-# Handle state URLs (if needed)
-RewriteRule ^([a-z]{2})/?$ /app/[[...slug]]/page.php [L,QSA]
+# Dynamic sitemap - point sitemap.xml to PHP script
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
 
-# Existing rules for other pages
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]+)/?$ /$1.php [L,QSA]
+# --- Force HTTPS (optional) ---
+# Make sure to EXEMPT the whitelisted files to prevent loops
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-# Force HTTPS (optional)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# --- Trailing slash normalization (optional) ---
+# Avoid applying to files like .xml/.ico
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,4}$
+#RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
 
-# Remove trailing slashes (optional)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{THE_REQUEST} /+[^?\s]*?/
-RewriteRule ^(.*)/$ /$1 [R=301,L]
-
-# Custom error pages
-ErrorDocument 404 /404.php
-ErrorDocument 500 /500.php
+# --- Front controller: everything else to index.php ---
+RewriteRule ^ index.php [L]
