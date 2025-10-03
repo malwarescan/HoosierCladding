@@ -12,7 +12,7 @@ $SITE = 'Hoosier Cladding LLC';
     <title><?= $pageTitle ?? 'Professional Siding Services in Northern Indiana | ' . $SITE ?></title>
     <meta name="description" content="<?= $pageDescription ?? 'Expert siding installation, repair, and replacement in South Bend, Mishawaka, Elkhart, and throughout Michiana. Licensed & insured. Winter-ready installations. Call 574-931-2119 for a free estimate.' ?>">
     <link rel="canonical" href="https://www.hoosiercladding.com<?= $pagePath ?? '' ?>">
-    <link rel="stylesheet" href="/public/styles/output.css">
+    <link rel="stylesheet" href="/styles/output.css">
     <script type="application/ld+json">{
         "@context": "https://schema.org",
         "@graph": [
@@ -21,7 +21,7 @@ $SITE = 'Hoosier Cladding LLC';
                 "@id": "https://www.hoosiercladding.com#org",
                 "name": "<?= $SITE ?>",
                 "url": "https://www.hoosiercladding.com",
-                "logo": "https://www.hoosiercladding.com/public/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp",
+                "logo": "https://www.hoosiercladding.com/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp",
                 "email": "<?= $EMAIL ?>",
                 "telephone": "<?= $PHONE ?>",
                 "contactPoint": [{
@@ -99,7 +99,7 @@ $SITE = 'Hoosier Cladding LLC';
             <div class="flex flex-col lg:flex-row justify-between items-center">
                 <div class="mb-4 lg:mb-0">
                     <a href="/" class="navbar-brand">
-                        <img src="/public/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp" alt="Hoosier Cladding LLC" class="navbar-logo">
+                        <img src="/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp" alt="Hoosier Cladding LLC" class="navbar-logo">
                         <span class="navbar-brand-text"><?= $SITE ?></span>
                     </a>
                 </div>

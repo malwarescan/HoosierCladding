@@ -1,51 +1,32 @@
-<?
-PHONEEMAILADDRESS;
+<?php
+// CTA Strip - Call to Action Section
+$PHONE = '574-931-2119';
+$EMAIL = 'David@Hoosier.works';
+$ADDRESS = '721 Lincoln Way E, South Bend, IN 46601';
 ?>
-<=>
-<=>
-<=>
-<=>
-<>
-<2=2=:;:0012x>GYFET<2>
-<=:0;:95;:17x;:16>
-CNIW
-<>
-<=>
-<=>LI<>
-<=>WRI<>
-<=>LCO<>
-<>
-<>
+<section class="cta-band">
+    <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div class="flex flex-col items-center">
+                <div class="icon">P</div>
+                <div class="font-semibold text-lg"><?= $PHONE ?></div>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="icon">E</div>
+                <div class="font-semibold text-lg"><?= $EMAIL ?></div>
+            </div>
+            <div class="flex flex-col items-center">
+                <div class="icon">A</div>
+                <div class="font-semibold text-lg"><?= $ADDRESS ?></div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-8">
+            <a href="/contact" class="btn btn-primary">Get Free Estimate</a>
+        </div>
+    </div>
+</section>
 
-<=:;:01220;:16x;:24x;:;:16x>
-<=>
-<>
-<=:;:4x;:4515;:13x>P<>
-<=:<?=[09PHONE?>=:22x;:800;:x><?=PHONE?><>
-<>
-<>
-<=:;:4x;:4515;:13x>E<>
-<=:<?=EMAIL?>=:x;:><?=EMAIL?><>
-<>
-<>
-<=:;:4x;:4515;:13x>A<>
-<=:><?=ADDRESS?><>
-<>
-<>
-
-<====RFE>
-<===YN=YN>
-<====YE=YE>
-<====YP=YP>
-<x=x==T=PD><x>
-<==>RFE<>
-<=:75;:13x;x:>W<>
-<>
-<>
-<>
-<>
-<>
-<>
 
 
 
