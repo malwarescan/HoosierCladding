@@ -95,14 +95,23 @@ $SITE = 'Hoosier Cladding LLC';
 </head>
 <body class="bg-blue-50 text-gray-900">
     <header class="bg-white shadow-md border-b-2 border-blue-100">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex flex-col lg:flex-row justify-between items-center">
-                <div class="mb-4 lg:mb-0">
-                    <a href="/" class="navbar-brand">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="/">
                         <img src="/public/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp" alt="Hoosier Cladding LLC" class="navbar-logo">
                         <span class="navbar-brand-text"><?= $SITE ?></span>
                     </a>
                 </div>
+                
+                <div class="navbar-nav">
+                    <ul class="nav-list">
+                        <li><a href="/" class="nav-link">Home</a></li>
+                        <li><a href="/service-area" class="nav-link">Service Area</a></li>
+                        <li><a href="/contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+                
                 <div class="navbar-contact">
                     <a href="tel:<?= preg_replace('/[^0-9]/', '', $PHONE) ?>" class="navbar-phone">
                         <?= $PHONE ?>
@@ -111,16 +120,31 @@ $SITE = 'Hoosier Cladding LLC';
                         <?= $EMAIL ?>
                     </a>
                 </div>
+                
+                <!-- Mobile menu toggle -->
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
             
-            <nav class="navbar-nav">
-                <ul class="flex flex-wrap justify-center lg:justify-start gap-8">
-                    <li><a href="/" class="nav-link">Home</a></li>
-                    <li><a href="/service-area" class="nav-link">Service Area</a></li>
-                    <li><a href="/contact" class="nav-link">Contact</a></li>
+            <!-- Mobile menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <ul class="mobile-nav-list">
+                    <li><a href="/" class="mobile-nav-link">Home</a></li>
+                    <li><a href="/service-area" class="mobile-nav-link">Service Area</a></li>
+                    <li><a href="/contact" class="mobile-nav-link">Contact</a></li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
+    
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
     
     <main class="container mx-auto px-6 py-12">
