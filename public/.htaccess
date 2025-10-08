@@ -10,10 +10,7 @@ RewriteRule ^ - [L]
 
 # --- Whitelist things that must never hit the router ---
 # add more if needed (humans.txt, security.txt, etc.)
-RewriteRule ^(sitemap\.xml|robots\.txt|favicon\.ico)$ - [L]
-
-# Dynamic sitemap - point sitemap.xml to PHP script
-RewriteRule ^sitemap\.xml$ sitemap.php [L]
+RewriteRule ^(sitemap.*\.xml|robots\.txt|favicon\.ico)$ - [L]
 
 # --- Force HTTPS (optional) ---
 # Make sure to EXEMPT the whitelisted files to prevent loops
