@@ -136,7 +136,6 @@ function renderMatrixLandingPage(array $row): void {
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/public/styles/output.css">
-    <link rel="stylesheet" href="/assets/css/base.css">
 </head>
 <body>
 
