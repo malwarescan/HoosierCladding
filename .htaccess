@@ -12,6 +12,9 @@ RewriteRule ^ - [L]
 # add more if needed (humans.txt, security.txt, etc.)
 RewriteRule ^(sitemap.*\.xml|robots\.txt|favicon\.ico)$ - [L]
 
+# --- Matrix landing pages ---
+RewriteRule ^matrix/(.+)$ matrix-router.php [L,QSA]
+
 # --- Force HTTPS (optional) ---
 # Make sure to EXEMPT the whitelisted files to prevent loops
 #RewriteCond %{HTTPS} !=on
