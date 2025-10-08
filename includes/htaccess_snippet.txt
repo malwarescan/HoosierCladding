@@ -1,0 +1,24 @@
+# Matrix Landing Page Router
+# Add this to your main .htaccess file
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Route matrix URLs to the matrix router
+    # Example: /matrix/dunlap-in/siding-replacement/rotten-siding
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^matrix/(.+)$ matrix-router.php [L,QSA]
+    
+    # Alternative: If you want to remove the /matrix/ prefix from URLs
+    # and route city-service-pain URLs directly:
+    # RewriteRule ^([a-z-]+)/([a-z-]+)/([a-z-]+)/?$ matrix-router.php [L,QSA]
+</IfModule>
+
+# Alternative Nginx configuration:
+# 
+# location ~ ^/matrix/(.+)$ {
+#     try_files $uri /matrix-router.php;
+# }
+
