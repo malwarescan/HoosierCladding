@@ -75,6 +75,25 @@ function routeMatrixPage(): void {
     $row = MatrixDataLoader::findBySlug($slug);
     
     if (!$row) {
+        // Try fuzzy matching for near-miss URLs
+        require_once __DIR__.'/app/lib/MatrixIndex.php';
+        $idx = new MatrixIndex(__DIR__.'/data_matrix/convex_matrix_expanded.csv');
+        
+        // Parse slug into service and location parts
+        $parts = explode('/', $slug);
+        if (count($parts) >= 2) {
+            $serviceSlug = $parts[count($parts) - 2];
+            $locSlug = $parts[count($parts) - 1];
+            
+            $nearMatch = $idx->nearest($serviceSlug, $locSlug);
+            if ($nearMatch && isset($nearMatch['url'])) {
+                // 301 redirect to the canonical URL
+                header('Location: '.$nearMatch['url'], true, 301);
+                exit;
+            }
+        }
+        
+        // No match found, return 404
         http_response_code(404);
         include __DIR__ . '/partials/404.php';
         return;
