@@ -1,0 +1,7 @@
+RewriteEngine On
+# Map clean sitemap URLs to PHP generators
+RewriteRule ^sitemap\.xml$ sitemap-index.php [L,QSA]
+RewriteRule ^sitemap-matrix\.xml$ sitemap-matrix.php [L,QSA]
+# Optional blog/static sitemaps if you have generators:
+# RewriteRule ^sitemap-static\.xml$ sitemap-static.php [L,QSA]
+# RewriteRule ^sitemap-blog\.xml$ sitemap-blog.php [L,QSA]

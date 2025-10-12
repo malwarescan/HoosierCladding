@@ -12,6 +12,12 @@ RewriteRule ^ - [L]
 # add more if needed (humans.txt, security.txt, etc.)
 RewriteRule ^(sitemap.*\.xml|robots\.txt|favicon\.ico)$ - [L]
 
+# --- Sitemap routing ---
+RewriteRule ^sitemap\.xml$ sitemap-index.php [L,QSA]
+RewriteRule ^sitemap-matrix\.xml$ sitemap-matrix.php [L,QSA]
+RewriteRule ^sitemap-static\.xml$ sitemap-static.php [L,QSA]
+RewriteRule ^sitemap-blog\.xml$ sitemap-blog.php [L,QSA]
+
 # --- Matrix landing pages ---
 RewriteRule ^matrix/(.+)$ matrix-router.php [L,QSA]
 

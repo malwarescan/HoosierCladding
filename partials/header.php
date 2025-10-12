@@ -3,14 +3,23 @@ $PHONE = '574-931-2119';
 $EMAIL = 'David@Hoosier.works';
 $ADDRESS = '721 Lincoln Way E, South Bend, IN 46601';
 $SITE = 'Hoosier Cladding LLC';
+
+// Load MetaManager for CTR-optimized titles/descriptions
+require_once __DIR__ . '/../app/lib/MetaManager.php';
+
+$reqPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+$defaultTitle = isset($pageTitle) ? $pageTitle : 'Professional Siding Services in Northern Indiana | ' . $SITE;
+$defaultDesc  = isset($pageDescription) ? $pageDescription : 'Expert siding installation, repair, and replacement in South Bend, Mishawaka, Elkhart, and throughout Michiana. Licensed & insured. Winter-ready installations. Call 574-931-2119 for a free estimate.';
+$finalTitle = MetaManager::title($reqPath, $defaultTitle);
+$finalDesc  = MetaManager::description($reqPath, $defaultDesc);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $pageTitle ?? 'Professional Siding Services in Northern Indiana | ' . $SITE ?></title>
-    <meta name="description" content="<?= $pageDescription ?? 'Expert siding installation, repair, and replacement in South Bend, Mishawaka, Elkhart, and throughout Michiana. Licensed & insured. Winter-ready installations. Call 574-931-2119 for a free estimate.' ?>">
+    <title><?= htmlspecialchars($finalTitle, ENT_QUOTES) ?></title>
+    <meta name="description" content="<?= htmlspecialchars($finalDesc, ENT_QUOTES) ?>">
     <link rel="canonical" href="https://www.hoosiercladding.com<?= $pagePath ?? '' ?>">
     <link rel="stylesheet" href="/public/styles/output.css">
     <script type="application/ld+json">{
@@ -92,6 +101,13 @@ $SITE = 'Hoosier Cladding LLC';
             }
         ]
     }</script>
+    <?php 
+    // Inject dynamic JSON-LD schema for matrix pages
+    $head_injector_path = __DIR__ . '/../app/bootstrap/head_injector.php';
+    if (file_exists($head_injector_path)) {
+        require_once $head_injector_path;
+    }
+    ?>
 </head>
 <body class="bg-blue-50 text-gray-900">
     <header class="bg-white shadow-md border-b-2 border-blue-100">

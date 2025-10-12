@@ -112,5 +112,7 @@ include __DIR__ . '/partials/header.php';
     </div>
 </section>
 
+<?php include __DIR__ . '/includes/services_internal_links.html'; ?>
+
 <?php include __DIR__ . '/partials/cta-strip.php'; ?>
 <?php include __DIR__ . '/partials/footer.php'; ?>

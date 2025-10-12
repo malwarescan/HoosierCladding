@@ -1,0 +1,19 @@
+--- CURSOR PATCH: Add Internal Links to Home & Services ---
+
+Files to include (or copy-paste the HTML):
+- /includes/home_internal_links.html
+- /includes/services_internal_links.html
+
+1) Move the provided files into your project:
+   - home_internal_links.html -> /includes/home_internal_links.html
+   - services_internal_links.html -> /includes/services_internal_links.html
+
+2) In your Home template (e.g., /views/home.php or index.php), include after the hero:
+   <?php include __DIR__ . '/../includes/home_internal_links.html'; ?>
+
+3) In your Services template (e.g., /views/services.php), include near the top:
+   <?php include __DIR__ . '/../includes/services_internal_links.html'; ?>
+
+Notes:
+- Update the link labels/targets as you add new /matrix/ routes.
+- Keep it close to the top of the content to maximize internal equity flow.

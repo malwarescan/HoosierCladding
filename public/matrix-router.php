@@ -39,12 +39,12 @@ class MatrixDataLoader {
         }
         
         $handle = fopen(self::$csvPath, 'r');
-        $headers = fgetcsv($handle);
+        $headers = fgetcsv($handle, 0, ',', '"', '');
         
         // Clean headers
         $headers = array_map('trim', $headers);
         
-        while (($row = fgetcsv($handle)) !== false) {
+        while (($row = fgetcsv($handle, 0, ',', '"', '')) !== false) {
             if (count($row) === count($headers)) {
                 $data = array_combine($headers, $row);
                 

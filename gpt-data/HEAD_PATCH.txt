@@ -1,0 +1,23 @@
+--- CURSOR PATCH: Inject MetaManager into your <head> ---
+
+1) Add file: /app/lib/MetaManager.php (done in this package). Ensure autoload or require:
+
+   <?php require_once __DIR__.'/../app/lib/MetaManager.php'; ?>
+
+2) In your global head (e.g., /views/partials/head.php or header.php), replace your static <title> and <meta name="description"> with:
+
+   <?php
+     $reqPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+     // Your existing defaults:
+     $defaultTitle = isset($pageTitle) ? $pageTitle : 'Hoosier Cladding';
+     $defaultDesc  = isset($pageDescription) ? $pageDescription : 'Expert siding services across Northern Indiana.';
+     $finalTitle = MetaManager::title($reqPath, $defaultTitle);
+     $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
+   ?>
+   <title><?= htmlspecialchars($finalTitle, ENT_QUOTES) ?></title>
+   <meta name="description" content="<?= htmlspecialchars($finalDesc, ENT_QUOTES) ?>">
+
+   <!-- keep your other meta tags as-is -->
+
+3) Place the CSV you were given at: /app/config/ctr_rewrites.csv
+   (We included a starter one earlier. You can append rows anytime; no code changes needed.)

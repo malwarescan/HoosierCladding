@@ -34,12 +34,12 @@ class MatrixDataLoader {
         }
         
         $handle = fopen(self::$csvPath, 'r');
-        $headers = fgetcsv($handle);
+        $headers = fgetcsv($handle, 0, ',', '"', '');
         
         // Clean headers
         $headers = array_map('trim', $headers);
         
-        while (($row = fgetcsv($handle)) !== false) {
+        while (($row = fgetcsv($handle, 0, ',', '"', '')) !== false) {
             if (count($row) === count($headers)) {
                 $data = array_combine($headers, $row);
                 
@@ -79,6 +79,9 @@ function routeMatrixPage(): void {
         include __DIR__ . '/partials/404.php';
         return;
     }
+    
+    // Make row data available globally for schema injection
+    $GLOBALS['matrix_row'] = $row;
     
     // Render the page
     renderMatrixLandingPage($row);
@@ -123,6 +126,14 @@ function renderMatrixLandingPage(array $row): void {
     
     <!-- Schema.org JSON-LD (LocalBusiness + Service + FAQPage) -->
     <?= SchemaRenderer\render($row) ?>
+    
+    <?php 
+    // Inject dynamic JSON-LD schema for matrix pages
+    $head_injector_path = __DIR__ . '/app/bootstrap/head_injector.php';
+    if (file_exists($head_injector_path)) {
+        require_once $head_injector_path;
+    }
+    ?>
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/public/styles/output.css">
