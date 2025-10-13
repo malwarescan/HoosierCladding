@@ -86,7 +86,7 @@
   <!-- Full-width chat container -->
   <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] sm:left-auto sm:right-auto sm:ml-auto sm:mr-auto sm:max-w-4xl sm:px-6 lg:px-8">
       <!-- Preline AI Chat Template Structure -->
-      <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
+      <div class="bg-white border border-gray-200 shadow-sm">
         <!-- Chat Header -->
         <div class="flex items-center gap-x-3 p-4 border-b border-gray-200">
           <div class="flex items-center gap-x-3">
@@ -122,7 +122,7 @@
                 </div>
               </div>
               <div class="grow">
-                <div class="bg-gray-100 rounded-e-xl rounded-es-xl p-4">
+                <div class="bg-gray-100 p-4">
                   <p class="text-sm text-gray-800">
                     I'm the AI assistant built by Hoosier Cladding, trained specifically on Indiana siding installation, home repairs, and maintenance best practices. I understand Midwest weather challenges, energy-efficiency needs, and regional building standards that affect your home's exterior. Whether you're dealing with drafty walls, fading siding, or storm damage, I'll guide you with accurate, local insights. What home-exterior challenge can I help you solve today?
                   </p>
@@ -134,9 +134,9 @@
           <!-- Input Form -->
           <form id="hc-form" class="flex gap-x-2">
             <div class="flex-1">
-              <input id="hc-input" type="text" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Ask about siding replacement, storm damage, or energy efficiency...">
+              <input id="hc-input" type="text" class="py-3 px-4 block w-full border-gray-200 text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Ask about siding replacement, storm damage, or energy efficiency...">
             </div>
-            <button type="submit" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+            <button type="submit" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
               <svg class="flex-shrink-0 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
               </svg>
@@ -145,13 +145,13 @@
 
           <!-- Suggestion Chips -->
           <div class="flex flex-wrap gap-2 mt-4">
-            <button type="button" data-suggest="What siding materials work best for South Bend Indiana weather conditions?" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-medium rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200">
+            <button type="button" data-suggest="What siding materials work best for South Bend Indiana weather conditions?" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-medium border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200">
               Siding Replacement
             </button>
-            <button type="button" data-suggest="How do I assess and repair storm damage to my home's exterior?" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-medium rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200">
+            <button type="button" data-suggest="How do I assess and repair storm damage to my home's exterior?" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-medium border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200">
               Storm Damage Repair
             </button>
-            <button type="button" data-suggest="What energy-efficient siding options work best for Indiana homes?" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-medium rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200">
+            <button type="button" data-suggest="What energy-efficient siding options work best for Indiana homes?" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-medium border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200">
               Energy Efficiency
             </button>
           </div>
