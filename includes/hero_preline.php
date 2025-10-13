@@ -4,9 +4,9 @@
   <div class="absolute inset-0 z-0">
     <img src="/public/images/hero-section/siding-repair-home-hoosier-cladding.png" 
          alt="Professional siding repair and installation services" 
-         class="w-full h-full object-cover opacity-10"
+         class="w-full h-full object-cover opacity-15"
          loading="eager">
-    <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/80 to-white/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-white/85 via-white/75 to-white/65"></div>
   </div>
   <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
     <div class="flex flex-col gap-8">
