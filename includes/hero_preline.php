@@ -8,13 +8,13 @@
          loading="eager">
     <div class="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50"></div>
   </div>
-  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
     <div class="flex flex-col gap-8">
       <!-- Copy Section -->
       <div class="flex flex-col justify-center text-center lg:text-left">
 
         <!-- Main Headline -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-6">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-4 sm:mb-6">
           <span class="text-blue-600">South Bend's</span><br>
           Premier Siding Experts
         </h1>
@@ -22,23 +22,23 @@
         <!-- Rotating Sub-headlines -->
         <div class="mb-8">
           <div id="hc-rotator"
-               class="relative h-16 overflow-hidden"
+               class="relative h-12 sm:h-16 overflow-hidden"
                aria-live="polite"
                aria-atomic="true">
             <span class="sr-only">Local service highlights:</span>
 
             <!-- Slides: all in DOM, not display:none (use translate/opacity for a11y & SEO) -->
-            <div class="hc-rot-slide opacity-100 translate-y-0 text-lg text-gray-600 leading-relaxed">Indiana's Premier Siding & Exterior Experts — Serving South Bend and Beyond</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg text-gray-600 leading-relaxed">South Bend's Trusted Siding Contractors — Indiana's Exterior Specialists</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg text-gray-600 leading-relaxed">Energy-Efficient Siding Installation & Repair Across Northern Indiana</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg text-gray-600 leading-relaxed">Quality Craftsmanship for Indiana Homes — Free Local Estimates</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg text-gray-600 leading-relaxed">Fiber Cement & Vinyl Siding Pros in South Bend, IN</div>
+            <div class="hc-rot-slide opacity-100 translate-y-0 text-base sm:text-lg text-gray-600 leading-relaxed">Indiana's Premier Siding & Exterior Experts — Serving South Bend and Beyond</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-base sm:text-lg text-gray-600 leading-relaxed">South Bend's Trusted Siding Contractors — Indiana's Exterior Specialists</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-base sm:text-lg text-gray-600 leading-relaxed">Energy-Efficient Siding Installation & Repair Across Northern Indiana</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-base sm:text-lg text-gray-600 leading-relaxed">Quality Craftsmanship for Indiana Homes — Free Local Estimates</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-base sm:text-lg text-gray-600 leading-relaxed">Fiber Cement & Vinyl Siding Pros in South Bend, IN</div>
           </div>
 
         </div>
 
         <!-- Trust Signals -->
-        <div class="flex flex-wrap gap-4 mb-8">
+        <div class="flex flex-wrap gap-2 sm:gap-4 mb-6 sm:mb-8">
           <div class="flex items-center text-sm text-gray-600 bg-white/80 px-3 py-2 rounded-lg">
             <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -62,7 +62,7 @@
       </div>
 
       <!-- Chat Assistant Section -->
-      <div class="w-full max-w-3xl mx-auto lg:max-w-none mt-12 sm:mt-8">
+      <div class="w-full max-w-3xl mx-auto lg:max-w-none mt-8 sm:mt-12">
         <div class="relative">
           <!-- Feature Badge -->
           <div class="absolute -top-3 left-6 z-20">

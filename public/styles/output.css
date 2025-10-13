@@ -1155,10 +1155,45 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
 
 /* Mobile-first responsive utilities */
 @media (max-width: 639px) {
+  /* Hero section mobile optimizations */
+  .py-12.sm\\:py-16.lg\\:py-20 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  
+  /* Mobile headline sizing */
+  .text-3xl.sm\\:text-4xl.md\\:text-5xl.lg\\:text-6xl {
+    font-size: 1.875rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Mobile rotator height */
+  .h-12.sm\\:h-16 {
+    height: 3rem !important;
+  }
+  
+  /* Mobile rotator text */
+  .text-base.sm\\:text-lg {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* Mobile trust signals */
+  .flex.flex-wrap.gap-2.sm\\:gap-4 {
+    gap: 0.5rem !important;
+  }
+  
+  /* Mobile trust signal badges */
+  .flex.items-center.text-sm.text-gray-600.bg-white\/80.px-3.py-2.rounded-lg {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.75rem !important;
+  }
+  
   /* Chat card mobile styling */
   .hs-card {
     border-radius: 1rem !important;
     padding: 1rem !important;
+    margin-top: 2rem !important;
   }
   
   /* Chat header - compact layout */
@@ -1184,6 +1219,7 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
     height: 3rem !important;
     background-color: #f9fafb !important;
     border: 1px solid #e5e7eb !important;
+    font-size: 0.875rem !important;
   }
   
   /* Chat send button */
@@ -1207,6 +1243,12 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
   .flex.gap-2.flex-wrap {
     flex-wrap: wrap !important;
     gap: 0.5rem !important;
+  }
+  
+  /* Mobile container padding */
+  .px-4.sm\\:px-6.lg\\:px-8 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 }
 
