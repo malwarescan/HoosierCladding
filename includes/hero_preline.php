@@ -51,8 +51,8 @@
 
       <!-- Right: Chat Assistant (Preline Card) -->
       <div class="lg:col-span-2 lg:order-2 w-full">
-        <div class="hs-card border border-gray-200 rounded-2xl shadow-sm bg-gradient-to-br from-blue-50 to-indigo-50">
-          <div class="p-4 sm:p-6">
+        <div class="hs-card border border-gray-200 rounded-2xl shadow-sm bg-gradient-to-br from-blue-50 to-indigo-50 h-full">
+          <div class="p-6 lg:p-8 h-full flex flex-col">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-bold text-gray-900">Ask our siding assistant</h3>
               <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
@@ -63,15 +63,15 @@
               </span>
             </div>
 
-            <div id="hc-thread" class="space-y-3 max-h-80 overflow-auto pr-1" aria-live="polite">
-              <div class="text-sm text-gray-700 p-3 bg-white rounded-lg border border-gray-200">
+            <div id="hc-thread" class="flex-1 space-y-3 overflow-auto pr-1 min-h-0" aria-live="polite">
+              <div class="text-sm text-gray-700 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
                 What can we help with today? Drafts, storm damage, warped panels, or rising energy bills?
               </div>
             </div>
 
-            <form id="hc-form" class="mt-4 flex gap-2">
-              <input id="hc-input" type="text" class="grow border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:outline-none text-sm" placeholder="Describe your issue (e.g., cold spots near exterior wall)">
-              <button type="submit" class="px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 focus:outline-none transition-colors">Ask</button>
+            <form id="hc-form" class="mt-6 flex gap-3">
+              <input id="hc-input" type="text" class="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:outline-none text-sm" placeholder="Describe your issue (e.g., cold spots near exterior wall)">
+              <button type="submit" class="px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 focus:outline-none transition-colors whitespace-nowrap">Ask</button>
             </form>
 
             <div class="mt-4 flex gap-2 flex-wrap">
@@ -80,7 +80,7 @@
               <button type="button" data-suggest="How fast can you do siding repair after storm damage in South Bend?" class="text-xs border border-gray-300 rounded-lg px-3 py-2 hover:bg-blue-50 hover:border-blue-300 transition-colors">Storm damage</button>
             </div>
 
-            <p class="mt-4 text-[11px] text-gray-500">
+            <p class="mt-4 text-xs text-gray-500">
               This assistant provides general guidance. For a detailed quote, <a href="/contact" class="underline">request a free estimate</a>.
             </p>
           </div>
