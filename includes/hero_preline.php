@@ -35,12 +35,6 @@
             <div class="hc-rot-slide opacity-0 translate-y-3 text-lg text-gray-600 leading-relaxed">Fiber Cement & Vinyl Siding Pros in South Bend, IN</div>
           </div>
 
-          <!-- Controls for users & crawlers (visible, not spam) -->
-          <div class="mt-4 flex items-center gap-3 text-sm text-gray-500">
-            <button type="button" class="hc-rot-prev px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-colors">Prev</button>
-            <button type="button" class="hc-rot-next px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-colors">Next</button>
-            <span class="hc-rot-index text-xs text-gray-400" aria-live="off">(1/5)</span>
-          </div>
         </div>
 
         <!-- Trust Signals -->
@@ -104,7 +98,7 @@
 
             <form id="hc-form" class="mt-6 flex gap-3">
               <input id="hc-input" type="text" class="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:outline-none text-sm" placeholder="Describe your issue (e.g., cold spots near exterior wall)">
-              <button type="submit" class="px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-600 focus:outline-none transition-colors whitespace-nowrap">Ask</button>
+              <button type="submit" class="px-6 py-3 rounded-lg bg-gray-900 text-white font-semibold hover:bg-gray-800 focus:ring-2 focus:ring-gray-900 focus:outline-none transition-colors whitespace-nowrap">Ask</button>
             </form>
 
             <div class="mt-4 flex gap-2 flex-wrap">
