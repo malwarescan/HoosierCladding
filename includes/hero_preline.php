@@ -8,13 +8,13 @@
          loading="eager">
     <div class="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50"></div>
   </div>
-  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-safe pt-16 sm:pt-20 lg:pt-24 pb-safe">
-    <div class="flex flex-col gap-4 sm:gap-6 lg:gap-8">
+  <div class="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-safe pt-16 sm:pt-20 lg:pt-24 pb-safe">
+    <div class="flex flex-col gap-4 sm:gap-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-10 xl:gap-14">
       <!-- Copy Section -->
-      <div class="flex flex-col justify-center text-center lg:text-left">
+      <div class="flex flex-col justify-center text-center lg:text-left lg:pr-8">
 
         <!-- Main Headline -->
-        <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-3 sm:mb-6 lg:mb-8">
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-gray-900 leading-tight mb-3 sm:mb-6 lg:mb-8">
           <span class="text-blue-600">South Bend's</span><br>
           Premier Siding Experts
         </h1>
@@ -28,17 +28,17 @@
             <span class="sr-only">Local service highlights:</span>
 
             <!-- Slides: all in DOM, not display:none (use translate/opacity for a11y & SEO) -->
-            <div class="hc-rot-slide opacity-100 translate-y-0 text-base xs:text-lg sm:text-xl text-gray-600 leading-relaxed">Indiana's Premier Siding & Exterior Experts — Serving South Bend and Beyond</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-base xs:text-lg sm:text-xl text-gray-600 leading-relaxed">South Bend's Trusted Siding Contractors — Indiana's Exterior Specialists</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-base xs:text-lg sm:text-xl text-gray-600 leading-relaxed">Energy-Efficient Siding Installation & Repair Across Northern Indiana</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-base xs:text-lg sm:text-xl text-gray-600 leading-relaxed">Quality Craftsmanship for Indiana Homes — Free Local Estimates</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-base xs:text-lg sm:text-xl text-gray-600 leading-relaxed">Fiber Cement & Vinyl Siding Pros in South Bend, IN</div>
+            <div class="hc-rot-slide opacity-100 translate-y-0 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">Indiana's Premier Siding & Exterior Experts — Serving South Bend and Beyond</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">South Bend's Trusted Siding Contractors — Indiana's Exterior Specialists</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">Energy-Efficient Siding Installation & Repair Across Northern Indiana</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">Quality Craftsmanship for Indiana Homes — Free Local Estimates</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">Fiber Cement & Vinyl Siding Pros in South Bend, IN</div>
           </div>
 
         </div>
 
         <!-- Trust Signals -->
-        <div class="flex flex-wrap gap-2 sm:gap-3 lg:gap-4 mb-4 sm:mb-6 lg:mb-8">
+        <div class="flex flex-wrap gap-4 justify-start mb-4 sm:mb-6 lg:mb-8">
           <div class="flex items-center text-sm text-gray-600 bg-white/80 px-3 py-2 rounded-lg">
             <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -62,11 +62,11 @@
       </div>
 
       <!-- Chat Assistant Section -->
-      <div class="w-full mx-auto px-3 sm:px-0 mt-8 sm:mt-10 lg:mt-12 mb-10">
+      <div class="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto lg:mx-0 lg:ml-auto px-3 sm:px-0 mt-8 sm:mt-10 lg:mt-0 lg:pl-8">
         <div class="relative">
           
           <!-- Chat Card -->
-          <div class="rounded-2xl shadow-lg bg-white/95 backdrop-blur-sm p-6 sm:p-6 lg:p-8 space-y-4">
+          <div class="rounded-2xl shadow-lg bg-white/95 backdrop-blur-sm p-4 sm:p-6 space-y-4">
               <div>
                 <h3 class="text-lg font-semibold text-gray-900">AI Home Expert</h3>
               </div>
@@ -78,8 +78,8 @@
             </div>
 
             <form id="hc-form" class="flex items-center gap-2">
-              <input id="hc-input" type="text" class="flex-1 min-w-0 h-12 sm:h-11 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-base bg-white" placeholder="Describe your challenge...">
-              <button type="submit" class="shrink-0 h-12 sm:h-11 px-6 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors flex items-center justify-center">
+              <input id="hc-input" type="text" class="flex-1 min-w-0 h-10 sm:h-11 lg:h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-base bg-white" placeholder="Describe your challenge...">
+              <button type="submit" class="shrink-0 h-10 sm:h-11 lg:h-12 px-6 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors flex items-center justify-center">
                 <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                 </svg>
@@ -93,8 +93,8 @@
             </div>
 
             <!-- Footer Attribution -->
-            <div class="text-xs text-gray-500 text-center pt-2 border-t border-gray-100">
-              <span>AI recommendations verified by licensed professionals.</span>
+            <div class="text-center text-xs text-gray-500 pt-2 border-t border-gray-100">
+              <p>Powered by <span class="font-semibold text-gray-700">ChatGPT</span> & <span class="font-semibold text-blue-700">OurCasa.ai</span></p>
             </div>
 
           </div>
