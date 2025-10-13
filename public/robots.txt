@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://hoosiercladding.com/sitemap-index.xml

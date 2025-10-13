@@ -1,6 +1,13 @@
 <?php
 // /api/chat.php
 declare(strict_types=1);
+
+// Load config for local development (optional - only if config.php exists)
+$configPath = __DIR__ . '/config.php';
+if (file_exists($configPath)) {
+    require_once $configPath;
+}
+
 header('Content-Type: application/json; charset=UTF-8');
 header('Access-Control-Allow-Origin: https://www.hoosiercladding.com');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
