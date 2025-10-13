@@ -41,6 +41,15 @@ $full = '/home-siding-blog/'.$slug;
 if (isset($known[$full])) {
   // ---- RENDER REAL BLOG POST ----
   http_response_code(200);
+  
+  // Try to load template file if it exists
+  $templatePath = __DIR__.'/../../templates/blog/'.$slug.'.php';
+  if (file_exists($templatePath)) {
+    include $templatePath;
+    exit;
+  }
+  
+  // Fallback: generic placeholder
   $title = ucwords(str_replace('-', ' ', $slug));
   $pageTitle = $title . ' | Hoosier Cladding';
   $pageDescription = "Expert siding services across Northern Indiana. Repairs, full replacements, and insulation upgrades done right. Get a same‑week estimate from Hoosier Cladding.";
