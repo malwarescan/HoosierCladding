@@ -23,16 +23,7 @@
           Premier Siding Experts
         </h1>
         <div class="mt-6 flex flex-col lg:flex-row gap-8">
-          <!-- Left: Main content -->
-          <div class="flex-1">
-            <p class="text-xl text-gray-700 leading-relaxed">
-              <strong>Storm damage?</strong> We respond within 24 hours.<br>
-              <strong>Energy bills rising?</strong> Our insulated siding cuts costs by 30%.<br>
-              <strong>Need a full replacement?</strong> We handle everything from permits to cleanup.
-            </p>
-          </div>
-          
-          <!-- Right: Trust signals -->
+          <!-- Left: Trust signals -->
           <div class="flex flex-col gap-4 lg:min-w-64">
             <div class="flex items-center text-sm text-gray-600">
               <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -46,6 +37,15 @@
               </svg>
               Licensed in Indiana • Fully insured
             </div>
+          </div>
+          
+          <!-- Right: Main content -->
+          <div class="flex-1">
+            <p class="text-xl text-gray-700 leading-relaxed">
+              <strong>Storm damage?</strong> We respond within 24 hours.<br>
+              <strong>Energy bills rising?</strong> Our insulated siding cuts costs by 30%.<br>
+              <strong>Need a full replacement?</strong> We handle everything from permits to cleanup.
+            </p>
           </div>
         </div>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
