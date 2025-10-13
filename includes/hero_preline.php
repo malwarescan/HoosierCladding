@@ -20,26 +20,26 @@
         </h1>
 
         <!-- Rotating Sub-headlines -->
-        <div class="mb-6">
+        <div class="mb-8">
           <div id="hc-rotator"
-               class="relative h-14 sm:h-12 overflow-hidden"
+               class="relative h-16 overflow-hidden"
                aria-live="polite"
                aria-atomic="true">
             <span class="sr-only">Local service highlights:</span>
 
             <!-- Slides: all in DOM, not display:none (use translate/opacity for a11y & SEO) -->
-            <div class="hc-rot-slide opacity-100 translate-y-0 text-xl text-gray-700">Indiana's Premier Siding & Exterior Experts — Serving South Bend and Beyond</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-xl text-gray-700">South Bend's Trusted Siding Contractors — Indiana's Exterior Specialists</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-xl text-gray-700">Energy-Efficient Siding Installation & Repair Across Northern Indiana</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-xl text-gray-700">Quality Craftsmanship for Indiana Homes — Free Local Estimates</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-xl text-gray-700">Fiber Cement & Vinyl Siding Pros in South Bend, IN</div>
+            <div class="hc-rot-slide opacity-100 translate-y-0 text-lg text-gray-600 leading-relaxed">Indiana's Premier Siding & Exterior Experts — Serving South Bend and Beyond</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg text-gray-600 leading-relaxed">South Bend's Trusted Siding Contractors — Indiana's Exterior Specialists</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg text-gray-600 leading-relaxed">Energy-Efficient Siding Installation & Repair Across Northern Indiana</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg text-gray-600 leading-relaxed">Quality Craftsmanship for Indiana Homes — Free Local Estimates</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg text-gray-600 leading-relaxed">Fiber Cement & Vinyl Siding Pros in South Bend, IN</div>
+          </div>
 
-            <!-- Controls for users & crawlers (visible, not spam) -->
-            <div class="mt-3 flex items-center gap-2 text-sm text-gray-600">
-              <button type="button" class="hc-rot-prev px-2 py-1 rounded border hover:bg-gray-50">Prev</button>
-              <button type="button" class="hc-rot-next px-2 py-1 rounded border hover:bg-gray-50">Next</button>
-              <span class="hc-rot-index text-xs text-gray-500" aria-live="off">(1/5)</span>
-            </div>
+          <!-- Controls for users & crawlers (visible, not spam) -->
+          <div class="mt-4 flex items-center gap-3 text-sm text-gray-500">
+            <button type="button" class="hc-rot-prev px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-colors">Prev</button>
+            <button type="button" class="hc-rot-next px-3 py-1 rounded-md border border-gray-300 hover:bg-gray-50 hover:border-gray-400 transition-colors">Next</button>
+            <span class="hc-rot-index text-xs text-gray-400" aria-live="off">(1/5)</span>
           </div>
         </div>
 
