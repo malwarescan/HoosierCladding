@@ -4,7 +4,7 @@ $pageDescription = "Expert siding installation, repair, and replacement in South
 include __DIR__ . '/partials/header.php';
 ?>
 
-<?php include __DIR__ . '/includes/hero_preline.php'; ?>
+<?php include __DIR__ . '/includes/hero_rotator.php'; ?>
 
 <!-- Energy Efficiency Section -->
 <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
