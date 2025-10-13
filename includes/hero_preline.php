@@ -12,41 +12,49 @@
     <div class="flex flex-col gap-8">
       <!-- Copy Section -->
       <div class="flex flex-col justify-center text-center lg:text-left">
-        <span class="inline-flex items-center gap-x-2 py-2 px-4 rounded-full text-sm font-semibold bg-blue-100 text-blue-800 mb-6">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-x-2 py-2 px-4 rounded-full text-sm font-semibold bg-gray-100 text-gray-800 mb-6">
+          <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
           </svg>
           Licensed & Insured • 15+ Years Experience
-        </span>
-        <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-6">
           <span class="text-blue-600">South Bend's</span><br>
           Premier Siding Experts
         </h1>
-        <div class="mt-6 flex flex-col lg:flex-row gap-8">
-          <!-- Left: Trust signals -->
-          <div class="flex flex-col gap-4 lg:min-w-64">
-            <div class="flex items-center text-sm text-gray-600">
-              <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-              </svg>
-              Free estimates • Same-day response
-            </div>
-            <div class="flex items-center text-sm text-gray-600">
-              <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-              </svg>
-              Licensed in Indiana • Fully insured
-            </div>
+
+        <!-- Trust Signals -->
+        <div class="flex flex-wrap gap-4 mb-8">
+          <div class="flex items-center text-sm text-gray-600 bg-white/80 px-3 py-2 rounded-lg">
+            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Free estimates
           </div>
-          
-          <!-- Right: Main content -->
-          <div class="flex-1">
-            <p class="text-xl text-gray-700 leading-relaxed">
-              <strong>Storm damage?</strong> We respond within 24 hours.<br>
-              <strong>Energy bills rising?</strong> Our insulated siding cuts costs by 30%.<br>
-              <strong>Need a full replacement?</strong> We handle everything from permits to cleanup.
-            </p>
+          <div class="flex items-center text-sm text-gray-600 bg-white/80 px-3 py-2 rounded-lg">
+            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Same-day response
           </div>
+          <div class="flex items-center text-sm text-gray-600 bg-white/80 px-3 py-2 rounded-lg">
+            <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Licensed in Indiana
+          </div>
+        </div>
+
+        <!-- Problem-Solution Content -->
+        <div class="bg-white/90 backdrop-blur-sm rounded-xl p-6 mb-8">
+          <p class="text-lg text-gray-700 leading-relaxed">
+            <span class="font-semibold text-gray-900">Storm damage?</span> We respond within 24 hours.<br>
+            <span class="font-semibold text-gray-900">Energy bills rising?</span> Our insulated siding cuts costs by 30%.<br>
+            <span class="font-semibold text-gray-900">Need a full replacement?</span> We handle everything from permits to cleanup.
+          </p>
         </div>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-gray-900 px-8 py-4 text-white font-semibold hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
