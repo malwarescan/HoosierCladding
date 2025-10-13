@@ -62,7 +62,7 @@
       </div>
 
       <!-- Chat Assistant Section -->
-      <div class="w-full max-w-3xl mx-auto lg:max-w-none">
+      <div class="w-full max-w-3xl mx-auto lg:max-w-none mt-12 sm:mt-8">
         <div class="relative">
           <!-- Feature Badge -->
           <div class="absolute -top-3 left-6 z-20">
@@ -76,11 +76,11 @@
           
           <!-- Chat Card -->
           <div class="hs-card border-2 border-blue-200 rounded-3xl shadow-2xl bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 backdrop-blur-sm h-full">
-            <div class="p-8 lg:p-10 h-full flex flex-col">
+            <div class="p-6 sm:p-8 lg:p-10 h-full flex flex-col">
               <div class="flex items-center justify-between mb-6">
-                <div>
-                  <h3 class="text-2xl font-bold text-gray-900 mb-1">Ask our siding assistant</h3>
-                  <p class="text-sm text-gray-600">Get instant answers about your siding needs</p>
+                <div class="flex-1">
+                  <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-1">Ask the Hoosier Cladding Siding Assistant</h3>
+                  <p class="text-sm text-gray-600">Get instant answers about siding repair, replacement, and energy efficiency.<br>Trusted by Indiana homeowners, contractors, and new buyers to make smart siding decisions — fast.</p>
                 </div>
                 <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
@@ -92,23 +92,24 @@
 
             <div id="hc-thread" class="flex-1 space-y-3 overflow-auto pr-1 min-h-0" aria-live="polite">
               <div class="text-sm text-gray-700 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
-                What can we help with today? Drafts, storm damage, warped panels, or rising energy bills?
+                What can we help with today? Peeling vinyl, storm damage, insulation loss, or high heating bills?<br>Describe your siding concern (e.g., warped panels near back wall, moisture behind siding, or drafty rooms).
               </div>
             </div>
 
             <form id="hc-form" class="mt-6 flex gap-3">
-              <input id="hc-input" type="text" class="flex-1 border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:outline-none text-sm" placeholder="Describe your issue (e.g., cold spots near exterior wall)">
-              <button type="submit" class="px-6 py-3 rounded-lg bg-gray-900 text-white font-semibold hover:bg-gray-800 focus:ring-2 focus:ring-gray-900 focus:outline-none transition-colors whitespace-nowrap">Ask</button>
+              <input id="hc-input" type="text" class="flex-1 border border-gray-300 rounded-lg px-4 py-3 h-12 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:outline-none text-sm" placeholder="Describe your issue (e.g., cold spots near exterior wall)">
+              <button type="submit" class="px-6 py-3 h-12 rounded-lg bg-gray-900 text-white font-semibold hover:bg-gray-800 focus:ring-2 focus:ring-gray-900 focus:outline-none transition-colors whitespace-nowrap">Ask Now</button>
             </form>
 
             <div class="mt-4 flex gap-2 flex-wrap">
-              <button type="button" data-suggest="Why is my energy bill rising with the same thermostat settings?" class="text-xs border border-gray-300 rounded-lg px-3 py-2 hover:bg-blue-50 hover:border-blue-300 transition-colors">Energy bill rising</button>
-              <button type="button" data-suggest="Should I repair or replace vinyl siding with cracks and gaps?" class="text-xs border border-gray-300 rounded-lg px-3 py-2 hover:bg-blue-50 hover:border-blue-300 transition-colors">Repair vs replace</button>
-              <button type="button" data-suggest="How fast can you do siding repair after storm damage in South Bend?" class="text-xs border border-gray-300 rounded-lg px-3 py-2 hover:bg-blue-50 hover:border-blue-300 transition-colors">Storm damage</button>
+              <button type="button" data-suggest="Energy efficiency tips for Indiana homes" class="text-xs border border-gray-300 rounded-lg px-3 py-2 hover:bg-blue-50 hover:border-blue-300 transition-colors">Energy Efficiency Tips</button>
+              <button type="button" data-suggest="Should I repair or replace my siding?" class="text-xs border border-gray-300 rounded-lg px-3 py-2 hover:bg-blue-50 hover:border-blue-300 transition-colors">Repair vs. Replace</button>
+              <button type="button" data-suggest="Storm damage siding repair help" class="text-xs border border-gray-300 rounded-lg px-3 py-2 hover:bg-blue-50 hover:border-blue-300 transition-colors">Storm Damage Help</button>
+              <button type="button" data-suggest="Best siding materials for Indiana weather" class="text-xs border border-gray-300 rounded-lg px-3 py-2 hover:bg-blue-50 hover:border-blue-300 transition-colors">Best Materials for Indiana Weather</button>
             </div>
 
             <p class="mt-4 text-xs text-gray-500">
-              This assistant provides general guidance. For a detailed quote, <a href="/contact" class="underline">request a free estimate</a>.
+              This virtual assistant provides quick siding insights, maintenance advice, and expert guidance.<br>For a free professional estimate, <a href="/contact" class="underline">request an inspection</a>.
             </p>
           </div>
         </div>
