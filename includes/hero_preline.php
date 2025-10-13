@@ -9,9 +9,9 @@
     <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/80 to-white/60"></div>
   </div>
   <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="flex flex-col lg:grid lg:grid-cols-3 gap-8 lg:items-stretch">
-      <!-- Left: Copy -->
-      <div class="lg:col-span-1 lg:order-1 flex flex-col justify-center mb-8 lg:mb-0">
+    <div class="flex flex-col gap-8">
+      <!-- Copy Section -->
+      <div class="flex flex-col justify-center text-center lg:text-left">
         <span class="inline-flex items-center gap-x-2 py-2 px-4 rounded-full text-sm font-semibold bg-blue-100 text-blue-800 mb-6">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -41,7 +41,7 @@
             Licensed in Indiana • Fully insured
           </div>
         </div>
-        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
@@ -57,8 +57,8 @@
         </div>
       </div>
 
-      <!-- Right: Chat Assistant (Preline Card) -->
-      <div class="lg:col-span-2 lg:order-2 w-full">
+      <!-- Chat Assistant Section -->
+      <div class="w-full max-w-2xl mx-auto lg:max-w-none">
         <div class="hs-card border border-gray-200 rounded-2xl shadow-sm bg-white/95 backdrop-blur-sm h-full">
           <div class="p-6 lg:p-8 h-full flex flex-col">
             <div class="flex items-center justify-between mb-4">
