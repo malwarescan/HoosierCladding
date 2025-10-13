@@ -1175,97 +1175,12 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
   }
 }
 
-/* Mobile-first responsive utilities */
-@media (max-width: 639px) {
-  /* Chat container mobile styling - full width */
-  .w-full.mx-auto {
-    width: 100% !important;
-    margin-top: 1rem !important;
-  }
-  
-  /* Chat card mobile styling */
-  .hs-card {
-    border-radius: 0.75rem !important;
-    padding: 0.75rem !important;
-    margin-top: 1rem !important;
-  }
-  
-  /* Chat header - compact layout */
-  .flex.items-center.gap-2.sm\\:gap-3 {
-    gap: 0.5rem !important;
-  }
-  
-  /* Chat message bubbles */
-  .bg-gray-50.rounded-xl.sm\\:rounded-2xl.rounded-tl-sm {
-    border-radius: 0.75rem 0.75rem 0.75rem 0.125rem !important;
-    padding: 0.5rem !important;
-  }
-  
-  /* Chat input form */
-  .flex.gap-1\.5.sm\:gap-2 {
-    gap: 0.375rem !important;
-  }
-  
-  /* Chat input field */
-  input[type="text"] {
-    border-radius: 9999px !important;
-    padding: 0.625rem 0.75rem !important;
-    height: 2.5rem !important;
-    background-color: #f9fafb !important;
-    border: 1px solid #e5e7eb !important;
-    font-size: 0.75rem !important;
-    max-width: calc(100% - 3rem) !important;
-  }
-  
-  /* Chat send button */
-  button[type="submit"] {
-    width: 2.5rem !important;
-    height: 2.5rem !important;
-    border-radius: 9999px !important;
-    background-color: #2563eb !important;
-    color: white !important;
-    flex-shrink: 0 !important;
-  }
-  
-  /* Chat suggestion chips */
-  .text-xs.bg-gray-100.hover\:bg-gray-200.rounded-full {
-    border-radius: 9999px !important;
-    padding: 0.375rem 0.75rem !important;
-    font-size: 0.75rem !important;
-    background-color: #f3f4f6 !important;
-  }
-  
-  /* Ensure chips wrap properly */
-  .flex.gap-2.sm\:gap-3.flex-wrap {
-    flex-wrap: wrap !important;
-    gap: 0.5rem !important;
-  }
-  
-  /* Mobile thread height */
-  .min-h-\[120px\].sm\:min-h-\[150px\] {
-    min-height: 7.5rem !important;
-  }
+/* Safe area helpers */
+.pt-safe { 
+  padding-top: env(safe-area-inset-top, 0); 
 }
-
-/* Tablet and up - restore responsive behavior */
-@media (min-width: 640px) {
-  .flex.flex-col.gap-2.sm\\:flex-row.sm\\:items-center.sm\\:justify-between {
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-  }
-  
-  .flex.flex-col.sm\\:flex-row.gap-3 {
-    flex-direction: row !important;
-  }
-  
-  .w-full.sm\\:w-auto {
-    width: auto !important;
-  }
-  
-  .h-10.sm\\:h-12 {
-    height: 3rem !important;
-  }
+.pb-safe { 
+  padding-bottom: env(safe-area-inset-bottom, 0); 
 }
 
 /* Reduced motion support */

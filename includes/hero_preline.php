@@ -66,7 +66,7 @@
 </section>
 
 <!-- AI Chat Assistant Hero Section -->
-<section class="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-16 sm:py-20 lg:py-24">
+<section class="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-16 sm:py-20 lg:py-24 pt-safe pb-safe">
   <div class="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-indigo-600/5 to-purple-600/5"></div>
   
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,8 +79,8 @@
       </p>
     </div>
 
-    <div class="max-w-4xl mx-auto">
-      <div class="bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+    <div class="w-full max-w-[92vw] sm:max-w-2xl lg:max-w-4xl mx-auto mt-8 sm:mt-10">
+      <div class="bg-white p-4 sm:p-6 rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
         <!-- Chat Header -->
         <div class="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-4">
           <div class="flex items-center justify-between">
@@ -103,9 +103,9 @@
         </div>
 
         <!-- Chat Content -->
-        <div class="p-6">
+        <div>
           <!-- Chat Thread -->
-          <div id="hc-thread" class="space-y-4 overflow-auto pr-2 min-h-[300px] max-h-[400px] mb-6" aria-live="polite">
+          <div id="hc-thread" class="space-y-4 overflow-auto min-h-[220px] sm:min-h-[260px] lg:min-h-[300px] max-h-[60vh] pr-1 mb-6" aria-live="polite" style="-webkit-overflow-scrolling: touch;">
             <div class="flex items-start space-x-3">
               <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                 <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
@@ -121,39 +121,32 @@
           </div>
 
           <!-- Input Form -->
-          <form id="hc-form" class="flex items-center space-x-3 mb-6">
-            <div class="flex-1 relative">
-              <input id="hc-input" type="text" class="w-full h-12 px-4 pr-12 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-base bg-white shadow-sm" placeholder="Ask about siding, repairs, or home maintenance...">
-              <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                </svg>
-              </button>
-            </div>
+          <form id="hc-form" class="flex items-center gap-2 mb-6">
+            <input id="hc-input" type="text" class="flex-1 min-w-0 h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 bg-white" placeholder="Ask about siding, repairs, or home maintenance...">
+            <button type="submit" class="shrink-0 h-12 px-5 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800 flex items-center justify-center">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              </svg>
+            </button>
           </form>
 
           <!-- Suggestion Chips -->
-          <div class="flex flex-wrap gap-3 justify-center mb-6">
-            <button type="button" data-suggest="What siding materials work best for South Bend Indiana weather conditions?" class="px-6 py-3 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors border border-blue-200">
+          <div class="flex flex-wrap justify-center sm:justify-start gap-3 mt-3 mb-6">
+            <button type="button" data-suggest="What siding materials work best for South Bend Indiana weather conditions?" class="px-4 py-2 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
               Local Siding Options
             </button>
-            <button type="button" data-suggest="Should I repair or replace my siding based on South Bend weather damage?" class="px-6 py-3 rounded-full text-base font-medium bg-indigo-100 text-indigo-700 hover:bg-indigo-200 transition-colors border border-indigo-200">
+            <button type="button" data-suggest="Should I repair or replace my siding based on South Bend weather damage?" class="px-4 py-2 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
               Repair vs Replace
             </button>
-            <button type="button" data-suggest="How do I maintain my home's exterior in Indiana's climate?" class="px-6 py-3 rounded-full text-base font-medium bg-purple-100 text-purple-700 hover:bg-purple-200 transition-colors border border-purple-200">
+            <button type="button" data-suggest="How do I maintain my home's exterior in Indiana's climate?" class="px-4 py-2 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
               Home Maintenance
             </button>
           </div>
 
           <!-- Footer Attribution -->
-          <div class="text-center pt-4 border-t border-gray-200">
-            <p class="text-sm text-gray-500">
-              <span class="font-semibold text-blue-700">Hoosier Cladding LLC</span> AI Assistant
-            </p>
-            <p class="text-xs text-gray-400 mt-1">
-              Trained on local South Bend area data and building codes
-            </p>
-          </div>
+          <p class="text-center text-xs text-gray-500 pt-3 border-t border-gray-100">
+            Powered by <span class="font-semibold text-gray-700">ChatGPT</span> & <span class="font-semibold text-blue-700">OurCasa.ai</span>
+          </p>
         </div>
       </div>
     </div>
