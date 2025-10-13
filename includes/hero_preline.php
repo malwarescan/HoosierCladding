@@ -62,34 +62,34 @@
       </div>
 
       <!-- Chat Assistant Section -->
-      <div class="max-w-sm w-full mx-auto px-3 sm:px-0 mt-8 sm:mt-10 lg:mt-12 mb-10">
+      <div class="w-full mx-auto px-3 sm:px-0 mt-8 sm:mt-10 lg:mt-12 mb-10">
         <div class="relative">
           
           <!-- Chat Card -->
-          <div class="rounded-2xl shadow-lg bg-white/95 backdrop-blur-sm p-4 sm:p-6 lg:p-8 space-y-4">
+          <div class="rounded-2xl shadow-lg bg-white/95 backdrop-blur-sm p-6 sm:p-6 lg:p-8 space-y-4">
               <div>
                 <h3 class="text-lg font-semibold text-gray-900">AI Home Expert</h3>
               </div>
 
-            <div id="hc-thread" class="space-y-3 overflow-auto pr-1 min-h-[120px] sm:min-h-[150px] lg:min-h-[180px]" aria-live="polite">
-              <div class="bg-gray-50 rounded-lg p-3">
+            <div id="hc-thread" class="space-y-3 overflow-auto pr-1 min-h-[180px] sm:min-h-[200px] lg:min-h-[220px]" aria-live="polite">
+              <div class="bg-gray-50 rounded-lg p-4">
                 <p class="text-base leading-relaxed text-gray-700">I'm your AI home intelligence system. I analyze exterior conditions, calculate energy efficiency metrics, and provide expert recommendations for your Indiana home. What exterior challenge can I solve for you today?</p>
               </div>
             </div>
 
             <form id="hc-form" class="flex items-center gap-2">
-              <input id="hc-input" type="text" class="flex-1 min-w-0 h-10 sm:h-11 px-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-sm bg-white" placeholder="Describe your challenge...">
-              <button type="submit" class="shrink-0 h-10 sm:h-11 px-5 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors flex items-center justify-center">
+              <input id="hc-input" type="text" class="flex-1 min-w-0 h-12 sm:h-11 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-base bg-white" placeholder="Describe your challenge...">
+              <button type="submit" class="shrink-0 h-12 sm:h-11 px-6 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors flex items-center justify-center">
                 <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                 </svg>
               </button>
             </form>
 
-            <div class="flex flex-wrap gap-2 justify-center mt-2">
-              <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="px-3 py-1.5 rounded-full text-sm font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">Energy</button>
-              <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="px-3 py-1.5 rounded-full text-sm font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">Repair</button>
-              <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="px-3 py-1.5 rounded-full text-sm font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">Storm</button>
+            <div class="flex flex-wrap gap-3 justify-center mt-3">
+              <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="px-4 py-2 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">Energy</button>
+              <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="px-4 py-2 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">Repair</button>
+              <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="px-4 py-2 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">Storm</button>
             </div>
 
             <!-- Footer Attribution -->
