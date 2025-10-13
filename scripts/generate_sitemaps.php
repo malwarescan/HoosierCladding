@@ -90,18 +90,22 @@ fclose($fh);
 echo "✅ Generated sitemap.xml (index with ".count($childFiles)." matrix sitemaps)\n";
 echo "✅ Total matrix URLs: ".count($urls)."\n";
 
-// Also generate static sitemap
+// Also generate static sitemap (capture output, ignore headers)
 ob_start();
-require __DIR__.'/../sitemap-static.php';
+@include __DIR__.'/../sitemap-static.php';
 $staticXml = ob_get_clean();
+// Remove any PHP warnings and keep only XML
+$staticXml = preg_replace('/^.*?(<\?xml)/s', '$1', $staticXml);
 file_put_contents($outDir.'/sitemap-static.xml', $staticXml);
 file_put_contents(__DIR__.'/../sitemap-static.xml', $staticXml);
 echo "✅ Generated sitemap-static.xml\n";
 
-// Also generate blog sitemap
+// Also generate blog sitemap (capture output, ignore headers)
 ob_start();
-require __DIR__.'/../sitemap-blog.php';
+@include __DIR__.'/../sitemap-blog.php';
 $blogXml = ob_get_clean();
+// Remove any PHP warnings and keep only XML
+$blogXml = preg_replace('/^.*?(<\?xml)/s', '$1', $blogXml);
 file_put_contents($outDir.'/sitemap-blog.xml', $blogXml);
 file_put_contents(__DIR__.'/../sitemap-blog.xml', $blogXml);
 echo "✅ Generated sitemap-blog.xml\n";
