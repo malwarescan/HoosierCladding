@@ -66,8 +66,7 @@
 </section>
 
 <!-- AI Chat Assistant Hero Section -->
-<section class="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-16 sm:py-20 lg:py-24 pt-safe pb-safe">
-  <div class="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-indigo-600/5 to-purple-600/5"></div>
+<section class="relative py-16 sm:py-20 lg:py-24 pt-safe pb-safe">
   
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
