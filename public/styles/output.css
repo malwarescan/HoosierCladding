@@ -1149,6 +1149,71 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
   outline-offset: 2px;
 }
 
+/* ========================================
+   MOBILE FLEXBOX FIXES FOR HERO CHAT
+   ======================================== */
+
+/* Mobile-first responsive utilities */
+@media (max-width: 639px) {
+  /* Force mobile stacking for hero chat heading + badge */
+  .flex.flex-col.gap-2.sm\\:flex-row.sm\\:items-center.sm\\:justify-between {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+  
+  /* Force mobile stacking for form */
+  .flex.flex-col.sm\\:flex-row.gap-3 {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+  
+  /* Ensure input and button are full width on mobile */
+  .w-full.sm\\:w-auto {
+    width: 100% !important;
+  }
+  
+  /* Ensure proper heights on mobile */
+  .h-10.sm\\:h-12 {
+    height: 2.5rem !important;
+  }
+  
+  /* Ensure chips wrap properly */
+  .flex.gap-2.flex-wrap {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+  
+  /* Ensure chips don't overflow */
+  .text-xs.border.border-gray-300.rounded-lg.px-3.py-2 {
+    white-space: nowrap !important;
+    flex-shrink: 1 !important;
+    min-width: 0 !important;
+  }
+}
+
+/* Tablet and up - restore responsive behavior */
+@media (min-width: 640px) {
+  .flex.flex-col.gap-2.sm\\:flex-row.sm\\:items-center.sm\\:justify-between {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  
+  .flex.flex-col.sm\\:flex-row.gap-3 {
+    flex-direction: row !important;
+  }
+  
+  .w-full.sm\\:w-auto {
+    width: auto !important;
+  }
+  
+  .h-10.sm\\:h-12 {
+    height: 3rem !important;
+  }
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   html {
