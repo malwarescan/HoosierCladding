@@ -8,21 +8,21 @@
          loading="eager">
     <div class="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50"></div>
   </div>
-  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-safe pt-16 sm:pt-20 pb-safe">
-    <div class="flex flex-col gap-4 sm:gap-6">
+  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-safe pt-16 sm:pt-20 lg:pt-24 pb-safe">
+    <div class="flex flex-col gap-4 sm:gap-6 lg:gap-8">
       <!-- Copy Section -->
       <div class="flex flex-col justify-center text-center lg:text-left">
 
         <!-- Main Headline -->
-        <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-3 sm:mb-6">
+        <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-3 sm:mb-6 lg:mb-8">
           <span class="text-blue-600">South Bend's</span><br>
           Premier Siding Experts
         </h1>
 
         <!-- Rotating Sub-headlines -->
-        <div class="mb-3 sm:mb-6">
+        <div class="mb-3 sm:mb-6 lg:mb-8">
           <div id="hc-rotator"
-               class="relative h-12 sm:h-16 overflow-hidden"
+               class="relative h-12 sm:h-16 lg:h-20 overflow-hidden"
                aria-live="polite"
                aria-atomic="true">
             <span class="sr-only">Local service highlights:</span>
@@ -38,7 +38,7 @@
         </div>
 
         <!-- Trust Signals -->
-        <div class="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
+        <div class="flex flex-wrap gap-2 sm:gap-3 lg:gap-4 mb-4 sm:mb-6 lg:mb-8">
           <div class="flex items-center text-sm text-gray-600 bg-white/80 px-3 py-2 rounded-lg">
             <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -62,16 +62,16 @@
       </div>
 
       <!-- Chat Assistant Section -->
-      <div class="max-w-sm w-full mx-auto px-3 sm:px-0 mt-8 sm:mt-10 mb-10">
+      <div class="max-w-sm w-full mx-auto px-3 sm:px-0 mt-8 sm:mt-10 lg:mt-12 mb-10">
         <div class="relative">
           
           <!-- Chat Card -->
-          <div class="rounded-2xl shadow-lg bg-white/95 backdrop-blur-sm p-4 sm:p-6 space-y-4">
+          <div class="rounded-2xl shadow-lg bg-white/95 backdrop-blur-sm p-4 sm:p-6 lg:p-8 space-y-4">
               <div>
                 <h3 class="text-lg font-semibold text-gray-900">AI Home Expert</h3>
               </div>
 
-            <div id="hc-thread" class="space-y-3 overflow-auto pr-1 min-h-[120px] sm:min-h-[150px]" aria-live="polite">
+            <div id="hc-thread" class="space-y-3 overflow-auto pr-1 min-h-[120px] sm:min-h-[150px] lg:min-h-[180px]" aria-live="polite">
               <div class="bg-gray-50 rounded-lg p-3">
                 <p class="text-base leading-relaxed text-gray-700">I'm your AI home intelligence system. I analyze exterior conditions, calculate energy efficiency metrics, and provide expert recommendations for your Indiana home. What exterior challenge can I solve for you today?</p>
               </div>
