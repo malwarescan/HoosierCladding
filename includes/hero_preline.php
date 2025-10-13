@@ -84,7 +84,7 @@
   </div>
 
   <!-- Full-width chat container -->
-  <div class="w-full -mx-4 sm:mx-auto sm:max-w-4xl sm:px-6 lg:px-8">
+  <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] sm:left-auto sm:right-auto sm:ml-auto sm:mr-auto sm:max-w-4xl sm:px-6 lg:px-8">
       <!-- Preline AI Chat Template Structure -->
       <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
         <!-- Chat Header -->
