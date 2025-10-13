@@ -1,6 +1,14 @@
 <?php /* /includes/hero_preline.php */ ?>
 <section class="relative overflow-hidden bg-white">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <!-- Background Image -->
+  <div class="absolute inset-0 z-0">
+    <img src="/public/images/hero-section/siding-repair-home-hoosier-cladding.png" 
+         alt="Professional siding repair and installation services" 
+         class="w-full h-full object-cover opacity-10"
+         loading="eager">
+    <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/80 to-white/60"></div>
+  </div>
+  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
     <div class="grid lg:grid-cols-3 gap-8 items-stretch">
       <!-- Left: Copy -->
       <div class="lg:col-span-1 lg:order-1 flex flex-col justify-center">
@@ -51,7 +59,7 @@
 
       <!-- Right: Chat Assistant (Preline Card) -->
       <div class="lg:col-span-2 lg:order-2 w-full">
-        <div class="hs-card border border-gray-200 rounded-2xl shadow-sm bg-gradient-to-br from-blue-50 to-indigo-50 h-full">
+        <div class="hs-card border border-gray-200 rounded-2xl shadow-sm bg-white/95 backdrop-blur-sm h-full">
           <div class="p-6 lg:p-8 h-full flex flex-col">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-bold text-gray-900">Ask our siding assistant</h3>
