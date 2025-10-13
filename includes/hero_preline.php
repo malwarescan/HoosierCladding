@@ -1,9 +1,9 @@
 <?php /* /includes/hero_preline.php */ ?>
 <section class="relative overflow-hidden bg-white">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-    <div class="grid lg:grid-cols-2 gap-10 items-center">
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
       <!-- Left: Copy -->
-      <div>
+      <div class="lg:order-1">
         <span class="inline-flex items-center gap-x-2 py-1 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 mb-4">
           Hoosier Cladding
         </span>
@@ -24,9 +24,9 @@
       </div>
 
       <!-- Right: Chat Assistant (Preline Card) -->
-      <div class="lg:ml-auto">
-        <div class="hs-card max-w-xl border border-gray-200 rounded-2xl shadow-sm">
-          <div class="p-5 sm:p-7">
+      <div class="lg:ml-auto lg:order-2 w-full">
+        <div class="hs-card border border-gray-200 rounded-2xl shadow-sm">
+          <div class="p-4 sm:p-6">
             <div class="flex items-center justify-between">
               <h3 class="text-lg font-semibold text-gray-900">Ask our siding assistant</h3>
               <span class="text-xs text-gray-500">Powered by AI</span>
