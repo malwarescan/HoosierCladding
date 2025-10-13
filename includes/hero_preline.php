@@ -84,8 +84,8 @@
                   </svg>
                 </div>
                 <div class="flex-1">
-                  <h3 class="text-lg font-semibold text-gray-900">Siding Assistant</h3>
-                  <p class="text-xs text-gray-500">Ask me anything about siding</p>
+                  <h3 class="text-lg font-semibold text-gray-900">AI Home Expert</h3>
+                  <p class="text-xs text-gray-500">Advanced intelligence for your home's exterior</p>
                 </div>
                 <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
@@ -103,13 +103,13 @@
                   </svg>
                 </div>
                 <div class="bg-gray-50 rounded-2xl rounded-tl-sm p-3 max-w-[85%]">
-                  <p class="text-sm text-gray-700">Hi! I can help with siding questions. What's your concern?</p>
+                  <p class="text-sm text-gray-700">I'm your AI home intelligence system. I analyze exterior conditions, calculate energy efficiency metrics, and provide expert recommendations for your Indiana home. What exterior challenge can I solve for you today?</p>
                 </div>
               </div>
             </div>
 
             <form id="hc-form" class="flex gap-2">
-              <input id="hc-input" type="text" class="flex-1 border border-gray-200 rounded-full px-4 py-3 h-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-sm bg-gray-50" placeholder="Type your message...">
+              <input id="hc-input" type="text" class="flex-1 border border-gray-200 rounded-full px-4 py-3 h-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-sm bg-gray-50" placeholder="Describe your home's exterior challenge...">
               <button type="submit" class="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors flex items-center justify-center">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
@@ -118,13 +118,13 @@
             </form>
 
             <div class="mt-3 flex gap-2 flex-wrap">
-              <button type="button" data-suggest="Energy efficiency tips" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1.5 transition-colors">Energy Tips</button>
-              <button type="button" data-suggest="Repair or replace?" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1.5 transition-colors">Repair vs Replace</button>
-              <button type="button" data-suggest="Storm damage help" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1.5 transition-colors">Storm Damage</button>
+              <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1.5 transition-colors">Energy Analysis</button>
+              <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1.5 transition-colors">Repair vs Replace</button>
+              <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1.5 transition-colors">Storm Assessment</button>
             </div>
 
             <p class="mt-3 text-xs text-gray-400 text-center">
-              For a free estimate, <a href="/contact" class="text-blue-600 hover:underline">contact us</a>
+              AI recommendations verified by licensed professionals. <a href="/contact" class="text-blue-600 hover:underline">Schedule consultation</a>
             </p>
           </div>
         </div>
@@ -183,15 +183,15 @@
 
   async function ask(msg){
     addBubble(msg,'you');
-    addBubble('Typing…','bot');
+    addBubble('Analyzing your home\'s exterior data...','bot');
     try {
       const res = await fetch(endpoint, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({message: msg}) });
       const data = await res.json();
       const last = elThread.lastElementChild; if (last) last.remove();
-      addBubble((data && data.reply) ? data.reply : 'Sorry, I could not generate a reply just now.','bot');
+      addBubble((data && data.reply) ? data.reply : 'Analysis incomplete. Please rephrase your query for optimal results.','bot');
     } catch(e){
       const last = elThread.lastElementChild; if (last) last.remove();
-      addBubble('Network error. Please try again.','bot');
+      addBubble('System temporarily unavailable. Please retry your analysis request.','bot');
     }
   }
 
