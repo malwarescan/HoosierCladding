@@ -9,20 +9,20 @@
     <div class="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50"></div>
   </div>
   <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 pt-safe pb-safe">
-    <div class="flex flex-col gap-6 sm:gap-8">
+    <div class="flex flex-col gap-4 sm:gap-6">
       <!-- Copy Section -->
       <div class="flex flex-col justify-center text-center lg:text-left">
 
         <!-- Main Headline -->
-        <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-6 sm:mb-8">
+        <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-3 sm:mb-6">
           <span class="text-blue-600">South Bend's</span><br>
           Premier Siding Experts
         </h1>
 
         <!-- Rotating Sub-headlines -->
-        <div class="mb-6 sm:mb-8">
+        <div class="mb-3 sm:mb-6">
           <div id="hc-rotator"
-               class="relative h-16 sm:h-20 overflow-hidden"
+               class="relative h-12 sm:h-16 overflow-hidden"
                aria-live="polite"
                aria-atomic="true">
             <span class="sr-only">Local service highlights:</span>
@@ -38,7 +38,7 @@
         </div>
 
         <!-- Trust Signals -->
-        <div class="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
+        <div class="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
           <div class="flex items-center text-sm text-gray-600 bg-white/80 px-3 py-2 rounded-lg">
             <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -62,7 +62,7 @@
       </div>
 
       <!-- Chat Assistant Section -->
-      <div class="w-full mx-auto mt-8 sm:mt-10">
+      <div class="w-full mx-auto mt-4 sm:mt-6">
         <div class="relative">
           
           <!-- Chat Card -->
