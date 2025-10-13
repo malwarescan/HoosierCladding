@@ -73,11 +73,8 @@
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
         <span class="text-blue-600">Homeowner AI</span> – by Hoosier Cladding
       </h2>
-      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-        Your personalized siding and home-care expert for South Bend and Northern Indiana homeowners. Trained on local weather patterns, building codes, and repair data, this AI assistant helps you make smarter decisions about siding replacement, storm damage, insulation, and long-term maintenance—without waiting on a sales call.
-      </p>
-      <p class="text-base text-gray-500 max-w-2xl mx-auto mt-4">
-        Backed by ChatGPT and OurCasa.ai, the Hoosier Cladding AI provides instant, locally informed answers so you can protect your investment and keep your Indiana home looking its best.
+      <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+        Get instant expert answers about siding, repairs, and home maintenance for South Bend and Northern Indiana.
       </p>
     </div>
   </div>
