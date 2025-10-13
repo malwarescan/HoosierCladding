@@ -34,6 +34,12 @@ switch ($request_uri) {
         include __DIR__ . '/sitemap-blog.php';
         break;
         
+    // API routes
+    case 'api/chat.php':
+    case 'api/chat':
+        include __DIR__ . '/api/chat.php';
+        break;
+        
     case 'contact':
     case 'contact.php':
         include __DIR__ . '/contact.php';

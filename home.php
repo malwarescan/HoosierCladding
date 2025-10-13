@@ -21,6 +21,35 @@ include __DIR__ . '/partials/header.php';
       <span>Winter-Ready Installations</span> • 
       <span>Local Crews Only</span>
     </div>
+    
+    <!-- Hero Chat Assistant -->
+    <div id="hc-chat" style="max-width: 600px; margin: 32px auto 0; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid var(--border);">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+        <h3 style="font-size: 18px; font-weight: 600; margin: 0;">Ask our siding assistant</h3>
+        <span style="font-size: 11px; color: var(--body-light);">Powered by AI</span>
+      </div>
+
+      <div id="hc-thread" style="max-height: 300px; overflow-y: auto; margin-bottom: 16px; padding-right: 4px;" aria-live="polite">
+        <div style="font-size: 14px; color: var(--body); padding: 12px; background: #f8f9fa; border-radius: 8px;">
+          What can we help with today? Drafts, storm damage, warped panels, or an energy bill spike?
+        </div>
+      </div>
+
+      <form id="hc-form" style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <input id="hc-input" type="text" style="flex: 1; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; font-size: 14px;" placeholder="Describe the issue (e.g., cold spots near exterior wall)" />
+        <button type="submit" style="padding: 10px 20px; border-radius: 8px; background: var(--primary); color: white; border: none; font-weight: 600; cursor: pointer;">Ask</button>
+      </form>
+
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+        <button type="button" data-suggest="Why is my energy bill rising with the same thermostat settings?" style="font-size: 12px; border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; background: white; cursor: pointer;">Energy bill rising</button>
+        <button type="button" data-suggest="Should I repair or replace vinyl siding with cracks and gaps?" style="font-size: 12px; border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; background: white; cursor: pointer;">Repair vs replace</button>
+        <button type="button" data-suggest="How fast can you do siding repair after storm damage in South Bend?" style="font-size: 12px; border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; background: white; cursor: pointer;">Storm damage</button>
+      </div>
+
+      <p style="margin: 0; font-size: 11px; color: var(--body-light);">
+        This assistant provides general guidance. For a detailed quote, <a href="/contact" style="text-decoration: underline;">request a free estimate</a>.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -362,5 +391,80 @@ include __DIR__ . '/partials/header.php';
 <?php include __DIR__ . '/includes/home_internal_links.html.php'; ?>
 
 <?php include __DIR__ . '/partials/cta-strip.php'; ?>
+
+<!-- Chat Assistant JavaScript -->
+<script>
+(function(){
+  const elForm   = document.getElementById('hc-form');
+  const elInput  = document.getElementById('hc-input');
+  const elThread = document.getElementById('hc-thread');
+  const endpoint = '/api/chat.php';
+
+  function addBubble(text, who) {
+    const wrap = document.createElement('div');
+    wrap.style.marginBottom = '12px';
+    wrap.innerHTML = who === 'you'
+      ? '<div style="background: #e9ecef; border-radius: 8px; padding: 12px; font-size: 14px;"><strong>You:</strong> '+escapeHtml(text)+'</div>'
+      : '<div style="background: #e3f2fd; border-radius: 8px; padding: 12px; border: 1px solid #90caf9; font-size: 14px;"><strong>Assistant:</strong> '+formatMd(text)+'</div>';
+    elThread.appendChild(wrap);
+    elThread.scrollTop = elThread.scrollHeight;
+  }
+
+  function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m]));}
+  function formatMd(s){
+    // very light Markdown to HTML (bold + links + line breaks)
+    return escapeHtml(s)
+      .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+      .replace(/(https?:\/\/\S+)/g,'<a style="text-decoration: underline;" href="$1" target="_blank" rel="nofollow noopener">$1</a>')
+      .replace(/\n/g,'<br/>');
+  }
+
+  async function ask(msg){
+    addBubble(msg,'you');
+    addBubble('Typing…','bot');
+    
+    // Get context from page if on matrix page
+    const path = window.location.pathname;
+    const context = path.startsWith('/matrix/') ? 'Page: ' + path : '';
+    
+    try {
+      const res = await fetch(endpoint, {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({message: msg, context: context})
+      });
+      const data = await res.json();
+      const last = elThread.lastElementChild;
+      if (last && last.textContent.includes('Typing')) last.remove();
+      if (data && data.reply) addBubble(data.reply,'bot');
+      else if (data && data.error) addBubble('Error: ' + data.error,'bot');
+      else addBubble('Sorry, I could not generate a reply just now.','bot');
+    } catch(e){
+      const last = elThread.lastElementChild;
+      if (last && last.textContent.includes('Typing')) last.remove();
+      addBubble('Network error. Please try again.','bot');
+    }
+  }
+
+  if (elForm) {
+    elForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      const msg = elInput.value.trim();
+      if (!msg) return;
+      elInput.value = '';
+      ask(msg);
+    });
+  }
+
+  // suggestion chips
+  document.querySelectorAll('#hc-chat [data-suggest]').forEach(btn=>{
+    btn.addEventListener('click', ()=> {
+      elInput.value = btn.getAttribute('data-suggest');
+      elInput.focus();
+    });
+  });
+})();
+</script>
+
 <?php include __DIR__ . '/partials/footer.php'; ?>
 

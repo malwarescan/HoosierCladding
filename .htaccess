@@ -10,7 +10,7 @@ RewriteRule ^ - [L]
 
 # --- Whitelist things that must never hit the router ---
 # add more if needed (humans.txt, security.txt, etc.)
-RewriteRule ^(sitemap.*\.xml|robots\.txt|favicon\.ico)$ - [L]
+RewriteRule ^(sitemap.*\.xml|robots\.txt|favicon\.ico|api/.*)$ - [L]
 
 # --- Sitemap routing ---
 RewriteRule ^sitemap\.xml$ sitemap-index.php [L,QSA]
