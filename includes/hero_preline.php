@@ -14,7 +14,7 @@
       <div class="flex flex-col justify-center text-center lg:text-left lg:pr-8">
 
         <!-- Main Headline -->
-        <h1 class="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-gray-900 leading-tight mb-3 sm:mb-6 lg:mb-8">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-3 sm:mb-6 lg:mb-8">
           <span class="text-blue-600">South Bend's</span><br>
           Premier Siding Experts
         </h1>
