@@ -15,8 +15,8 @@ if ($request_uri !== '/' && file_exists($file_path) && is_file($file_path)) {
     return false;
 }
 
-// Special handling for sitemap URLs
-if (preg_match('/^\/sitemap(-[a-z]+)?\.xml$/', $request_uri)) {
+// Special handling for sitemap URLs (including numbered ones)
+if (preg_match('/^\/sitemap(-[a-z]+)?(-\d+)?\.xml$/', $request_uri)) {
     // Route to index.php which will handle sitemap routing
     $_SERVER['SCRIPT_NAME'] = '/index.php';
     require __DIR__ . '/index.php';

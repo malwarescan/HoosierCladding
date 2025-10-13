@@ -1,5 +1,14 @@
 <?php
 header('Content-Type: application/xml; charset=UTF-8');
+
+// Prefer static file if it exists
+$staticFile = __DIR__.'/public/sitemap.xml';
+if (file_exists($staticFile)) {
+    readfile($staticFile);
+    exit;
+}
+
+// Fallback: generate dynamically
 $base = 'https://www.hoosiercladding.com';
 $today = gmdate('Y-m-d');
 echo '<?xml version="1.0" encoding="UTF-8"?>';

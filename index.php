@@ -4,6 +4,22 @@
  * Handles all incoming requests and routes them to the appropriate page
  */
 
+// PRIORITY: Handle sitemaps FIRST (before any routing logic)
+$__path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+if ($__path === '/sitemap.xml')        { require __DIR__ . '/sitemap-index.php';  exit; }
+if ($__path === '/sitemap-static.xml') { require __DIR__ . '/sitemap-static.php'; exit; }
+if ($__path === '/sitemap-blog.xml')   { require __DIR__ . '/sitemap-blog.php';   exit; }
+if ($__path === '/sitemap-matrix.xml') { require __DIR__ . '/sitemap-matrix.php'; exit; }
+// Also handle numbered matrix sitemaps
+if (preg_match('#^/sitemap-matrix-(\d+)\.xml$#', $__path, $m)) {
+    $file = __DIR__ . '/public/sitemap-matrix-' . $m[1] . '.xml';
+    if (file_exists($file)) {
+        header('Content-Type: application/xml; charset=UTF-8');
+        readfile($file);
+        exit;
+    }
+}
+
 // Get the request URI and clean it
 $request_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $request_uri = trim($request_uri, '/');
