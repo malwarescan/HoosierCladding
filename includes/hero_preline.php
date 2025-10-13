@@ -62,7 +62,7 @@
       </div>
 
       <!-- Chat Assistant Section -->
-      <div class="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-3xl mx-auto mt-6 sm:mt-8">
+      <div class="w-full mx-auto mt-4 sm:mt-6">
         <div class="relative">
           <!-- Feature Badge -->
           <div class="absolute -top-2 left-4 sm:-top-3 sm:left-6 z-20">
@@ -77,8 +77,8 @@
           
           <!-- Chat Card -->
           <div class="hs-card border border-gray-200 rounded-xl sm:rounded-2xl shadow-lg bg-white h-full overflow-hidden">
-            <div class="p-3 sm:p-4 md:p-6 lg:p-8 h-full flex flex-col">
-              <div class="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <div class="p-2 sm:p-3 md:p-4 lg:p-6 h-full flex flex-col">
+              <div class="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
                 <div class="w-6 h-6 sm:w-8 sm:h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg class="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -96,14 +96,14 @@
                 </span>
               </div>
 
-            <div id="hc-thread" class="flex-1 space-y-2 sm:space-y-3 overflow-auto pr-1 min-h-[120px] sm:min-h-[150px] mb-3 sm:mb-4" aria-live="polite">
+            <div id="hc-thread" class="flex-1 space-y-2 sm:space-y-3 overflow-auto pr-1 min-h-[100px] sm:min-h-[120px] mb-2 sm:mb-3" aria-live="polite">
               <div class="flex items-start gap-2 sm:gap-3">
                 <div class="w-5 h-5 sm:w-6 sm:h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </div>
-                <div class="bg-gray-50 rounded-xl sm:rounded-2xl rounded-tl-sm p-2.5 sm:p-3 max-w-[85%]">
+                <div class="bg-gray-50 rounded-xl sm:rounded-2xl rounded-tl-sm p-2 sm:p-2.5 max-w-[85%]">
                   <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">I'm your AI home intelligence system. I analyze exterior conditions, calculate energy efficiency metrics, and provide expert recommendations for your Indiana home. What exterior challenge can I solve for you today?</p>
                 </div>
               </div>
@@ -118,13 +118,13 @@
               </button>
             </form>
 
-            <div class="mt-2 sm:mt-3 flex gap-1.5 sm:gap-2 flex-wrap">
+            <div class="mt-1.5 sm:mt-2 flex gap-1.5 sm:gap-2 flex-wrap">
               <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-2.5 py-1 sm:px-3 sm:py-1.5 transition-colors">Energy</button>
               <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-2.5 py-1 sm:px-3 sm:py-1.5 transition-colors">Repair</button>
               <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-2.5 py-1 sm:px-3 sm:py-1.5 transition-colors">Storm</button>
             </div>
 
-            <p class="mt-2 sm:mt-3 text-xs text-gray-400 text-center">
+            <p class="mt-1.5 sm:mt-2 text-xs text-gray-400 text-center">
               <span class="hidden sm:inline">AI recommendations verified by licensed professionals. </span><a href="/contact" class="text-blue-600 hover:underline">Contact us</a>
             </p>
           </div>

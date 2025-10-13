@@ -1189,16 +1189,17 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
     font-size: 0.75rem !important;
   }
   
-  /* Chat container mobile styling */
-  .max-w-sm.sm\\:max-w-md.md\\:max-w-lg.lg\\:max-w-3xl {
-    max-width: 20rem !important;
+  /* Chat container mobile styling - full width */
+  .w-full.mx-auto {
+    width: 100% !important;
+    margin-top: 1rem !important;
   }
   
   /* Chat card mobile styling */
   .hs-card {
     border-radius: 0.75rem !important;
-    padding: 0.75rem !important;
-    margin-top: 1.5rem !important;
+    padding: 0.5rem !important;
+    margin-top: 1rem !important;
   }
   
   /* Chat header - compact layout */
@@ -1209,7 +1210,7 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
   /* Chat message bubbles */
   .bg-gray-50.rounded-xl.sm\\:rounded-2xl.rounded-tl-sm {
     border-radius: 0.75rem 0.75rem 0.75rem 0.125rem !important;
-    padding: 0.625rem !important;
+    padding: 0.5rem !important;
   }
   
   /* Chat input form */
@@ -1257,8 +1258,8 @@ a:focus, button:focus, input:focus, textarea:focus, select:focus {
   }
   
   /* Mobile thread height */
-  .min-h-\[120px\].sm\:min-h-\[150px\] {
-    min-height: 7.5rem !important;
+  .min-h-\[100px\].sm\:min-h-\[120px\] {
+    min-height: 6.25rem !important;
   }
 }
 
