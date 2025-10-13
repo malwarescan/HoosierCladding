@@ -79,8 +79,9 @@
       </p>
     </div>
 
-    <div class="w-full max-w-[92vw] sm:max-w-2xl lg:max-w-4xl mx-auto mt-8 sm:mt-10">
-      <div class="bg-white p-4 sm:p-6 rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+    <div class="relative w-full mx-auto px-4 sm:px-0 mt-10">
+      <div class="w-full max-w-none sm:max-w-2xl lg:max-w-4xl mx-auto">
+        <div class="bg-white rounded-3xl shadow-2xl border border-gray-200 p-4 sm:p-6">
         <!-- Chat Header -->
         <div class="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-4">
           <div class="flex items-center justify-between">
