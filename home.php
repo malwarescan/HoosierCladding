@@ -175,7 +175,7 @@ include __DIR__ . '/partials/header.php';
     <div class="grid grid-3">
       <article class="card" style="background: #ffffff; border: 1px solid #e9ecef;" itemscope itemtype="https://schema.org/Review">
         <div style="margin-bottom: 1rem;">
-          <div style="color: #ffc107; font-size: 1.2rem; margin-bottom: 0.5rem;">★★★★★</div>
+          <div style="color: #1e66d0; font-size: 1.2rem; margin-bottom: 0.5rem;">★★★★★</div>
           <p style="font-style: italic; margin-bottom: 1rem; color: #495057;" itemprop="reviewBody">
             "Our heating bills dropped right after replacing our old siding. The crew was fast, professional, and cleaned up everything."
           </p>
@@ -193,7 +193,7 @@ include __DIR__ . '/partials/header.php';
 
       <article class="card" style="background: #ffffff; border: 1px solid #e9ecef;" itemscope itemtype="https://schema.org/Review">
         <div style="margin-bottom: 1rem;">
-          <div style="color: #ffc107; font-size: 1.2rem; margin-bottom: 0.5rem;">★★★★★</div>
+          <div style="color: #1e66d0; font-size: 1.2rem; margin-bottom: 0.5rem;">★★★★★</div>
           <p style="font-style: italic; margin-bottom: 1rem; color: #495057;" itemprop="reviewBody">
             "Winters in South Bend destroyed our last siding—this install already feels tighter and warmer."
           </p>
@@ -211,7 +211,7 @@ include __DIR__ . '/partials/header.php';
 
       <article class="card" style="background: #ffffff; border: 1px solid #e9ecef;" itemscope itemtype="https://schema.org/Review">
         <div style="margin-bottom: 1rem;">
-          <div style="color: #ffc107; font-size: 1.2rem; margin-bottom: 0.5rem;">★★★★★</div>
+          <div style="color: #1e66d0; font-size: 1.2rem; margin-bottom: 0.5rem;">★★★★★</div>
           <p style="font-style: italic; margin-bottom: 1rem; color: #495057;" itemprop="reviewBody">
             "Professional installation and honest pricing. They explained everything and delivered on time."
           </p>

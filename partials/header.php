@@ -25,8 +25,11 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
     <!-- Tailwind core (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Preline UI CSS & JS (CDN) -->
+    <!-- Preline UI CSS (CDN) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline@2.3.0/dist/preline.min.css">
+    
+    <!-- Construction Blue Theme Overrides -->
+    <link rel="stylesheet" href="/public/css/preline-theme-overrides.css">
     
     <!-- Site CSS -->
     <link rel="stylesheet" href="/public/styles/output.css">
