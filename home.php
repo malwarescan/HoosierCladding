@@ -6,6 +6,86 @@ include __DIR__ . '/partials/header.php';
 
 <?php include __DIR__ . '/includes/hero_preline.php'; ?>
 
+<!-- Energy Efficiency Section -->
+<section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Left: Image -->
+      <div class="order-2 lg:order-1">
+        <img src="/public/images/branded/misc/energy-efficiency-construction.jpeg" 
+             alt="Energy-efficient siding installation in Northern Indiana" 
+             class="w-full h-auto rounded-2xl shadow-2xl"
+             loading="lazy">
+      </div>
+      
+      <!-- Right: Content -->
+      <div class="order-1 lg:order-2">
+        <span class="inline-flex items-center gap-x-2 py-2 px-4 rounded-full text-sm font-semibold bg-green-100 text-green-800 mb-6">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Energy Efficiency Focus
+        </span>
+        
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6">
+          Cut Your Energy Bills by <span class="text-green-600">30%</span>
+        </h2>
+        
+        <p class="text-xl text-gray-700 leading-relaxed mb-8">
+          Our insulated siding systems create a thermal barrier that keeps your Northern Indiana home warm in winter and cool in summer. See immediate savings on your utility bills.
+        </p>
+        
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-1">Advanced Insulation</h3>
+              <p class="text-gray-600">R-5 to R-7 insulation values reduce heat transfer through your walls</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-1">Air Sealing</h3>
+              <p class="text-gray-600">Eliminates drafts and cold spots throughout your home</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-1">Moisture Protection</h3>
+              <p class="text-gray-600">Prevents ice damming and moisture damage in Indiana's freeze-thaw cycles</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-green-600 px-8 py-4 text-white font-semibold hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Calculate Your Savings
+          </a>
+          <a href="/service-area" class="inline-flex items-center justify-center rounded-lg border-2 border-green-600 px-8 py-4 text-green-600 font-semibold hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 transition-all duration-200">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- LocalBusiness Schema -->
 <script type="application/ld+json">
 {
