@@ -68,13 +68,13 @@ include __DIR__ . '/partials/header.php';
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-green-600 px-8 py-4 text-white font-semibold hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+          <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-gray-900 px-8 py-4 text-white font-semibold hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
             Calculate Your Savings
           </a>
-          <a href="/service-area" class="inline-flex items-center justify-center rounded-lg border-2 border-green-600 px-8 py-4 text-green-600 font-semibold hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 transition-all duration-200">
+          <a href="/service-area" class="inline-flex items-center justify-center rounded-lg border-2 border-gray-900 px-8 py-4 text-gray-900 font-semibold hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 transition-all duration-200">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>

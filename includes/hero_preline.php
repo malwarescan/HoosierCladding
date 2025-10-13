@@ -22,23 +22,30 @@
           <span class="text-blue-600">South Bend's</span><br>
           Premier Siding Experts
         </h1>
-        <p class="mt-6 text-xl text-gray-700 leading-relaxed">
-          <strong>Storm damage?</strong> We respond within 24 hours.<br>
-          <strong>Energy bills rising?</strong> Our insulated siding cuts costs by 30%.<br>
-          <strong>Need a full replacement?</strong> We handle everything from permits to cleanup.
-        </p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-4">
-          <div class="flex items-center text-sm text-gray-600">
-            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            Free estimates • Same-day response
+        <div class="mt-6 flex flex-col lg:flex-row gap-8">
+          <!-- Left: Main content -->
+          <div class="flex-1">
+            <p class="text-xl text-gray-700 leading-relaxed">
+              <strong>Storm damage?</strong> We respond within 24 hours.<br>
+              <strong>Energy bills rising?</strong> Our insulated siding cuts costs by 30%.<br>
+              <strong>Need a full replacement?</strong> We handle everything from permits to cleanup.
+            </p>
           </div>
-          <div class="flex items-center text-sm text-gray-600">
-            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            Licensed in Indiana • Fully insured
+          
+          <!-- Right: Trust signals -->
+          <div class="flex flex-col gap-4 lg:min-w-64">
+            <div class="flex items-center text-sm text-gray-600">
+              <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              Free estimates • Same-day response
+            </div>
+            <div class="flex items-center text-sm text-gray-600">
+              <svg class="w-5 h-5 text-green-500 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              Licensed in Indiana • Fully insured
+            </div>
           </div>
         </div>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -63,11 +70,11 @@
           <div class="p-6 lg:p-8 h-full flex flex-col">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-bold text-gray-900">Ask our siding assistant</h3>
-              <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zm-2.4568-11.9288a4.4708 4.4708 0 0 1 2.3655-1.9728V8.2606a.7667.7667 0 0 0 .3879-.6765l2.02-1.1638.142-.0804a4.478 4.478 0 0 1-.5346-3.0137A4.504 4.504 0 0 1 1.1644 6.375zm16.5963 3.8558L18.8243 8.2606a.7712.7712 0 0 0-.7806 0l-5.8428 3.3685V9.2954a.0804.0804 0 0 1 .0332-.0615l4.783-2.7582a4.4992 4.4992 0 0 1 6.6802 4.66 4.4757 4.4757 0 0 1-.5346 3.0137zM2.8906 10.8642a4.4992 4.4992 0 0 1 6.1408-1.6464l4.783 2.7582a.0804.0804 0 0 1 .0332.0615v5.5352a4.504 4.504 0 0 1-4.4945 4.4944 4.4755 4.4755 0 0 1-2.8764-1.0408l-4.783-2.7582a.7712.7712 0 0 0-.7806 0l-5.8428 3.3685v-2.3324a.0804.0804 0 0 1 .0332-.0615z"/>
                 </svg>
-                Powered by AI
+                Powered by OpenAI
               </span>
             </div>
 
