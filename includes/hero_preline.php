@@ -75,14 +75,19 @@
           </div>
           
           <!-- Chat Card -->
-          <div class="hs-card border-2 border-blue-200 rounded-3xl shadow-2xl bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 backdrop-blur-sm h-full overflow-hidden">
-            <div class="p-6 sm:p-8 lg:p-10 h-full flex flex-col">
-              <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between mb-6">
-                <div class="flex-1">
-                  <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-1">Ask the Hoosier Cladding Siding Assistant</h3>
-                  <p class="text-sm text-gray-600">Get instant answers about siding repair, replacement, and energy efficiency.<br>Trusted by Indiana homeowners, contractors, and new buyers to make smart siding decisions — fast.</p>
+          <div class="hs-card border border-gray-200 rounded-2xl shadow-lg bg-white h-full overflow-hidden">
+            <div class="p-4 sm:p-6 lg:p-8 h-full flex flex-col">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                  <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
                 </div>
-                <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                <div class="flex-1">
+                  <h3 class="text-lg font-semibold text-gray-900">Siding Assistant</h3>
+                  <p class="text-xs text-gray-500">Ask me anything about siding</p>
+                </div>
+                <span class="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zm-2.4568-11.9288a4.4708 4.4708 0 0 1 2.3655-1.9728V8.2606a.7667.7667 0 0 0 .3879-.6765l2.02-1.1638.142-.0804a4.478 4.478 0 0 1-.5346-3.0137A4.504 4.504 0 0 1 1.1644 6.375zm16.5963 3.8558L18.8243 8.2606a.7712.7712 0 0 0-.7806 0l-5.8428 3.3685V9.2954a.0804.0804 0 0 1 .0332-.0615l4.783-2.7582a4.4992 4.4992 0 0 1 6.6802 4.66 4.4757 4.4757 0 0 1-.5346 3.0137zM2.8906 10.8642a4.4992 4.4992 0 0 1 6.1408-1.6464l4.783 2.7582a.0804.0804 0 0 1 .0332.0615v5.5352a4.504 4.504 0 0 1-4.4945 4.4944 4.4755 4.4755 0 0 1-2.8764-1.0408l-4.783-2.7582a.7712.7712 0 0 0-.7806 0l-5.8428 3.3685v-2.3324a.0804.0804 0 0 1 .0332-.0615z"/>
                   </svg>
@@ -90,26 +95,36 @@
                 </span>
               </div>
 
-            <div id="hc-thread" class="flex-1 space-y-3 overflow-auto pr-1 min-h-0" aria-live="polite">
-              <div class="text-sm text-gray-700 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
-                What can we help with today? Peeling vinyl, storm damage, insulation loss, or high heating bills?<br>Describe your siding concern (e.g., warped panels near back wall, moisture behind siding, or drafty rooms).
+            <div id="hc-thread" class="flex-1 space-y-3 overflow-auto pr-1 min-h-0 mb-4" aria-live="polite">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <svg class="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <div class="bg-gray-50 rounded-2xl rounded-tl-sm p-3 max-w-[85%]">
+                  <p class="text-sm text-gray-700">Hi! I can help with siding questions. What's your concern?</p>
+                </div>
               </div>
             </div>
 
-            <form id="hc-form" class="mt-6 flex flex-col sm:flex-row gap-3">
-              <input id="hc-input" type="text" class="flex-1 min-w-0 w-full sm:w-auto border border-gray-300 rounded-lg px-4 py-3 h-10 sm:h-12 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:outline-none text-sm" placeholder="Describe your issue (e.g., cold spots near exterior wall)">
-              <button type="submit" class="shrink-0 w-full sm:w-auto px-6 py-3 h-10 sm:h-12 rounded-lg bg-gray-900 text-white font-semibold hover:bg-gray-800 focus:ring-2 focus:ring-gray-900 focus:outline-none transition-colors whitespace-nowrap">Ask Now</button>
+            <form id="hc-form" class="flex gap-2">
+              <input id="hc-input" type="text" class="flex-1 border border-gray-200 rounded-full px-4 py-3 h-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-sm bg-gray-50" placeholder="Type your message...">
+              <button type="submit" class="w-12 h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors flex items-center justify-center">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+              </button>
             </form>
 
-            <div class="mt-4 flex gap-2 flex-wrap">
-              <button type="button" data-suggest="Energy efficiency tips for Indiana homes" class="text-xs border border-gray-300 rounded-lg px-3 py-2 hover:bg-blue-50 hover:border-blue-300 transition-colors">Energy Efficiency Tips</button>
-              <button type="button" data-suggest="Should I repair or replace my siding?" class="text-xs border border-gray-300 rounded-lg px-3 py-2 hover:bg-blue-50 hover:border-blue-300 transition-colors">Repair vs. Replace</button>
-              <button type="button" data-suggest="Storm damage siding repair help" class="text-xs border border-gray-300 rounded-lg px-3 py-2 hover:bg-blue-50 hover:border-blue-300 transition-colors">Storm Damage Help</button>
-              <button type="button" data-suggest="Best siding materials for Indiana weather" class="text-xs border border-gray-300 rounded-lg px-3 py-2 hover:bg-blue-50 hover:border-blue-300 transition-colors">Best Materials for Indiana Weather</button>
+            <div class="mt-3 flex gap-2 flex-wrap">
+              <button type="button" data-suggest="Energy efficiency tips" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1.5 transition-colors">Energy Tips</button>
+              <button type="button" data-suggest="Repair or replace?" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1.5 transition-colors">Repair vs Replace</button>
+              <button type="button" data-suggest="Storm damage help" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-3 py-1.5 transition-colors">Storm Damage</button>
             </div>
 
-            <p class="mt-4 text-xs text-gray-500">
-              This virtual assistant provides quick siding insights, maintenance advice, and expert guidance.<br>For a free professional estimate, <a href="/contact" class="underline">request an inspection</a>.
+            <p class="mt-3 text-xs text-gray-400 text-center">
+              For a free estimate, <a href="/contact" class="text-blue-600 hover:underline">contact us</a>
             </p>
           </div>
         </div>
@@ -129,10 +144,32 @@
 
   function addBubble(text, who) {
     const wrap = document.createElement('div');
-    wrap.className = 'text-sm';
-    wrap.innerHTML = who === 'you'
-      ? '<div class="bg-gray-100 rounded-lg p-2"><strong>You:</strong> '+esc(text)+'</div>'
-      : '<div class="bg-blue-50 rounded-lg p-2 border border-blue-100"><strong>Assistant:</strong> '+fmt(text)+'</div>';
+    wrap.className = 'flex items-start gap-3';
+    
+    if (who === 'you') {
+      wrap.innerHTML = `
+        <div class="bg-blue-600 rounded-2xl rounded-tr-sm p-3 max-w-[85%] ml-auto">
+          <p class="text-sm text-white">${esc(text)}</p>
+        </div>
+        <div class="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+          <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+        </div>
+      `;
+    } else {
+      wrap.innerHTML = `
+        <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+          <svg class="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+        </div>
+        <div class="bg-gray-50 rounded-2xl rounded-tl-sm p-3 max-w-[85%]">
+          <p class="text-sm text-gray-700">${fmt(text)}</p>
+        </div>
+      `;
+    }
+    
     elThread.appendChild(wrap);
     elThread.scrollTop = elThread.scrollHeight;
   }
