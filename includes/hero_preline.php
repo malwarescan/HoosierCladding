@@ -9,9 +9,9 @@
     <div class="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50"></div>
   </div>
   <div class="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-safe pt-16 sm:pt-20 lg:pt-24 pb-safe">
-    <div class="flex flex-col gap-4 sm:gap-6 lg:grid lg:grid-cols-2 lg:items-center lg:gap-10 xl:gap-14">
+    <div class="flex flex-col gap-4 sm:gap-6">
       <!-- Copy Section -->
-      <div class="flex flex-col justify-center text-center lg:text-left lg:pr-8">
+      <div class="flex flex-col justify-center text-center lg:text-left">
 
         <!-- Main Headline -->
         <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-3 sm:mb-6 lg:mb-8">
@@ -61,46 +61,101 @@
 
       </div>
 
-      <!-- Chat Assistant Section -->
-      <div class="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto lg:mx-0 lg:ml-auto px-3 sm:px-0 mt-8 sm:mt-10 lg:mt-0 lg:pl-8">
-        <div class="relative">
-          
-          <!-- Chat Card -->
-          <div class="rounded-2xl shadow-lg bg-white/95 backdrop-blur-sm p-4 sm:p-6 space-y-4">
-              <div>
-                <h3 class="text-lg font-semibold text-gray-900">AI Home Expert</h3>
-              </div>
+    </div>
+  </div>
+</section>
 
-            <div id="hc-thread" class="space-y-3 overflow-auto pr-1 min-h-[180px] sm:min-h-[200px] lg:min-h-[220px]" aria-live="polite">
-              <div class="bg-gray-50 rounded-lg p-4">
-                <p class="text-base leading-relaxed text-gray-700">I'm your AI home intelligence system. I analyze exterior conditions, calculate energy efficiency metrics, and provide expert recommendations for your Indiana home. What exterior challenge can I solve for you today?</p>
+<!-- AI Chat Assistant Hero Section -->
+<section class="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-16 sm:py-20 lg:py-24">
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-indigo-600/5 to-purple-600/5"></div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        <span class="text-blue-600">AI-Powered</span> Home Intelligence
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+        Get instant expert analysis for your home's exterior challenges. Our advanced AI system provides personalized recommendations for siding, energy efficiency, and storm damage assessment.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+        <!-- Chat Header -->
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white">AI Home Expert</h3>
+                <p class="text-blue-100 text-sm">Advanced intelligence for your home's exterior</p>
               </div>
             </div>
+            <div class="flex items-center space-x-2">
+              <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span class="text-white text-sm font-medium">Online</span>
+            </div>
+          </div>
+        </div>
 
-            <form id="hc-form" class="flex items-center gap-2">
-              <input id="hc-input" type="text" class="flex-1 min-w-0 h-10 sm:h-11 lg:h-12 px-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-base bg-white" placeholder="Describe your challenge...">
-              <button type="submit" class="shrink-0 h-10 sm:h-11 lg:h-12 px-6 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors flex items-center justify-center">
-                <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
+        <!-- Chat Content -->
+        <div class="p-6">
+          <!-- Chat Thread -->
+          <div id="hc-thread" class="space-y-4 overflow-auto pr-2 min-h-[300px] max-h-[400px] mb-6" aria-live="polite">
+            <div class="flex items-start space-x-3">
+              <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <div class="bg-gray-50 rounded-2xl rounded-tl-sm p-4 max-w-[80%]">
+                <p class="text-gray-700 leading-relaxed">
+                  I'm your AI home intelligence system. I analyze exterior conditions, calculate energy efficiency metrics, and provide expert recommendations for your Indiana home. What exterior challenge can I solve for you today?
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Form -->
+          <form id="hc-form" class="flex items-center space-x-3 mb-6">
+            <div class="flex-1 relative">
+              <input id="hc-input" type="text" class="w-full h-12 px-4 pr-12 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-base bg-white shadow-sm" placeholder="Describe your home's exterior challenge...">
+              <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                 </svg>
               </button>
-            </form>
-
-            <div class="flex flex-wrap gap-3 justify-center mt-3">
-              <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="px-4 py-2 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">Energy</button>
-              <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="px-4 py-2 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">Repair</button>
-              <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="px-4 py-2 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">Storm</button>
             </div>
+          </form>
 
-            <!-- Footer Attribution -->
-            <div class="text-center text-xs text-gray-500 pt-2 border-t border-gray-100">
-              <p>Powered by <span class="font-semibold text-gray-700">ChatGPT</span> & <span class="font-semibold text-blue-700">OurCasa.ai</span></p>
-            </div>
+          <!-- Suggestion Chips -->
+          <div class="flex flex-wrap gap-3 justify-center mb-6">
+            <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="px-6 py-3 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors border border-blue-200">
+              Energy Analysis
+            </button>
+            <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="px-6 py-3 rounded-full text-base font-medium bg-indigo-100 text-indigo-700 hover:bg-indigo-200 transition-colors border border-indigo-200">
+              Repair vs Replace
+            </button>
+            <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="px-6 py-3 rounded-full text-base font-medium bg-purple-100 text-purple-700 hover:bg-purple-200 transition-colors border border-purple-200">
+              Storm Assessment
+            </button>
+          </div>
 
+          <!-- Footer Attribution -->
+          <div class="text-center pt-4 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+              Powered by <span class="font-semibold text-gray-700">ChatGPT</span> & <span class="font-semibold text-blue-700">OurCasa.ai</span>
+            </p>
+            <p class="text-xs text-gray-400 mt-1">
+              AI recommendations verified by licensed professionals
+            </p>
           </div>
         </div>
       </div>
-      <!-- /Right -->
     </div>
   </div>
 </section>
