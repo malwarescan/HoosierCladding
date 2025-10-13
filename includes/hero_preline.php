@@ -72,10 +72,10 @@
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-        <span class="text-blue-600">AI-Powered</span> Home Intelligence
+        <span class="text-blue-600">Home Owner AI</span> for Hoosier Cladding
       </h2>
       <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-        Get instant expert analysis for your home's exterior challenges. Our advanced AI system provides personalized recommendations for siding, energy efficiency, and storm damage assessment.
+        Trained on home siding, repairs, and all homeowner questions localized to South Bend, Indiana and surrounding areas. The expert on home ownership, repair, and maintenance questions in the area, trained on local data.
       </p>
     </div>
 
@@ -91,8 +91,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold text-white">AI Home Expert</h3>
-                <p class="text-blue-100 text-sm">Advanced intelligence for your home's exterior</p>
+                <h3 class="text-xl font-bold text-white">Hoosier Cladding AI</h3>
+                <p class="text-blue-100 text-sm">Local expert for South Bend area homeowners</p>
               </div>
             </div>
             <div class="flex items-center space-x-2">
@@ -114,7 +114,7 @@
               </div>
               <div class="bg-gray-50 rounded-2xl rounded-tl-sm p-4 max-w-[80%]">
                 <p class="text-gray-700 leading-relaxed">
-                  I'm your AI home intelligence system. I analyze exterior conditions, calculate energy efficiency metrics, and provide expert recommendations for your Indiana home. What exterior challenge can I solve for you today?
+                  I'm Hoosier Cladding's AI assistant, trained specifically on home siding, repairs, and maintenance for South Bend, Indiana and surrounding areas. I can help with local building codes, weather considerations, and homeowner questions specific to our region. What can I help you with today?
                 </p>
               </div>
             </div>
@@ -123,7 +123,7 @@
           <!-- Input Form -->
           <form id="hc-form" class="flex items-center space-x-3 mb-6">
             <div class="flex-1 relative">
-              <input id="hc-input" type="text" class="w-full h-12 px-4 pr-12 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-base bg-white shadow-sm" placeholder="Describe your home's exterior challenge...">
+              <input id="hc-input" type="text" class="w-full h-12 px-4 pr-12 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-base bg-white shadow-sm" placeholder="Ask about siding, repairs, or home maintenance...">
               <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
@@ -134,24 +134,24 @@
 
           <!-- Suggestion Chips -->
           <div class="flex flex-wrap gap-3 justify-center mb-6">
-            <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="px-6 py-3 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors border border-blue-200">
-              Energy Analysis
+            <button type="button" data-suggest="What siding materials work best for South Bend Indiana weather conditions?" class="px-6 py-3 rounded-full text-base font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors border border-blue-200">
+              Local Siding Options
             </button>
-            <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="px-6 py-3 rounded-full text-base font-medium bg-indigo-100 text-indigo-700 hover:bg-indigo-200 transition-colors border border-indigo-200">
+            <button type="button" data-suggest="Should I repair or replace my siding based on South Bend weather damage?" class="px-6 py-3 rounded-full text-base font-medium bg-indigo-100 text-indigo-700 hover:bg-indigo-200 transition-colors border border-indigo-200">
               Repair vs Replace
             </button>
-            <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="px-6 py-3 rounded-full text-base font-medium bg-purple-100 text-purple-700 hover:bg-purple-200 transition-colors border border-purple-200">
-              Storm Assessment
+            <button type="button" data-suggest="How do I maintain my home's exterior in Indiana's climate?" class="px-6 py-3 rounded-full text-base font-medium bg-purple-100 text-purple-700 hover:bg-purple-200 transition-colors border border-purple-200">
+              Home Maintenance
             </button>
           </div>
 
           <!-- Footer Attribution -->
           <div class="text-center pt-4 border-t border-gray-200">
             <p class="text-sm text-gray-500">
-              Powered by <span class="font-semibold text-gray-700">ChatGPT</span> & <span class="font-semibold text-blue-700">OurCasa.ai</span>
+              <span class="font-semibold text-blue-700">Hoosier Cladding LLC</span> AI Assistant
             </p>
             <p class="text-xs text-gray-400 mt-1">
-              AI recommendations verified by licensed professionals
+              Trained on local South Bend area data and building codes
             </p>
           </div>
         </div>
