@@ -14,13 +14,13 @@
       <div class="flex flex-col justify-center text-center lg:text-left">
 
         <!-- Main Headline -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-3 sm:mb-6 lg:mb-8 text-center lg:text-left">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-3 sm:mb-4 lg:mb-6 text-center lg:text-left">
           <span class="text-blue-600">South Bend's</span><br>
           Premier Siding Experts
         </h1>
 
         <!-- Rotating Sub-headlines -->
-        <div class="mb-3 sm:mb-6 lg:mb-8 text-center lg:text-left">
+        <div class="mb-3 sm:mb-4 lg:mb-6 text-center lg:text-left">
           <div id="hc-rotator"
                class="relative h-12 sm:h-16 lg:h-20 overflow-hidden"
                aria-live="polite"
@@ -38,7 +38,7 @@
         </div>
 
         <!-- Trust Signals -->
-        <div class="flex flex-wrap gap-4 justify-center lg:justify-start mb-4 sm:mb-6 lg:mb-8">
+        <div class="flex flex-wrap gap-4 justify-center lg:justify-start mb-4 sm:mb-4 lg:mb-6">
           <div class="hidden sm:flex items-center text-sm text-gray-600 bg-white/80 px-3 py-2 rounded-lg">
             <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
