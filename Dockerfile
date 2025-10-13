@@ -22,6 +22,10 @@ WORKDIR /var/www/html
 # Copy your actual website files
 COPY . /var/www/html
 
+# Generate sitemaps during build
+RUN php /var/www/html/scripts/generate_sitemaps.php \
+ && cp /var/www/html/public/sitemap*.xml /var/www/html/
+
 # Create the fast health endpoint for Railway
 RUN echo '<?php header("Content-Type: text/plain"); echo "ok"; ?>' > /var/www/html/health.php
 
