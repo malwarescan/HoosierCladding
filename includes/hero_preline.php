@@ -1,14 +1,14 @@
 <?php /* /includes/hero_preline.php */ ?>
 <section class="relative overflow-hidden bg-white">
   <!-- Background Image -->
-  <div class="absolute inset-0 z-0">
+  <div class="absolute inset-0 top-0 z-0 pointer-events-none">
     <img src="/public/images/hero-section/siding-repair-home-hoosier-cladding.png" 
          alt="Professional siding repair and installation services" 
          class="w-full h-full object-cover opacity-25"
          loading="eager">
     <div class="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50"></div>
   </div>
-  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 pt-safe pb-safe">
+  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 pt-safe pt-16 sm:pt-20 pb-safe">
     <div class="flex flex-col gap-4 sm:gap-6">
       <!-- Copy Section -->
       <div class="flex flex-col justify-center text-center lg:text-left">
