@@ -81,8 +81,10 @@
         Backed by ChatGPT and OurCasa.ai, the Hoosier Cladding AI provides instant, locally informed answers so you can protect your investment and keep your Indiana home looking its best.
       </p>
     </div>
+  </div>
 
-    <div class="w-full mt-10 sm:max-w-4xl sm:mx-auto">
+  <!-- Full-width chat container -->
+  <div class="w-full -mx-4 sm:mx-auto sm:max-w-4xl sm:px-6 lg:px-8">
       <!-- Preline AI Chat Template Structure -->
       <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
         <!-- Chat Header -->
