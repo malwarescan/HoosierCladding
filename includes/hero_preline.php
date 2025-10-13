@@ -82,7 +82,7 @@
       </p>
     </div>
 
-    <div class="max-w-4xl mx-auto mt-10">
+    <div class="w-full mx-auto mt-10 px-4 sm:px-0 sm:max-w-4xl">
       <!-- Preline AI Chat Template Structure -->
       <div class="bg-white border border-gray-200 rounded-xl shadow-sm">
         <!-- Chat Header -->
