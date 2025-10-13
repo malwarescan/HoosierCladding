@@ -105,7 +105,7 @@ include __DIR__ . '/../../partials/header.php';
         Get a free estimate for professional metal roof ridge cap installation. We serve South Bend, 
         Mishawaka, Elkhart, Granger, and all surrounding areas.
       </p>
-      <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+      <a href="/contact" style="display: inline-block; padding: 16px 32px; background: #1e66d0; color: white; font-weight: 600; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.2s ease;">
         Request Free Estimate →
       </a>
     </div>
