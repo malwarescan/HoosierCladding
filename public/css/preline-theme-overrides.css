@@ -136,3 +136,28 @@ body {
   color: var(--pl-primary-500) !important;
 }
 
+/* Override any mustard/yellow backgrounds from output.css */
+.card {
+  background: white !important;
+}
+.bg-blue-700,
+.bg-orange-700,
+[style*="background: hsl(49.89deg"],
+[class*="bg-"][class*="700"] {
+  background-color: var(--pl-neutral-50) !important;
+}
+
+/* Override any yellow text from output.css */
+.text-blue-700,
+[style*="color: hsl(49.89deg"] {
+  color: var(--pl-neutral-700) !important;
+}
+
+/* Ensure sections have clean backgrounds */
+.section {
+  background-color: white !important;
+}
+.section[style*="background"] {
+  background-color: var(--pl-neutral-50) !important;
+}
+

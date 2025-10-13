@@ -87,7 +87,7 @@ include __DIR__ . '/partials/header.php';
     </div>
 </section>
 
-<section class="section" style="background: hsl(49.89deg 86.82% 63.42%);">
+<section class="section" style="background: var(--pl-neutral-50);">
     <div class="container">
         <div class="text-center">
             <h2 class="h2 mb-4">Why Choose Hoosier Cladding?</h2>
