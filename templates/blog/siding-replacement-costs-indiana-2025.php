@@ -97,17 +97,17 @@ include __DIR__ . '/../../partials/header.php';
       <li>No prepayment penalties</li>
     </ul>
 
-    <div class="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
-      <h3 class="text-xl font-semibold mb-2">Get Your Free Estimate</h3>
-      <p class="mb-4">
+    <div class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-8 my-8 shadow-sm">
+      <h3 class="text-2xl font-bold mb-3 text-gray-900">Get Your Free Estimate</h3>
+      <p class="mb-6 text-gray-700">
         Hoosier Cladding provides detailed, transparent estimates at no cost. We serve South Bend, Mishawaka, 
         Elkhart, Granger, and all of Northern Indiana.
       </p>
-      <a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700">
-        Request Free Estimate
+      <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+        Request Free Estimate →
       </a>
-      <p class="mt-4 text-sm">
-        Or call us directly: <a href="tel:574-931-2119" class="font-semibold text-blue-600">574-931-2119</a>
+      <p class="mt-6 text-sm text-gray-600">
+        Or call us directly: <a href="tel:574-931-2119" class="font-semibold text-blue-600 hover:text-blue-700 underline">574-931-2119</a>
       </p>
     </div>
 
