@@ -137,8 +137,11 @@ body {
 }
 
 /* Override any mustard/yellow backgrounds from output.css */
-.card {
+.card,
+article.card,
+div.card {
   background: white !important;
+  background-color: white !important;
 }
 .bg-blue-700,
 .bg-orange-700,
