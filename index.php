@@ -73,6 +73,30 @@ switch ($request_uri) {
         break;
         
     default:
+        // Check if it's a blog route
+        if (strpos($request_uri, 'home-siding-blog') === 0) {
+            // Blog post route - show generic blog page for now
+            // You can create specific blog post templates later
+            $pageTitle = "Home Siding Blog | Hoosier Cladding LLC";
+            $pageDescription = "Expert advice on siding installation, repair, and maintenance for Northern Indiana homes.";
+            include __DIR__ . '/partials/header.php';
+            ?>
+            <section class="hero">
+                <div class="container">
+                    <h1 class="h1">Blog Post</h1>
+                    <p class="lead">This blog section is coming soon. For immediate assistance, please contact us.</p>
+                    <div class="hero-cta">
+                        <a class="btn btn-primary" href="/">Go Home</a>
+                        <a class="btn btn-outline" href="/contact">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+            <?php
+            include __DIR__ . '/partials/footer.php';
+            break;
+        }
+        
+        // Check if it's a matrix route
         // Check if it's a matrix route
         if (strpos($request_uri, 'matrix/') === 0) {
             require_once __DIR__ . '/matrix-router.php';
