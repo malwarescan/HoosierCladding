@@ -8,37 +8,37 @@
          loading="eager">
     <div class="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50"></div>
   </div>
-  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-    <div class="flex flex-col gap-8">
+  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="flex flex-col gap-6 sm:gap-8">
       <!-- Copy Section -->
       <div class="flex flex-col justify-center text-center lg:text-left">
 
         <!-- Main Headline -->
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-4 sm:mb-6">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-6 sm:mb-8">
           <span class="text-blue-600">South Bend's</span><br>
           Premier Siding Experts
         </h1>
 
         <!-- Rotating Sub-headlines -->
-        <div class="mb-8">
+        <div class="mb-6 sm:mb-8">
           <div id="hc-rotator"
-               class="relative h-12 sm:h-16 overflow-hidden"
+               class="relative h-16 sm:h-20 overflow-hidden"
                aria-live="polite"
                aria-atomic="true">
             <span class="sr-only">Local service highlights:</span>
 
             <!-- Slides: all in DOM, not display:none (use translate/opacity for a11y & SEO) -->
-            <div class="hc-rot-slide opacity-100 translate-y-0 text-base sm:text-lg text-gray-600 leading-relaxed">Indiana's Premier Siding & Exterior Experts — Serving South Bend and Beyond</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-base sm:text-lg text-gray-600 leading-relaxed">South Bend's Trusted Siding Contractors — Indiana's Exterior Specialists</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-base sm:text-lg text-gray-600 leading-relaxed">Energy-Efficient Siding Installation & Repair Across Northern Indiana</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-base sm:text-lg text-gray-600 leading-relaxed">Quality Craftsmanship for Indiana Homes — Free Local Estimates</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-base sm:text-lg text-gray-600 leading-relaxed">Fiber Cement & Vinyl Siding Pros in South Bend, IN</div>
+            <div class="hc-rot-slide opacity-100 translate-y-0 text-lg sm:text-xl text-gray-600 leading-relaxed">Indiana's Premier Siding & Exterior Experts — Serving South Bend and Beyond</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg sm:text-xl text-gray-600 leading-relaxed">South Bend's Trusted Siding Contractors — Indiana's Exterior Specialists</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg sm:text-xl text-gray-600 leading-relaxed">Energy-Efficient Siding Installation & Repair Across Northern Indiana</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg sm:text-xl text-gray-600 leading-relaxed">Quality Craftsmanship for Indiana Homes — Free Local Estimates</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg sm:text-xl text-gray-600 leading-relaxed">Fiber Cement & Vinyl Siding Pros in South Bend, IN</div>
           </div>
 
         </div>
 
         <!-- Trust Signals -->
-        <div class="flex flex-wrap gap-2 sm:gap-4 mb-6 sm:mb-8">
+        <div class="flex flex-wrap gap-3 sm:gap-4 mb-6 sm:mb-8">
           <div class="flex items-center text-sm text-gray-600 bg-white/80 px-3 py-2 rounded-lg">
             <svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -62,7 +62,7 @@
       </div>
 
       <!-- Chat Assistant Section -->
-      <div class="w-full mx-auto mt-4 sm:mt-6">
+      <div class="w-full mx-auto mt-6 sm:mt-8">
         <div class="relative">
           <!-- Feature Badge -->
           <div class="absolute -top-2 left-4 sm:-top-3 sm:left-6 z-20">
@@ -77,8 +77,8 @@
           
           <!-- Chat Card -->
           <div class="hs-card border border-gray-200 rounded-xl sm:rounded-2xl shadow-lg bg-white h-full overflow-hidden">
-            <div class="p-2 sm:p-3 md:p-4 lg:p-6 h-full flex flex-col">
-              <div class="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+            <div class="p-4 sm:p-6 md:p-8 lg:p-10 h-full flex flex-col">
+              <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                 <div class="w-6 h-6 sm:w-8 sm:h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg class="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -96,35 +96,35 @@
                 </span>
               </div>
 
-            <div id="hc-thread" class="flex-1 space-y-2 sm:space-y-3 overflow-auto pr-1 min-h-[100px] sm:min-h-[120px] mb-2 sm:mb-3" aria-live="polite">
+            <div id="hc-thread" class="flex-1 space-y-3 sm:space-y-4 overflow-auto pr-1 min-h-[150px] sm:min-h-[200px] mb-4 sm:mb-6" aria-live="polite">
               <div class="flex items-start gap-2 sm:gap-3">
                 <div class="w-5 h-5 sm:w-6 sm:h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </div>
-                <div class="bg-gray-50 rounded-xl sm:rounded-2xl rounded-tl-sm p-2 sm:p-2.5 max-w-[85%]">
-                  <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">I'm your AI home intelligence system. I analyze exterior conditions, calculate energy efficiency metrics, and provide expert recommendations for your Indiana home. What exterior challenge can I solve for you today?</p>
+                <div class="bg-gray-50 rounded-xl sm:rounded-2xl rounded-tl-sm p-3 sm:p-4 max-w-[85%]">
+                  <p class="text-sm sm:text-base text-gray-700 leading-relaxed">I'm your AI home intelligence system. I analyze exterior conditions, calculate energy efficiency metrics, and provide expert recommendations for your Indiana home. What exterior challenge can I solve for you today?</p>
                 </div>
               </div>
             </div>
 
-            <form id="hc-form" class="flex gap-1.5 sm:gap-2">
-              <input id="hc-input" type="text" class="flex-1 border border-gray-200 rounded-full px-3 py-2.5 sm:px-4 sm:py-3 h-10 sm:h-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-xs sm:text-sm bg-gray-50" placeholder="Describe your challenge...">
-              <button type="submit" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors flex items-center justify-center flex-shrink-0">
+            <form id="hc-form" class="flex gap-2 sm:gap-3">
+              <input id="hc-input" type="text" class="flex-1 border border-gray-200 rounded-full px-4 py-3 sm:px-5 sm:py-4 h-12 sm:h-14 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-sm sm:text-base bg-gray-50" placeholder="Describe your challenge...">
+              <button type="submit" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors flex items-center justify-center flex-shrink-0">
                 <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                 </svg>
               </button>
             </form>
 
-            <div class="mt-1.5 sm:mt-2 flex gap-1.5 sm:gap-2 flex-wrap">
-              <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-2.5 py-1 sm:px-3 sm:py-1.5 transition-colors">Energy</button>
-              <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-2.5 py-1 sm:px-3 sm:py-1.5 transition-colors">Repair</button>
-              <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="text-xs bg-gray-100 hover:bg-gray-200 rounded-full px-2.5 py-1 sm:px-3 sm:py-1.5 transition-colors">Storm</button>
+            <div class="mt-3 sm:mt-4 flex gap-2 sm:gap-3 flex-wrap">
+              <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="text-sm bg-gray-100 hover:bg-gray-200 rounded-full px-4 py-2 sm:px-5 sm:py-2.5 transition-colors">Energy Analysis</button>
+              <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="text-sm bg-gray-100 hover:bg-gray-200 rounded-full px-4 py-2 sm:px-5 sm:py-2.5 transition-colors">Repair vs Replace</button>
+              <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="text-sm bg-gray-100 hover:bg-gray-200 rounded-full px-4 py-2 sm:px-5 sm:py-2.5 transition-colors">Storm Assessment</button>
             </div>
 
-            <p class="mt-1.5 sm:mt-2 text-xs text-gray-400 text-center">
+            <p class="mt-3 sm:mt-4 text-sm text-gray-400 text-center">
               <span class="hidden sm:inline">AI recommendations verified by licensed professionals. </span><a href="/contact" class="text-blue-600 hover:underline">Contact us</a>
             </p>
           </div>
