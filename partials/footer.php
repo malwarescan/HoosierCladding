@@ -41,3 +41,6 @@ $SITE = 'Hoosier Cladding LLC';
         </div>
     </div>
 </footer>
+
+<!-- Preline UI JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/preline@2.3.0/dist/preline.min.js"></script>

@@ -21,7 +21,16 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
     <title><?= htmlspecialchars($finalTitle, ENT_QUOTES) ?></title>
     <meta name="description" content="<?= htmlspecialchars($finalDesc, ENT_QUOTES) ?>">
     <link rel="canonical" href="https://www.hoosiercladding.com<?= $pagePath ?? '' ?>">
+    
+    <!-- Tailwind core (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Preline UI CSS & JS (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline@2.3.0/dist/preline.min.css">
+    
+    <!-- Site CSS -->
     <link rel="stylesheet" href="/public/styles/output.css">
+    
     <script type="application/ld+json">{
         "@context": "https://schema.org",
         "@graph": [
