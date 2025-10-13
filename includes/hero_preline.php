@@ -66,7 +66,7 @@
 </section>
 
 <!-- AI Chat Assistant Hero Section -->
-<section class="relative py-16 sm:py-20 lg:py-24 pt-safe pb-safe">
+<section class="relative py-16 sm:py-20 lg:py-24 pt-safe pb-safe bg-gradient-to-b from-blue-50/30 via-white to-white">
   
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
@@ -79,47 +79,47 @@
     </div>
   </div>
 
-  <!-- Full-width chat container -->
-  <div class="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] sm:left-auto sm:right-auto sm:ml-auto sm:mr-auto sm:max-w-4xl sm:px-6 lg:px-8">
+  <!-- Full-width on mobile, max-width on desktop -->
+  <div class="w-full md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto md:px-6 lg:px-8">
       <!-- Preline AI Chat Template Structure -->
-      <div class="bg-white border border-gray-200 shadow-sm">
+      <div class="bg-white/80 backdrop-blur-sm">
         <!-- Chat Header -->
-        <div class="flex items-center gap-x-3 p-4 border-b border-gray-200">
-          <div class="flex items-center gap-x-3">
+        <div class="flex items-center gap-x-1 sm:gap-x-3 p-2 sm:p-4 border-b border-gray-200">
+          <div class="flex items-center gap-x-1 sm:gap-x-3 min-w-0 flex-1">
             <div class="flex-shrink-0">
-              <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <div class="w-7 h-7 sm:w-10 sm:h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                <svg class="w-3 h-3 sm:w-5 sm:h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
                 </svg>
               </div>
             </div>
-            <div class="grow">
-              <span class="block text-sm font-semibold text-gray-800">Hoosier Cladding AI</span>
-              <span class="block text-xs text-gray-500">Local Home Expert for South Bend & Northern Indiana</span>
+            <div class="grow min-w-0">
+              <span class="block text-xs sm:text-sm font-semibold text-gray-800 truncate">Hoosier Cladding AI</span>
+              <span class="block text-xs text-gray-500 truncate">Local Home Expert for South Bend & Northern Indiana</span>
             </div>
           </div>
-          <div class="flex items-center gap-x-2 ms-auto">
-            <span class="inline-flex items-center gap-x-1.5 py-1 px-2 rounded-full text-xs font-medium bg-green-100 text-green-800">
+          <div class="flex items-center flex-shrink-0">
+            <span class="inline-flex items-center gap-x-1 py-1 px-1.5 sm:px-2 rounded-full text-xs font-medium bg-green-100 text-green-800">
               <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
-              Online
+              <span class="text-[10px] sm:text-xs">Online</span>
             </span>
           </div>
         </div>
 
         <!-- Chat Messages -->
-        <div class="p-4">
-          <div id="hc-thread" class="space-y-4 mb-4 max-h-96 overflow-y-auto" aria-live="polite">
-            <div class="flex gap-x-3">
+        <div class="p-3 sm:p-4">
+          <div id="hc-thread" class="space-y-3 sm:space-y-4 mb-3 sm:mb-4 min-h-[400px] max-h-[500px] sm:min-h-[450px] sm:max-h-[550px] md:min-h-[500px] md:max-h-[600px] lg:min-h-[500px] lg:max-h-[600px] xl:min-h-[550px] xl:max-h-[650px] overflow-y-auto border border-gray-200 p-3 sm:p-4" aria-live="polite">
+            <div class="flex gap-x-2 sm:gap-x-3">
               <div class="flex-shrink-0">
-                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                  <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <div class="w-6 h-6 sm:w-8 sm:h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                  <svg class="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
                   </svg>
                 </div>
               </div>
-              <div class="grow">
-                <div class="bg-gray-100 p-4">
-                  <p class="text-sm text-gray-800">
+              <div class="grow min-w-0">
+                <div class="bg-gray-100 p-3 sm:p-4 rounded-lg">
+                  <p class="text-xs sm:text-sm text-gray-800 leading-relaxed">
                     I'm the AI assistant built by Hoosier Cladding, trained specifically on Indiana siding installation, home repairs, and maintenance best practices. I understand Midwest weather challenges, energy-efficiency needs, and regional building standards that affect your home's exterior. Whether you're dealing with drafty walls, fading siding, or storm damage, I'll guide you with accurate, local insights. What home-exterior challenge can I help you solve today?
                   </p>
                 </div>
@@ -130,25 +130,28 @@
           <!-- Input Form -->
           <form id="hc-form" class="flex gap-x-2">
             <div class="flex-1">
-              <input id="hc-input" type="text" class="py-3 px-4 block w-full border-gray-200 text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="Ask about siding replacement, storm damage, or energy efficiency...">
+              <input id="hc-input" type="text" class="py-2 sm:py-3 px-3 sm:px-4 block w-full border-2 border-blue-400 rounded-lg text-xs sm:text-sm focus:border-blue-600 focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none shadow-sm" placeholder="Ask about siding replacement, storm damage, or energy efficiency...">
             </div>
-            <button type="submit" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-              <svg class="flex-shrink-0 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+            <button type="submit" class="py-2 sm:py-3 px-3 sm:px-4 inline-flex items-center justify-center rounded-lg text-xs sm:text-sm font-semibold border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none min-w-[36px] min-h-[36px] sm:min-w-[44px] sm:min-h-[44px]">
+              <svg class="flex-shrink-0 w-3 h-3 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
               </svg>
             </button>
           </form>
 
           <!-- Suggestion Chips -->
-          <div class="flex flex-wrap gap-2 mt-4">
-            <button type="button" data-suggest="What siding materials work best for South Bend Indiana weather conditions?" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-medium border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200">
-              Siding Replacement
+          <div class="flex flex-wrap gap-1 sm:gap-2 mt-3 sm:mt-4">
+            <button type="button" data-suggest="What siding materials work best for South Bend Indiana weather conditions?" class="py-1.5 sm:py-2 px-2 sm:px-3 inline-flex items-center gap-x-1 sm:gap-x-2 text-xs font-medium border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 rounded-md">
+              <span class="hidden sm:inline">Siding Replacement</span>
+              <span class="sm:hidden">Siding</span>
             </button>
-            <button type="button" data-suggest="How do I assess and repair storm damage to my home's exterior?" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-medium border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200">
-              Storm Damage Repair
+            <button type="button" data-suggest="How do I assess and repair storm damage to my home's exterior?" class="py-1.5 sm:py-2 px-2 sm:px-3 inline-flex items-center gap-x-1 sm:gap-x-2 text-xs font-medium border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 rounded-md">
+              <span class="hidden sm:inline">Storm Damage Repair</span>
+              <span class="sm:hidden">Storm</span>
             </button>
-            <button type="button" data-suggest="What energy-efficient siding options work best for Indiana homes?" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs font-medium border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200">
-              Energy Efficiency
+            <button type="button" data-suggest="What energy-efficient siding options work best for Indiana homes?" class="py-1.5 sm:py-2 px-2 sm:px-3 inline-flex items-center gap-x-1 sm:gap-x-2 text-xs font-medium border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 rounded-md">
+              <span class="hidden sm:inline">Energy Efficiency</span>
+              <span class="sm:hidden">Energy</span>
             </button>
           </div>
 

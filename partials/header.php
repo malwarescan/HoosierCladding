@@ -122,48 +122,73 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
     ?>
 </head>
 <body class="bg-blue-50 text-gray-900">
-    <header class="bg-white shadow-md border-b-2 border-blue-100">
-        <nav class="navbar">
-            <div class="container">
-                <div class="navbar-brand">
-                    <a href="/">
-                        <img src="/public/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp" alt="Hoosier Cladding LLC" class="navbar-logo">
-                        <span class="navbar-brand-text"><?= $SITE ?></span>
+    <header class="sticky top-0 z-50 w-full bg-white border-b border-gray-200 shadow-sm">
+        <nav class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <!-- Logo/Brand -->
+                <div class="flex items-center gap-x-3">
+                    <a href="/" class="flex items-center gap-x-3 group">
+                        <img src="/public/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp" alt="Hoosier Cladding LLC" class="h-10 lg:h-12 w-auto">
+                        <span class="hidden sm:block text-lg lg:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200"><?= $SITE ?></span>
                     </a>
                 </div>
                 
-                <div class="navbar-nav">
-                    <ul class="nav-list">
-                        <li><a href="/" class="nav-link">Home</a></li>
-                        <li><a href="/service-area" class="nav-link">Service Area</a></li>
-                        <li><a href="/contact" class="nav-link">Contact</a></li>
-                    </ul>
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-x-8">
+                    <a href="/" class="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors duration-200">Home</a>
+                    <a href="/service-area" class="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors duration-200">Service Area</a>
+                    <a href="/contact" class="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors duration-200">Contact</a>
                 </div>
                 
-                <div class="navbar-contact">
-                    <a href="tel:<?= preg_replace('/[^0-9]/', '', $PHONE) ?>" class="navbar-phone">
+                <!-- Desktop Contact -->
+                <div class="hidden lg:flex items-center gap-x-4">
+                    <a href="tel:<?= preg_replace('/[^0-9]/', '', $PHONE) ?>" class="inline-flex items-center gap-x-2 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors duration-200">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
                         <?= $PHONE ?>
                     </a>
-                    <a href="mailto:<?= $EMAIL ?>" class="navbar-email">
-                        <?= $EMAIL ?>
+                    <a href="mailto:<?= $EMAIL ?>" class="inline-flex items-center gap-x-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        Email Us
                     </a>
                 </div>
                 
-                <!-- Mobile menu toggle -->
-                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <!-- Mobile menu button -->
+                <button type="button" class="lg:hidden inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-600" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" id="menuIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg class="w-6 h-6 hidden" id="closeIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
                 </button>
             </div>
             
             <!-- Mobile menu -->
-            <div class="mobile-menu" id="mobileMenu">
-                <ul class="mobile-nav-list">
-                    <li><a href="/" class="mobile-nav-link">Home</a></li>
-                    <li><a href="/service-area" class="mobile-nav-link">Service Area</a></li>
-                    <li><a href="/contact" class="mobile-nav-link">Contact</a></li>
-                </ul>
+            <div class="hidden lg:hidden border-t border-gray-200" id="mobileMenu">
+                <div class="py-4 space-y-1">
+                    <a href="/" class="block px-4 py-3 text-base font-semibold text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200">Home</a>
+                    <a href="/service-area" class="block px-4 py-3 text-base font-semibold text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200">Service Area</a>
+                    <a href="/contact" class="block px-4 py-3 text-base font-semibold text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200">Contact</a>
+                    
+                    <div class="pt-4 pb-2 px-4 space-y-3 border-t border-gray-200 mt-4">
+                        <a href="tel:<?= preg_replace('/[^0-9]/', '', $PHONE) ?>" class="flex items-center gap-x-3 text-sm font-semibold text-blue-600 hover:text-blue-700">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            <?= $PHONE ?>
+                        </a>
+                        <a href="mailto:<?= $EMAIL ?>" class="flex items-center gap-x-3 px-4 py-3 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 justify-center">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            Email Us
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -171,7 +196,12 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
     <script>
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenu.classList.toggle('active');
+            const menuIcon = document.getElementById('menuIcon');
+            const closeIcon = document.getElementById('closeIcon');
+            
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
         }
     </script>
     
