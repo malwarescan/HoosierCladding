@@ -75,9 +75,9 @@
           </div>
           
           <!-- Chat Card -->
-          <div class="hs-card border-2 border-blue-200 rounded-3xl shadow-2xl bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 backdrop-blur-sm h-full">
+          <div class="hs-card border-2 border-blue-200 rounded-3xl shadow-2xl bg-gradient-to-br from-white via-blue-50/30 to-indigo-50/50 backdrop-blur-sm h-full overflow-hidden">
             <div class="p-6 sm:p-8 lg:p-10 h-full flex flex-col">
-              <div class="flex items-center justify-between mb-6">
+              <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between mb-6">
                 <div class="flex-1">
                   <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-1">Ask the Hoosier Cladding Siding Assistant</h3>
                   <p class="text-sm text-gray-600">Get instant answers about siding repair, replacement, and energy efficiency.<br>Trusted by Indiana homeowners, contractors, and new buyers to make smart siding decisions — fast.</p>
@@ -96,9 +96,9 @@
               </div>
             </div>
 
-            <form id="hc-form" class="mt-6 flex gap-3">
-              <input id="hc-input" type="text" class="flex-1 border border-gray-300 rounded-lg px-4 py-3 h-12 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:outline-none text-sm" placeholder="Describe your issue (e.g., cold spots near exterior wall)">
-              <button type="submit" class="px-6 py-3 h-12 rounded-lg bg-gray-900 text-white font-semibold hover:bg-gray-800 focus:ring-2 focus:ring-gray-900 focus:outline-none transition-colors whitespace-nowrap">Ask Now</button>
+            <form id="hc-form" class="mt-6 flex flex-col sm:flex-row gap-3">
+              <input id="hc-input" type="text" class="flex-1 min-w-0 w-full sm:w-auto border border-gray-300 rounded-lg px-4 py-3 h-10 sm:h-12 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 focus:outline-none text-sm" placeholder="Describe your issue (e.g., cold spots near exterior wall)">
+              <button type="submit" class="shrink-0 w-full sm:w-auto px-6 py-3 h-10 sm:h-12 rounded-lg bg-gray-900 text-white font-semibold hover:bg-gray-800 focus:ring-2 focus:ring-gray-900 focus:outline-none transition-colors whitespace-nowrap">Ask Now</button>
             </form>
 
             <div class="mt-4 flex gap-2 flex-wrap">
