@@ -8,13 +8,13 @@
          loading="eager">
     <div class="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50"></div>
   </div>
-  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+  <div class="relative z-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 pt-safe pb-safe">
     <div class="flex flex-col gap-6 sm:gap-8">
       <!-- Copy Section -->
       <div class="flex flex-col justify-center text-center lg:text-left">
 
         <!-- Main Headline -->
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-6 sm:mb-8">
+        <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-6 sm:mb-8">
           <span class="text-blue-600">South Bend's</span><br>
           Premier Siding Experts
         </h1>
@@ -28,11 +28,11 @@
             <span class="sr-only">Local service highlights:</span>
 
             <!-- Slides: all in DOM, not display:none (use translate/opacity for a11y & SEO) -->
-            <div class="hc-rot-slide opacity-100 translate-y-0 text-lg sm:text-xl text-gray-600 leading-relaxed">Indiana's Premier Siding & Exterior Experts — Serving South Bend and Beyond</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg sm:text-xl text-gray-600 leading-relaxed">South Bend's Trusted Siding Contractors — Indiana's Exterior Specialists</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg sm:text-xl text-gray-600 leading-relaxed">Energy-Efficient Siding Installation & Repair Across Northern Indiana</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg sm:text-xl text-gray-600 leading-relaxed">Quality Craftsmanship for Indiana Homes — Free Local Estimates</div>
-            <div class="hc-rot-slide opacity-0 translate-y-3 text-lg sm:text-xl text-gray-600 leading-relaxed">Fiber Cement & Vinyl Siding Pros in South Bend, IN</div>
+            <div class="hc-rot-slide opacity-100 translate-y-0 text-base xs:text-lg sm:text-xl text-gray-600 leading-relaxed">Indiana's Premier Siding & Exterior Experts — Serving South Bend and Beyond</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-base xs:text-lg sm:text-xl text-gray-600 leading-relaxed">South Bend's Trusted Siding Contractors — Indiana's Exterior Specialists</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-base xs:text-lg sm:text-xl text-gray-600 leading-relaxed">Energy-Efficient Siding Installation & Repair Across Northern Indiana</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-base xs:text-lg sm:text-xl text-gray-600 leading-relaxed">Quality Craftsmanship for Indiana Homes — Free Local Estimates</div>
+            <div class="hc-rot-slide opacity-0 translate-y-3 text-base xs:text-lg sm:text-xl text-gray-600 leading-relaxed">Fiber Cement & Vinyl Siding Pros in South Bend, IN</div>
           </div>
 
         </div>
@@ -62,7 +62,7 @@
       </div>
 
       <!-- Chat Assistant Section -->
-      <div class="w-full mx-auto mt-6 sm:mt-8">
+      <div class="w-full mx-auto mt-8 sm:mt-10">
         <div class="relative">
           <!-- Feature Badge -->
           <div class="absolute -top-2 left-4 sm:-top-3 sm:left-6 z-20">
@@ -76,8 +76,8 @@
           </div>
           
           <!-- Chat Card -->
-          <div class="hs-card border border-gray-200 rounded-xl sm:rounded-2xl shadow-lg bg-white h-full overflow-hidden">
-            <div class="p-4 sm:p-6 md:p-8 lg:p-10 h-full flex flex-col">
+          <div class="hs-card border border-gray-200 rounded-xl sm:rounded-2xl shadow-xl bg-white/95 backdrop-blur-sm h-full overflow-hidden">
+            <div class="p-6 sm:p-6 md:p-8 lg:p-10 h-full flex flex-col">
               <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                 <div class="w-6 h-6 sm:w-8 sm:h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <svg class="w-3 h-3 sm:w-4 sm:h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
@@ -118,10 +118,10 @@
               </button>
             </form>
 
-            <div class="mt-3 sm:mt-4 flex gap-2 sm:gap-3 flex-wrap">
-              <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="text-sm bg-gray-100 hover:bg-gray-200 rounded-full px-4 py-2 sm:px-5 sm:py-2.5 transition-colors">Energy Analysis</button>
-              <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="text-sm bg-gray-100 hover:bg-gray-200 rounded-full px-4 py-2 sm:px-5 sm:py-2.5 transition-colors">Repair vs Replace</button>
-              <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="text-sm bg-gray-100 hover:bg-gray-200 rounded-full px-4 py-2 sm:px-5 sm:py-2.5 transition-colors">Storm Assessment</button>
+            <div class="mt-4 sm:mt-5 flex gap-3 sm:gap-4 flex-wrap">
+              <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="text-sm bg-gray-100 hover:bg-gray-200 rounded-full px-4 py-3 sm:px-5 sm:py-3 transition-colors">Energy Analysis</button>
+              <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="text-sm bg-gray-100 hover:bg-gray-200 rounded-full px-4 py-3 sm:px-5 sm:py-3 transition-colors">Repair vs Replace</button>
+              <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="text-sm bg-gray-100 hover:bg-gray-200 rounded-full px-4 py-3 sm:px-5 sm:py-3 transition-colors">Storm Assessment</button>
             </div>
 
             <p class="mt-3 sm:mt-4 text-sm text-gray-400 text-center">
