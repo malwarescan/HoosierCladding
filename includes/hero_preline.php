@@ -4,21 +4,47 @@
     <div class="grid lg:grid-cols-3 gap-8 items-start">
       <!-- Left: Copy -->
       <div class="lg:col-span-1 lg:order-1">
-        <span class="inline-flex items-center gap-x-2 py-1 px-3 rounded-full text-xs font-medium bg-gray-100 text-gray-800 mb-4">
-          Hoosier Cladding
+        <span class="inline-flex items-center gap-x-2 py-2 px-4 rounded-full text-sm font-semibold bg-blue-100 text-blue-800 mb-6">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Licensed & Insured • 15+ Years Experience
         </span>
-        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900">
-          Siding Contractors in South Bend
+        <h1 class="text-5xl sm:text-6xl font-bold tracking-tight text-gray-900 leading-tight">
+          <span class="text-blue-600">South Bend's</span><br>
+          Premier Siding Experts
         </h1>
-        <p class="mt-5 text-gray-600 max-w-xl">
-          Energy-efficient siding, storm-damage repair, and full replacements—done right. Get a fast, local estimate.
+        <p class="mt-6 text-xl text-gray-700 leading-relaxed">
+          <strong>Storm damage?</strong> We respond within 24 hours.<br>
+          <strong>Energy bills rising?</strong> Our insulated siding cuts costs by 30%.<br>
+          <strong>Need a full replacement?</strong> We handle everything from permits to cleanup.
         </p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
-            Get a Free Estimate
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Free estimates • Same-day response
+          </div>
+          <div class="flex items-center text-sm text-gray-600">
+            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Licensed in Indiana • Fully insured
+          </div>
+        </div>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            Get Free Estimate
           </a>
-          <a href="/service-area" class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-gray-700 hover:bg-gray-50">
-            View Services
+          <a href="/service-area" class="inline-flex items-center justify-center rounded-lg border-2 border-blue-600 px-8 py-4 text-blue-600 font-semibold hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+            View Our Services
           </a>
         </div>
       </div>
