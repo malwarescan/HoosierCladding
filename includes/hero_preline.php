@@ -62,35 +62,39 @@
       </div>
 
       <!-- Chat Assistant Section -->
-      <div class="w-full mx-auto mt-4 sm:mt-6">
+      <div class="max-w-sm w-full mx-auto px-3 sm:px-0 mt-8 sm:mt-10 mb-10">
         <div class="relative">
           
           <!-- Chat Card -->
-          <div class="hs-card border border-gray-200 rounded-lg shadow-lg bg-white h-full overflow-hidden">
-            <div class="p-3 sm:p-4 md:p-6 lg:p-8 h-full flex flex-col">
-              <div class="mb-3 sm:mb-4">
+          <div class="rounded-2xl shadow-lg bg-white/95 backdrop-blur-sm p-4 sm:p-6 space-y-4">
+              <div>
                 <h3 class="text-lg font-semibold text-gray-900">AI Home Expert</h3>
               </div>
 
-            <div id="hc-thread" class="flex-1 space-y-2 sm:space-y-3 overflow-auto pr-1 min-h-[120px] sm:min-h-[150px] mb-3 sm:mb-4" aria-live="polite">
+            <div id="hc-thread" class="space-y-3 overflow-auto pr-1 min-h-[120px] sm:min-h-[150px]" aria-live="polite">
               <div class="bg-gray-50 rounded-lg p-3">
-                <p class="text-sm text-gray-700">I'm your AI home intelligence system. I analyze exterior conditions, calculate energy efficiency metrics, and provide expert recommendations for your Indiana home. What exterior challenge can I solve for you today?</p>
+                <p class="text-base leading-relaxed text-gray-700">I'm your AI home intelligence system. I analyze exterior conditions, calculate energy efficiency metrics, and provide expert recommendations for your Indiana home. What exterior challenge can I solve for you today?</p>
               </div>
             </div>
 
-            <form id="hc-form" class="flex gap-1.5 sm:gap-2">
-              <input id="hc-input" type="text" class="flex-1 border border-gray-200 rounded-full px-3 py-2.5 sm:px-4 sm:py-3 h-10 sm:h-12 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-sm sm:text-base bg-gray-50" placeholder="Describe your challenge...">
-              <button type="submit" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-colors flex items-center justify-center flex-shrink-0">
+            <form id="hc-form" class="flex items-center gap-2">
+              <input id="hc-input" type="text" class="flex-1 min-w-0 h-10 sm:h-11 px-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none text-sm bg-white" placeholder="Describe your challenge...">
+              <button type="submit" class="shrink-0 h-10 sm:h-11 px-5 rounded-lg bg-blue-700 text-white font-semibold hover:bg-blue-800 transition-colors flex items-center justify-center">
                 <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                 </svg>
               </button>
             </form>
 
-            <div class="mt-2 sm:mt-3 flex gap-2 flex-wrap">
-              <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="text-xs bg-gray-100 hover:bg-gray-200 rounded px-2 py-1 transition-colors">Energy</button>
-              <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="text-xs bg-gray-100 hover:bg-gray-200 rounded px-2 py-1 transition-colors">Repair</button>
-              <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="text-xs bg-gray-100 hover:bg-gray-200 rounded px-2 py-1 transition-colors">Storm</button>
+            <div class="flex flex-wrap gap-2 justify-center mt-2">
+              <button type="button" data-suggest="Analyze my home's energy efficiency and recommend improvements" class="px-3 py-1.5 rounded-full text-sm font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">Energy</button>
+              <button type="button" data-suggest="Evaluate whether to repair or replace my siding based on current condition" class="px-3 py-1.5 rounded-full text-sm font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">Repair</button>
+              <button type="button" data-suggest="Assess storm damage and provide restoration strategy" class="px-3 py-1.5 rounded-full text-sm font-medium bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">Storm</button>
+            </div>
+
+            <!-- Footer Attribution -->
+            <div class="text-xs text-gray-500 text-center pt-2 border-t border-gray-100">
+              <span>AI recommendations verified by licensed professionals.</span>
             </div>
 
           </div>
