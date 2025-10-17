@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.hoosiercladding.com/services/siding-repair/south-bend-in/</loc>
+    <image:image>
+      <image:loc>https://www.hoosiercladding.com/assets/sb-repair.jpg</image:loc>
+      <image:title>Siding Repair in South Bend</image:title>
+      <image:caption>Before/after: repaired vinyl seams</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoosiercladding.com/services/vinyl-siding/granger-in/</loc>
+    <image:image>
+      <image:loc>https://www.hoosiercladding.com/assets/granger-vinyl.jpg</image:loc>
+      <image:title>Vinyl Siding Granger</image:title>
+      <image:caption>New insulated panels install</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoosiercladding.com/insights/winter-energy-bills-indiana/</loc>
+    <image:image>
+      <image:loc>https://www.hoosiercladding.com/assets/energy-hero.jpg</image:loc>
+      <image:title>Winter Energy Bills in Indiana: How Siding Impacts Heat Loss</image:title>
+      <image:caption>Hero image</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.hoosiercladding.com/insights/storm-readiness-checklist/</loc>
+    <image:image>
+      <image:loc>https://www.hoosiercladding.com/assets/storm-hero.jpg</image:loc>
+      <image:title>Storm Readiness Checklist for Siding</image:title>
+      <image:caption>Hero image</image:caption>
+    </image:image>
+  </url>
+</urlset>

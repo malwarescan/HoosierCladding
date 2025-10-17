@@ -12,6 +12,10 @@ RewriteRule ^ - [L]
 # add more if needed (humans.txt, security.txt, etc.)
 RewriteRule ^(sitemap.*\.xml|robots\.txt|favicon\.ico)$ - [L]
 
+# Serve XML directly (bypass PHP router) + cache
+RewriteCond %{REQUEST_URI} \.xml(\.gz)?$ [NC]
+RewriteRule ^ - [L]
+
 # --- Matrix landing pages ---
 RewriteRule ^matrix/(.+)$ matrix-router.php [L,QSA]
 
@@ -28,3 +32,22 @@ RewriteRule ^matrix/(.+)$ matrix-router.php [L,QSA]
 
 # --- Front controller: everything else to index.php ---
 RewriteRule ^ index.php [L]
+
+# Content types + cache
+<IfModule mod_headers.c>
+  <FilesMatch "\.xml$">
+    ForceType application/xml
+    Header set Content-Type "application/xml; charset=UTF-8"
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+  <FilesMatch "\.xml\.gz$">
+    ForceType application/gzip
+    Header set Content-Type "application/xml; charset=UTF-8"
+    Header set Content-Encoding "gzip"
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+  <Files "robots.txt">
+    Header set Content-Type "text/plain; charset=UTF-8"
+    Header set Cache-Control "public, max-age=3600"
+  </Files>
+</IfModule>
