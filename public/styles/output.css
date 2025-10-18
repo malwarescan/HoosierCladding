@@ -1052,8 +1052,7 @@ body.text-gray-900 {
   width: 100% !important;
 }
 
-/* Center all content in every section */
-.section .container,
+/* Center content for hero/cta/footer only (do not affect generic sections) */
 .hero .container,
 .cta-band .container,
 .footer .container {
