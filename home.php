@@ -360,6 +360,10 @@ include __DIR__ . '/partials/header.php';
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Lisa Greene Review -->
       <div class="hs-card bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300" itemscope itemtype="https://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness">
+          <meta itemprop="name" content="Hoosier Cladding LLC">
+          <meta itemprop="url" content="https://www.hoosiercladding.com">
+        </div>
         <div class="hs-card-body p-6">
           <div class="flex items-center gap-x-1 mb-4">
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -404,6 +408,10 @@ include __DIR__ . '/partials/header.php';
 
       <!-- Mark Jensen Review -->
       <div class="hs-card bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300" itemscope itemtype="https://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness">
+          <meta itemprop="name" content="Hoosier Cladding LLC">
+          <meta itemprop="url" content="https://www.hoosiercladding.com">
+        </div>
         <div class="hs-card-body p-6">
           <div class="flex items-center gap-x-1 mb-4">
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -448,6 +456,10 @@ include __DIR__ . '/partials/header.php';
 
       <!-- Sarah Williams Review -->
       <div class="hs-card bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300" itemscope itemtype="https://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness">
+          <meta itemprop="name" content="Hoosier Cladding LLC">
+          <meta itemprop="url" content="https://www.hoosiercladding.com">
+        </div>
         <div class="hs-card-body p-6">
           <div class="flex items-center gap-x-1 mb-4">
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
@@ -492,6 +504,10 @@ include __DIR__ . '/partials/header.php';
 
       <!-- Michael Rodriguez Review -->
       <div class="hs-card bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300" itemscope itemtype="https://schema.org/Review">
+        <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness">
+          <meta itemprop="name" content="Hoosier Cladding LLC">
+          <meta itemprop="url" content="https://www.hoosiercladding.com">
+        </div>
         <div class="hs-card-body p-6">
           <div class="flex items-center gap-x-1 mb-4">
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
