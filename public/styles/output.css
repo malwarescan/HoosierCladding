@@ -121,7 +121,7 @@ a:hover {
 .container {
   max-width: 100% !important;
   margin: 0 auto !important;
-  padding: 0 clamp(1rem, 4vw, 2.5rem) !important;
+  padding: 0 clamp(0rem, 0vw, 0rem) !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
