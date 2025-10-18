@@ -20,6 +20,7 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($finalTitle, ENT_QUOTES) ?></title>
     <meta name="description" content="<?= htmlspecialchars($finalDesc, ENT_QUOTES) ?>">
+    <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://www.hoosiercladding.com<?= $pagePath ?? '' ?>">
     
     <!-- Tailwind core (CDN) -->

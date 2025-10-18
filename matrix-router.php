@@ -143,6 +143,17 @@ function renderMatrixLandingPage(array $row): void {
     <title><?= htmlspecialchars($pageTitle, ENT_QUOTES) ?></title>
     <meta name="description" content="<?= htmlspecialchars($metaDesc, ENT_QUOTES) ?>">
     
+    <?php
+    // Canonical URL and robots meta
+    if (function_exists('canonicalTag')) {
+        $canonicalUrl = 'https://www.hoosiercladding.com' . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+        canonicalTag($canonicalUrl);
+    }
+    if (function_exists('robotsHeader')) {
+        robotsHeader(true); // index,follow
+    }
+    ?>
+    
     <!-- Schema.org JSON-LD (LocalBusiness + Service + FAQPage) -->
     <?= SchemaRenderer\render($row) ?>
     

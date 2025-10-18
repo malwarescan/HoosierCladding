@@ -7,7 +7,17 @@ namespace SchemaRenderer;
  * LocalBusiness: https://developers.google.com/search/docs/appearance/structured-data/local-business
  * Product: https://developers.google.com/search/docs/appearance/structured-data/product
  * FAQPage: https://developers.google.com/search/docs/appearance/structured-data/faqpage
+ * 
+ * Enhanced with modular schema support from includes/schema/
  */
+
+// Load new modular schema functions if available
+if (file_exists(__DIR__.'/schema/LocalBusiness.php')) require_once __DIR__.'/schema/LocalBusiness.php';
+if (file_exists(__DIR__.'/schema/Service.php')) require_once __DIR__.'/schema/Service.php';
+if (file_exists(__DIR__.'/schema/FAQPage.php')) require_once __DIR__.'/schema/FAQPage.php';
+if (file_exists(__DIR__.'/schema/JobPosting.php')) require_once __DIR__.'/schema/JobPosting.php';
+if (file_exists(__DIR__.'/seo/canonical.php')) require_once __DIR__.'/seo/canonical.php';
+if (file_exists(__DIR__.'/seo/robots.php')) require_once __DIR__.'/seo/robots.php';
 
 function wrap($p){ return '<script type="application/ld+json">'.json_encode($p, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE).'</script>'; }
 
