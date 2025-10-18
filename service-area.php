@@ -4,27 +4,28 @@ $pageDescription = "Serving South Bend, Mishawaka, Elkhart, Granger, Niles, and 
 include __DIR__ . '/partials/header.php';
 ?>
 
-<section class="relative overflow-hidden bg-white">
-    <div class="absolute inset-0 top-0 z-0 pointer-events-none">
+	<section class="relative overflow-hidden bg-white">
+    	<div class="absolute inset-0 top-0 z-0 pointer-events-none">
         <img src="/public/images/hero-section/siding-repair-home-hoosier-cladding.png" 
              alt="Siding services across Northern Indiana and Southwest Michigan" 
              class="w-full h-full object-cover opacity-25"
              loading="eager">
-        <div class="absolute inset-0 bg-gradient-to-r from-white/70 via-white/60 to-white/50"></div>
-    </div>
-    <div class="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-safe pt-16 sm:pt-20 lg:pt-24 pb-safe">
-        <div class="flex flex-col gap-4 sm:gap-6">
-            <div class="flex flex-col justify-center text-center lg:text-left">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight mb-3 sm:mb-4 lg:mb-6">
-                    Service Areas We Cover
-                </h1>
-                <p class="text-base sm:text-lg lg:text-xl text-gray-600 leading-relaxed">
-                    Professional siding installation, repair, and replacement across Northern Indiana and Southwest Michigan.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+        	<div class="absolute inset-0 bg-gradient-to-r from-white/80 via-white/70 to-white/60"></div>
+    	</div>
+    	<div class="relative z-10 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-safe pt-16 sm:pt-20 lg:pt-24 pb-safe pb-12 sm:pb-16 lg:pb-20">
+        	<div class="flex flex-col gap-5 sm:gap-6">
+            	<div class="flex flex-col justify-center text-center lg:text-left">
+                	<span class="inline-flex items-center gap-x-2 py-1.5 px-3 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 mb-3 self-center lg:self-start">Serving Michiana</span>
+                	<h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-gray-900 leading-tight mb-4 sm:mb-5 lg:mb-6 max-w-4xl self-center lg:self-start">
+                    	<span class="text-blue-600">Service Areas</span> We Cover
+                	</h1>
+                	<p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-2xl self-center lg:self-start">
+                    	Professional siding installation, repair, and replacement across Northern Indiana and Southwest Michigan.
+                	</p>
+            	</div>
+        	</div>
+    	</div>
+	</section>
 
 <section class="py-16 sm:py-20 lg:py-24 bg-white">
     <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
