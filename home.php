@@ -91,6 +91,7 @@ include __DIR__ . '/partials/header.php';
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://www.hoosiercladding.com/#localbusiness",
   "name": "Hoosier Cladding LLC",
   "description": "Professional siding installation, repair, and replacement services in Michiana. Serving South Bend, Mishawaka, Elkhart, and surrounding areas with quality craftsmanship and local expertise.",
   "url": "https://www.hoosiercladding.com",
@@ -159,13 +160,6 @@ include __DIR__ . '/partials/header.php';
         }
       }
     ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "43",
-    "bestRating": "5",
-    "worstRating": "1"
   },
   "priceRange": "$$",
   "openingHours": "Mo-Fr 07:00-18:00",
@@ -394,7 +388,7 @@ include __DIR__ . '/partials/header.php';
               </div>
             </div>
             <div class="ml-3">
-              <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div itemprop="author" itemscope itemtype="https://schema.org/Person">
                 <p class="text-sm font-semibold text-gray-900" itemprop="name">Lisa Greene</p>
               </div>
               <p class="text-xs text-gray-500">South Bend, IN</p>
@@ -438,7 +432,7 @@ include __DIR__ . '/partials/header.php';
               </div>
             </div>
             <div class="ml-3">
-              <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div itemprop="author" itemscope itemtype="https://schema.org/Person">
                 <p class="text-sm font-semibold text-gray-900" itemprop="name">Mark Jensen</p>
               </div>
               <p class="text-xs text-gray-500">Mishawaka, IN</p>
@@ -482,7 +476,7 @@ include __DIR__ . '/partials/header.php';
               </div>
             </div>
             <div class="ml-3">
-              <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <div itemprop="author" itemscope itemtype="https://schema.org/Person">
                 <p class="text-sm font-semibold text-gray-900" itemprop="name">Sarah Williams</p>
               </div>
               <p class="text-xs text-gray-500">Elkhart, IN</p>
@@ -548,6 +542,7 @@ include __DIR__ . '/partials/header.php';
       "@type": "AggregateRating",
       "itemReviewed": {
         "@type": "LocalBusiness",
+        "@id": "https://www.hoosiercladding.com/#localbusiness",
         "name": "Hoosier Cladding LLC",
         "url": "https://www.hoosiercladding.com"
       },
