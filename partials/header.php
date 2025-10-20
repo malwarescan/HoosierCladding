@@ -21,7 +21,7 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
     <title><?= htmlspecialchars($finalTitle, ENT_QUOTES) ?></title>
     <meta name="description" content="<?= htmlspecialchars($finalDesc, ENT_QUOTES) ?>">
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://www.hoosiercladding.com<?= $pagePath ?? '' ?>">
+    <link rel="canonical" href="<?= MetaManager::canonical($reqPath) ?>">
     
     <!-- Tailwind core (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -119,6 +119,14 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
     $head_injector_path = __DIR__ . '/../app/bootstrap/head_injector.php';
     if (file_exists($head_injector_path)) {
         require_once $head_injector_path;
+    }
+    
+    // Inject FAQ structured data from GSC snippets
+    $slug = trim($reqPath, '/') ?: 'home';
+    $faqPath = __DIR__ . '/../outputs/snippets/' . $slug . '/faq.jsonld';
+    if (file_exists($faqPath)) {
+        $faqJson = file_get_contents($faqPath);
+        echo '<script type="application/ld+json">' . $faqJson . '</script>' . PHP_EOL;
     }
     ?>
 </head>

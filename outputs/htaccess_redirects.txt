@@ -1,0 +1,2 @@
+# --- 301 Canonical Redirects (place in vhost or .htaccess) ---
+RewriteEngine On

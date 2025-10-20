@@ -46,3 +46,4 @@ function hc_render_faq_schema(array $faqs): void {
 }
 
 
+

@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 /**
  * MetaManager
- * - Reads CSV mapping of path -> suggested title + meta description.
- * Place CSV at /app/config/ctr_rewrites.csv with headers:
- * Top_pages,Impressions,Position,Suggested_Title,Suggested_Meta_Description
+ * - Reads GSC-generated snippets for optimized titles and meta descriptions
+ * - Falls back to CSV mapping if snippets not available
+ * - Provides canonical URL generation
  */
 final class MetaManager
 {
@@ -14,6 +14,24 @@ final class MetaManager
 
   private static function load(): void {
     if (self::$loaded) return;
+    
+    // First try GSC-generated snippets
+    $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+    $slug = trim($path, '/') ?: 'home';
+    
+    $titleFile = __DIR__ . '/../../outputs/snippets/' . $slug . '/title.txt';
+    $metaFile = __DIR__ . '/../../outputs/snippets/' . $slug . '/meta.txt';
+    
+    if (file_exists($titleFile) && file_exists($metaFile)) {
+      self::$map[$path] = [
+        'title' => trim(file_get_contents($titleFile)),
+        'desc' => trim(file_get_contents($metaFile))
+      ];
+      self::$loaded = true;
+      return;
+    }
+    
+    // Fallback to CSV mapping
     $file = __DIR__ . '/../config/ctr_rewrites.csv';
     if (!file_exists($file)) { self::$loaded = true; return; }
     if (($h = fopen($file, 'r')) !== false) {
@@ -46,6 +64,18 @@ final class MetaManager
       return self::$map[$path]['desc'];
     }
     return $default;
+  }
+
+  public static function canonical(string $path): string {
+    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
+    $host = $_SERVER['HTTP_HOST'] ?? 'www.hoosiercladding.com';
+    
+    // Remove trailing slash except for root
+    if ($path !== '/' && substr($path, -1) === '/') {
+      $path = rtrim($path, '/');
+    }
+    
+    return $scheme . '://' . $host . $path;
   }
 }
 

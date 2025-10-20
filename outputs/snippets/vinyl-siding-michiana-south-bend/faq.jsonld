@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does vinyl siding in South Bend, IN cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Costs vary by material and square footage. We provide firm quotes after a quick site check and can match most written estimates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer vinyl siding repair in South Bend, IN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We handle storm damage, warped panels, and color-matched replacements. Most repairs are completed in a single visit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can you start vinyl siding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typical lead time is 3–7 days depending on material availability. Emergency service is available for urgent issues."
+      }
+    }
+  ]
+}
