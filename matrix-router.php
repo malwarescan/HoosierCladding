@@ -154,8 +154,7 @@ function renderMatrixLandingPage(array $row): void {
     }
     ?>
     
-    <!-- Schema.org JSON-LD (LocalBusiness + Service + FAQPage) -->
-    <?= SchemaRenderer\render($row) ?>
+    <!-- JSON-LD injected via app/bootstrap/head_injector.php for matrix pages -->
     
     <?php 
     // Inject dynamic JSON-LD schema for matrix pages

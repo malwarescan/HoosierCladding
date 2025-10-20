@@ -103,10 +103,18 @@ function product($r){
 /** FAQPage schema (only if you have Q/A content present on the page) */
 function faq($r){
   $pairs = [];
+  $sanitize = function(string $s): string {
+    $s = html_entity_decode($s, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $s = strip_tags($s);
+    $s = strtr($s, ["\u{201C}"=>'"',"\u{201D}"=>'"',"\u{2018}"=>"'","\u{2019}"=>"'"]);
+    $s = preg_replace('/\s+/', ' ', $s);
+    return trim((string)$s);
+  };
   for ($i=1;$i<=6;$i++){
-    $q = trim($r["faq_q$i"] ?? '');
-    $a = trim($r["faq_a$i"] ?? '');
+    $q = $sanitize((string)($r["faq_q$i"] ?? ''));
+    $a = $sanitize((string)($r["faq_a$i"] ?? ''));
     if ($q && $a){
+      if (mb_strlen($a) > 2000) $a = mb_substr($a, 0, 2000) . '…';
       $pairs[] = [
         "@type"=>"Question",
         "name"=>$q,
