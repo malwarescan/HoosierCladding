@@ -156,13 +156,7 @@ function renderMatrixLandingPage(array $row): void {
     
     <!-- JSON-LD injected via app/bootstrap/head_injector.php for matrix pages -->
     
-    <?php 
-    // Inject dynamic JSON-LD schema for matrix pages
-    $head_injector_path = __DIR__ . '/app/bootstrap/head_injector.php';
-    if (file_exists($head_injector_path)) {
-        require_once $head_injector_path;
-    }
-    ?>
+    <?php /* JSON-LD is injected by the global header include on matrix pages */ ?>
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/public/styles/output.css">
