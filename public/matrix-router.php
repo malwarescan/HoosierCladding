@@ -131,8 +131,7 @@ function renderMatrixLandingPage(array $row): void {
     <title><?= htmlspecialchars($pageTitle, ENT_QUOTES) ?></title>
     <meta name="description" content="<?= htmlspecialchars($metaDesc, ENT_QUOTES) ?>">
     
-    <!-- Schema.org JSON-LD (LocalBusiness + Service + FAQPage) -->
-    <?= SchemaRenderer\render($row) ?>
+    <!-- JSON-LD is injected by global header (head injector) to avoid duplicates -->
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/public/styles/output.css">
