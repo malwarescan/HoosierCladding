@@ -6,6 +6,7 @@ declare(strict_types=1);
  */
 require_once __DIR__.'/../lib/schema.php';
 require_once __DIR__.'/../lib/faq_extractor.php';
+require_once __DIR__.'/../includes/faq_schema.php';
 
 $biz = require __DIR__.'/../config/business.php';
 $reqPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
@@ -117,25 +118,23 @@ if (Schema::isMatrixRoute($reqPath)) {
   }
   
   $faqs = FaqExtractor::fromMatrixRow($matrixRow, $biz['default_faqs']);
-  $faqSchema = [
-    '@context'=>'https://schema.org',
-    '@type'=>'FAQPage',
-    'mainEntity'=> array_map(function($f){
-      return [
-        '@type'=>'Question',
-        'name'=>$f['q'],
-        'acceptedAnswer'=>[
-          '@type'=>'Answer',
-          'text'=>$f['a']
-        ]
-      ];
-    }, $faqs)
-  ];
+  // Sanitize and filter; only emit if we have at least one valid pair
+  $cleanFaqs = [];
+  foreach ($faqs as $f) {
+    $q = isset($f['q']) ? hc_sanitize_faq((string)$f['q']) : '';
+    $a = isset($f['a']) ? hc_sanitize_faq((string)$f['a']) : '';
+    if ($q === '' || $a === '') continue;
+    if (mb_strlen($a) > 2000) $a = mb_substr($a, 0, 2000) . '…';
+    $cleanFaqs[] = ['name'=>$q, 'answer'=>$a];
+  }
 
   // Emit JSON-LD
   echo Schema::tag(Schema::encode($localBusiness));
   echo Schema::tag(Schema::encode($crumbs));
   echo Schema::tag(Schema::encode($serviceSchema));
-  echo Schema::tag(Schema::encode($faqSchema));
+  if (!empty($cleanFaqs)) {
+    // Prefer sanitized renderer to avoid blanks/HTML
+    hc_render_faq_schema($cleanFaqs);
+  }
 }
 
