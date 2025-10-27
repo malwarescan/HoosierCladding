@@ -14,7 +14,12 @@ final class ProductSchema
     {
         if (self::$loaded) return;
         
-        $file = __DIR__ . '/../../data/james_hardie_products.csv';
+        // Try products with images first, fallback to regular CSV
+        $file = __DIR__ . '/../../data/james_hardie_products_with_images.csv';
+        if (!file_exists($file)) {
+            $file = __DIR__ . '/../../data/james_hardie_products.csv';
+        }
+        
         if (!file_exists($file)) {
             self::$loaded = true;
             return;
@@ -142,6 +147,7 @@ final class ProductSchema
             ],
             "category" => $product['Product Type'],
             "description" => "{$productName} - Premium fiber cement siding engineered for hardieZone® {$product['HardieZone'][-1]} climates with ColorPlus Technology finish.",
+            "image" => isset($product['Image Path']) && !empty($product['Image Path']) ? $product['Image Path'] : null,
             "aggregateRating" => [
                 "@type" => "AggregateRating",
                 "ratingValue" => $rating,
