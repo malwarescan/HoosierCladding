@@ -66,13 +66,13 @@ include __DIR__ . '/../partials/header.php';
                 </div>
                 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+                    <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-800 hover:text-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                         Get Free Quote
                     </a>
-                    <a href="tel:5749312119" class="inline-flex items-center justify-center rounded-lg border-2 border-gray-900 px-8 py-4 text-gray-900 font-semibold hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 transition-all duration-200">
+                    <a href="tel:5749312119" class="inline-flex items-center justify-center rounded-lg border-2 border-gray-900 px-8 py-4 text-gray-900 font-semibold hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 transition-all duration-200">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                         </svg>
@@ -218,7 +218,7 @@ include __DIR__ . '/../partials/header.php';
         <p class="text-xl text-blue-100 mb-8">
             Get a free quote from certified James Hardie installers in Northern Indiana
         </p>
-        <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-blue-600 font-semibold hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl">
+        <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-blue-600 font-semibold hover:bg-gray-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl">
             Request Free Estimate
         </a>
     </div>
