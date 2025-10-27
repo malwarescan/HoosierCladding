@@ -24,3 +24,6 @@ Thumbs.db
 
 # Build
 *.tsbuildinfo
+
+# Large generated files (generate dynamically instead)
+data/james_hardie_products_schemas.json
