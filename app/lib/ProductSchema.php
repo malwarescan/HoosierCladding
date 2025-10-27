@@ -59,6 +59,11 @@ final class ProductSchema
         
         foreach (self::$products as $product) {
             if ($product['URL'] === $url) {
+                // Replace broken CDN images with a generic placeholder
+                if (isset($product['Image Path']) && $product['Image Path']) {
+                    // Use a generic placeholder for now until real images are sourced
+                    $product['Image Path'] = null; // This will trigger the fallback in the template
+                }
                 return $product;
             }
         }
@@ -147,7 +152,6 @@ final class ProductSchema
             ],
             "category" => $product['Product Type'],
             "description" => "{$productName} - Premium fiber cement siding engineered for hardieZone® {$product['HardieZone'][-1]} climates with ColorPlus Technology finish.",
-            "image" => isset($product['Image Path']) && !empty($product['Image Path']) ? $product['Image Path'] : null,
             "aggregateRating" => [
                 "@type" => "AggregateRating",
                 "ratingValue" => $rating,
