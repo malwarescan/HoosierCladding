@@ -112,6 +112,24 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
                 },
                 "serviceType": "Siding Installation and Repair",
                 "description": "Professional siding services in Northern Indiana, specializing in energy-efficient installations for harsh winter climates"
+            },
+            {
+                "@type": "Dataset",
+                "name": "Hoosier Cladding Product Schema Feed",
+                "description": "NDJSON feed containing 1,200 James Hardie product schemas optimized for LLM indexing, AI retrieval, and structured data ingestion",
+                "distribution": {
+                    "@type": "DataDownload",
+                    "contentUrl": "https://www.hoosiercladding.com/feeds/products.ndjson",
+                    "encodingFormat": "application/x-ndjson",
+                    "schemaVersion": "https://schema.org",
+                    "about": "https://www.hoosiercladding.com/products/"
+                },
+                "keywords": ["James Hardie", "fiber cement siding", "product schema", "NDJSON", "structured data"],
+                "provider": {
+                    "@type": "Organization",
+                    "name": "Hoosier Cladding LLC",
+                    "url": "https://www.hoosiercladding.com"
+                }
             }
         ]
     }</script>
