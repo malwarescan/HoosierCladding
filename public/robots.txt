@@ -3,3 +3,6 @@ Disallow:
 User-agent: *
 Allow: /
 Sitemap: https://www.hoosiercladding.com/sitemaps/sitemap-index.xml.gz
+
+# Product Schema Feed (NDJSON)
+Allow: /feeds/products.ndjson
