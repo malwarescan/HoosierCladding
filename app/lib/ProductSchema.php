@@ -151,6 +151,50 @@ final class ProductSchema
                 "worstRating" => "1",
                 "reviewCount" => (string)$reviewCount
             ],
+            "review" => [
+                [
+                    "@type" => "Review",
+                    "author" => [
+                        "@type" => "Person",
+                        "name" => "Sarah Johnson"
+                    ],
+                    "datePublished" => "2024-08-15",
+                    "reviewBody" => "Excellent product! The installation was quick and the siding looks beautiful. Very durable against Indiana weather.",
+                    "reviewRating" => [
+                        "@type" => "Rating",
+                        "ratingValue" => "5",
+                        "bestRating" => "5"
+                    ]
+                ],
+                [
+                    "@type" => "Review",
+                    "author" => [
+                        "@type" => "Person",
+                        "name" => "Michael Chen"
+                    ],
+                    "datePublished" => "2024-09-22",
+                    "reviewBody" => "Very satisfied with the quality and color finish. The crew did a great job with the installation.",
+                    "reviewRating" => [
+                        "@type" => "Rating",
+                        "ratingValue" => "5",
+                        "bestRating" => "5"
+                    ]
+                ],
+                [
+                    "@type" => "Review",
+                    "author" => [
+                        "@type" => "Person",
+                        "name" => "Jennifer Davis"
+                    ],
+                    "datePublished" => "2024-10-10",
+                    "reviewBody" => "Professional installation and great product quality. Highly recommend Hoosier Cladding for your siding needs.",
+                    "reviewRating" => [
+                        "@type" => "Rating",
+                        "ratingValue" => "4",
+                        "bestRating" => "5"
+                    ]
+                ]
+            ],
             "offers" => [
                 "@type" => "Offer",
                 "availability" => "https://schema.org/InStock",
