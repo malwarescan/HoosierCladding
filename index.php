@@ -20,6 +20,16 @@ if (preg_match('#^/sitemap-matrix-(\d+)\.xml$#', $__path, $m)) {
     }
 }
 
+// JAMES HARDIE PRODUCT ROUTES: Handle product pages first
+if (preg_match('#^/products/james-hardie/#', $__path)) {
+    require_once __DIR__ . '/app/lib/ProductSchema.php';
+    $product = ProductSchema::findByUrl($__path);
+    if ($product) {
+        require __DIR__ . '/templates/james-hardie-product.php';
+        exit;
+    }
+}
+
 // BLOG ROUTES: Direct blog slug routes to deterministic blog-router
 if (preg_match('#^/home-siding-blog/[^/]+/?$#', $__path)) {
   require __DIR__.'/app/routes/blog-router.php';

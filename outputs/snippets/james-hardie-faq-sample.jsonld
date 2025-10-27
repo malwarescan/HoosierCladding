@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is HardiePlank Smooth 5-1/4 in Arctic White?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HardiePlank Smooth 5-1/4 in Arctic White is James Hardie's premium fiber cement siding engineered for hardieZone® 5 climates. It features smooth texture and comes in arctic white ColorPlus Technology finish, offering exceptional durability, weather resistance, and a 30-year non-prorated limited warranty on the substrate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the specifications of HardiePlank Smooth 5-1/4 in Arctic White?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HardiePlank Smooth 5-1/4 in Arctic White features James Hardie's proprietary fiber cement formulation optimized for the Midwest climate. It includes ColorPlus Technology factory-applied paint finish, resists cracking, rotting, and moisture damage, and carries fire resistance ratings of Class A. The product is backed by a 30-year substrate warranty and 15-year finish warranty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is HardiePlank Smooth 5-1/4 in Arctic White weather-resistant and fire-rated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, HardiePlank Smooth 5-1/4 in Arctic White is engineered for hardieZone® 5 climates and excels in harsh weather conditions including freeze-thaw cycles, heavy rain, and temperature extremes. It carries a Class A fire rating (non-combustible), resists moisture damage, and won't rot, warp, or crack like wood siding. The ColorPlus Technology finish provides consistent color and reduced maintenance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Smooth and other James Hardie textures?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The smooth texture offers a distinctive appearance that sets it apart from other James Hardie finishes. Each texture provides different aesthetic characteristics while maintaining the same core fiber cement performance. Smooth is ideal for homeowners seeking [texture-specific benefit]. Choose the texture that best matches your home's architectural style and personal preferences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does HardiePlank Smooth 5-1/4 in Arctic White last?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HardiePlank Smooth 5-1/4 in Arctic White is designed to last for decades with minimal maintenance. James Hardie provides a 30-year non-prorated limited warranty on the substrate and a 15-year warranty on the ColorPlus Technology finish. Proper installation by a certified James Hardie installer ensures optimal performance and warranty coverage."
+      }
+    }
+  ]
+}

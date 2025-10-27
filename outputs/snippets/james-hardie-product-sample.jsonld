@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "HardiePlank Lap Siding Smooth 5-1/4 in Arctic White",
+  "brand": {
+    "@type": "Brand",
+    "name": "James Hardie"
+  },
+  "sku": "JH-HARD-SMO-ARC-51/4",
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "James Hardie Building Products",
+    "url": "https://www.jameshardie.com"
+  },
+  "category": "HardiePlank Lap Siding",
+  "description": "HardiePlank Lap Siding Smooth 5-1/4 in Arctic White - Premium fiber cement siding engineered for hardieZone® 5 climates with ColorPlus Technology finish.",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "250"
+  },
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": {
+      "@type": "LocalBusiness",
+      "name": "Hoosier Cladding LLC",
+      "url": "https://www.hoosiercladding.com"
+    }
+  },
+  "url": "https://www.hoosiercladding.com/products/james-hardie/hardieplank/smooth/5-1/4/arctic-white",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Width",
+      "value": "5-1/4"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Length",
+      "value": "144\""
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Thickness",
+      "value": "0.3125\""
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Exposure",
+      "value": "4.0\""
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "HardieZone",
+      "value": "HZ5"
+    }
+  ]
+}
