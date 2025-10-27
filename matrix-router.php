@@ -202,7 +202,7 @@ function renderMatrixLandingPage(array $row): void {
                 <?php endif; ?>
             </p>
             
-            <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+            <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
                 Get Started
             </a>
         </div>
@@ -281,7 +281,7 @@ function renderMatrixLandingPage(array $row): void {
                                 </a>
                             </p>
                         </div>
-                        <a href="/contact" class="inline-flex items-center justify-center w-full rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+                        <a href="/contact" class="inline-flex items-center justify-center w-full rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
                             Request Estimate
                         </a>
                     </div>
