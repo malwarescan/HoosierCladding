@@ -14,11 +14,8 @@ final class ProductSchema
     {
         if (self::$loaded) return;
         
-        // Try products with images first, fallback to regular CSV
-        $file = __DIR__ . '/../../data/james_hardie_products_with_images.csv';
-        if (!file_exists($file)) {
-            $file = __DIR__ . '/../../data/james_hardie_products.csv';
-        }
+        // Use regular CSV (image paths are empty until real images are sourced)
+        $file = __DIR__ . '/../../data/james_hardie_products.csv';
         
         if (!file_exists($file)) {
             self::$loaded = true;
@@ -59,11 +56,6 @@ final class ProductSchema
         
         foreach (self::$products as $product) {
             if ($product['URL'] === $url) {
-                // Replace broken CDN images with a generic placeholder
-                if (isset($product['Image Path']) && $product['Image Path']) {
-                    // Use a generic placeholder for now until real images are sourced
-                    $product['Image Path'] = null; // This will trigger the fallback in the template
-                }
                 return $product;
             }
         }
