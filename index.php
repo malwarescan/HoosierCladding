@@ -10,6 +10,7 @@ if ($__path === '/sitemap.xml')        { require __DIR__ . '/sitemap-index.php';
 if ($__path === '/sitemap-static.xml') { require __DIR__ . '/sitemap-static.php'; exit; }
 if ($__path === '/sitemap-blog.xml')   { require __DIR__ . '/sitemap-blog.php';   exit; }
 if ($__path === '/sitemap-matrix.xml') { require __DIR__ . '/sitemap-matrix.php'; exit; }
+if ($__path === '/sitemap-products.xml') { require __DIR__ . '/sitemap-products.php'; exit; }
 // Also handle numbered matrix sitemaps
 if (preg_match('#^/sitemap-matrix-(\d+)\.xml$#', $__path, $m)) {
     $file = __DIR__ . '/public/sitemap-matrix-' . $m[1] . '.xml';

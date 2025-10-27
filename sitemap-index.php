@@ -26,5 +26,9 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
     <loc><?= $base ?>/sitemap-blog.xml</loc>
     <lastmod><?= $today ?></lastmod>
   </sitemap>
+  <sitemap>
+    <loc><?= $base ?>/sitemap-products.xml</loc>
+    <lastmod><?= $today ?></lastmod>
+  </sitemap>
 </sitemapindex>
 
