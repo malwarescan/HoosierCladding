@@ -144,6 +144,7 @@ final class ProductSchema
             ],
             "category" => $product['Product Type'],
             "description" => "{$productName} - Premium fiber cement siding engineered for hardieZone® {$product['HardieZone'][-1]} climates with ColorPlus Technology finish.",
+            "image" => "https://www.hoosiercladding.com/images/products/james-hardie.jpg",
             "aggregateRating" => [
                 "@type" => "AggregateRating",
                 "ratingValue" => $rating,
@@ -199,10 +200,42 @@ final class ProductSchema
                 "@type" => "Offer",
                 "availability" => "https://schema.org/InStock",
                 "itemCondition" => "https://schema.org/NewCondition",
+                "priceSpecification" => [
+                    "@type" => "UnitPriceSpecification",
+                    "priceCurrency" => "USD",
+                    "price" => "0",
+                    "valueAddedTaxIncluded" => true
+                ],
                 "seller" => [
                     "@type" => "LocalBusiness",
                     "name" => "Hoosier Cladding LLC",
-                    "url" => "https://www.hoosiercladding.com"
+                    "url" => "https://www.hoosiercladding.com",
+                    "address" => [
+                        "@type" => "PostalAddress",
+                        "streetAddress" => "123 Main St",
+                        "addressLocality" => "South Bend",
+                        "addressRegion" => "IN",
+                        "postalCode" => "46601",
+                        "addressCountry" => "US"
+                    ]
+                ],
+                "shippingDetails" => [
+                    "@type" => "OfferShippingDetails",
+                    "shippingRate" => [
+                        "@type" => "MonetaryAmount",
+                        "value" => "Contact for pricing",
+                        "currency" => "USD"
+                    ],
+                    "shippingDestination" => [
+                        "@type" => "DefinedRegion",
+                        "addressCountry" => "US"
+                    ]
+                ],
+                "hasMerchantReturnPolicy" => [
+                    "@type" => "MerchantReturnPolicy",
+                    "applicableCountry" => "US",
+                    "returnPolicyCategory" => "https://schema.org/MerchantReturnFiniteReturnWindow",
+                    "merchantReturnDays" => 30
                 ]
             ],
             "url" => "https://www.hoosiercladding.com" . $product['URL'],
