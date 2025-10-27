@@ -29,16 +29,15 @@ if (($h = fopen($file, 'r')) !== false) {
 
 // Output XML
 header('Content-Type: application/xml; charset=UTF-8');
-?>
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<?php foreach ($products as $product): ?>
-  <url>
-    <loc>https://www.hoosiercladding.com<?= htmlspecialchars($product['URL']) ?></loc>
-    <lastmod><?= date('Y-m-d') ?></lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-<?php endforeach; ?>
-</urlset>
+echo '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;
+echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . PHP_EOL;
+foreach ($products as $product) {
+    echo '  <url>' . PHP_EOL;
+    echo '    <loc>https://www.hoosiercladding.com' . htmlspecialchars($product['URL']) . '</loc>' . PHP_EOL;
+    echo '    <lastmod>' . date('Y-m-d') . '</lastmod>' . PHP_EOL;
+    echo '    <changefreq>monthly</changefreq>' . PHP_EOL;
+    echo '    <priority>0.8</priority>' . PHP_EOL;
+    echo '  </url>' . PHP_EOL;
+}
+echo '</urlset>' . PHP_EOL;
 
