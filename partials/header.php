@@ -6,6 +6,7 @@ $SITE = 'Hoosier Cladding LLC';
 
 // Load MetaManager for CTR-optimized titles/descriptions
 require_once __DIR__ . '/../app/lib/MetaManager.php';
+require_once __DIR__ . '/../app/lib/schema.php';
 
 $reqPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 $defaultTitle = isset($pageTitle) ? $pageTitle : 'Professional Siding Services in Northern Indiana | ' . $SITE;
@@ -121,12 +122,15 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
         require_once $head_injector_path;
     }
     
-    // Inject FAQ structured data from GSC snippets
-    $slug = trim($reqPath, '/') ?: 'home';
-    $faqPath = __DIR__ . '/../outputs/snippets/' . $slug . '/faq.jsonld';
-    if (file_exists($faqPath)) {
-        $faqJson = file_get_contents($faqPath);
-        echo '<script type="application/ld+json">' . $faqJson . '</script>' . PHP_EOL;
+    // Inject FAQ structured data from GSC snippets ONLY for non-matrix pages without existing FAQ
+    // Skip if we're on a matrix page (head_injector already handles FAQ) or homepage (has inline FAQ)
+    if (!Schema::isMatrixRoute($reqPath) && $reqPath !== '/') {
+        $slug = trim($reqPath, '/') ?: 'home';
+        $faqPath = __DIR__ . '/../outputs/snippets/' . $slug . '/faq.jsonld';
+        if (file_exists($faqPath)) {
+            $faqJson = file_get_contents($faqPath);
+            echo '<script type="application/ld+json">' . $faqJson . '</script>' . PHP_EOL;
+        }
     }
     ?>
 </head>
