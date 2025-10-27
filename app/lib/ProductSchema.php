@@ -212,12 +212,15 @@ final class ProductSchema
                     "url" => "https://www.hoosiercladding.com",
                     "address" => [
                         "@type" => "PostalAddress",
-                        "streetAddress" => "123 Main St",
+                        "streetAddress" => "721 Lincoln Way E",
                         "addressLocality" => "South Bend",
                         "addressRegion" => "IN",
                         "postalCode" => "46601",
                         "addressCountry" => "US"
-                    ]
+                    ],
+                    "telephone" => "574-931-2119",
+                    "email" => "David@Hoosier.works",
+                    "image" => "https://www.hoosiercladding.com/public/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp"
                 ],
                 "shippingDetails" => [
                     "@type" => "OfferShippingDetails",

@@ -5,17 +5,19 @@ function schemaLocalBusiness() {
     "@type" => "LocalBusiness",
     "@id" => "https://www.hoosiercladding.com/#localbusiness",
     "name" => "Hoosier Cladding",
-    "image" => "https://www.hoosiercladding.com/images/logo.png",
     "url" => "https://www.hoosiercladding.com",
-    "telephone" => "+1-574-555-0123",
+    "telephone" => "574-931-2119",
     "address" => [
       "@type" => "PostalAddress",
-      "streetAddress" => "123 Main St",
+      "streetAddress" => "721 Lincoln Way E",
       "addressLocality" => "South Bend",
       "addressRegion" => "IN",
       "postalCode" => "46601",
       "addressCountry" => "US"
     ],
+    "email" => "David@Hoosier.works",
+    "image" => "https://www.hoosiercladding.com/public/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp",
+    "priceRange" => "$$",
     "openingHoursSpecification" => [
       "@type" => "OpeningHoursSpecification",
       "dayOfWeek" => ["Monday","Tuesday","Wednesday","Thursday","Friday"],
