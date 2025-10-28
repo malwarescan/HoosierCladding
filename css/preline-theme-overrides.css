@@ -1,0 +1,166 @@
+/* === Preline Construction Theme Overrides ===
+   Palette: industrial blues + neutral greys
+   Base accent replaces #ffc107 (yellow) with deep engineered blue.
+   Aesthetic: Bosch / Siemens / Liebherr precision engineering
+*/
+
+:root {
+  /* Brand blues (construction steel / industrial) */
+  --pl-primary-50:  #f2f6fc;
+  --pl-primary-100: #d9e4f7;
+  --pl-primary-200: #b3c9ef;
+  --pl-primary-300: #80a9e6;
+  --pl-primary-400: #4c87db;
+  --pl-primary-500: #1e66d0; /* Core accent (deep steel blue) */
+  --pl-primary-600: #174ea0; /* darker hover */
+  --pl-primary-700: #123b7a;
+  --pl-primary-800: #0d2a57;
+  --pl-primary-900: #091b38;
+
+  /* Secondary neutral greys (construction steel) */
+  --pl-neutral-50:  #f8f9fa;
+  --pl-neutral-100: #f1f3f5;
+  --pl-neutral-200: #e9ecef;
+  --pl-neutral-300: #dee2e6;
+  --pl-neutral-400: #adb5bd;
+  --pl-neutral-500: #868e96;
+  --pl-neutral-600: #495057;
+  --pl-neutral-700: #343a40;
+  --pl-neutral-800: #212529;
+  --pl-neutral-900: #121416;
+}
+
+/* Override Preline / Tailwind accent utilities */
+.bg-primary, .bg-blue-500, .bg-yellow-500, .bg-amber-500 {
+  background-color: var(--pl-primary-500) !important;
+}
+.hover\:bg-primary:hover, .hover\:bg-blue-600:hover {
+  background-color: var(--pl-primary-600) !important;
+}
+.text-primary, .text-blue-600, .text-amber-500 {
+  color: var(--pl-primary-600) !important;
+}
+.border-primary, .border-blue-500, .border-amber-500 {
+  border-color: var(--pl-primary-500) !important;
+}
+
+/* Buttons */
+button, .btn, .hs-btn {
+  --tw-bg-opacity: 1;
+}
+button:not([class*="border"]):not([class*="outline"]), 
+.btn-primary,
+.bg-blue-600 {
+  background-color: var(--pl-primary-500) !important;
+  color: #fff !important;
+  border-color: var(--pl-primary-600) !important;
+}
+button:not([class*="border"]):not([class*="outline"]):hover, 
+.btn-primary:hover,
+.bg-blue-600:hover,
+.hover\:bg-blue-700:hover {
+  background-color: var(--pl-primary-600) !important;
+}
+
+/* Secondary buttons (outline/border style) */
+button[class*="border"], .btn-outline {
+  border-color: var(--pl-neutral-400) !important;
+  color: var(--pl-neutral-700) !important;
+}
+button[class*="border"]:hover, .btn-outline:hover {
+  background-color: var(--pl-neutral-100) !important;
+}
+
+/* Focus rings & form accents */
+:focus-visible {
+  outline-color: var(--pl-primary-500) !important;
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--pl-primary-500) !important;
+  box-shadow: 0 0 0 3px rgba(30,102,208,0.2) !important;
+}
+.focus\:ring-2:focus,
+.focus\:ring-blue-600:focus {
+  --tw-ring-color: var(--pl-primary-500) !important;
+}
+
+/* Accent link hover */
+a:hover:not([class*="btn"]) {
+  color: var(--pl-primary-500) !important;
+}
+
+/* Badge / Tag components */
+.badge, .tag, .inline-flex.items-center.gap-x-2 {
+  background-color: var(--pl-neutral-100) !important;
+  color: var(--pl-neutral-800) !important;
+}
+
+/* Card borders & shadows (subtle, industrial) */
+.hs-card, .card {
+  border-color: var(--pl-neutral-200) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Optional: Preline component color tokens */
+[data-hs-theme=default] {
+  --hs-color-primary: var(--pl-primary-500);
+  --hs-color-primary-hover: var(--pl-primary-600);
+  --hs-color-accent: var(--pl-primary-400);
+}
+
+/* Body defaults (clean, professional) */
+body {
+  background-color: #f9fafb;
+  color: #212529;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Remove any yellow/amber from existing styles */
+.text-yellow-500,
+.text-amber-500,
+.bg-yellow-500,
+.bg-amber-500,
+.border-yellow-500,
+.border-amber-500 {
+  color: var(--pl-primary-600) !important;
+  background-color: transparent !important;
+  border-color: var(--pl-primary-500) !important;
+}
+
+/* Stars/ratings (if any) - convert to blue */
+.text-yellow-400,
+[style*="color: #ffc107"],
+[style*="color:#ffc107"] {
+  color: var(--pl-primary-500) !important;
+}
+
+/* Override any mustard/yellow backgrounds from output.css */
+.card,
+article.card,
+div.card {
+  background: white !important;
+  background-color: white !important;
+}
+.bg-blue-700,
+.bg-orange-700,
+[style*="background: hsl(49.89deg"],
+[class*="bg-"][class*="700"] {
+  background-color: var(--pl-neutral-50) !important;
+}
+
+/* Override any yellow text from output.css */
+.text-blue-700,
+[style*="color: hsl(49.89deg"] {
+  color: var(--pl-neutral-700) !important;
+}
+
+/* Ensure sections have clean backgrounds */
+.section {
+  background-color: white !important;
+}
+.section[style*="background"] {
+  background-color: var(--pl-neutral-50) !important;
+}
+

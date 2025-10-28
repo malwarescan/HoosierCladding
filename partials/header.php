@@ -31,10 +31,10 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/preline@2.3.0/dist/preline.min.css">
     
     <!-- Construction Blue Theme Overrides -->
-    <link rel="stylesheet" href="/public/css/preline-theme-overrides.css">
+    <link rel="stylesheet" href="/css/preline-theme-overrides.css">
     
     <!-- Site CSS -->
-    <link rel="stylesheet" href="/public/styles/output.css">
+    <link rel="stylesheet" href="/styles/output.css">
     
     <script type="application/ld+json">{
         "@context": "https://schema.org",
