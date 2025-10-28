@@ -23,8 +23,8 @@
 
         <!-- Controls for users & crawlers (visible, not spam) -->
         <div class="mt-3 flex items-center gap-2 text-sm text-gray-600">
-          <button type="button" class="hc-rot-prev px-2 py-1 rounded border hover:bg-gray-50">Prev</button>
-          <button type="button" class="hc-rot-next px-2 py-1 rounded border hover:bg-gray-50">Next</button>
+          <button type="button" class="hc-rot-prev px-2 py-1 rounded border bg-blue-600 text-white hover:bg-blue-700">Prev</button>
+          <button type="button" class="hc-rot-next px-2 py-1 rounded border bg-blue-600 text-white hover:bg-blue-700">Next</button>
           <span class="hc-rot-index text-xs text-gray-500" aria-live="off">(1/5)</span>
         </div>
       </div>
@@ -35,7 +35,7 @@
       <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
         Get a Free Estimate
       </a>
-      <a href="/our-services" class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-gray-700 hover:bg-gray-50">
+      <a href="/our-services" class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-white bg-blue-600 hover:bg-blue-700">
         View Services
       </a>
     </div>

@@ -12,7 +12,7 @@
         <p class="text-white opacity-90">Get your free estimate today. We call within 1 business day.</p>
       </div>
       <div class="flex flex-col sm:flex-row gap-4 justify-end">
-        <a href="tel:<?= preg_replace('/[^0-9]/', '', $PHONE) ?>" class="btn btn-secondary bg-white text-blue-600 hover:bg-gray-50">
+        <a href="tel:<?= preg_replace('/[^0-9]/', '', $PHONE) ?>" class="btn btn-secondary bg-blue-600 text-white hover:bg-blue-700">
           Call <?= $PHONE ?>
         </a>
         <a href="/contact.php" class="btn btn-outline border-white text-white hover:bg-white hover:text-blue-600">

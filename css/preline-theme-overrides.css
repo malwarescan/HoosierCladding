@@ -156,11 +156,42 @@ div.card {
   color: var(--pl-neutral-700) !important;
 }
 
-/* Ensure sections have clean backgrounds */
-.section {
-  background-color: white !important;
+/* Override all gray button backgrounds to navy blue */
+button[class*="bg-gray"],
+.btn[class*="bg-gray"],
+a[class*="bg-gray"],
+.hover\:bg-gray-50:hover,
+.hover\:bg-gray-100:hover,
+.hover\:bg-gray-200:hover,
+.bg-gray-50,
+.bg-gray-100,
+.bg-gray-200 {
+  background-color: #01426A !important;
+  color: white !important;
 }
-.section[style*="background"] {
-  background-color: var(--pl-neutral-50) !important;
+
+/* Ensure hover states work properly for navy buttons */
+button[class*="bg-gray"]:hover,
+.btn[class*="bg-gray"]:hover,
+a[class*="bg-gray"]:hover {
+  background-color: #0A2F4A !important;
+  color: white !important;
+}
+
+/* Override specific button classes that use gray backgrounds */
+.hc-rot-prev,
+.hc-rot-next,
+button[class*="hover:bg-gray"],
+a[class*="hover:bg-gray"] {
+  background-color: #01426A !important;
+  color: white !important;
+}
+
+.hc-rot-prev:hover,
+.hc-rot-next:hover,
+button[class*="hover:bg-gray"]:hover,
+a[class*="hover:bg-gray"]:hover {
+  background-color: #0A2F4A !important;
+  color: white !important;
 }
 
