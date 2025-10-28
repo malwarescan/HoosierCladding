@@ -1,6 +1,19 @@
 # Stop unexpected content negotiation
 Options -MultiViews
 
+# BEGIN HoosierCladding-Global
+# Security + sane defaults
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set X-XSS-Protection "0"
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/json text/plain application/x-ndjson
+</IfModule>
+# END HoosierCladding-Global
+
 RewriteEngine On
 
 # --- Always serve real files/dirs as-is ---
@@ -11,6 +24,9 @@ RewriteRule ^ - [L]
 # --- Whitelist things that must never hit the router ---
 # add more if needed (humans.txt, security.txt, etc.)
 RewriteRule ^(sitemap.*\.xml|robots\.txt|favicon\.ico)$ - [L]
+
+# --- NDJSON feeds (must come before XML rules) ---
+RewriteRule ^feeds/products\.ndjson$ feeds/products.ndjson.php [L]
 
 # Serve XML directly (bypass PHP router) + cache
 RewriteCond %{REQUEST_URI} \.xml(\.gz)?$ [NC]
