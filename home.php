@@ -12,7 +12,7 @@ include __DIR__ . '/partials/header.php';
     <div class="grid lg:grid-cols-2 gap-12 items-center">
       <!-- Left: Image -->
       <div class="order-2 lg:order-1">
-        <img src="/public/images/branded/misc/energy-efficiency-construction.jpeg" 
+        <img src="/images/branded/misc/energy-efficiency-construction.jpeg" 
              alt="Energy-efficient siding installation in Northern Indiana" 
              class="w-full h-auto rounded-2xl shadow-2xl"
              loading="lazy">

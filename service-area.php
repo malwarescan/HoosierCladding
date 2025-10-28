@@ -6,7 +6,7 @@ include __DIR__ . '/partials/header.php';
 
 	<section class="relative overflow-hidden bg-white">
     	<div class="absolute inset-0 top-0 z-0 pointer-events-none">
-        <img src="/public/images/hero-section/siding-repair-home-hoosier-cladding.png" 
+        <img src="/images/hero-section/siding-repair-home-hoosier-cladding.png" 
              alt="Siding services across Northern Indiana and Southwest Michigan" 
              class="w-full h-full object-cover opacity-25"
              loading="eager">

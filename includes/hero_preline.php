@@ -2,7 +2,7 @@
 <section class="relative overflow-hidden bg-white">
   <!-- Background Image -->
   <div class="absolute inset-0 top-0 z-0 pointer-events-none">
-    <img src="/public/images/hero-section/siding-repair-home-hoosier-cladding.png" 
+    <img src="/images/hero-section/siding-repair-home-hoosier-cladding.png" 
          alt="Professional siding repair and installation services" 
          class="w-full h-full object-cover opacity-25"
          loading="eager">
