@@ -313,7 +313,7 @@ function renderMatrixLandingPage(array $row): void {
     </section>
     
     <!-- FAQ Section (Required for FAQPage schema compliance) -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-gray-50">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
             <div class="space-y-4">
