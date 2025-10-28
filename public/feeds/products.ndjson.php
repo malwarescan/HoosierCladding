@@ -8,7 +8,13 @@ declare(strict_types=1);
 while (ob_get_level() > 0) { @ob_end_clean(); }
 header('Content-Type: application/x-ndjson; charset=utf-8');
 header('Cache-Control: public, max-age=300');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, HEAD, OPTIONS');
 header('X-Accel-Buffering: no');
+
+$method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+if ($method === 'HEAD') { http_response_code(200); exit; }
+if ($method === 'OPTIONS') { http_response_code(204); exit; }
 
 require_once __DIR__ . '/_lib/FeedSource.php'; // your source of PHP arrays
 

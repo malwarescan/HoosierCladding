@@ -1,8 +1,9 @@
 Options -Indexes
 RewriteEngine On
-RewriteRule ^products\.ndjson$ products.ndjson.php [L]
+RewriteBase /feeds/
 
+# Route clean URL to the PHP generator
+RewriteRule ^products\.ndjson$ products.ndjson.php [L,QSA]
+
+# Fallback MIME (safety)
 AddType application/x-ndjson .ndjson
-<Files "products.ndjson">
-  Header set Cache-Control "public, max-age=300"
-</Files>
