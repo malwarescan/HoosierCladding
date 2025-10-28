@@ -4,8 +4,11 @@
  * Handles all incoming requests and routes them to the appropriate page
  */
 
-// PRIORITY: Handle sitemaps FIRST (before any routing logic)
+// PRIORITY: Handle feeds FIRST (before any routing logic)
 $__path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+if ($__path === '/feeds/products.ndjson') { require __DIR__ . '/public/feeds/products.ndjson.php'; exit; }
+
+// PRIORITY: Handle sitemaps SECOND (before any routing logic)
 if ($__path === '/sitemap.xml')        { require __DIR__ . '/sitemap-index.php';  exit; }
 if ($__path === '/sitemap-static.xml') { require __DIR__ . '/sitemap-static.php'; exit; }
 if ($__path === '/sitemap-blog.xml')   { require __DIR__ . '/sitemap-blog.php';   exit; }

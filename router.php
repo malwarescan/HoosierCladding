@@ -23,6 +23,14 @@ if (preg_match('#^/api/#', $request_uri)) {
     }
 }
 
+// NDJSON feeds - serve directly
+if (preg_match('#^/feeds/#', $request_uri)) {
+    $file_path = __DIR__ . $request_uri;
+    if (file_exists($file_path) && is_file($file_path)) {
+        return false; // Let PHP serve the file
+    }
+}
+
 // Special handling for sitemap URLs (including numbered ones)
 if (preg_match('/^\/sitemap(-[a-z]+)?(-\d+)?\.xml$/', $request_uri)) {
     // Route to index.php which will handle sitemap routing

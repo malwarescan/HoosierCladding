@@ -45,4 +45,3 @@ $gen = (function (): \Generator {
 })();
 
 JsonlWriter::stream($gen);
-

@@ -16,9 +16,10 @@ Header always set X-XSS-Protection "0"
 
 RewriteEngine On
 
-# --- Always serve real files/dirs as-is ---
+# --- Always serve real files/dirs as-is (EXCEPT feeds) ---
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !^/feeds/
 RewriteRule ^ - [L]
 
 # --- Whitelist things that must never hit the router ---

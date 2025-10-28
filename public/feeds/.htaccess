@@ -1,23 +1,15 @@
-# BEGIN HoosierCladding-Feeds
+# Feeds directory
 Options -Indexes
-
-# Serve /feeds/products.ndjson from PHP generator with clean URL
 RewriteEngine On
-RewriteCond %{REQUEST_URI} ^/feeds/products\.ndjson$
+
+# Always route the clean URL to the PHP generator in THIS folder
 RewriteRule ^products\.ndjson$ products.ndjson.php [L]
 
-# Ensure correct content-type even if PHP fails
+# Correct MIME for safety (even if PHP headers fail)
 AddType application/x-ndjson .ndjson
 
-# Caching: short CDN cache + validators
+# Caching headers (short)
 <Files "products.ndjson">
   Header set Cache-Control "public, max-age=300"
 </Files>
-
-# Allow HEAD preflight checks from bots/tools
-<IfModule mod_headers.c>
-  Header always set Access-Control-Allow-Origin "*"
-  Header always set Access-Control-Allow-Methods "GET,HEAD,OPTIONS"
-</IfModule>
-# END HoosierCladding-Feeds
 
