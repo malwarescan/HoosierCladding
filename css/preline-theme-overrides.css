@@ -149,20 +149,10 @@ div.card {
   color: var(--pl-neutral-700) !important;
 }
 
-/* Override all gray button backgrounds to navy blue - HIGHER SPECIFICITY */
+/* Override only actual buttons with gray backgrounds to navy blue */
 button[class*="bg-gray"],
 .btn[class*="bg-gray"],
-a[class*="bg-gray"],
-.hover\:bg-gray-50:hover,
-.hover\:bg-gray-100:hover,
-.hover\:bg-gray-200:hover,
-.bg-gray-50,
-.bg-gray-100,
-.bg-gray-200,
-.bg-blue-700,
-.bg-orange-700,
-[style*="background: hsl(49.89deg"],
-[class*="bg-"][class*="700"] {
+a[class*="bg-gray"] {
   background-color: #01426A !important;
   color: white !important;
 }
