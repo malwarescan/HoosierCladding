@@ -143,20 +143,13 @@ div.card {
   background: white !important;
   background-color: white !important;
 }
-.bg-blue-700,
-.bg-orange-700,
-[style*="background: hsl(49.89deg"],
-[class*="bg-"][class*="700"] {
-  background-color: var(--pl-neutral-50) !important;
-}
-
 /* Override any yellow text from output.css */
 .text-blue-700,
 [style*="color: hsl(49.89deg"] {
   color: var(--pl-neutral-700) !important;
 }
 
-/* Override all gray button backgrounds to navy blue */
+/* Override all gray button backgrounds to navy blue - HIGHER SPECIFICITY */
 button[class*="bg-gray"],
 .btn[class*="bg-gray"],
 a[class*="bg-gray"],
@@ -165,7 +158,11 @@ a[class*="bg-gray"],
 .hover\:bg-gray-200:hover,
 .bg-gray-50,
 .bg-gray-100,
-.bg-gray-200 {
+.bg-gray-200,
+.bg-blue-700,
+.bg-orange-700,
+[style*="background: hsl(49.89deg"],
+[class*="bg-"][class*="700"] {
   background-color: #01426A !important;
   color: white !important;
 }
