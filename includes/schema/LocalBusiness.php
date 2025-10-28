@@ -16,7 +16,7 @@ function schemaLocalBusiness() {
       "addressCountry" => "US"
     ],
     "email" => "David@Hoosier.works",
-    "image" => "https://www.hoosiercladding.com/public/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp",
+    "image" => "https://www.hoosiercladding.com/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp",
     "priceRange" => "$$",
     "openingHoursSpecification" => [
       "@type" => "OpeningHoursSpecification",

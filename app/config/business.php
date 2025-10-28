@@ -3,7 +3,7 @@ return [
   'name'        => 'Hoosier Cladding LLC',
   'legalName'   => 'Hoosier Cladding LLC',
   'url'         => 'https://www.hoosiercladding.com',
-  'logo'        => 'https://www.hoosiercladding.com/public/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp',
+  'logo'        => 'https://www.hoosiercladding.com/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp',
   'telephone'   => '+1-574-931-2119',
   'email'       => 'David@Hoosier.works',
   'street'      => '721 Lincoln Way E',

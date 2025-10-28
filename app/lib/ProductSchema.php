@@ -220,7 +220,7 @@ final class ProductSchema
                     ],
                     "telephone" => "574-931-2119",
                     "email" => "David@Hoosier.works",
-                    "image" => "https://www.hoosiercladding.com/public/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp"
+                    "image" => "https://www.hoosiercladding.com/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp"
                 ],
                 "shippingDetails" => [
                     "@type" => "OfferShippingDetails",

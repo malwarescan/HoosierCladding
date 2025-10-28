@@ -44,7 +44,7 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
                 "@id": "https://www.hoosiercladding.com#org",
                 "name": "<?= $SITE ?>",
                 "url": "https://www.hoosiercladding.com",
-                "logo": "https://www.hoosiercladding.com/public/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp",
+                "logo": "https://www.hoosiercladding.com/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp",
                 "email": "<?= $EMAIL ?>",
                 "telephone": "<?= $PHONE ?>",
                 "contactPoint": [{
@@ -159,7 +159,7 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
                 <!-- Logo/Brand -->
                 <div class="flex items-center gap-x-3">
                     <a href="/" class="flex items-center gap-x-3 group">
-                        <img src="/public/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp" alt="Hoosier Cladding LLC" class="h-10 lg:h-12 w-auto">
+                        <img src="/images/logos/Hoosie-Cladding-Home-Siding-Indiana.webp" alt="Hoosier Cladding LLC" class="h-10 lg:h-12 w-auto">
                         <span class="hidden sm:block text-lg lg:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200"><?= $SITE ?></span>
                     </a>
                 </div>
