@@ -23,8 +23,11 @@ RewriteCond %{REQUEST_URI} !^/feeds/
 RewriteRule ^ - [L]
 
 # --- Whitelist things that must never hit the router ---
-# add more if needed (humans.txt, security.txt, etc.)
-RewriteRule ^(sitemap.*\.xml|robots\.txt|favicon\.ico)$ - [L]
+# Favicon and icon files - serve directly with proper content types
+RewriteRule ^(favicon\.ico|favicon-16x16\.png|favicon-32x32\.png|favicon\.svg|apple-touch-icon\.png|android-chrome-192x192\.png|android-chrome-512x512\.png|site\.webmanifest)$ - [L]
+
+# Other whitelisted files
+RewriteRule ^(sitemap.*\.xml|robots\.txt)$ - [L]
 
 # --- NDJSON feeds (must come before XML rules) ---
 RewriteRule ^feeds/products\.ndjson$ feeds/products.ndjson.php [L]

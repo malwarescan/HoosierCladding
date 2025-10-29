@@ -4,11 +4,35 @@
  * Handles all incoming requests and routes them to the appropriate page
  */
 
-// PRIORITY: Handle feeds FIRST (before any routing logic)
+// PRIORITY: Handle favicon and icon files FIRST (before any routing logic)
 $__path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+
+// Serve favicon files with proper content-type headers
+$faviconFiles = [
+    '/favicon.ico' => ['file' => __DIR__ . '/favicon.ico', 'type' => 'image/x-icon'],
+    '/favicon-16x16.png' => ['file' => __DIR__ . '/favicon-16x16.png', 'type' => 'image/png'],
+    '/favicon-32x32.png' => ['file' => __DIR__ . '/favicon-32x32.png', 'type' => 'image/png'],
+    '/favicon.svg' => ['file' => __DIR__ . '/favicon.svg', 'type' => 'image/svg+xml'],
+    '/apple-touch-icon.png' => ['file' => __DIR__ . '/apple-touch-icon.png', 'type' => 'image/png'],
+    '/android-chrome-192x192.png' => ['file' => __DIR__ . '/android-chrome-192x192.png', 'type' => 'image/png'],
+    '/android-chrome-512x512.png' => ['file' => __DIR__ . '/android-chrome-512x512.png', 'type' => 'image/png'],
+    '/site.webmanifest' => ['file' => __DIR__ . '/site.webmanifest', 'type' => 'application/manifest+json'],
+];
+
+if (isset($faviconFiles[$__path])) {
+    $favicon = $faviconFiles[$__path];
+    if (file_exists($favicon['file'])) {
+        header('Content-Type: ' . $favicon['type']);
+        header('Cache-Control: public, max-age=2592000, stale-while-revalidate=86400');
+        readfile($favicon['file']);
+        exit;
+    }
+}
+
+// PRIORITY: Handle feeds SECOND (before any routing logic)
 if ($__path === '/feeds/products.ndjson') { require __DIR__ . '/public/feeds/products.ndjson.php'; exit; }
 
-// PRIORITY: Handle sitemaps SECOND (before any routing logic)
+// PRIORITY: Handle sitemaps THIRD (before any routing logic)
 if ($__path === '/sitemap.xml')        { require __DIR__ . '/sitemap-index.php';  exit; }
 if ($__path === '/sitemap-static.xml') { require __DIR__ . '/sitemap-static.php'; exit; }
 if ($__path === '/sitemap-blog.xml')   { require __DIR__ . '/sitemap-blog.php';   exit; }

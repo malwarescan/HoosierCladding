@@ -6,6 +6,28 @@
 
 $request_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
+// PRIORITY: Handle favicon files with explicit content-type headers
+$faviconFiles = [
+    '/favicon.ico' => ['file' => __DIR__ . '/favicon.ico', 'type' => 'image/x-icon'],
+    '/favicon-16x16.png' => ['file' => __DIR__ . '/favicon-16x16.png', 'type' => 'image/png'],
+    '/favicon-32x32.png' => ['file' => __DIR__ . '/favicon-32x32.png', 'type' => 'image/png'],
+    '/favicon.svg' => ['file' => __DIR__ . '/favicon.svg', 'type' => 'image/svg+xml'],
+    '/apple-touch-icon.png' => ['file' => __DIR__ . '/apple-touch-icon.png', 'type' => 'image/png'],
+    '/android-chrome-192x192.png' => ['file' => __DIR__ . '/android-chrome-192x192.png', 'type' => 'image/png'],
+    '/android-chrome-512x512.png' => ['file' => __DIR__ . '/android-chrome-512x512.png', 'type' => 'image/png'],
+    '/site.webmanifest' => ['file' => __DIR__ . '/site.webmanifest', 'type' => 'application/manifest+json'],
+];
+
+if (isset($faviconFiles[$request_uri])) {
+    $favicon = $faviconFiles[$request_uri];
+    if (file_exists($favicon['file'])) {
+        header('Content-Type: ' . $favicon['type']);
+        header('Cache-Control: public, max-age=2592000, stale-while-revalidate=86400');
+        readfile($favicon['file']);
+        return true;
+    }
+}
+
 // Serve static files directly
 $file_path = __DIR__ . $request_uri;
 
