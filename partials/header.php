@@ -24,6 +24,14 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="<?= MetaManager::canonical($reqPath) ?>">
     
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#111111">
+    
     <!-- Tailwind core (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -133,6 +141,19 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
             }
         ]
     }</script>
+    
+    <!-- WebSite JSON-LD with favicon image hint -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://www.hoosiercladding.com/",
+        "name": "Hoosier Cladding",
+        "image": "https://www.hoosiercladding.com/favicon-32x32.png",
+        "inLanguage": "en"
+    }
+    </script>
+    
     <?php 
     // Inject dynamic JSON-LD schema for matrix pages
     $head_injector_path = __DIR__ . '/../app/bootstrap/head_injector.php';

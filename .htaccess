@@ -34,3 +34,16 @@ RewriteRule ^matrix/(.+)$ matrix-router.php [L,QSA]
 
 # --- Front controller: everything else to index.php ---
 RewriteRule ^ index.php [L]
+
+# --- Favicon and Icon Caching ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType image/png    "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "^(favicon\.ico|favicon-16x16\.png|favicon-32x32\.png|apple-touch-icon\.png|android-chrome-192x192\.png|android-chrome-512x512\.png|favicon\.svg)$">
+    Header set Cache-Control "public, max-age=2592000, stale-while-revalidate=86400"
+  </FilesMatch>
+</IfModule>
