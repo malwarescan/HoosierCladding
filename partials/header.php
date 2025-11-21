@@ -126,6 +126,12 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
                 "@type": "Dataset",
                 "name": "Hoosier Cladding Product Schema Feed",
                 "description": "NDJSON feed containing 1,200 James Hardie product schemas optimized for LLM indexing, AI retrieval, and structured data ingestion",
+                "creator": {
+                    "@type": "Organization",
+                    "name": "Hoosier Cladding LLC",
+                    "url": "https://www.hoosiercladding.com"
+                },
+                "license": "https://creativecommons.org/licenses/by/4.0/",
                 "distribution": {
                     "@type": "DataDownload",
                     "contentUrl": "https://www.hoosiercladding.com/feeds/products.ndjson",
