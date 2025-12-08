@@ -4,15 +4,47 @@ $EMAIL = 'David@Hoosier.works';
 $ADDRESS = '721 Lincoln Way E, South Bend, IN 46601';
 $SITE = 'Hoosier Cladding LLC';
 
-// Load MetaManager for CTR-optimized titles/descriptions
+// Load AdvancedMetaManager for unique, geo-targeted metadata
+require_once __DIR__ . '/../app/lib/AdvancedMetaManager.php';
 require_once __DIR__ . '/../app/lib/MetaManager.php';
 require_once __DIR__ . '/../app/lib/schema.php';
 
 $reqPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
-$defaultTitle = isset($pageTitle) ? $pageTitle : 'Professional Siding Services in Northern Indiana | ' . $SITE;
-$defaultDesc  = isset($pageDescription) ? $pageDescription : 'Expert siding installation, repair, and replacement in South Bend, Mishawaka, Elkhart, and throughout Michiana. Licensed & insured. Winter-ready installations. Call 574-931-2119 for a free estimate.';
-$finalTitle = MetaManager::title($reqPath, $defaultTitle);
-$finalDesc  = MetaManager::description($reqPath, $defaultDesc);
+
+// Determine page type from context or path
+if (!isset($pageType)) {
+    $path = trim($reqPath, '/');
+    if ($path === '' || $path === 'home' || $path === 'index') {
+        $pageType = 'homepage';
+    } elseif (strpos($path, 'matrix/') === 0) {
+        $pageType = 'matrix';
+    } elseif (strpos($path, 'home-siding-blog') === 0 || strpos($path, 'home-improvement-blog') === 0) {
+        $pageType = 'blog';
+    } elseif ($path === 'about-us' || $path === 'about') {
+        $pageType = 'about';
+    } elseif ($path === 'contact' || $path === 'contact-us') {
+        $pageType = 'contact';
+    } elseif (strpos($path, 'service-area') === 0) {
+        $pageType = 'city';
+    } else {
+        $pageType = 'service';
+    }
+}
+$context = $pageContext ?? [];
+
+// Generate unique metadata using AdvancedMetaManager
+if (isset($pageTitle) && isset($pageDescription)) {
+    // Use provided metadata if set (allows page-specific overrides)
+    $finalTitle = $pageTitle;
+    $finalDesc = $pageDescription;
+} else {
+    // Generate unique metadata
+    $finalTitle = AdvancedMetaManager::generateTitle($reqPath, $pageType, $context);
+    $finalDesc = AdvancedMetaManager::generateDescription($reqPath, $pageType, $context);
+}
+
+// Fallback to MetaManager for canonical URLs
+$canonical = MetaManager::canonical($reqPath);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +54,7 @@ $finalDesc  = MetaManager::description($reqPath, $defaultDesc);
     <title><?= htmlspecialchars($finalTitle, ENT_QUOTES) ?></title>
     <meta name="description" content="<?= htmlspecialchars($finalDesc, ENT_QUOTES) ?>">
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="<?= MetaManager::canonical($reqPath) ?>">
+    <link rel="canonical" href="<?= $canonical ?>">
     
     <!-- Favicon and Icons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">

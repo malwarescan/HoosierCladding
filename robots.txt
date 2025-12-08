@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Disallow sitemaps, feeds, and non-indexable content
+Disallow: /sitemap*.xml
+Disallow: /feeds/
+Disallow: /home-siding-blog?author=*
+Disallow: /home-improvement-blog?author=*
+
 Sitemap: https://www.hoosiercladding.com/sitemap.xml

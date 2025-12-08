@@ -43,6 +43,7 @@ if (preg_match('#^/sitemap-matrix-(\d+)\.xml$#', $__path, $m)) {
     $file = __DIR__ . '/public/sitemap-matrix-' . $m[1] . '.xml';
     if (file_exists($file)) {
         header('Content-Type: application/xml; charset=UTF-8');
+        header('X-Robots-Tag: noindex, nofollow');
         readfile($file);
         exit;
     }
@@ -68,6 +69,27 @@ if (preg_match('#^/home-siding-blog/[^/]+/?$#', $__path)) {
 if ($__path === '/home-siding-blog') {
   require __DIR__.'/app/routes/blog-router.php';
   exit;
+}
+
+// AUTHOR PAGES: Add noindex to author query parameter pages
+if (preg_match('#^/home-siding-blog#', $__path) && isset($_GET['author'])) {
+    header('X-Robots-Tag: noindex, nofollow');
+}
+if (preg_match('#^/home-improvement-blog#', $__path) && isset($_GET['author'])) {
+    header('X-Robots-Tag: noindex, nofollow');
+}
+
+// SERVICE PAGE ROUTES: Handle service-specific pages
+// Try service page router first
+$serviceRouter = __DIR__ . '/app/routes/service-page-router.php';
+if (file_exists($serviceRouter)) {
+    ob_start();
+    $result = require $serviceRouter;
+    $output = ob_get_clean();
+    if ($result !== false) {
+        echo $output;
+        exit;
+    }
 }
 
 // Get the request URI and clean it
@@ -108,7 +130,148 @@ switch ($request_uri) {
         
     case 'contact':
     case 'contact.php':
+    case 'contact-us':
         include __DIR__ . '/contact.php';
+        break;
+        
+    case 'home':
+        include __DIR__ . '/home.php';
+        break;
+        
+    case 'products':
+        // Redirect /products to /products/ or handle products page
+        if (substr($__path, -1) !== '/') {
+            header('Location: /products/', true, 301);
+            exit;
+        }
+        // Fall through to default for now - products page should be handled by service router
+        break;
+        
+    case 'services':
+    case 'our-services':
+        // Create a services page or redirect
+        $pageTitle = "Our Services - Siding, Windows, Doors & More | Hoosier Cladding LLC";
+        $pageDescription = "Comprehensive home improvement services including siding installation, window replacement, door installation, and painting in Northern Indiana.";
+        include __DIR__ . '/partials/header.php';
+        ?>
+        <section class="hero">
+            <div class="container w-full text-left">
+                <div class="hero-content w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 class="h1">Our Services</h1>
+                    <p class="lead">Comprehensive home improvement services in Northern Indiana.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container w-full text-left">
+                <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="card">
+                            <h3 class="h3">Siding Services</h3>
+                            <p>Professional siding installation, repair, and replacement.</p>
+                            <a href="/siding" class="btn btn-outline">Learn More</a>
+                        </div>
+                        <div class="card">
+                            <h3 class="h3">Window Replacement</h3>
+                            <p>Energy-efficient window installation and replacement.</p>
+                            <a href="/window-replacement-south-bend" class="btn btn-outline">Learn More</a>
+                        </div>
+                        <div class="card">
+                            <h3 class="h3">Door Installation</h3>
+                            <p>Entry doors, storm doors, and custom door solutions.</p>
+                            <a href="/door-replacement-south-bend" class="btn btn-outline">Learn More</a>
+                        </div>
+                        <div class="card">
+                            <h3 class="h3">Painting Services</h3>
+                            <p>Interior and exterior painting with premium finishes.</p>
+                            <a href="/painting-services-south-bend" class="btn btn-outline">Learn More</a>
+                        </div>
+                        <div class="card">
+                            <h3 class="h3">Kitchen Renovation</h3>
+                            <p>Complete kitchen remodeling and renovation services.</p>
+                            <a href="/kitchen-renovation-south-bend" class="btn btn-outline">Learn More</a>
+                        </div>
+                        <div class="card">
+                            <h3 class="h3">Cabinet Installation</h3>
+                            <p>Custom cabinet design and professional installation.</p>
+                            <a href="/cabinet-installation-south-bend" class="btn btn-outline">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        include __DIR__ . '/partials/footer.php';
+        break;
+        
+    case 'about-us':
+        $pageTitle = "About Us - Hoosier Cladding LLC | Professional Siding Contractors";
+        $pageDescription = "Learn about Hoosier Cladding LLC, your trusted siding contractors in Northern Indiana. Licensed, insured, and committed to quality craftsmanship.";
+        include __DIR__ . '/partials/header.php';
+        ?>
+        <section class="hero">
+            <div class="container w-full text-left">
+                <div class="hero-content w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 class="h1">About Hoosier Cladding LLC</h1>
+                    <p class="lead">Your trusted local experts for home improvement in Northern Indiana.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container w-full text-left">
+                <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="prose prose-lg max-w-none">
+                        <h2>Our Story</h2>
+                        <p>Hoosier Cladding LLC is a locally owned and operated home improvement company serving Northern Indiana and Michiana. We specialize in siding installation, window replacement, door installation, and comprehensive home renovation services.</p>
+                        <h2>Why Choose Us</h2>
+                        <ul>
+                            <li>Licensed and insured contractors</li>
+                            <li>Years of local experience</li>
+                            <li>Quality craftsmanship guaranteed</li>
+                            <li>Free estimates and consultations</li>
+                            <li>Customer satisfaction focused</li>
+                        </ul>
+                        <h2>Service Areas</h2>
+                        <p>We proudly serve South Bend, Mishawaka, Elkhart, Granger, and throughout Michiana.</p>
+                        <div class="mt-8">
+                            <a href="/contact" class="btn btn-primary">Contact Us Today</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        include __DIR__ . '/partials/footer.php';
+        break;
+        
+    case 'our-results':
+        $pageTitle = "Our Results - Before & After Gallery | Hoosier Cladding LLC";
+        $pageDescription = "View our portfolio of completed siding, window, and home improvement projects in Northern Indiana. See the quality craftsmanship and results we deliver.";
+        include __DIR__ . '/partials/header.php';
+        ?>
+        <section class="hero">
+            <div class="container w-full text-left">
+                <div class="hero-content w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h1 class="h1">Our Results & Portfolio</h1>
+                    <p class="lead">See the quality craftsmanship and results we deliver.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container w-full text-left">
+                <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="prose prose-lg max-w-none">
+                        <p>We're proud of the work we do and the results we achieve for our customers. Our portfolio showcases completed projects including siding installation, window replacement, door installation, and comprehensive home renovations throughout Northern Indiana.</p>
+                        <p>Contact us today to see how we can transform your home.</p>
+                        <div class="mt-8">
+                            <a href="/contact" class="btn btn-primary">Get Your Free Estimate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php
+        include __DIR__ . '/partials/footer.php';
         break;
         
     case 'service-area':

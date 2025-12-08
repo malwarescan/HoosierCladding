@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Professional Siding Services in Northern Indiana | Hoosier Cladding LLC";
-$pageDescription = "Expert siding installation, repair, and replacement in South Bend, Mishawaka, Elkhart, and throughout Michiana. Licensed & insured. Winter-ready installations. Call 574-931-2119 for a free estimate.";
+// Homepage - use AdvancedMetaManager for unique metadata
+$pageType = 'homepage';
 include __DIR__ . '/partials/header.php';
 ?>
 

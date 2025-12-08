@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Contact Us - Professional Siding Services | Hoosier Cladding LLC";
-$pageDescription = "Contact Hoosier Cladding LLC for professional siding installation, repair, and replacement services. Call 574-931-2119 or email David@Hoosier.works for a free estimate.";
+// Contact page - use AdvancedMetaManager for unique metadata
+$pageType = 'contact';
 include __DIR__ . '/partials/header.php';
 
 // Handle form submission

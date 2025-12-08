@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Service Area - Professional Siding Services | Hoosier Cladding LLC";
-$pageDescription = "Serving South Bend, Mishawaka, Elkhart, Granger, Niles, and throughout Northern Indiana. Expert siding installation, repair, and replacement services.";
+// Service area page - use AdvancedMetaManager for unique metadata
+$pageType = 'city';
 include __DIR__ . '/partials/header.php';
 ?>
 

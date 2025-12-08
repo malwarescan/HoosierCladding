@@ -15,10 +15,9 @@ foreach ($posts as $p) {
 
 // Check if this is the blog hub (no slug)
 if ($slug === '' && isset($known['/home-siding-blog'])) {
-  // Blog hub page
+  // Blog hub page - use AdvancedMetaManager
   http_response_code(200);
-  $pageTitle = "Home Siding Blog | Hoosier Cladding LLC";
-  $pageDescription = "Expert advice on siding installation, repair, and maintenance for Northern Indiana homes.";
+  $pageType = 'blog';
   include __DIR__.'/../../partials/header.php';
   ?>
   <section class="hero">
@@ -49,10 +48,12 @@ if (isset($known[$full])) {
     exit;
   }
   
-  // Fallback: generic placeholder
-  $title = ucwords(str_replace('-', ' ', $slug));
-  $pageTitle = $title . ' | Hoosier Cladding';
-  $pageDescription = "Expert siding services across Northern Indiana. Repairs, full replacements, and insulation upgrades done right. Get a same‑week estimate from Hoosier Cladding.";
+  // Fallback: use AdvancedMetaManager for unique metadata
+  require_once __DIR__.'/../lib/AdvancedMetaManager.php';
+  $pageType = 'blog';
+  $pageContext = ['slug' => $slug];
+  $pageTitle = AdvancedMetaManager::generateTitle($reqPath, $pageType, $pageContext);
+  $pageDescription = AdvancedMetaManager::generateDescription($reqPath, $pageType, $pageContext);
   include __DIR__.'/../../partials/header.php';
   ?>
   <section class="hero">

@@ -110,9 +110,25 @@ function routeMatrixPage(): void {
  * Render a complete landing page from CSV data
  */
 function renderMatrixLandingPage(array $row): void {
+    // Use AdvancedMetaManager for unique metadata
+    require_once __DIR__ . '/app/lib/AdvancedMetaManager.php';
+    
+    // Get current path
+    $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    $uri = trim($uri, '/');
+    
+    // Generate unique metadata
+    $pageType = 'matrix';
+    $pageContext = [
+        'location' => $row['location'] ?? '',
+        'primary_keyword' => $row['primary_keyword'] ?? '',
+        'pain_point' => $row['pain_point'] ?? '',
+        'slug' => $row['slug'] ?? ''
+    ];
+    $pageTitle = AdvancedMetaManager::generateTitle($uri, $pageType, $pageContext);
+    $metaDesc = AdvancedMetaManager::generateDescription($uri, $pageType, $pageContext);
+    
     // Extract common variables
-    $pageTitle = $row['seo_title'] ?? 'Service';
-    $metaDesc = $row['meta_description'] ?? '';
     $h1 = $row['h1'] ?? $pageTitle;
     $location = $row['location'] ?? '';
     $brandName = $row['brand_name'] ?? 'Hoosier Cladding';

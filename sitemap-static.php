@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 header('Content-Type: application/xml; charset=UTF-8');
+header('X-Robots-Tag: noindex, nofollow');
 
 $base = 'https://www.hoosiercladding.com';
 $today = gmdate('Y-m-d');

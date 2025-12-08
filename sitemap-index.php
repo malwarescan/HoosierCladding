@@ -1,5 +1,6 @@
 <?php
 header('Content-Type: application/xml; charset=UTF-8');
+header('X-Robots-Tag: noindex, nofollow');
 
 // Prefer static file if it exists
 $staticFile = __DIR__.'/public/sitemap.xml';

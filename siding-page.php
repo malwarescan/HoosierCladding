@@ -1,6 +1,7 @@
 <?php
-$pageTitle = "Siding Services in Northern Indiana | Hoosier Cladding LLC";
-$pageDescription = "Professional siding installation, repair, and replacement services in Northern Indiana. Vinyl, fiber cement, and wood siding. Licensed & insured. Call 574-931-2119 for a free estimate.";
+// Siding service page - use AdvancedMetaManager for unique metadata
+$pageType = 'service';
+$pageContext = ['service' => 'siding-installation'];
 include __DIR__ . '/partials/header.php';
 ?>
 

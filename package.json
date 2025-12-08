@@ -1,0 +1,8 @@
+{
+  "name": "my-croutons-satellite",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "croutons:test": "node examples/send-facts.js"
+  }
+}
