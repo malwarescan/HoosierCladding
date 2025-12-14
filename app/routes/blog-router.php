@@ -35,6 +35,12 @@ if ($slug === '' && isset($known['/home-siding-blog'])) {
   exit;
 }
 
+// Handle duplicate blog post redirect (canonical consolidation)
+if ($slug === 'does-home-insurance-cover-broken-windows-what-indiana-homeowners-need-to-know-1') {
+    header('Location: /home-siding-blog/does-home-insurance-cover-broken-windows-what-indiana-homeowners-need-to-know', true, 301);
+    exit;
+}
+
 // Check if this specific post exists
 $full = '/home-siding-blog/'.$slug;
 if (isset($known[$full])) {

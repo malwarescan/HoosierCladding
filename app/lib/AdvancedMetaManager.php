@@ -50,7 +50,7 @@ final class AdvancedMetaManager
         }
 
         $title = match($pageType) {
-            'homepage' => self::generateHomepageTitle(),
+            'homepage' => self::generateHomepageTitle($path, $context),
             'service' => self::generateServiceTitle($path, $context),
             'city' => self::generateCityTitle($path, $context),
             'matrix' => self::generateMatrixTitle($path, $context),
@@ -93,10 +93,13 @@ final class AdvancedMetaManager
             default => self::generateDefaultDescription($path, $context)
         };
 
-        // Ensure uniqueness
+        // Enforce length FIRST (120-155 chars)
+        $description = self::enforceDescriptionLength($description);
+        
+        // Then ensure uniqueness (after length is correct)
         $description = self::ensureUniqueDescription($description);
         
-        // Enforce length (120-155 chars)
+        // Final length check after uniqueness
         $description = self::enforceDescriptionLength($description);
         
         self::$usedDescriptions[$path] = $description;
@@ -107,8 +110,9 @@ final class AdvancedMetaManager
     // TITLE GENERATORS
     // ============================================================
 
-    private static function generateHomepageTitle(): string
+    private static function generateHomepageTitle(string $path, ?array $context): string
     {
+        // Differentiate / vs /home if needed, but we redirect /home to /
         return "Home Siding & Exterior Repair – South Bend's Trusted Installers";
     }
 
@@ -132,7 +136,12 @@ final class AdvancedMetaManager
     private static function generateCityTitle(string $path, ?array $context): string
     {
         $city = self::extractCityFromPath($path);
-        $cityName = self::PRIMARY_CITIES[$city] ?? ucwords(str_replace('-', ' ', $city));
+        if ($city) {
+            $cityName = self::PRIMARY_CITIES[$city] ?? ucwords(str_replace('-', ' ', $city));
+        } else {
+            // Fallback for service-area page
+            $cityName = "Northern Indiana";
+        }
         
         return "$cityName Siding Services – Installation & Repair Experts";
     }
@@ -197,7 +206,7 @@ final class AdvancedMetaManager
 
     private static function generateHomepageDescription(): string
     {
-        return "Professional siding installation and exterior repair in South Bend, Mishawaka, and Granger. Licensed contractors with expert crews for vinyl, fiber cement, and storm damage repairs.";
+        return "Professional siding installation and exterior repair in South Bend, Mishawaka, and Granger. Licensed contractors with expert crews for vinyl, fiber cement, and storm damage repairs. Free estimates available.";
     }
 
     private static function generateServiceDescription(string $path, ?array $context): string
@@ -226,7 +235,12 @@ final class AdvancedMetaManager
     private static function generateCityDescription(string $path, ?array $context): string
     {
         $city = self::extractCityFromPath($path);
-        $cityName = self::PRIMARY_CITIES[$city] ?? ucwords(str_replace('-', ' ', $city));
+        if ($city) {
+            $cityName = self::PRIMARY_CITIES[$city] ?? ucwords(str_replace('-', ' ', $city));
+        } else {
+            // Fallback for service-area page
+            $cityName = "Northern Indiana";
+        }
         
         $services = [
             "siding installation and repair",
@@ -251,7 +265,15 @@ final class AdvancedMetaManager
             $service = ucwords(str_replace('-', ' ', $serviceSlug));
             $problem = ucwords(str_replace('-', ' ', $problemSlug));
             
-            return "Expert $service solutions for $problem in $cityName. Local contractors specializing in targeted repairs and professional installation. Free estimates available.";
+            // Ensure minimum length with additional context
+            $base = "Expert $service solutions for $problem in $cityName. Local contractors specializing in targeted repairs and professional installation.";
+            if (mb_strlen($base) < 120) {
+                $base .= " Licensed, insured, and committed to quality craftsmanship. Free estimates available.";
+            } else {
+                $base .= " Free estimates available.";
+            }
+            
+            return $base;
         }
         
         return self::generateDefaultDescription($path, $context);
@@ -261,9 +283,15 @@ final class AdvancedMetaManager
     {
         $segments = explode('/', $path);
         $slug = end($segments);
+        
+        // Handle blog hub
+        if (empty($slug) || $slug === 'home-siding-blog') {
+            return "Expert advice on siding installation, repair, and maintenance for Northern Indiana homes. Comprehensive guides from licensed contractors covering vinyl, fiber cement, and storm damage solutions.";
+        }
+        
         $topic = ucwords(str_replace('-', ' ', $slug));
         
-        return "Learn about $topic for Northern Indiana homes. Expert advice from licensed siding contractors on installation, repair, and maintenance best practices.";
+        return "Learn about $topic for Northern Indiana homes. Expert advice from licensed siding contractors on installation, repair, and maintenance best practices. Get professional insights and actionable tips.";
     }
 
     private static function generateAboutDescription(): string
@@ -416,20 +444,37 @@ final class AdvancedMetaManager
             }
             return trim($result) ?: mb_substr($description, 0, 152) . '...';
         } else {
-            // Add benefit or differentiator
+            // Add benefit or differentiator until we reach 120 chars
             $additions = [
-                " Licensed and insured contractors.",
-                " Free estimates available.",
-                " Serving Northern Indiana since 2010.",
-                " Expert crews and quality materials."
+                " Licensed and insured contractors with local expertise.",
+                " Free estimates and same-week service available.",
+                " Serving Northern Indiana with quality craftsmanship.",
+                " Expert crews and premium materials for lasting results."
             ];
-            $addition = $additions[array_rand($additions)];
-            $description = rtrim($description, '.') . $addition;
+            
+            // Keep adding until we hit 120 chars
+            while ($len < 120) {
+                $addition = $additions[array_rand($additions)];
+                $test = rtrim($description, '.') . '. ' . $addition;
+                if (mb_strlen($test) <= 155) {
+                    $description = $test;
+                    $len = mb_strlen($description);
+                    break;
+                } else {
+                    // Try shorter addition
+                    $description = rtrim($description, '.') . '. ' . "Licensed contractors. Free estimates.";
+                    $len = mb_strlen($description);
+                    break;
+                }
+            }
         }
         
-        // Final check
+        // Final check - ensure we're in range
         $len = mb_strlen($description);
-        if ($len > 155) {
+        if ($len < 120) {
+            // Force minimum
+            $description .= " Licensed, insured, and committed to quality.";
+        } elseif ($len > 155) {
             $description = mb_substr($description, 0, 152) . '...';
         }
         

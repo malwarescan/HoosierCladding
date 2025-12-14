@@ -4,6 +4,15 @@
  * Handles all incoming requests and routes them to the appropriate page
  */
 
+// PRIORITY 0: Force www canonical (server-level enforcement)
+// This handles cases where .htaccess redirect may not execute (e.g., CDN/proxy)
+$host = $_SERVER['HTTP_HOST'] ?? '';
+if ($host === 'hoosiercladding.com') {
+    $uri = $_SERVER['REQUEST_URI'] ?? '/';
+    header("Location: https://www.hoosiercladding.com{$uri}", true, 301);
+    exit;
+}
+
 // PRIORITY: Handle favicon and icon files FIRST (before any routing logic)
 $__path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 
@@ -79,6 +88,19 @@ if (preg_match('#^/home-improvement-blog#', $__path) && isset($_GET['author'])) 
     header('X-Robots-Tag: noindex, nofollow');
 }
 
+// CITY-SERVICE ROUTES: Handle high-opportunity city+service pages first
+// These match top GSC queries with high impressions but low CTR
+$cityServiceRouter = __DIR__ . '/app/routes/city-service-router.php';
+if (file_exists($cityServiceRouter)) {
+    ob_start();
+    $result = require $cityServiceRouter;
+    $output = ob_get_clean();
+    if ($result !== false) {
+        echo $output;
+        exit;
+    }
+}
+
 // SERVICE PAGE ROUTES: Handle service-specific pages
 // Try service page router first
 $serviceRouter = __DIR__ . '/app/routes/service-page-router.php';
@@ -130,12 +152,18 @@ switch ($request_uri) {
         
     case 'contact':
     case 'contact.php':
-    case 'contact-us':
         include __DIR__ . '/contact.php';
+        break;
+    case 'contact-us':
+        // Redirect /contact-us to /contact for canonical consistency
+        header('Location: /contact', true, 301);
+        exit;
         break;
         
     case 'home':
-        include __DIR__ . '/home.php';
+        // Redirect /home to / for canonical consistency
+        header('Location: /', true, 301);
+        exit;
         break;
         
     case 'products':

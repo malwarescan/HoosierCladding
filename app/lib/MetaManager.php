@@ -67,8 +67,9 @@ final class MetaManager
   }
 
   public static function canonical(string $path): string {
-    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? "https" : "http";
-    $host = $_SERVER['HTTP_HOST'] ?? 'www.hoosiercladding.com';
+    // Always use www as canonical (enforced sitewide)
+    $scheme = 'https';
+    $host = 'www.hoosiercladding.com';
     
     // Remove trailing slash except for root
     if ($path !== '/' && substr($path, -1) === '/') {

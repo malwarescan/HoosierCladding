@@ -37,14 +37,19 @@ include __DIR__ . '/partials/header.php';
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="hs-card group bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
                 <div class="hs-card-body p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">South Bend</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                        <a href="/vinyl-siding-michiana-south-bend" class="text-gray-900 hover:text-blue-600 transition-colors">South Bend</a>
+                    </h3>
                     <p class="text-gray-600">Professional siding installation, repair, and replacement services in South Bend, Indiana.</p>
                     <ul class="mt-4 space-y-2 text-gray-700">
-                        <li>• Vinyl Siding Installation</li>
-                        <li>• Fiber Cement Siding</li>
+                        <li>• <a href="/vinyl-siding-michiana-south-bend" class="text-blue-600 hover:underline">Vinyl Siding Installation</a></li>
+                        <li>• <a href="/house-siding-replacement" class="text-blue-600 hover:underline">House Siding Replacement</a></li>
                         <li>• Storm Damage Repair</li>
                         <li>• Energy-Efficient Upgrades</li>
                     </ul>
+                    <div class="mt-4">
+                        <a href="/vinyl-siding-michiana-south-bend" class="text-sm font-semibold text-blue-600 hover:text-blue-800">Learn More →</a>
+                    </div>
                 </div>
             </div>
 
@@ -110,6 +115,42 @@ include __DIR__ . '/partials/header.php';
                         <li>• Emergency Repairs</li>
                         <li>• Free Estimates</li>
                     </ul>
+                </div>
+            </div>
+
+            <div class="hs-card group bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="hs-card-body p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                        <a href="/siding-replacement-warsaw" class="text-gray-900 hover:text-blue-600 transition-colors">Warsaw</a>
+                    </h3>
+                    <p class="text-gray-600">Expert siding replacement and installation services in Warsaw, Indiana. Serving Kosciusko County with quality craftsmanship.</p>
+                    <ul class="mt-4 space-y-2 text-gray-700">
+                        <li>• <a href="/siding-replacement-warsaw" class="text-blue-600 hover:underline">Siding Replacement</a></li>
+                        <li>• Storm Damage Repair</li>
+                        <li>• Professional Installation</li>
+                        <li>• Free Estimates</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="/siding-replacement-warsaw" class="text-sm font-semibold text-blue-600 hover:text-blue-800">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hs-card group bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="hs-card-body p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">
+                        <a href="/siding-installation-granger" class="text-gray-900 hover:text-blue-600 transition-colors">Granger</a>
+                    </h3>
+                    <p class="text-gray-600">Premium siding installation services for Granger, Indiana homeowners. Quality materials and expert installation.</p>
+                    <ul class="mt-4 space-y-2 text-gray-700">
+                        <li>• <a href="/siding-installation-granger" class="text-blue-600 hover:underline">Siding Installation</a></li>
+                        <li>• High-End Materials</li>
+                        <li>• Custom Solutions</li>
+                        <li>• Licensed Contractors</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="/siding-installation-granger" class="text-sm font-semibold text-blue-600 hover:text-blue-800">Learn More →</a>
+                    </div>
                 </div>
             </div>
         </div>

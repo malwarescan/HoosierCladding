@@ -60,11 +60,11 @@ $servicePages = [
         'location' => 'South Bend, Indiana'
     ],
     'vinyl-siding-michiana-south-bend' => [
-        'title' => 'Vinyl Siding in Michiana & South Bend, IN | Hoosier Cladding LLC',
-        'description' => 'Professional vinyl siding installation and replacement in South Bend and throughout Michiana. Energy-efficient, low-maintenance solutions. Call 574-931-2119.',
-        'h1' => 'Vinyl Siding Services in Michiana',
+        'title' => 'Vinyl Siding in South Bend, IN – Expert Installation',
+        'description' => 'Professional vinyl siding installation and replacement in South Bend, Indiana. Licensed contractors with local expertise. Free estimates. Call 574-931-2119.',
+        'h1' => 'Vinyl Siding in South Bend, Indiana',
         'service' => 'Vinyl Siding',
-        'location' => 'Michiana, Indiana'
+        'location' => 'South Bend, Indiana'
     ],
     'contact-us' => [
         'title' => 'Contact Us - Free Estimate | Hoosier Cladding LLC',
@@ -129,6 +129,27 @@ $servicePages = [
         'service' => 'Certifications',
         'location' => 'Northern Indiana'
     ],
+    'vinyl-siding-installers' => [
+        'title' => 'Vinyl Siding Installers Near Me – South Bend, IN',
+        'description' => 'Professional vinyl siding installers serving South Bend, Mishawaka, and Northern Indiana. Licensed, insured contractors with expert installation. Free estimates.',
+        'h1' => 'Vinyl Siding Installers Near Me',
+        'service' => 'Vinyl Siding Installation',
+        'location' => 'Northern Indiana'
+    ],
+    'house-siding-replacement' => [
+        'title' => 'House Siding Replacement in South Bend, IN',
+        'description' => 'Complete house siding replacement services in South Bend and Northern Indiana. Expert installation, quality materials, and professional service. Free estimates.',
+        'h1' => 'House Siding Replacement Services',
+        'service' => 'Siding Replacement',
+        'location' => 'Northern Indiana'
+    ],
+    'residential-siding-contractor' => [
+        'title' => 'Residential Siding Contractor in South Bend, IN',
+        'description' => 'Licensed residential siding contractor serving South Bend, Mishawaka, and Northern Indiana. Expert installation, repair, and replacement. Call 574-931-2119.',
+        'h1' => 'Residential Siding Contractor',
+        'service' => 'Siding Contractor',
+        'location' => 'Northern Indiana'
+    ],
     'exterior-painting-south-bend' => [
         'title' => 'Exterior Painting in South Bend, IN | Hoosier Cladding LLC',
         'description' => 'Professional exterior painting services in South Bend, Indiana. Expert color consultation, premium paints, and weather-resistant finishes. Call 574-931-2119.',
@@ -178,7 +199,11 @@ include __DIR__ . '/../../partials/header.php';
     <div class="container w-full text-left">
         <div class="hero-content w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 class="h1"><?= htmlspecialchars($pageData['h1']) ?></h1>
-            <p class="lead">Professional <?= htmlspecialchars($pageData['service']) ?> services in <?= htmlspecialchars($pageData['location']) ?>.</p>
+            <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
+                <p class="lead">Professional vinyl siding installation, replacement, and repair in <strong>South Bend, Indiana</strong>. Licensed, insured contractors with local expertise. Free estimates available.</p>
+            <?php else: ?>
+                <p class="lead">Professional <?= htmlspecialchars($pageData['service']) ?> services in <?= htmlspecialchars($pageData['location']) ?>.</p>
+            <?php endif; ?>
             <div class="hero-cta">
                 <a class="btn btn-primary" href="/contact">Get Free Estimate</a>
                 <a class="btn btn-outline" href="/service-area">View Service Areas</a>
@@ -192,7 +217,11 @@ include __DIR__ . '/../../partials/header.php';
         <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="prose prose-lg max-w-none">
                 <h2>Why Choose Hoosier Cladding LLC for <?= htmlspecialchars($pageData['service']) ?>?</h2>
-                <p>We are your trusted local experts for <?= htmlspecialchars($pageData['service']) ?> in <?= htmlspecialchars($pageData['location']) ?>. With years of experience and a commitment to quality, we deliver exceptional results on every project.</p>
+                <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
+                    <p>We are your trusted local experts for <strong>vinyl siding in South Bend, Indiana</strong>. With years of experience serving Northern Indiana homeowners, we deliver exceptional results on every installation, repair, and replacement project. Our licensed contractors specialize in energy-efficient vinyl siding solutions built to withstand Indiana's harsh weather.</p>
+                <?php else: ?>
+                    <p>We are your trusted local experts for <?= htmlspecialchars($pageData['service']) ?> in <?= htmlspecialchars($pageData['location']) ?>. With years of experience and a commitment to quality, we deliver exceptional results on every project.</p>
+                <?php endif; ?>
                 
                 <h3>Our Services Include:</h3>
                 <ul>
@@ -204,10 +233,64 @@ include __DIR__ . '/../../partials/header.php';
                 </ul>
                 
                 <h3>Service Areas</h3>
-                <p>We proudly serve <?= htmlspecialchars($pageData['location']) ?> and surrounding areas, including South Bend, Mishawaka, Elkhart, Granger, and throughout Michiana.</p>
+                <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
+                    <p>We proudly serve <strong>South Bend, Indiana</strong> and surrounding areas, including Mishawaka, Elkhart, Granger, and throughout Northern Indiana. Our licensed vinyl siding contractors have years of experience serving the Michiana region.</p>
+                <?php else: ?>
+                    <p>We proudly serve <?= htmlspecialchars($pageData['location']) ?> and surrounding areas, including South Bend, Mishawaka, Elkhart, Granger, and throughout Michiana.</p>
+                <?php endif; ?>
+                
+                <?php
+                // Add LocalBusiness schema for transactional service pages
+                if (in_array($pageKey, ['vinyl-siding-michiana-south-bend', 'vinyl-siding-installers', 'house-siding-replacement', 'residential-siding-contractor'])) {
+                    $schema = [
+                        '@context' => 'https://schema.org',
+                        '@type' => 'LocalBusiness',
+                        'name' => 'Hoosier Cladding LLC',
+                        'description' => "Professional {$pageData['service']} services in {$pageData['location']}",
+                        'url' => 'https://www.hoosiercladding.com',
+                        'telephone' => '+15749312119',
+                        'address' => [
+                            '@type' => 'PostalAddress',
+                            'streetAddress' => '721 Lincoln Way E',
+                            'addressLocality' => 'South Bend',
+                            'addressRegion' => 'IN',
+                            'postalCode' => '46601',
+                            'addressCountry' => 'US'
+                        ],
+                        'areaServed' => [
+                            [
+                                '@type' => 'City',
+                                'name' => 'South Bend',
+                                'containedInPlace' => [
+                                    '@type' => 'State',
+                                    'name' => 'Indiana'
+                                ]
+                            ]
+                        ],
+                        'hasOfferCatalog' => [
+                            '@type' => 'OfferCatalog',
+                            'name' => $pageData['service'],
+                            'itemListElement' => [
+                                [
+                                    '@type' => 'Offer',
+                                    'itemOffered' => [
+                                        '@type' => 'Service',
+                                        'name' => $pageData['service'],
+                                        'description' => "Professional {$pageData['service']} in {$pageData['location']}"
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ];
+                    echo '<script type="application/ld+json">' . PHP_EOL;
+                    echo json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . PHP_EOL;
+                    echo '</script>' . PHP_EOL;
+                }
+                ?>
                 
                 <div class="mt-8">
                     <a href="/contact" class="btn btn-primary">Contact Us Today</a>
+                    <a href="/service-area" class="btn btn-outline">View All Service Areas</a>
                 </div>
             </div>
         </div>

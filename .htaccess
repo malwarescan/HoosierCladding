@@ -24,10 +24,14 @@ RewriteRule ^sitemap-blog\.xml$ sitemap-blog.php [L,QSA]
 # --- Matrix landing pages ---
 RewriteRule ^matrix/(.+)$ matrix-router.php [L,QSA]
 
-# --- Force HTTPS (optional) ---
-# Make sure to EXEMPT the whitelisted files to prevent loops
-#RewriteCond %{HTTPS} !=on
-#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# --- PRIORITY 0: Canonical Host Enforcement (www) ---
+# Redirect non-www to www (canonical consolidation)
+RewriteCond %{HTTP_HOST} ^hoosiercladding\.com$ [NC]
+RewriteRule ^(.*)$ https://www.hoosiercladding.com/$1 [R=301,L]
+
+# --- Force HTTPS ---
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # --- Trailing slash normalization (optional) ---
 # Avoid applying to files like .xml/.ico
