@@ -182,6 +182,13 @@ if (!$pageData) {
     return false;
 }
 
+// Ensure we output content, not a redirect
+// This prevents any accidental redirect loops
+if (headers_sent()) {
+    // Headers already sent, can't redirect anyway
+    return false;
+}
+
 // Use AdvancedMetaManager to generate unique metadata
 require_once __DIR__ . '/../lib/AdvancedMetaManager.php';
 $pageType = 'service';
