@@ -4,7 +4,15 @@
  * Handles all incoming requests and routes them to the appropriate page
  */
 
-// PRIORITY 0: Force www canonical (server-level enforcement)
+// PRIORITY 0: Handle healthcheck endpoint FIRST (before any redirects)
+$__path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+if ($__path === '/health.php') {
+    header("Content-Type: text/plain");
+    echo "ok";
+    exit;
+}
+
+// PRIORITY 1: Force www canonical (server-level enforcement)
 // This handles cases where .htaccess redirect may not execute (e.g., CDN/proxy)
 $host = $_SERVER['HTTP_HOST'] ?? '';
 if ($host === 'hoosiercladding.com') {
@@ -13,8 +21,7 @@ if ($host === 'hoosiercladding.com') {
     exit;
 }
 
-// PRIORITY: Handle favicon and icon files FIRST (before any routing logic)
-$__path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+// PRIORITY: Handle favicon and icon files SECOND (before any routing logic)
 
 // Serve favicon files with proper content-type headers
 $faviconFiles = [

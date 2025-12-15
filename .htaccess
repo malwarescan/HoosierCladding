@@ -9,6 +9,9 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
 # --- Whitelist things that must never hit the router ---
+# Healthcheck endpoint - serve directly (critical for deployment)
+RewriteRule ^health\.php$ - [L]
+
 # Favicon and icon files - serve directly with proper content types
 RewriteRule ^(favicon\.ico|favicon-16x16\.png|favicon-32x32\.png|favicon\.svg|apple-touch-icon\.png|android-chrome-192x192\.png|android-chrome-512x512\.png|site\.webmanifest)$ - [L]
 
