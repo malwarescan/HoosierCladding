@@ -215,107 +215,254 @@ header('Expires: 0');
 include __DIR__ . '/../../partials/header.php';
 ?>
 
-<section class="hero">
+<section class="hero" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white;">
     <div class="container w-full text-left">
-        <div class="hero-content w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="h1"><?= htmlspecialchars($pageData['h1']) ?></h1>
+        <div class="hero-content w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h1 class="h1 text-white mb-4"><?= htmlspecialchars($pageData['h1']) ?></h1>
             <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
-                <p class="lead">Professional vinyl siding installation, replacement, and repair in <strong>South Bend, Indiana</strong>. Licensed, insured contractors with local expertise. Free estimates available.</p>
+                <p class="lead text-white/90 mb-6 text-xl">Professional vinyl siding installation, replacement, and repair in <strong>South Bend, Indiana</strong>. Licensed, insured contractors with local expertise. Free estimates available.</p>
+            <?php elseif ($pageKey === 'vinyl-siding-installers'): ?>
+                <p class="lead text-white/90 mb-6 text-xl">Find trusted vinyl siding installers near you in <strong>South Bend, Mishawaka, and Northern Indiana</strong>. Licensed, insured contractors with expert installation. Same-day quotes available.</p>
             <?php else: ?>
-                <p class="lead">Professional <?= htmlspecialchars($pageData['service']) ?> services in <?= htmlspecialchars($pageData['location']) ?>.</p>
+                <p class="lead text-white/90 mb-6 text-xl">Professional <?= htmlspecialchars($pageData['service']) ?> services in <?= htmlspecialchars($pageData['location']) ?>. Licensed, insured, and ready to serve you.</p>
             <?php endif; ?>
-            <div class="hero-cta">
-                <a class="btn btn-primary" href="/contact">Get Free Estimate</a>
-                <a class="btn btn-outline" href="/service-area">View Service Areas</a>
+            
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap gap-4 mb-8">
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+                    <span class="text-sm font-semibold">✓ Licensed & Insured</span>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+                    <span class="text-sm font-semibold">✓ Free Estimates</span>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+                    <span class="text-sm font-semibold">✓ Same-Day Quotes</span>
+                </div>
+            </div>
+            
+            <!-- Primary CTAs -->
+            <div class="hero-cta flex flex-wrap gap-4">
+                <a class="btn btn-primary bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4 font-bold" href="tel:5749312119">
+                    📞 Call Now: (574) 931-2119
+                </a>
+                <a class="btn btn-outline border-2 border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-4 font-bold" href="/contact">
+                    Get Free Estimate →
+                </a>
+            </div>
+            
+            <p class="text-white/80 text-sm mt-4">Available 7 days a week • Serving Northern Indiana since 2010</p>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Section -->
+<section class="section bg-gray-50">
+    <div class="container w-full text-left">
+        <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="h2 mb-4">Why Choose Hoosier Cladding LLC?</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Trusted by hundreds of Northern Indiana homeowners for quality craftsmanship and reliable service.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="text-4xl mb-4">🏆</div>
+                    <h3 class="h3 mb-3">15+ Years Experience</h3>
+                    <p class="text-gray-600">Serving Northern Indiana since 2010 with thousands of successful installations.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h3 class="h3 mb-3">Fully Licensed & Insured</h3>
+                    <p class="text-gray-600">Complete protection for your home and peace of mind for you.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="h3 mb-3">Fast, Reliable Service</h3>
+                    <p class="text-gray-600">Same-day quotes, quick turnarounds, and on-time project completion.</p>
+                </div>
+            </div>
+            
+            <?php if ($pageKey === 'vinyl-siding-installers'): ?>
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
+                    <h3 class="h3 mb-3">Expert Vinyl Siding Installation</h3>
+                    <p class="mb-4">Our certified vinyl siding installers bring years of experience to every project. We specialize in:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <ul class="space-y-2">
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span> <span>New construction installations</span></li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span> <span>Complete home re-siding</span></li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span> <span>Storm damage repair</span></li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span> <span>Energy-efficient upgrades</span></li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span> <span>Premium material selection</span></li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span> <span>Color matching services</span></li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span> <span>Warranty-backed work</span></li>
+                            <li class="flex items-start"><span class="text-blue-500 mr-2">✓</span> <span>Free consultations</span></li>
+                        </ul>
+                    </div>
+                </div>
+            <?php elseif ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
+                    <h3 class="h3 mb-3">Your South Bend Vinyl Siding Experts</h3>
+                    <p class="mb-4">We are your trusted local experts for <strong>vinyl siding in South Bend, Indiana</strong>. With years of experience serving Northern Indiana homeowners, we deliver exceptional results on every installation, repair, and replacement project. Our licensed contractors specialize in energy-efficient vinyl siding solutions built to withstand Indiana's harsh weather.</p>
+                </div>
+            <?php else: ?>
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
+                    <h3 class="h3 mb-3">Professional <?= htmlspecialchars($pageData['service']) ?> Services</h3>
+                    <p class="mb-4">We are your trusted local experts for <?= htmlspecialchars($pageData['service']) ?> in <?= htmlspecialchars($pageData['location']) ?>. With years of experience and a commitment to quality, we deliver exceptional results on every project.</p>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
+
+<!-- Service Areas Section -->
+<section class="section">
+    <div class="container w-full text-left">
+        <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="h2 text-center mb-8">Serving Northern Indiana</h2>
+            <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
+                <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">We proudly serve <strong>South Bend, Indiana</strong> and surrounding areas, including Mishawaka, Elkhart, Granger, and throughout Northern Indiana. Our licensed vinyl siding contractors have years of experience serving the Michiana region.</p>
+            <?php elseif ($pageKey === 'vinyl-siding-installers'): ?>
+                <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Find vinyl siding installers near you! We serve <strong>South Bend, Mishawaka, Elkhart, Granger, Niles, Osceola</strong>, and throughout the Michiana region. Same-day service available in most areas.</p>
+            <?php else: ?>
+                <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">We proudly serve <?= htmlspecialchars($pageData['location']) ?> and surrounding areas, including South Bend, Mishawaka, Elkhart, Granger, and throughout Michiana.</p>
+            <?php endif; ?>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="text-center p-4 bg-gray-50 rounded-lg">
+                    <div class="font-bold text-lg">South Bend</div>
+                    <div class="text-sm text-gray-600">IN</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg">
+                    <div class="font-bold text-lg">Mishawaka</div>
+                    <div class="text-sm text-gray-600">IN</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg">
+                    <div class="font-bold text-lg">Elkhart</div>
+                    <div class="text-sm text-gray-600">IN</div>
+                </div>
+                <div class="text-center p-4 bg-gray-50 rounded-lg">
+                    <div class="font-bold text-lg">Granger</div>
+                    <div class="text-sm text-gray-600">IN</div>
+                </div>
+            </div>
+            
+            <!-- CTA Section -->
+            <div class="bg-blue-600 text-white rounded-lg p-8 text-center">
+                <h3 class="h3 text-white mb-4">Ready to Get Started?</h3>
+                <p class="text-lg mb-6 text-white/90">Call us today for a free, no-obligation estimate</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="tel:5749312119" class="btn bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4 font-bold">
+                        📞 (574) 931-2119
+                    </a>
+                    <a href="/contact" class="btn border-2 border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-4 font-bold">
+                        Get Free Estimate →
+                    </a>
+                </div>
+            </div>
+                
             </div>
         </div>
     </div>
 </section>
 
-<section class="section">
+<!-- FAQ Section -->
+<?php if ($pageKey === 'vinyl-siding-installers'): ?>
+<section class="section bg-gray-50">
     <div class="container w-full text-left">
         <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="prose prose-lg max-w-none">
-                <h2>Why Choose Hoosier Cladding LLC for <?= htmlspecialchars($pageData['service']) ?>?</h2>
-                <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
-                    <p>We are your trusted local experts for <strong>vinyl siding in South Bend, Indiana</strong>. With years of experience serving Northern Indiana homeowners, we deliver exceptional results on every installation, repair, and replacement project. Our licensed contractors specialize in energy-efficient vinyl siding solutions built to withstand Indiana's harsh weather.</p>
-                <?php else: ?>
-                    <p>We are your trusted local experts for <?= htmlspecialchars($pageData['service']) ?> in <?= htmlspecialchars($pageData['location']) ?>. With years of experience and a commitment to quality, we deliver exceptional results on every project.</p>
-                <?php endif; ?>
-                
-                <h3>Our Services Include:</h3>
-                <ul>
-                    <li>Professional installation and replacement</li>
-                    <li>Expert repair and maintenance</li>
-                    <li>Quality materials and craftsmanship</li>
-                    <li>Licensed and insured contractors</li>
-                    <li>Free estimates and consultations</li>
-                </ul>
-                
-                <h3>Service Areas</h3>
-                <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
-                    <p>We proudly serve <strong>South Bend, Indiana</strong> and surrounding areas, including Mishawaka, Elkhart, Granger, and throughout Northern Indiana. Our licensed vinyl siding contractors have years of experience serving the Michiana region.</p>
-                <?php else: ?>
-                    <p>We proudly serve <?= htmlspecialchars($pageData['location']) ?> and surrounding areas, including South Bend, Mishawaka, Elkhart, Granger, and throughout Michiana.</p>
-                <?php endif; ?>
-                
-                <?php
-                // Add LocalBusiness schema for transactional service pages
-                if (in_array($pageKey, ['vinyl-siding-michiana-south-bend', 'vinyl-siding-installers', 'house-siding-replacement', 'residential-siding-contractor'])) {
-                    $schema = [
-                        '@context' => 'https://schema.org',
-                        '@type' => 'LocalBusiness',
-                        'name' => 'Hoosier Cladding LLC',
-                        'description' => "Professional {$pageData['service']} services in {$pageData['location']}",
-                        'url' => 'https://www.hoosiercladding.com',
-                        'telephone' => '+15749312119',
-                        'address' => [
-                            '@type' => 'PostalAddress',
-                            'streetAddress' => '721 Lincoln Way E',
-                            'addressLocality' => 'South Bend',
-                            'addressRegion' => 'IN',
-                            'postalCode' => '46601',
-                            'addressCountry' => 'US'
-                        ],
-                        'areaServed' => [
-                            [
-                                '@type' => 'City',
-                                'name' => 'South Bend',
-                                'containedInPlace' => [
-                                    '@type' => 'State',
-                                    'name' => 'Indiana'
-                                ]
-                            ]
-                        ],
-                        'hasOfferCatalog' => [
-                            '@type' => 'OfferCatalog',
-                            'name' => $pageData['service'],
-                            'itemListElement' => [
-                                [
-                                    '@type' => 'Offer',
-                                    'itemOffered' => [
-                                        '@type' => 'Service',
-                                        'name' => $pageData['service'],
-                                        'description' => "Professional {$pageData['service']} in {$pageData['location']}"
-                                    ]
-                                ]
-                            ]
-                        ]
-                    ];
-                    echo '<script type="application/ld+json">' . PHP_EOL;
-                    echo json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . PHP_EOL;
-                    echo '</script>' . PHP_EOL;
-                }
-                ?>
-                
-                <div class="mt-8">
-                    <a href="/contact" class="btn btn-primary">Contact Us Today</a>
-                    <a href="/service-area" class="btn btn-outline">View All Service Areas</a>
+            <h2 class="h2 text-center mb-8">Frequently Asked Questions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="h3 mb-3">How much does vinyl siding installation cost?</h3>
+                    <p class="text-gray-600">Costs vary based on home size, material choice, and project complexity. We provide free, detailed estimates with no obligation. Most projects range from $8,000-$15,000 for average-sized homes.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="h3 mb-3">How long does installation take?</h3>
+                    <p class="text-gray-600">Most vinyl siding installations are completed in 3-7 days, depending on home size and weather conditions. We work efficiently to minimize disruption to your daily routine.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="h3 mb-3">Do you offer warranties?</h3>
+                    <p class="text-gray-600">Yes! We provide comprehensive warranties on both materials and workmanship. Most vinyl siding comes with manufacturer warranties of 20-50 years, plus our installation guarantee.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="h3 mb-3">Are you licensed and insured?</h3>
+                    <p class="text-gray-600">Absolutely. We're fully licensed in Indiana, carry comprehensive liability insurance, and are bonded. Your home and investment are fully protected.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<?php endif; ?>
+
+<!-- Final CTA Section -->
+<section class="section" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
+    <div class="container w-full text-center">
+        <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h2 class="h2 text-white mb-4">Ready to Transform Your Home?</h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Get your free estimate today. No obligation, just honest pricing and expert advice.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="tel:5749312119" class="btn bg-white text-blue-600 hover:bg-gray-100 text-xl px-10 py-5 font-bold shadow-lg">
+                    📞 Call (574) 931-2119
+                </a>
+                <a href="/contact" class="btn border-2 border-white text-white hover:bg-white hover:text-blue-600 text-xl px-10 py-5 font-bold">
+                    Get Free Estimate →
+                </a>
+            </div>
+            <p class="text-white/80 text-sm mt-6">Available 7 days a week • Same-day quotes available</p>
+        </div>
+    </div>
+</section>
+
+<?php
+// Add LocalBusiness schema for transactional service pages
+if (in_array($pageKey, ['vinyl-siding-michiana-south-bend', 'vinyl-siding-installers', 'house-siding-replacement', 'residential-siding-contractor'])) {
+    $schema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'LocalBusiness',
+        'name' => 'Hoosier Cladding LLC',
+        'description' => "Professional {$pageData['service']} services in {$pageData['location']}",
+        'url' => 'https://www.hoosiercladding.com',
+        'telephone' => '+15749312119',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => '721 Lincoln Way E',
+            'addressLocality' => 'South Bend',
+            'addressRegion' => 'IN',
+            'postalCode' => '46601',
+            'addressCountry' => 'US'
+        ],
+        'areaServed' => [
+            [
+                '@type' => 'City',
+                'name' => 'South Bend',
+                'containedInPlace' => [
+                    '@type' => 'State',
+                    'name' => 'Indiana'
+                ]
+            ]
+        ],
+        'hasOfferCatalog' => [
+            '@type' => 'OfferCatalog',
+            'name' => $pageData['service'],
+            'itemListElement' => [
+                [
+                    '@type' => 'Offer',
+                    'itemOffered' => [
+                        '@type' => 'Service',
+                        'name' => $pageData['service'],
+                        'description' => "Professional {$pageData['service']} in {$pageData['location']}"
+                    ]
+                ]
+            ]
+        ]
+    ];
+    echo '<script type="application/ld+json">' . PHP_EOL;
+    echo json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . PHP_EOL;
+    echo '</script>' . PHP_EOL;
+}
+?>
 
 <?php include __DIR__ . '/../../partials/footer.php'; ?>
 
