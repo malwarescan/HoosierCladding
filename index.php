@@ -14,11 +14,15 @@ if ($__path === '/health.php') {
 
 // PRIORITY 1: Force www canonical (server-level enforcement)
 // This handles cases where .htaccess redirect may not execute (e.g., CDN/proxy)
+// BUT: Only redirect if we're NOT already on www (prevent loops)
 $host = $_SERVER['HTTP_HOST'] ?? '';
-if ($host === 'hoosiercladding.com') {
+if ($host === 'hoosiercladding.com' && strpos($host, 'www.') !== 0) {
     $uri = $_SERVER['REQUEST_URI'] ?? '/';
-    header("Location: https://www.hoosiercladding.com{$uri}", true, 301);
-    exit;
+    // Prevent redirect loops - check if we're already redirecting to www
+    if (!isset($_SERVER['HTTP_X_FORWARDED_HOST']) || strpos($_SERVER['HTTP_X_FORWARDED_HOST'], 'www.') === false) {
+        header("Location: https://www.hoosiercladding.com{$uri}", true, 301);
+        exit;
+    }
 }
 
 // PRIORITY: Handle favicon and icon files SECOND (before any routing logic)

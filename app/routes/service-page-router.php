@@ -206,10 +206,12 @@ $pageDescription = AdvancedMetaManager::generateDescription($path, $pageType, $p
 // CRITICAL: Set response code to 200 to prevent any redirect caching
 http_response_code(200);
 
-// CRITICAL: Prevent Railway Edge from caching redirects
-header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+// CRITICAL: Prevent Railway Edge from caching redirects - AGGRESSIVE
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0, private');
 header('Pragma: no-cache');
 header('Expires: 0');
+header('X-Accel-Expires: 0'); // Nginx-specific
+header('X-Cache-Control: no-cache'); // Additional cache control
 
 // Include header
 include __DIR__ . '/../../partials/header.php';
