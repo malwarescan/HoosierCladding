@@ -26,8 +26,11 @@ COPY . /var/www/html
 RUN php /var/www/html/scripts/generate_sitemaps.php \
  && cp /var/www/html/public/sitemap*.xml /var/www/html/
 
-# Create the fast health endpoint for Railway
+# Create the fast health endpoint for Railway (PHP version)
 RUN echo '<?php header("Content-Type: text/plain"); echo "ok"; ?>' > /var/www/html/health.php
+
+# Also create a static HTML version as backup (doesn't require PHP)
+RUN echo 'ok' > /var/www/html/health.txt
 
 # Set proper permissions
 RUN chown -R www-data:www-data /var/www/html \
