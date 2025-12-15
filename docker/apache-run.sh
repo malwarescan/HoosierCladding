@@ -26,6 +26,11 @@ fi
 
 echo "[apache-run] Port configuration updated successfully"
 
+# Ensure only one MPM is loaded (fix "More than one MPM loaded" error)
+# Disable all MPMs first, then enable only prefork (default for PHP)
+a2dismod mpm_event mpm_worker mpm_prefork >/dev/null 2>&1 || true
+a2enmod mpm_prefork >/dev/null 2>&1 || true
+
 # Optional: set a ServerName to avoid warnings
 echo "ServerName localhost" >/etc/apache2/conf-available/servername.conf
 a2enconf servername >/dev/null 2>&1 || true
