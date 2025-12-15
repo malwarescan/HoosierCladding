@@ -8,8 +8,9 @@
  * to provide clean intent alignment
  */
 
-// Get the URL path
+// Get the URL path (normalize trailing slashes)
 $path = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+$path = rtrim($path, '/'); // Remove trailing slash for matching
 $segments = explode('/', $path);
 
 // High-opportunity city-service mappings from GSC data
@@ -56,6 +57,9 @@ $pageData = $cityServicePages[$pageKey] ?? null;
 if (!$pageData) {
     return false; // Continue routing - not a city-service page
 }
+
+// CRITICAL: Set response code to 200 to prevent Railway Edge redirect caching
+http_response_code(200);
 
 // Use AdvancedMetaManager for unique metadata
 require_once __DIR__ . '/../lib/AdvancedMetaManager.php';
