@@ -215,7 +215,7 @@ header('Expires: 0');
 include __DIR__ . '/../../partials/header.php';
 ?>
 
-<section class="hero" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white;">
+<section class="hero" style="background: #1e40af; color: white;">
     <div class="container w-full text-left">
         <div class="hero-content w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <h1 class="h1 text-white mb-4"><?= htmlspecialchars($pageData['h1']) ?></h1>
@@ -395,7 +395,7 @@ include __DIR__ . '/../../partials/header.php';
 <?php endif; ?>
 
 <!-- Final CTA Section -->
-<section class="section" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
+<section class="section" style="background: #1e40af;">
     <div class="container w-full text-center">
         <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <h2 class="h2 text-white mb-4">Ready to Transform Your Home?</h2>
