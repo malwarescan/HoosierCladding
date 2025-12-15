@@ -222,7 +222,7 @@ include __DIR__ . '/../../partials/header.php';
             <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
                 <p class="lead text-white/90 mb-6 text-xl">Professional vinyl siding installation, replacement, and repair in <strong>South Bend, Indiana</strong>. Licensed, insured contractors with local expertise. Free estimates available.</p>
             <?php elseif ($pageKey === 'vinyl-siding-installers'): ?>
-                <p class="lead text-white/90 mb-6 text-xl">Find trusted vinyl siding installers near you in <strong>South Bend, Mishawaka, and Northern Indiana</strong>. Licensed, insured contractors with expert installation. Same-day quotes available.</p>
+                <p class="lead text-white/90 mb-6 text-xl">Hoosier Cladding LLC provides professional vinyl siding installation services throughout <strong>South Bend, Mishawaka, Elkhart, Granger, and Northern Indiana</strong>. Our certified installers are licensed, insured, and available for same-day consultations.</p>
             <?php else: ?>
                 <p class="lead text-white/90 mb-6 text-xl">Professional <?= htmlspecialchars($pageData['service']) ?> services in <?= htmlspecialchars($pageData['location']) ?>. Licensed, insured, and ready to serve you.</p>
             <?php endif; ?>
@@ -322,7 +322,7 @@ include __DIR__ . '/../../partials/header.php';
             <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
                 <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">We proudly serve <strong>South Bend, Indiana</strong> and surrounding areas, including Mishawaka, Elkhart, Granger, and throughout Northern Indiana. Our licensed vinyl siding contractors have years of experience serving the Michiana region.</p>
             <?php elseif ($pageKey === 'vinyl-siding-installers'): ?>
-                <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Find vinyl siding installers near you! We serve <strong>South Bend, Mishawaka, Elkhart, Granger, Niles, Osceola</strong>, and throughout the Michiana region. Same-day service available in most areas.</p>
+                <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Our vinyl siding installers serve <strong>South Bend, Mishawaka, Elkhart, Granger, Niles, Osceola</strong>, and throughout the Michiana region. We provide same-day consultations and free estimates for all service areas.</p>
             <?php else: ?>
                 <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">We proudly serve <?= htmlspecialchars($pageData['location']) ?> and surrounding areas, including South Bend, Mishawaka, Elkhart, Granger, and throughout Michiana.</p>
             <?php endif; ?>
