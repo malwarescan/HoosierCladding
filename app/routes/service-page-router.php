@@ -4,8 +4,10 @@
  * Handles service-specific pages like /cabinet-installation-south-bend, /window-replacement-south-bend, etc.
  */
 
-// Get the URL path
+// Get the URL path (remove leading/trailing slashes)
 $path = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+// Normalize: remove trailing slash for matching
+$path = rtrim($path, '/');
 $segments = explode('/', $path);
 
 // Service page mapping
