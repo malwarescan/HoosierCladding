@@ -216,7 +216,7 @@ include __DIR__ . '/../../partials/header.php';
 ?>
 
 <section class="hero" style="background: white; color: #1e40af;">
-    <div class="container w-full text-left">
+    <div class="container w-full text-center">
         <div class="hero-content w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <h1 class="h1 text-gray-900 mb-4"><?= htmlspecialchars($pageData['h1']) ?></h1>
             <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
