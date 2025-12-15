@@ -200,6 +200,9 @@ $pageContext = [
 $pageTitle = AdvancedMetaManager::generateTitle($path, $pageType, $pageContext);
 $pageDescription = AdvancedMetaManager::generateDescription($path, $pageType, $pageContext);
 
+// CRITICAL: Set response code to 200 to prevent any redirect caching
+http_response_code(200);
+
 // Include header
 include __DIR__ . '/../../partials/header.php';
 ?>
