@@ -398,17 +398,17 @@ include __DIR__ . '/../../partials/header.php';
 <section class="section" style="background: white;">
     <div class="container w-full text-center">
         <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h2 class="h2 text-white mb-4">Ready to Transform Your Home?</h2>
-            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">Get your free estimate today. No obligation, just honest pricing and expert advice.</p>
+            <h2 class="h2 text-gray-900 mb-4">Ready to Transform Your Home?</h2>
+            <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Get your free estimate today. No obligation, just honest pricing and expert advice.</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="tel:5749312119" class="btn bg-white text-blue-600 hover:bg-gray-100 text-xl px-10 py-5 font-bold shadow-lg">
+                <a href="tel:5749312119" class="btn bg-blue-600 text-white hover:bg-blue-700 text-xl px-10 py-5 font-bold shadow-lg">
                     Call (574) 931-2119
                 </a>
-                <a href="/contact" class="btn border-2 border-white text-white hover:bg-white hover:text-blue-600 text-xl px-10 py-5 font-bold">
+                <a href="/contact" class="btn border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-xl px-10 py-5 font-bold">
                     Get Free Estimate
                 </a>
             </div>
-            <p class="text-white/80 text-sm mt-6">Available 7 days a week • Same-day quotes available</p>
+            <p class="text-gray-600 text-sm mt-6">Available 7 days a week • Same-day quotes available</p>
         </div>
     </div>
 </section>
