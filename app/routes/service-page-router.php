@@ -228,7 +228,7 @@ include __DIR__ . '/../../partials/header.php';
             <?php endif; ?>
             
             <!-- Trust Badges -->
-            <div class="flex flex-wrap gap-4 mb-8">
+            <div class="flex flex-wrap gap-4 mb-8 justify-center">
                 <div class="bg-gray-100 rounded-lg px-4 py-2">
                     <span class="text-sm font-semibold text-gray-900">Licensed & Insured</span>
                 </div>
@@ -241,7 +241,7 @@ include __DIR__ . '/../../partials/header.php';
             </div>
             
             <!-- Primary CTAs -->
-            <div class="hero-cta flex flex-wrap gap-4">
+            <div class="hero-cta flex flex-wrap gap-4 justify-center">
                 <a class="btn btn-primary bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-4 font-bold" href="tel:5749312119">
                     Call Now: (574) 931-2119
                 </a>
