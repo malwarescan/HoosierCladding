@@ -215,42 +215,42 @@ header('Expires: 0');
 include __DIR__ . '/../../partials/header.php';
 ?>
 
-<section class="hero" style="background: #1e40af; color: white;">
+<section class="hero" style="background: white; color: #1e40af;">
     <div class="container w-full text-left">
         <div class="hero-content w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h1 class="h1 text-white mb-4"><?= htmlspecialchars($pageData['h1']) ?></h1>
+            <h1 class="h1 text-gray-900 mb-4"><?= htmlspecialchars($pageData['h1']) ?></h1>
             <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
-                <p class="lead text-white/90 mb-6 text-xl">Professional vinyl siding installation, replacement, and repair in <strong>South Bend, Indiana</strong>. Licensed, insured contractors with local expertise. Free estimates available.</p>
+                <p class="lead text-gray-700 mb-6 text-xl">Professional vinyl siding installation, replacement, and repair in <strong>South Bend, Indiana</strong>. Licensed, insured contractors with local expertise. Free estimates available.</p>
             <?php elseif ($pageKey === 'vinyl-siding-installers'): ?>
-                <p class="lead text-white/90 mb-6 text-xl">Hoosier Cladding LLC provides professional vinyl siding installation services throughout <strong>South Bend, Mishawaka, Elkhart, Granger, and Northern Indiana</strong>. Our certified installers are licensed, insured, and available for same-day consultations.</p>
+                <p class="lead text-gray-700 mb-6 text-xl">Hoosier Cladding LLC provides professional vinyl siding installation services throughout <strong>South Bend, Mishawaka, Elkhart, Granger, and Northern Indiana</strong>. Our certified installers are licensed, insured, and available for same-day consultations.</p>
             <?php else: ?>
-                <p class="lead text-white/90 mb-6 text-xl">Professional <?= htmlspecialchars($pageData['service']) ?> services in <?= htmlspecialchars($pageData['location']) ?>. Licensed, insured, and ready to serve you.</p>
+                <p class="lead text-gray-700 mb-6 text-xl">Professional <?= htmlspecialchars($pageData['service']) ?> services in <?= htmlspecialchars($pageData['location']) ?>. Licensed, insured, and ready to serve you.</p>
             <?php endif; ?>
             
             <!-- Trust Badges -->
             <div class="flex flex-wrap gap-4 mb-8">
-                <div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-                    <span class="text-sm font-semibold">Licensed & Insured</span>
+                <div class="bg-gray-100 rounded-lg px-4 py-2">
+                    <span class="text-sm font-semibold text-gray-900">Licensed & Insured</span>
                 </div>
-                <div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-                    <span class="text-sm font-semibold">Free Estimates</span>
+                <div class="bg-gray-100 rounded-lg px-4 py-2">
+                    <span class="text-sm font-semibold text-gray-900">Free Estimates</span>
                 </div>
-                <div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-                    <span class="text-sm font-semibold">Same-Day Quotes</span>
+                <div class="bg-gray-100 rounded-lg px-4 py-2">
+                    <span class="text-sm font-semibold text-gray-900">Same-Day Quotes</span>
                 </div>
             </div>
             
             <!-- Primary CTAs -->
             <div class="hero-cta flex flex-wrap gap-4">
-                <a class="btn btn-primary bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4 font-bold" href="tel:5749312119">
+                <a class="btn btn-primary bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-4 font-bold" href="tel:5749312119">
                     Call Now: (574) 931-2119
                 </a>
-                <a class="btn btn-outline border-2 border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-4 font-bold" href="/contact">
+                <a class="btn btn-outline border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-lg px-8 py-4 font-bold" href="/contact">
                     Get Free Estimate
                 </a>
             </div>
             
-            <p class="text-white/80 text-sm mt-4">Available 7 days a week • Serving Northern Indiana since 2010</p>
+            <p class="text-gray-600 text-sm mt-4">Available 7 days a week • Serving Northern Indiana since 2010</p>
         </div>
     </div>
 </section>
@@ -347,14 +347,14 @@ include __DIR__ . '/../../partials/header.php';
             </div>
             
             <!-- CTA Section -->
-            <div class="bg-blue-600 text-white rounded-lg p-8 text-center">
-                <h3 class="h3 text-white mb-4">Ready to Get Started?</h3>
-                <p class="text-lg mb-6 text-white/90">Call us today for a free, no-obligation estimate</p>
+            <div class="bg-gray-100 border border-gray-300 rounded-lg p-8 text-center">
+                <h3 class="h3 text-gray-900 mb-4">Ready to Get Started?</h3>
+                <p class="text-lg mb-6 text-gray-700">Call us today for a free, no-obligation estimate</p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="tel:5749312119" class="btn bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4 font-bold">
+                    <a href="tel:5749312119" class="btn bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-4 font-bold">
                         Call (574) 931-2119
                     </a>
-                    <a href="/contact" class="btn border-2 border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-4 font-bold">
+                    <a href="/contact" class="btn border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-lg px-8 py-4 font-bold">
                         Get Free Estimate
                     </a>
                 </div>
@@ -395,7 +395,7 @@ include __DIR__ . '/../../partials/header.php';
 <?php endif; ?>
 
 <!-- Final CTA Section -->
-<section class="section" style="background: #1e40af;">
+<section class="section" style="background: white;">
     <div class="container w-full text-center">
         <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <h2 class="h2 text-white mb-4">Ready to Transform Your Home?</h2>
