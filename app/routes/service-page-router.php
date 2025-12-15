@@ -222,7 +222,7 @@ include __DIR__ . '/../../partials/header.php';
             <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
                 <p class="lead text-gray-700 mb-6 text-xl">Professional vinyl siding installation, replacement, and repair in <strong>South Bend, Indiana</strong>. Licensed, insured contractors with local expertise. Free estimates available.</p>
             <?php elseif ($pageKey === 'vinyl-siding-installers'): ?>
-                <p class="lead text-gray-700 mb-6 text-xl">Hoosier Cladding LLC provides professional vinyl siding installation services throughout <strong>South Bend, Mishawaka, Elkhart, Granger, and Northern Indiana</strong>. Our certified installers are licensed, insured, and available for same-day consultations.</p>
+                <p class="lead text-gray-700 mb-6 text-xl text-center max-w-3xl mx-auto">Hoosier Cladding LLC provides professional vinyl siding installation services throughout <strong>South Bend, Mishawaka, Elkhart, Granger, and Northern Indiana</strong>. Our certified installers are licensed, insured, and available for same-day consultations.</p>
             <?php else: ?>
                 <p class="lead text-gray-700 mb-6 text-xl">Professional <?= htmlspecialchars($pageData['service']) ?> services in <?= htmlspecialchars($pageData['location']) ?>. Licensed, insured, and ready to serve you.</p>
             <?php endif; ?>
