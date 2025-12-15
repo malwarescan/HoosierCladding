@@ -299,6 +299,38 @@ include __DIR__ . '/../../partials/header.php';
                     </div>
                     <p class="mt-4 text-gray-700"><strong>Our installers are available throughout Northern Indiana</strong> and provide same-day consultations for most service areas. All work is performed by licensed contractors with full insurance coverage.</p>
                 </div>
+                
+                <!-- Certifications and Licensing Section -->
+                <div class="bg-white border border-gray-300 rounded-lg p-6 mb-8">
+                    <h3 class="h3 mb-4">Licensing, Certifications, and Training</h3>
+                    <p class="mb-4 text-gray-700">Hoosier Cladding LLC is fully licensed, verified, and certified to provide professional siding installation services throughout Northern Indiana. Our team maintains the highest industry standards through ongoing training and certification programs.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">State Licensing</h4>
+                            <ul class="space-y-1 text-gray-700">
+                                <li>Licensed contractor in Indiana</li>
+                                <li>Fully insured and bonded</li>
+                                <li>Workers' compensation coverage</li>
+                                <li>General liability insurance</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Manufacturer Certifications</h4>
+                            <ul class="space-y-1 text-gray-700">
+                                <li><strong>James Hardie Certified Installer</strong> - Trained and certified in Hardie board siding installation</li>
+                                <li>CertainTeed Master Craftsman Certified</li>
+                                <li>Vinyl siding manufacturer certifications</li>
+                                <li>Fiber cement siding specialist training</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <h4 class="font-bold text-gray-900 mb-2">James Hardie Board Siding Expertise</h4>
+                        <p class="text-gray-700">Our team is verified and trained by James Hardie, the leading manufacturer of fiber cement siding. As certified Hardie board installers, we have completed comprehensive training programs covering proper installation techniques, weather-resistive barrier systems, and warranty compliance. This certification ensures your Hardie board siding installation meets manufacturer specifications and qualifies for full warranty coverage.</p>
+                    </div>
+                </div>
             <?php elseif ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
                 <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
                     <h3 class="h3 mb-3">Your South Bend Vinyl Siding Experts</h3>
@@ -440,6 +472,42 @@ if (in_array($pageKey, ['vinyl-siding-michiana-south-bend', 'vinyl-siding-instal
         ? 'Professional vinyl siding installation services provided by licensed contractors'
         : "Professional {$pageData['service']} services in {$pageData['location']}";
     
+    // Build certifications array for structured data
+    $certifications = [];
+    if ($pageKey === 'vinyl-siding-installers') {
+        $certifications = [
+            [
+                '@type' => 'EducationalOccupationalCredential',
+                'credentialCategory' => 'Professional Certification',
+                'name' => 'James Hardie Certified Installer',
+                'description' => 'Verified and trained by James Hardie in Hardie board siding installation, weather-resistive barrier systems, and warranty compliance',
+                'recognizedBy' => [
+                    '@type' => 'Organization',
+                    'name' => 'James Hardie Building Products'
+                ]
+            ],
+            [
+                '@type' => 'EducationalOccupationalCredential',
+                'credentialCategory' => 'Professional Certification',
+                'name' => 'CertainTeed Master Craftsman Certified',
+                'recognizedBy' => [
+                    '@type' => 'Organization',
+                    'name' => 'CertainTeed Corporation'
+                ]
+            ],
+            [
+                '@type' => 'EducationalOccupationalCredential',
+                'credentialCategory' => 'State License',
+                'name' => 'Indiana Licensed Contractor',
+                'description' => 'Fully licensed contractor in the state of Indiana',
+                'recognizedBy' => [
+                    '@type' => 'Organization',
+                    'name' => 'Indiana Professional Licensing Agency'
+                ]
+            ]
+        ];
+    }
+    
     $schema = [
         '@context' => 'https://schema.org',
         '@type' => 'LocalBusiness',
@@ -457,6 +525,7 @@ if (in_array($pageKey, ['vinyl-siding-michiana-south-bend', 'vinyl-siding-instal
             'addressCountry' => 'US'
         ],
         'areaServed' => $serviceAreas,
+        'hasCredential' => $certifications,
         'hasOfferCatalog' => [
             '@type' => 'OfferCatalog',
             'name' => $serviceName,
@@ -470,7 +539,8 @@ if (in_array($pageKey, ['vinyl-siding-michiana-south-bend', 'vinyl-siding-instal
                         'description' => $serviceDescription,
                         'provider' => [
                             '@type' => 'LocalBusiness',
-                            'name' => 'Hoosier Cladding LLC'
+                            'name' => 'Hoosier Cladding LLC',
+                            'hasCredential' => $certifications
                         ],
                         'serviceType' => $pageKey === 'vinyl-siding-installers' ? 'Vinyl Siding Installation' : $pageData['service'],
                         'areaServed' => $serviceAreas
