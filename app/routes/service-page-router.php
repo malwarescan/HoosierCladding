@@ -182,6 +182,9 @@ if (!$pageData) {
     return false;
 }
 
+// DEBUG: Log that we matched (remove after fixing)
+error_log("Service router matched: $pageKey");
+
 // Ensure we output content, not a redirect
 // This prevents any accidental redirect loops
 if (headers_sent()) {
