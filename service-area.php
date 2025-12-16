@@ -197,4 +197,131 @@ include __DIR__ . '/partials/header.php';
 <?php include __DIR__ . '/includes/services_internal_links.html.php'; ?>
 
 <?php include __DIR__ . '/partials/cta-strip.php'; ?>
+
+<?php
+// Structured Data: LocalBusiness with comprehensive service area coverage
+// Reference: MATRIX-SCHEMA-IMPLEMENTATION.md
+
+$localBusinessSchema = [
+    '@context' => 'https://schema.org',
+    '@type' => 'LocalBusiness',
+    'name' => 'Hoosier Cladding LLC',
+    'description' => 'Professional siding installation, repair, and replacement services across Northern Indiana and Southwest Michigan. Licensed, insured contractors serving Michiana.',
+    'url' => 'https://www.hoosiercladding.com',
+    'telephone' => '+15749312119',
+    'email' => 'David@Hoosier.works',
+    'address' => [
+        '@type' => 'PostalAddress',
+        'streetAddress' => '721 Lincoln Way E',
+        'addressLocality' => 'South Bend',
+        'addressRegion' => 'IN',
+        'postalCode' => '46601',
+        'addressCountry' => 'US'
+    ],
+    'geo' => [
+        '@type' => 'GeoCoordinates',
+        'latitude' => 41.6764,
+        'longitude' => -86.2520
+    ],
+    'areaServed' => [
+        [
+            '@type' => 'City',
+            'name' => 'South Bend',
+            'containedInPlace' => [
+                '@type' => 'State',
+                'name' => 'Indiana'
+            ]
+        ],
+        [
+            '@type' => 'City',
+            'name' => 'Mishawaka',
+            'containedInPlace' => [
+                '@type' => 'State',
+                'name' => 'Indiana'
+            ]
+        ],
+        [
+            '@type' => 'City',
+            'name' => 'Elkhart',
+            'containedInPlace' => [
+                '@type' => 'State',
+                'name' => 'Indiana'
+            ]
+        ],
+        [
+            '@type' => 'City',
+            'name' => 'Granger',
+            'containedInPlace' => [
+                '@type' => 'State',
+                'name' => 'Indiana'
+            ]
+        ],
+        [
+            '@type' => 'City',
+            'name' => 'Warsaw',
+            'containedInPlace' => [
+                '@type' => 'State',
+                'name' => 'Indiana'
+            ]
+        ],
+        [
+            '@type' => 'City',
+            'name' => 'Osceola',
+            'containedInPlace' => [
+                '@type' => 'State',
+                'name' => 'Indiana'
+            ]
+        ],
+        [
+            '@type' => 'City',
+            'name' => 'Niles',
+            'containedInPlace' => [
+                '@type' => 'State',
+                'name' => 'Michigan'
+            ]
+        ]
+    ],
+    'hasOfferCatalog' => [
+        '@type' => 'OfferCatalog',
+        'name' => 'Siding Services',
+        'itemListElement' => [
+            [
+                '@type' => 'Offer',
+                'itemOffered' => [
+                    '@type' => 'Service',
+                    'name' => 'Siding Installation',
+                    'description' => 'Professional siding installation services for residential and commercial properties'
+                ]
+            ],
+            [
+                '@type' => 'Offer',
+                'itemOffered' => [
+                    '@type' => 'Service',
+                    'name' => 'Siding Repair',
+                    'description' => 'Expert siding repair services including storm damage repair and maintenance'
+                ]
+            ],
+            [
+                '@type' => 'Offer',
+                'itemOffered' => [
+                    '@type' => 'Service',
+                    'name' => 'Siding Replacement',
+                    'description' => 'Complete siding replacement services with quality materials and expert installation'
+                ]
+            ]
+        ]
+    ],
+    'priceRange' => '$$',
+    'openingHours' => 'Mo-Fr 07:00-18:00',
+    'sameAs' => [
+        'https://www.facebook.com/hoosiercladding',
+        'https://www.instagram.com/hoosiercladding'
+    ]
+];
+?>
+<!-- LocalBusiness Schema (always-on for local SEO) -->
+<script type="application/ld+json">
+<?= json_encode($localBusinessSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
+</script>
+
 <?php include __DIR__ . '/partials/footer.php'; ?>
