@@ -29,12 +29,17 @@ RewriteRule ^matrix/(.+)$ matrix-router.php [L,QSA]
 
 # --- PRIORITY 0: Canonical Host Enforcement (www) ---
 # Redirect non-www to www (canonical consolidation)
+# NOTE: Railway handles SSL termination at the edge, so we always redirect to HTTPS
+# in the target URL, but we don't check for HTTPS in the condition (Railway forwards HTTP internally)
 RewriteCond %{HTTP_HOST} ^hoosiercladding\.com$ [NC]
 RewriteRule ^(.*)$ https://www.hoosiercladding.com/$1 [R=301,L]
 
-# --- Force HTTPS ---
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# --- Force HTTPS (DISABLED for Railway) ---
+# Railway handles SSL termination at the edge, so we should NOT force HTTPS redirects
+# This was causing ERR_TOO_MANY_REDIRECTS because Railway forwards HTTP internally
+# but serves HTTPS externally, creating a redirect loop.
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # --- Trailing slash normalization (optional) ---
 # Avoid applying to files like .xml/.ico
