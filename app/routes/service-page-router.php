@@ -103,6 +103,13 @@ $servicePages = [
         'service' => 'Window Replacement',
         'location' => 'South Bend, Indiana'
     ],
+    'trimwork-south-bend' => [
+        'title' => 'Trimwork in South Bend, IN | Hoosier Cladding LLC',
+        'description' => 'Professional trimwork installation and repair in South Bend, Indiana. Expert craftsmanship for fascia, soffits, corner boards, and window trim. Call 574-931-2119.',
+        'h1' => 'Trimwork Services in South Bend',
+        'service' => 'Trimwork',
+        'location' => 'South Bend, Indiana'
+    ],
     'products' => [
         'title' => 'Products - Siding Materials & Home Improvement Products | Hoosier Cladding LLC',
         'description' => 'Browse our selection of premium siding materials, windows, doors, and home improvement products. Quality brands and expert installation.',
