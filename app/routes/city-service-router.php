@@ -148,14 +148,18 @@ include __DIR__ . '/../../partials/header.php';
 </section>
 
 <?php
-// Add LocalBusiness schema for this city
-$schema = [
+// Structured Data: LocalBusiness + Service (following data ontology guidelines)
+// Reference: MATRIX-SCHEMA-IMPLEMENTATION.md
+
+// 1. LocalBusiness Schema (always-on for local SEO)
+$localBusinessSchema = [
     '@context' => 'https://schema.org',
     '@type' => 'LocalBusiness',
     'name' => 'Hoosier Cladding LLC',
     'description' => "Professional {$pageData['service']} services in {$pageData['city']}, {$pageData['state']}",
     'url' => 'https://www.hoosiercladding.com',
     'telephone' => '+15749312119',
+    'email' => 'David@Hoosier.works',
     'address' => [
         '@type' => 'PostalAddress',
         'streetAddress' => '721 Lincoln Way E',
@@ -164,6 +168,75 @@ $schema = [
         'postalCode' => '46601',
         'addressCountry' => 'US'
     ],
+    'geo' => [
+        '@type' => 'GeoCoordinates',
+        'latitude' => 41.6764,
+        'longitude' => -86.2520
+    ],
+    'areaServed' => [
+        [
+            '@type' => 'City',
+            'name' => $pageData['city'],
+            'containedInPlace' => [
+                '@type' => 'State',
+                'name' => $pageData['state']
+            ]
+        ],
+        [
+            '@type' => 'City',
+            'name' => 'South Bend',
+            'containedInPlace' => [
+                '@type' => 'State',
+                'name' => 'Indiana'
+            ]
+        ],
+        [
+            '@type' => 'City',
+            'name' => 'Mishawaka',
+            'containedInPlace' => [
+                '@type' => 'State',
+                'name' => 'Indiana'
+            ]
+        ],
+        [
+            '@type' => 'City',
+            'name' => 'Elkhart',
+            'containedInPlace' => [
+                '@type' => 'State',
+                'name' => 'Indiana'
+            ]
+        ]
+    ],
+    'priceRange' => '$$',
+    'openingHours' => 'Mo-Fr 07:00-18:00',
+    'sameAs' => [
+        'https://www.facebook.com/hoosiercladding',
+        'https://www.instagram.com/hoosiercladding'
+    ]
+];
+
+// 2. Service Schema (page-specific service intent)
+$serviceSchema = [
+    '@context' => 'https://schema.org',
+    '@type' => 'Service',
+    '@id' => 'https://www.hoosiercladding.com/' . $pageKey . '#service',
+    'name' => "{$pageData['service']} in {$pageData['city']}, {$pageData['state']}",
+    'description' => "Professional {$pageData['service']} services in {$pageData['city']}, {$pageData['state']}. Licensed, insured contractors with local expertise. Free estimates available.",
+    'provider' => [
+        '@type' => 'LocalBusiness',
+        'name' => 'Hoosier Cladding LLC',
+        'url' => 'https://www.hoosiercladding.com',
+        'telephone' => '+15749312119',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => '721 Lincoln Way E',
+            'addressLocality' => 'South Bend',
+            'addressRegion' => 'IN',
+            'postalCode' => '46601',
+            'addressCountry' => 'US'
+        ]
+    ],
+    'serviceType' => $pageData['service'],
     'areaServed' => [
         [
             '@type' => 'City',
@@ -174,24 +247,21 @@ $schema = [
             ]
         ]
     ],
-    'hasOfferCatalog' => [
-        '@type' => 'OfferCatalog',
-        'name' => $pageData['service'],
-        'itemListElement' => [
-            [
-                '@type' => 'Offer',
-                'itemOffered' => [
-                    '@type' => 'Service',
-                    'name' => $pageData['service'],
-                    'description' => "Professional {$pageData['service']} in {$pageData['city']}, {$pageData['state']}"
-                ]
-            ]
-        ]
+    'availableChannel' => [
+        '@type' => 'ServiceChannel',
+        'serviceUrl' => 'https://www.hoosiercladding.com/' . $pageKey,
+        'servicePhone' => '+15749312119'
     ]
 ];
 ?>
+<!-- LocalBusiness Schema (always-on for local SEO) -->
 <script type="application/ld+json">
-<?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
+<?= json_encode($localBusinessSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
+</script>
+
+<!-- Service Schema (page-specific service intent) -->
+<script type="application/ld+json">
+<?= json_encode($serviceSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
 </script>
 
 <?php include __DIR__ . '/../../partials/footer.php'; 
