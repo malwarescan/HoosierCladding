@@ -139,22 +139,22 @@ $servicePages = [
         'location' => 'Northern Indiana'
     ],
     'vinyl-siding-installers' => [
-        'title' => 'Vinyl Siding Installers Near Me – South Bend, IN',
-        'description' => 'Professional vinyl siding installers serving South Bend, Mishawaka, and Northern Indiana. Licensed, insured contractors with expert installation. Free estimates.',
+        'title' => 'Vinyl Siding Installers Near Me | South Bend, IN',
+        'description' => 'Licensed vinyl siding installers serving South Bend, IN and Northern Indiana. Expert installation, same-day quotes. Free estimates. Call (574) 931-2119.',
         'h1' => 'Vinyl Siding Installers Near Me',
         'service' => 'Vinyl Siding Installation',
         'location' => 'Northern Indiana'
     ],
     'house-siding-replacement' => [
-        'title' => 'House Siding Replacement in South Bend, IN',
-        'description' => 'Complete house siding replacement services in South Bend and Northern Indiana. Expert installation, quality materials, and professional service. Free estimates.',
+        'title' => 'House Siding Replacement Contractors South Bend',
+        'description' => 'House siding replacement contractors in South Bend, IN. Complete installation, quality materials, licensed & insured. Free estimates. Call (574) 931-2119.',
         'h1' => 'House Siding Replacement Services',
         'service' => 'Siding Replacement',
         'location' => 'Northern Indiana'
     ],
     'residential-siding-contractor' => [
-        'title' => 'Residential Siding Contractor in South Bend, IN',
-        'description' => 'Licensed residential siding contractor serving South Bend, Mishawaka, and Northern Indiana. Expert installation, repair, and replacement. Call 574-931-2119.',
+        'title' => 'Residential Siding Contractor South Bend, IN',
+        'description' => 'Licensed residential siding contractor in South Bend, IN. Expert installation, repair, replacement. 15+ years experience. Free estimates. (574) 931-2119.',
         'h1' => 'Residential Siding Contractor',
         'service' => 'Siding Contractor',
         'location' => 'Northern Indiana'
