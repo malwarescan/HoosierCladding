@@ -43,7 +43,7 @@ $servicePages = [
     'door-replacement-south-bend' => [
         'title' => 'Door Replacement Contractors South Bend, IN',
         'description' => 'Licensed door replacement contractors in South Bend, IN. Entry doors, storm doors, energy-efficient options. Free estimates. Call (574) 931-2119.',
-        'h1' => 'Door Replacement Services in South Bend',
+        'h1' => 'Door Replacement Contractors South Bend, IN',
         'service' => 'Door Replacement',
         'location' => 'South Bend, Indiana'
     ],
@@ -64,7 +64,7 @@ $servicePages = [
     'vinyl-siding-michiana-south-bend' => [
         'title' => 'Vinyl Siding Installers in South Bend, IN | Free Quote',
         'description' => 'Professional vinyl siding installation in South Bend, IN. Licensed installers with 15+ years experience. Same-day quotes. Call (574) 931-2119 for free estimate.',
-        'h1' => 'Vinyl Siding in South Bend, Indiana',
+        'h1' => 'Vinyl Siding Installers in South Bend, IN',
         'service' => 'Vinyl Siding',
         'location' => 'South Bend, Indiana'
     ],
@@ -99,14 +99,14 @@ $servicePages = [
     'window-replacement-south-bend' => [
         'title' => 'Window Replacement Contractors South Bend, IN',
         'description' => 'Licensed window replacement contractors in South Bend, IN. Energy-efficient windows, expert installation, lifetime warranties. Free estimates. (574) 931-2119.',
-        'h1' => 'Window Replacement Services in South Bend',
+        'h1' => 'Window Replacement Contractors South Bend, IN',
         'service' => 'Window Replacement',
         'location' => 'South Bend, Indiana'
     ],
     'trimwork-south-bend' => [
         'title' => 'Trimwork Contractors South Bend, IN | Licensed',
         'description' => 'Professional trimwork contractors in South Bend, IN. Fascia, soffits, corner boards, window trim. Licensed & insured. Free estimates. (574) 931-2119.',
-        'h1' => 'Trimwork Services in South Bend',
+        'h1' => 'Trimwork Contractors South Bend, IN',
         'service' => 'Trimwork',
         'location' => 'South Bend, Indiana'
     ],
@@ -148,14 +148,14 @@ $servicePages = [
     'house-siding-replacement' => [
         'title' => 'House Siding Replacement Contractors South Bend',
         'description' => 'House siding replacement contractors in South Bend, IN. Complete installation, quality materials, licensed & insured. Free estimates. Call (574) 931-2119.',
-        'h1' => 'House Siding Replacement Services',
+        'h1' => 'House Siding Replacement Contractors South Bend',
         'service' => 'Siding Replacement',
         'location' => 'Northern Indiana'
     ],
     'residential-siding-contractor' => [
         'title' => 'Residential Siding Contractor South Bend, IN',
         'description' => 'Licensed residential siding contractor in South Bend, IN. Expert installation, repair, replacement. 15+ years experience. Free estimates. (574) 931-2119.',
-        'h1' => 'Residential Siding Contractor',
+        'h1' => 'Residential Siding Contractor South Bend, IN',
         'service' => 'Siding Contractor',
         'location' => 'Northern Indiana'
     ],
@@ -229,11 +229,11 @@ include __DIR__ . '/../../partials/header.php';
         <div class="hero-content w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <h1 class="h1 text-gray-900 mb-4"><?= htmlspecialchars($pageData['h1']) ?></h1>
             <?php if ($pageKey === 'vinyl-siding-michiana-south-bend'): ?>
-                <p class="lead text-gray-700 mb-6 text-xl">Professional vinyl siding installation, replacement, and repair in <strong>South Bend, Indiana</strong>. Licensed, insured contractors with local expertise. Free estimates available.</p>
+                <p class="lead text-gray-700 mb-6 text-xl">Hoosier Cladding is a licensed vinyl siding installer serving <strong>South Bend, IN</strong> and Northern Indiana. We provide professional vinyl siding installation, replacement, and repair. Call (574) 931-2119 for a free estimate.</p>
             <?php elseif ($pageKey === 'vinyl-siding-installers'): ?>
                 <p class="lead text-gray-700 mb-6 text-xl text-center max-w-3xl mx-auto">Hoosier Cladding LLC provides professional vinyl siding installation services throughout <strong>South Bend, Mishawaka, Elkhart, Granger, and Northern Indiana</strong>. Our certified installers are licensed, insured, and available for same-day consultations.</p>
             <?php else: ?>
-                <p class="lead text-gray-700 mb-6 text-xl">Professional <?= htmlspecialchars($pageData['service']) ?> services in <?= htmlspecialchars($pageData['location']) ?>. Licensed, insured, and ready to serve you.</p>
+                <p class="lead text-gray-700 mb-6 text-xl">Hoosier Cladding is a licensed <?= htmlspecialchars(strtolower($pageData['service'])) ?> contractor serving <?= htmlspecialchars($pageData['location']) ?>. We provide professional <?= htmlspecialchars(strtolower($pageData['service'])) ?> services. Call (574) 931-2119 for a free estimate.</p>
             <?php endif; ?>
             
             <!-- Trust Badges -->
