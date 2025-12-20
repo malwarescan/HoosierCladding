@@ -15,23 +15,8 @@ final class MetaManager
   private static function load(): void {
     if (self::$loaded) return;
     
-    // First try GSC-generated snippets
-    $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
-    $slug = trim($path, '/') ?: 'home';
-    
-    $titleFile = __DIR__ . '/../../outputs/snippets/' . $slug . '/title.txt';
-    $metaFile = __DIR__ . '/../../outputs/snippets/' . $slug . '/meta.txt';
-    
-    if (file_exists($titleFile) && file_exists($metaFile)) {
-      self::$map[$path] = [
-        'title' => trim(file_get_contents($titleFile)),
-        'desc' => trim(file_get_contents($metaFile))
-      ];
-      self::$loaded = true;
-      return;
-    }
-    
-    // Fallback to CSV mapping
+    // CSV mapping takes precedence (GSC-optimized snippets)
+    // Snippet files are deprecated in favor of CSV for easier updates
     $file = __DIR__ . '/../config/ctr_rewrites.csv';
     if (!file_exists($file)) { self::$loaded = true; return; }
     if (($h = fopen($file, 'r')) !== false) {
@@ -50,7 +35,7 @@ final class MetaManager
     self::$loaded = true;
   }
 
-  public static function title(string $path, string $default): string {
+  public static function title(string $path, ?string $default = null): ?string {
     self::load();
     if (isset(self::$map[$path]['title']) && self::$map[$path]['title']) {
       return self::$map[$path]['title'];
@@ -58,7 +43,7 @@ final class MetaManager
     return $default;
   }
 
-  public static function description(string $path, string $default): string {
+  public static function description(string $path, ?string $default = null): ?string {
     self::load();
     if (isset(self::$map[$path]['desc']) && self::$map[$path]['desc']) {
       return self::$map[$path]['desc'];

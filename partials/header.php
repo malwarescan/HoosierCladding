@@ -32,19 +32,27 @@ if (!isset($pageType)) {
 }
 $context = $pageContext ?? [];
 
-// Generate unique metadata - Priority: 1) Page override, 2) CSV (MetaManager), 3) AdvancedMetaManager
-if (isset($pageTitle) && isset($pageDescription)) {
-    // Use provided metadata if set (allows page-specific overrides)
+// Generate unique metadata - Priority: 1) CSV (MetaManager), 2) Page override, 3) AdvancedMetaManager
+// CSV takes precedence because it contains GSC-optimized snippets
+$defaultTitle = AdvancedMetaManager::generateTitle($reqPath, $pageType, $context);
+$defaultDesc = AdvancedMetaManager::generateDescription($reqPath, $pageType, $context);
+
+// Check CSV first (GSC-optimized snippets take precedence)
+$csvTitle = MetaManager::title($reqPath, null);
+$csvDesc = MetaManager::description($reqPath, null);
+
+// Use CSV if available, otherwise use page override, otherwise use AdvancedMetaManager default
+if ($csvTitle && $csvDesc) {
+    $finalTitle = $csvTitle;
+    $finalDesc = $csvDesc;
+} elseif (isset($pageTitle) && isset($pageDescription)) {
+    // Use provided metadata if set (allows page-specific overrides when CSV missing)
     $finalTitle = $pageTitle;
     $finalDesc = $pageDescription;
 } else {
-    // First try CSV overrides (MetaManager) for GSC-optimized snippets
-    $defaultTitle = AdvancedMetaManager::generateTitle($reqPath, $pageType, $context);
-    $defaultDesc = AdvancedMetaManager::generateDescription($reqPath, $pageType, $context);
-    
-    // Check if CSV has optimized title/description (takes precedence)
-    $finalTitle = MetaManager::title($reqPath, $defaultTitle);
-    $finalDesc = MetaManager::description($reqPath, $defaultDesc);
+    // Fallback to AdvancedMetaManager defaults
+    $finalTitle = $defaultTitle;
+    $finalDesc = $defaultDesc;
 }
 
 // Fallback to MetaManager for canonical URLs

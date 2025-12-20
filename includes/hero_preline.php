@@ -15,9 +15,13 @@
 
         <!-- Main Headline -->
         <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-gray-900 leading-tight mb-3 sm:mb-4 lg:mb-6 text-center lg:text-left">
-          <span class="text-blue-600">South Bend's</span><br>
-          Premier Siding Experts
+          Siding Contractors in South Bend, IN
         </h1>
+
+        <!-- First Paragraph Confirmation (QA Requirement) -->
+        <p class="text-lg sm:text-xl lg:text-2xl text-gray-700 leading-relaxed mb-4 sm:mb-6 text-center lg:text-left max-w-3xl">
+          Hoosier Cladding is a licensed siding contractor serving South Bend, IN and Northern Indiana. We provide expert installation, repair, and replacement services. Call (574) 931-2119 for a free estimate.
+        </p>
 
         <!-- Rotating Sub-headlines -->
         <div class="mb-3 sm:mb-4 lg:mb-6 text-center lg:text-left">
