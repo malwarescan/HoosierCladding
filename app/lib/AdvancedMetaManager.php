@@ -112,8 +112,8 @@ final class AdvancedMetaManager
 
     private static function generateHomepageTitle(string $path, ?array $context): string
     {
-        // Differentiate / vs /home if needed, but we redirect /home to /
-        return "Home Siding & Exterior Repair – South Bend's Trusted Installers";
+        // Commercial language: "Contractors" matches query intent better than "Installers"
+        return "Siding Contractors in South Bend, IN | Licensed & Insured";
     }
 
     private static function generateServiceTitle(string $path, ?array $context): string
@@ -206,7 +206,8 @@ final class AdvancedMetaManager
 
     private static function generateHomepageDescription(): string
     {
-        return "Professional siding installation and exterior repair in South Bend, Mishawaka, and Granger. Licensed contractors with expert crews for vinyl, fiber cement, and storm damage repairs. Free estimates available.";
+        // Commercial language with phone number for trust signal
+        return "Licensed siding contractors serving South Bend, Mishawaka, and Northern Indiana. Expert installation, repair, and replacement. Free estimates. Call (574) 931-2119 today.";
     }
 
     private static function generateServiceDescription(string $path, ?array $context): string

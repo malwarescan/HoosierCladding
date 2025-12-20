@@ -41,8 +41,8 @@ $servicePages = [
         'location' => 'Northern Indiana'
     ],
     'door-replacement-south-bend' => [
-        'title' => 'Door Replacement in South Bend, IN | Hoosier Cladding LLC',
-        'description' => 'Professional door replacement services in South Bend, Indiana. Energy-efficient entry doors, storm doors, and custom solutions. Call 574-931-2119.',
+        'title' => 'Door Replacement Contractors South Bend, IN',
+        'description' => 'Licensed door replacement contractors in South Bend, IN. Entry doors, storm doors, energy-efficient options. Free estimates. Call (574) 931-2119.',
         'h1' => 'Door Replacement Services in South Bend',
         'service' => 'Door Replacement',
         'location' => 'South Bend, Indiana'
@@ -62,8 +62,8 @@ $servicePages = [
         'location' => 'South Bend, Indiana'
     ],
     'vinyl-siding-michiana-south-bend' => [
-        'title' => 'Vinyl Siding in South Bend, IN – Expert Installation',
-        'description' => 'Professional vinyl siding installation and replacement in South Bend, Indiana. Licensed contractors with local expertise. Free estimates. Call 574-931-2119.',
+        'title' => 'Vinyl Siding Installers in South Bend, IN | Free Quote',
+        'description' => 'Professional vinyl siding installation in South Bend, IN. Licensed installers with 15+ years experience. Same-day quotes. Call (574) 931-2119 for free estimate.',
         'h1' => 'Vinyl Siding in South Bend, Indiana',
         'service' => 'Vinyl Siding',
         'location' => 'South Bend, Indiana'
@@ -97,15 +97,15 @@ $servicePages = [
         'location' => 'Northern Indiana'
     ],
     'window-replacement-south-bend' => [
-        'title' => 'Window Replacement in South Bend, IN | Hoosier Cladding LLC',
-        'description' => 'Professional window replacement services in South Bend, Indiana. Energy-efficient windows, expert installation, and lifetime warranties. Call 574-931-2119.',
+        'title' => 'Window Replacement Contractors South Bend, IN',
+        'description' => 'Licensed window replacement contractors in South Bend, IN. Energy-efficient windows, expert installation, lifetime warranties. Free estimates. (574) 931-2119.',
         'h1' => 'Window Replacement Services in South Bend',
         'service' => 'Window Replacement',
         'location' => 'South Bend, Indiana'
     ],
     'trimwork-south-bend' => [
-        'title' => 'Trimwork in South Bend, IN | Hoosier Cladding LLC',
-        'description' => 'Professional trimwork installation and repair in South Bend, Indiana. Expert craftsmanship for fascia, soffits, corner boards, and window trim. Call 574-931-2119.',
+        'title' => 'Trimwork Contractors South Bend, IN | Licensed',
+        'description' => 'Professional trimwork contractors in South Bend, IN. Fascia, soffits, corner boards, window trim. Licensed & insured. Free estimates. (574) 931-2119.',
         'h1' => 'Trimwork Services in South Bend',
         'service' => 'Trimwork',
         'location' => 'South Bend, Indiana'

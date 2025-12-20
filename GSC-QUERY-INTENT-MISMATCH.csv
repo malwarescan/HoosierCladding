@@ -1,0 +1,34 @@
+Query,Impressions,Position,Clicks,Current_Page,Intent_Match,Action_Required,Priority
+residential siding contractor,62,17.87,0,/residential-siding-contractor,Partial,Update title to emphasize 'Contractor',P1
+house siding contractors,58,16.24,0,/house-siding-replacement,No,Add 'Contractors' to title,P1
+siding contractor,58,30.81,0,Homepage,No,Change title from 'Installers' to 'Contractor',P1
+siding company,45,25.71,0,Homepage,No,Add 'Company' to title or create dedicated page,P1
+siding companies,35,24.49,0,Homepage,No,Add 'Companies' to title or create dedicated page,P1
+vinyl siding installers near me,35,72.83,1,/vinyl-siding-installers,Yes,Improve position (currently too low),P2
+siding south bend,15,14.4,0,/vinyl-siding-michiana-south-bend,Partial,'Michiana' dilutes local signal - consider redirect,P2
+vinyl siding south bend,15,31.8,0,/vinyl-siding-michiana-south-bend,Partial,Same issue - 'Michiana' vs 'South Bend',P2
+siding replacement warsaw indiana,12,10.75,0,/siding-replacement-warsaw,Yes,Good position - optimize snippet for clicks,P2
+"siding installation granger, indiana",10,11.4,0,/siding-installation-granger,Yes,Good position - optimize snippet for clicks,P2
+siding contractors south bend in,14,19.57,0,Homepage,No,Create /siding-contractors-south-bend or update homepage,P1
+siding company south bend,11,23.36,0,Homepage,No,Create /siding-company-south-bend or update homepage,P1
+south bend siding,9,37.11,0,/vinyl-siding-michiana-south-bend,Partial,Consider /siding-south-bend page,P3
+siding contractors near me,7,62,0,Homepage,No,Add 'Near Me' language to homepage,P2
+siding installation near me,7,62.29,0,Homepage,No,Add 'Near Me' language to homepage,P2
+siding companies near me,6,76,0,Homepage,No,Add 'Near Me' language to homepage,P2
+door replacement south bend in,4,14.75,0,/door-replacement-south-bend,Yes,Good position - optimize snippet,P2
+siding services,4,5.75,0,Homepage,Partial,Add 'Services' to title or create /siding-services,P3
+siding painting south bend,4,7.75,0,None,No,Create /siding-painting-south-bend if volume justifies,P3
+siding installation services,4,14.25,0,Homepage,Partial,Add 'Services' to title,P3
+vinyl siding contractors,4,16.75,0,/vinyl-siding-installers,Partial,Consider /vinyl-siding-contractors page,P3
+vinyl siding installers,4,19.25,0,/vinyl-siding-installers,Yes,Good match - optimize snippet,P2
+siding installers,4,24.5,0,/vinyl-siding-installers,Partial,Consider broader /siding-installers page,P3
+siding repair near me,5,25.8,0,Homepage,No,Add 'Near Me' language or create /siding-repair-near-me,P3
+vinyl siding companies,5,36,0,Homepage,No,Add 'Companies' to title,P3
+siding replacement,3,32.67,0,Homepage,Partial,Consider /siding-replacement page,P3
+house siding cost,3,33.67,0,Homepage,No,Create /siding-cost or add to FAQ section,P3
+siding elkhart,3,43.67,0,None,No,Create /siding-elkhart if volume justifies,P3
+siding contractor near me,2,54.5,0,Homepage,No,Add 'Near Me' language to homepage,P2
+door installation south bend in,2,66.5,0,/door-replacement-south-bend,Partial,Consider /door-installation-south-bend,P3
+siding contractor elkhart in,2,76.5,0,None,No,Create /siding-contractor-elkhart if volume justifies,P3
+siding company elkhart in,2,77.5,0,None,No,Create /siding-company-elkhart if volume justifies,P3
+

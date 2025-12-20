@@ -1,0 +1,44 @@
+# Full URLs to Inspect in Google Search Console URL Inspection Tool
+
+## PRIORITY 1: Newly Created High-Opportunity Pages
+
+### Service Pages
+https://www.hoosiercladding.com/vinyl-siding-installers
+https://www.hoosiercladding.com/house-siding-replacement
+https://www.hoosiercladding.com/residential-siding-contractor
+
+### City-Service Pages
+https://www.hoosiercladding.com/siding-replacement-warsaw
+https://www.hoosiercladding.com/vinyl-siding-south-bend
+https://www.hoosiercladding.com/siding-installation-granger
+
+## PRIORITY 2: Optimized Existing Pages
+
+https://www.hoosiercladding.com/vinyl-siding-michiana-south-bend
+
+## PRIORITY 3: Canonical Consolidation (Critical)
+
+https://www.hoosiercladding.com/
+https://hoosiercladding.com/
+
+## PRIORITY 4: Striking Distance Matrix Pages
+
+https://www.hoosiercladding.com/matrix/granger-in/vinyl-siding-repair/outdated-look
+https://www.hoosiercladding.com/matrix/warsaw-in/soffit-fascia-repair/peeling-paint
+
+## Additional Important Pages
+
+https://www.hoosiercladding.com/door-replacement-south-bend
+https://www.hoosiercladding.com/trimwork-south-bend
+https://www.hoosiercladding.com/window-replacement-south-bend
+https://www.hoosiercladding.com/service-area
+https://www.hoosiercladding.com/siding
+https://www.hoosiercladding.com/contact
+
+## Sitemaps (for reference)
+
+https://www.hoosiercladding.com/sitemap.xml
+https://www.hoosiercladding.com/sitemap-static.xml
+https://www.hoosiercladding.com/sitemap-matrix.xml
+https://www.hoosiercladding.com/sitemap-blog.xml
+

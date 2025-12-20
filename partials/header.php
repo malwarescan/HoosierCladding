@@ -32,15 +32,19 @@ if (!isset($pageType)) {
 }
 $context = $pageContext ?? [];
 
-// Generate unique metadata using AdvancedMetaManager
+// Generate unique metadata - Priority: 1) Page override, 2) CSV (MetaManager), 3) AdvancedMetaManager
 if (isset($pageTitle) && isset($pageDescription)) {
     // Use provided metadata if set (allows page-specific overrides)
     $finalTitle = $pageTitle;
     $finalDesc = $pageDescription;
 } else {
-    // Generate unique metadata
-    $finalTitle = AdvancedMetaManager::generateTitle($reqPath, $pageType, $context);
-    $finalDesc = AdvancedMetaManager::generateDescription($reqPath, $pageType, $context);
+    // First try CSV overrides (MetaManager) for GSC-optimized snippets
+    $defaultTitle = AdvancedMetaManager::generateTitle($reqPath, $pageType, $context);
+    $defaultDesc = AdvancedMetaManager::generateDescription($reqPath, $pageType, $context);
+    
+    // Check if CSV has optimized title/description (takes precedence)
+    $finalTitle = MetaManager::title($reqPath, $defaultTitle);
+    $finalDesc = MetaManager::description($reqPath, $defaultDesc);
 }
 
 // Fallback to MetaManager for canonical URLs
