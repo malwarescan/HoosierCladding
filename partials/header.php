@@ -34,25 +34,43 @@ $context = $pageContext ?? [];
 
 // Generate unique metadata - Priority: 1) CSV (MetaManager), 2) Page override, 3) AdvancedMetaManager
 // CSV takes precedence because it contains GSC-optimized snippets
-$defaultTitle = AdvancedMetaManager::generateTitle($reqPath, $pageType, $context);
-$defaultDesc = AdvancedMetaManager::generateDescription($reqPath, $pageType, $context);
+// DEFENSIVE: Wrap in try-catch to prevent fatal errors from breaking page rendering
+try {
+    $defaultTitle = AdvancedMetaManager::generateTitle($reqPath, $pageType, $context);
+    $defaultDesc = AdvancedMetaManager::generateDescription($reqPath, $pageType, $context);
+} catch (Throwable $e) {
+    // Fallback to safe defaults if AdvancedMetaManager fails
+    error_log("AdvancedMetaManager error for $reqPath: " . $e->getMessage());
+    $defaultTitle = "Hoosier Cladding LLC | Siding Services in South Bend, IN";
+    $defaultDesc = "Professional siding installation, repair, and replacement services in Northern Indiana. Licensed, insured contractors. Free estimates.";
+}
 
 // Check CSV first (GSC-optimized snippets take precedence)
+// DEFENSIVE: MetaManager returns null if not found, which is safe
 $csvTitle = MetaManager::title($reqPath, null);
 $csvDesc = MetaManager::description($reqPath, null);
 
-// Use CSV if available, otherwise use page override, otherwise use AdvancedMetaManager default
-if ($csvTitle && $csvDesc) {
+// Use CSV if BOTH title and description are available (not null, not empty)
+// This ensures we don't mix CSV and defaults
+if (!empty($csvTitle) && !empty($csvDesc)) {
     $finalTitle = $csvTitle;
     $finalDesc = $csvDesc;
-} elseif (isset($pageTitle) && isset($pageDescription)) {
+} elseif (isset($pageTitle) && isset($pageDescription) && !empty($pageTitle) && !empty($pageDescription)) {
     // Use provided metadata if set (allows page-specific overrides when CSV missing)
     $finalTitle = $pageTitle;
     $finalDesc = $pageDescription;
 } else {
-    // Fallback to AdvancedMetaManager defaults
+    // Fallback to AdvancedMetaManager defaults (already computed above, with error handling)
     $finalTitle = $defaultTitle;
     $finalDesc = $defaultDesc;
+}
+
+// FINAL SAFETY CHECK: Ensure we never have empty/null values
+if (empty($finalTitle)) {
+    $finalTitle = "Hoosier Cladding LLC | Siding Services in South Bend, IN";
+}
+if (empty($finalDesc)) {
+    $finalDesc = "Professional siding installation, repair, and replacement services in Northern Indiana. Licensed, insured contractors. Free estimates.";
 }
 
 // Get canonical URL (always clean, no query params)
@@ -67,7 +85,12 @@ $canonical = CrawlHygiene::getCanonicalUrl($reqPath);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($finalTitle, ENT_QUOTES) ?></title>
     <meta name="description" content="<?= htmlspecialchars($finalDesc, ENT_QUOTES) ?>">
-    <meta name="robots" content="index,follow">
+    <?php
+    // Set robots meta tag: noindex, follow if query params exist (prevents parameter pollution indexing)
+    // CrawlHygiene already adds X-Robots-Tag header, but we also set meta tag for defense in depth
+    $robotsContent = CrawlHygiene::hasUnknownParams() ? 'noindex, follow' : 'index, follow';
+    ?>
+    <meta name="robots" content="<?= $robotsContent ?>">
     <link rel="canonical" href="<?= $canonical ?>">
     
     <!-- Favicon and Icons -->

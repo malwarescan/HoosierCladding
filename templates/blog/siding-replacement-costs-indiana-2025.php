@@ -85,32 +85,6 @@ include __DIR__ . '/../../partials/header.php';
       <li>Warranty protection (up to 50 years)</li>
     </ul>
 
-    <h2 class="text-2xl font-semibold mt-8 mb-4">Financing Options</h2>
-    <p class="mb-4">
-      Hoosier Cladding works with several financing partners to offer flexible payment plans. Many homeowners 
-      qualify for:
-    </p>
-    <ul class="list-disc pl-6 mb-6">
-      <li>12-24 month same-as-cash options</li>
-      <li>Low monthly payments</li>
-      <li>Quick approval process</li>
-      <li>No prepayment penalties</li>
-    </ul>
-
-    <div class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-8 my-8 shadow-sm">
-      <h3 class="text-2xl font-bold mb-3 text-gray-900">Get Your Free Estimate</h3>
-      <p class="mb-6 text-gray-700">
-        Hoosier Cladding provides detailed, transparent estimates at no cost. We serve South Bend, Mishawaka, 
-        Elkhart, Granger, and all of Northern Indiana.
-      </p>
-      <a href="/contact" style="display: inline-block; padding: 16px 32px; background: #1e66d0; color: white; font-weight: 600; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.2s ease;">
-        Request Free Estimate →
-      </a>
-      <p class="mt-6 text-sm text-gray-600">
-        Or call us directly: <a href="tel:574-931-2119" class="font-semibold text-blue-600 hover:text-blue-700 underline">574-931-2119</a>
-      </p>
-    </div>
-
     <h2 class="text-2xl font-semibold mt-8 mb-4">When to Replace Your Siding</h2>
     <p class="mb-4">Consider replacement if you notice:</p>
     <ul class="list-disc pl-6 mb-6">
@@ -123,8 +97,10 @@ include __DIR__ . '/../../partials/header.php';
     </ul>
 
     <p class="mb-6">
-      Schedule a free inspection with Hoosier Cladding to assess your siding's condition and get an accurate estimate 
-      tailored to your home and budget.
+      If your siding shows multiple signs of failure or your energy bills have increased significantly, it may be time to consider replacement. 
+      Homeowners in South Bend and Northern Indiana should consult with 
+      <a href="/house-siding-replacement" class="text-blue-600 hover:underline font-semibold">siding replacement contractors in South Bend</a> 
+      for a professional assessment of whether repair or full replacement better serves your home's needs, budget, and long-term value.
     </p>
 
     <div class="border-t border-gray-200 mt-12 pt-8">

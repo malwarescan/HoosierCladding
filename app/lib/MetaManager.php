@@ -18,20 +18,54 @@ final class MetaManager
     // CSV mapping takes precedence (GSC-optimized snippets)
     // Snippet files are deprecated in favor of CSV for easier updates
     $file = __DIR__ . '/../config/ctr_rewrites.csv';
-    if (!file_exists($file)) { self::$loaded = true; return; }
-    if (($h = fopen($file, 'r')) !== false) {
-      $headers = fgetcsv($h, 0, ',', '"', '');
-      $idx = array_flip($headers);
-      while (($row = fgetcsv($h, 0, ',', '"', '')) !== false) {
-        $url  = $row[$idx['Top_pages']] ?? null;
-        $tit  = $row[$idx['Suggested_Title']] ?? null;
-        $desc = $row[$idx['Suggested_Meta_Description']] ?? null;
-        if (!$url) continue;
-        $path = parse_url($url, PHP_URL_PATH) ?: '/';
-        self::$map[$path] = ['title'=>$tit, 'desc'=>$desc];
-      }
-      fclose($h);
+    if (!file_exists($file)) { 
+      error_log("MetaManager: CSV file not found: $file");
+      self::$loaded = true; 
+      return; 
     }
+    
+    try {
+      if (($h = fopen($file, 'r')) !== false) {
+        $headers = fgetcsv($h, 0, ',', '"', '');
+        if ($headers === false || empty($headers)) {
+          error_log("MetaManager: Failed to read CSV headers from $file");
+          fclose($h);
+          self::$loaded = true;
+          return;
+        }
+        
+        $idx = array_flip($headers);
+        $rowNum = 0;
+        while (($row = fgetcsv($h, 0, ',', '"', '')) !== false) {
+          $rowNum++;
+          // Skip if row is shorter than expected (prevents undefined index errors)
+          if (count($row) < count($headers)) {
+            continue;
+          }
+          
+          $url  = $row[$idx['Top_pages']] ?? null;
+          $tit  = $row[$idx['Suggested_Title']] ?? null;
+          $desc = $row[$idx['Suggested_Meta_Description']] ?? null;
+          if (!$url) continue;
+          
+          try {
+            $path = parse_url($url, PHP_URL_PATH) ?: '/';
+            // Only store if both title and description exist (defensive)
+            if ($tit && $desc) {
+              self::$map[$path] = ['title'=>$tit, 'desc'=>$desc];
+            }
+          } catch (Throwable $e) {
+            error_log("MetaManager: Error parsing URL '$url' at row $rowNum: " . $e->getMessage());
+            continue;
+          }
+        }
+        fclose($h);
+      }
+    } catch (Throwable $e) {
+      error_log("MetaManager: Fatal error loading CSV: " . $e->getMessage());
+      // Continue with empty map - AdvancedMetaManager will handle fallback
+    }
+    
     self::$loaded = true;
   }
 

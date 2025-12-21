@@ -1,0 +1,32 @@
+# QA URLs - Complete List
+
+## Blog Pages (Priority 1)
+https://313243ed7371.ngrok-free.app/home-siding-blog
+https://313243ed7371.ngrok-free.app/home-siding-blog/install-a-metal-roof-ridge-cap
+https://313243ed7371.ngrok-free.app/home-siding-blog/siding-replacement-costs-indiana-2025
+https://313243ed7371.ngrok-free.app/home-siding-blog/does-home-insurance-cover-broken-windows-what-indiana-homeowners-need-to-know
+
+## Core Pages (Priority 2)
+https://313243ed7371.ngrok-free.app/
+https://313243ed7371.ngrok-free.app/service-area
+https://313243ed7371.ngrok-free.app/contact
+
+## Service Pages (Priority 3)
+https://313243ed7371.ngrok-free.app/vinyl-siding-michiana-south-bend
+https://313243ed7371.ngrok-free.app/house-siding-replacement
+https://313243ed7371.ngrok-free.app/residential-siding-contractor
+https://313243ed7371.ngrok-free.app/vinyl-siding-installers
+https://313243ed7371.ngrok-free.app/door-replacement-south-bend
+https://313243ed7371.ngrok-free.app/window-replacement-south-bend
+https://313243ed7371.ngrok-free.app/trimwork-south-bend
+
+## City-Service Pages (Priority 4)
+https://313243ed7371.ngrok-free.app/siding-replacement-warsaw
+https://313243ed7371.ngrok-free.app/vinyl-siding-south-bend
+https://313243ed7371.ngrok-free.app/siding-installation-granger
+
+## Canonical/Parameter Tests (Priority 5)
+https://313243ed7371.ngrok-free.app/home-siding-blog?author=test
+https://313243ed7371.ngrok-free.app/home-siding-blog?page=2
+https://313243ed7371.ngrok-free.app/?test=123
+

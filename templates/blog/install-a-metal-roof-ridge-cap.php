@@ -90,25 +90,14 @@ include __DIR__ . '/../../partials/header.php';
     <h2 class="text-2xl font-semibold mt-8 mb-4">When to Call a Professional</h2>
     <p class="mb-4">
       While DIY ridge cap installation is possible, it's dangerous work at heights and mistakes can lead to 
-      costly leaks. Hoosier Cladding LLC has experience with metal roofing and ridge cap installations throughout 
+      costly leaks. Professional contractors have experience with metal roofing and ridge cap installations throughout 
       South Bend, Mishawaka, Elkhart, and all of Northern Indiana.
     </p>
 
     <p class="mb-6">
-      We understand the unique challenges of our climate—from lake-effect snow to summer storms—and install 
+      Professional installers understand the unique challenges of our climate—from lake-effect snow to summer storms—and install 
       ridge caps that will protect your investment for decades.
     </p>
-
-    <div class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-8 my-8 shadow-sm">
-      <h3 class="text-2xl font-bold mb-3 text-gray-900">Need Expert Installation?</h3>
-      <p class="mb-6 text-gray-700">
-        Get a free estimate for professional metal roof ridge cap installation. We serve South Bend, 
-        Mishawaka, Elkhart, Granger, and all surrounding areas.
-      </p>
-      <a href="/contact" style="display: inline-block; padding: 16px 32px; background: #1e66d0; color: white; font-weight: 600; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.2s ease;">
-        Request Free Estimate →
-      </a>
-    </div>
 
     <h2 class="text-2xl font-semibold mt-8 mb-4">Maintenance Tips</h2>
     <p class="mb-4">
@@ -123,8 +112,10 @@ include __DIR__ . '/../../partials/header.php';
     </ul>
 
     <p class="mb-6">
-      In Northern Indiana, winter damage is common. If you notice any issues, contact Hoosier Cladding at 
-      <a href="tel:574-931-2119" class="text-blue-600 font-semibold">574-931-2119</a> for a free inspection.
+      In Northern Indiana, winter damage is common. If you notice any issues, it's important to address them promptly. 
+      For complex repairs or full roof replacement projects, homeowners should consult with 
+      <a href="/house-siding-replacement" class="text-blue-600 hover:underline font-semibold">siding replacement contractors in South Bend</a> 
+      who have experience with both siding and roofing systems and can assess whether your roof and siding need coordinated attention.
     </p>
 
     <div class="border-t border-gray-200 mt-12 pt-8">
