@@ -105,13 +105,8 @@ if ($__path === '/home-siding-blog') {
   exit;
 }
 
-// AUTHOR PAGES: Add noindex to author query parameter pages
-if (preg_match('#^/home-siding-blog#', $__path) && isset($_GET['author'])) {
-    header('X-Robots-Tag: noindex, nofollow');
-}
-if (preg_match('#^/home-improvement-blog#', $__path) && isset($_GET['author'])) {
-    header('X-Robots-Tag: noindex, nofollow');
-}
+// AUTHOR PAGES: Handled by CrawlHygiene now (all unknown params get noindex + redirect)
+// Legacy code removed - CrawlHygiene handles this globally at PRIORITY 0.5
 
 // CITY-SERVICE ROUTES: Handle high-opportunity city+service pages first
 // These match top GSC queries with high impressions but low CTR
