@@ -55,8 +55,10 @@ if ($csvTitle && $csvDesc) {
     $finalDesc = $defaultDesc;
 }
 
-// Fallback to MetaManager for canonical URLs
-$canonical = MetaManager::canonical($reqPath);
+// Get canonical URL (always clean, no query params)
+// Use CrawlHygiene to ensure query params are stripped
+require_once __DIR__ . '/../app/lib/CrawlHygiene.php';
+$canonical = CrawlHygiene::getCanonicalUrl($reqPath);
 ?>
 <!DOCTYPE html>
 <html lang="en">

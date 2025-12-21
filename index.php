@@ -12,6 +12,20 @@ if ($__path === '/health.php') {
     exit;
 }
 
+// PRIORITY 0.5: Crawl Hygiene - Handle query parameter pollution
+require_once __DIR__ . '/app/lib/CrawlHygiene.php';
+
+// Check if we should redirect to clean URL (301)
+$redirectUrl = CrawlHygiene::shouldRedirect();
+if ($redirectUrl !== null) {
+    // Redirect to clean URL (301 permanent)
+    header("Location: $redirectUrl", true, 301);
+    exit;
+}
+
+// Add noindex header for any remaining unknown params (defense in depth)
+CrawlHygiene::addNoindexIfNeeded();
+
 // PRIORITY 1: Force www canonical (server-level enforcement)
 // This handles cases where .htaccess redirect may not execute (e.g., CDN/proxy)
 // BUT: Only redirect if we're NOT already on www (prevent loops)

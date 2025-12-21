@@ -52,16 +52,9 @@ final class MetaManager
   }
 
   public static function canonical(string $path): string {
-    // Always use www as canonical (enforced sitewide)
-    $scheme = 'https';
-    $host = 'www.hoosiercladding.com';
-    
-    // Remove trailing slash except for root
-    if ($path !== '/' && substr($path, -1) === '/') {
-      $path = rtrim($path, '/');
-    }
-    
-    return $scheme . '://' . $host . $path;
+    // Use CrawlHygiene to get clean canonical (strips query params)
+    require_once __DIR__ . '/CrawlHygiene.php';
+    return CrawlHygiene::getCanonicalUrl($path);
   }
 }
 
