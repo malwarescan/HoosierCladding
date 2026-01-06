@@ -1,270 +1,242 @@
 <?php
 /**
- * City-Service Router
- * Handles dedicated city+service pages for high-opportunity queries
- * Example: /siding-replacement-warsaw, /vinyl-siding-south-bend
+ * City-Service Router (Locked Template System)
+ * Handles dedicated city+service pages for high-opportunity queries.
  * 
- * These pages are created for queries with high impressions but low CTR
- * to provide clean intent alignment
+ * DIRECTIVE P1: Query-Driven Landing Pages
+ * Template: Locked, Deterministic, Retrieval-Anchored
  */
 
-// Get the URL path (normalize trailing slashes)
+// Normalize path
 $path = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
-$path = rtrim($path, '/'); // Remove trailing slash for matching
-$segments = explode('/', $path);
+$path = rtrim($path, '/');
 
-// High-opportunity city-service mappings from GSC data
+// Configuration: P1 Priority Cities
 $cityServicePages = [
-    // Warsaw - HIGH PRIORITY (position 9.91, 0 clicks)
-    'siding-replacement-warsaw' => [
+    'siding-contractor-south-bend-in' => [
+        'city' => 'South Bend',
+        'state' => 'Indiana',
+        'service' => 'Siding Contractor', // Primary Entity
+        'h1' => 'Siding Contractor in South Bend, IN',
+        'query' => 'siding contractors south bend in',
+        'intent' => 'transactional-local',
+        'adjacencies' => [
+            ['url' => '/siding-contractor-granger-in', 'anchor' => 'Granger Siding Services'],
+            ['url' => '/home-siding-blog/siding-replacement-costs-indiana-2025', 'anchor' => 'Indiana Siding Cost Guide']
+        ]
+    ],
+    'siding-companies-plymouth-in' => [
+        'city' => 'Plymouth',
+        'state' => 'Indiana',
+        'service' => 'Siding Company',
+        'h1' => 'Siding Companies in Plymouth, IN',
+        'query' => 'siding companies plymouth in',
+        'intent' => 'transactional-local',
+        'adjacencies' => [
+            ['url' => '/siding-replacement-warsaw-indiana', 'anchor' => 'Warsaw Siding Replacement'],
+            ['url' => '/siding-contractor-south-bend-in', 'anchor' => 'South Bend Contractors']
+        ]
+    ],
+    'siding-replacement-warsaw-indiana' => [
         'city' => 'Warsaw',
         'state' => 'Indiana',
         'service' => 'Siding Replacement',
-        'serviceSlug' => 'siding-replacement',
+        'h1' => 'Siding Replacement in Warsaw, Indiana',
         'query' => 'siding replacement warsaw indiana',
-        'position' => 9.91,
-        'impressions' => 76,
-        'intent' => 'transactional-local'
+        'intent' => 'transactional-local',
+        'adjacencies' => [
+            ['url' => '/siding-companies-plymouth-in', 'anchor' => 'Plymouth Siding Companies'],
+            ['url' => '/contact', 'anchor' => 'Get a Quote']
+        ]
     ],
-    // South Bend - High impressions
-    'vinyl-siding-south-bend' => [
-        'city' => 'South Bend',
-        'state' => 'Indiana',
-        'service' => 'Vinyl Siding',
-        'serviceSlug' => 'vinyl-siding',
-        'query' => 'vinyl siding south bend',
-        'position' => 27.92,
-        'impressions' => 117,
-        'intent' => 'transactional-local'
-    ],
-    // Granger - Good position
-    'siding-installation-granger' => [
+    'siding-contractor-granger-in' => [
         'city' => 'Granger',
         'state' => 'Indiana',
-        'service' => 'Siding Installation',
-        'serviceSlug' => 'siding-installation',
-        'query' => 'siding installation granger, indiana',
-        'position' => 23.68,
-        'impressions' => 100,
-        'intent' => 'transactional-local'
-    ],
+        'service' => 'Siding Contractor',
+        'h1' => 'Siding Contractor in Granger, IN',
+        'query' => 'granger in siding contractor',
+        'intent' => 'transactional-local',
+        'adjacencies' => [
+            ['url' => '/siding-contractor-south-bend-in', 'anchor' => 'South Bend Siding'],
+            ['url' => '/home-siding-blog/siding-replacement-costs-indiana-2025', 'anchor' => '2025 Cost Guide']
+        ]
+    ]
 ];
 
-// Check if this is a city-service page
-$pageKey = $path;
-$pageData = $cityServicePages[$pageKey] ?? null;
+// Check match
+$pageData = $cityServicePages[$path] ?? null;
 
 if (!$pageData) {
-    return false; // Continue routing - not a city-service page
+    return false;
 }
 
-// CRITICAL: Set response code to 200 to prevent Railway Edge redirect caching
+// Headers
 http_response_code(200);
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0'); // Prevent Edge caching during dev
 
-// CRITICAL: Prevent Railway Edge from caching redirects
-header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
-header('Pragma: no-cache');
-header('Expires: 0');
-
-// Use AdvancedMetaManager for unique metadata
+// Metadata
 require_once __DIR__ . '/../lib/AdvancedMetaManager.php';
+$pageTitle = "{$pageData['h1']} | Licensed & Insured";
+$pageDescription = "Top-rated {$pageData['service']} serving {$pageData['city']}, {$pageData['state']}. Expert installation of vinyl and James Hardie siding. Request a free estimate today.";
 
-// Generate metadata specifically for this query
-$pageType = 'service';
-$pageContext = [
-    'city' => $pageData['city'],
-    'service' => $pageData['service'],
-    'query' => $pageData['query'],
-    'intent' => $pageData['intent']
-];
-
-// Override metadata to match query intent exactly
-$pageTitle = "{$pageData['service']} in {$pageData['city']}, {$pageData['state']} – Expert Installation";
-$pageDescription = "Professional {$pageData['service']} services in {$pageData['city']}, {$pageData['state']}. Licensed contractors with local expertise. Free estimates. Call 574-931-2119.";
-
-// Ensure length compliance
-if (mb_strlen($pageTitle) > 60) {
-    $pageTitle = mb_substr($pageTitle, 0, 57) . '...';
-}
-if (mb_strlen($pageDescription) < 120) {
-    $pageDescription .= " Serving {$pageData['city']} and surrounding Northern Indiana communities.";
-}
-if (mb_strlen($pageDescription) > 155) {
-    $pageDescription = mb_substr($pageDescription, 0, 152) . '...';
-}
-
-// Set page type and context for header
-$pageType = 'service';
-$pageContext = [
-    'city' => $pageData['city'],
-    'service' => $pageData['service'],
-    'query' => $pageData['query'],
-    'intent' => $pageData['intent']
-];
-
-// Include header (will use $pageTitle and $pageDescription if set)
 include __DIR__ . '/../../partials/header.php';
 ?>
 
-<section class="hero">
-    <div class="container w-full text-left">
-        <div class="hero-content w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="h1"><?= htmlspecialchars($pageData['service']) ?> in <?= htmlspecialchars($pageData['city']) ?>, <?= htmlspecialchars($pageData['state']) ?></h1>
-            <p class="lead">Professional <?= htmlspecialchars(strtolower($pageData['service'])) ?> services for <?= htmlspecialchars($pageData['city']) ?> homeowners. Licensed, insured, and locally trusted.</p>
-            <div class="hero-cta">
-                <a class="btn btn-primary" href="/contact">Get Free Estimate</a>
-                <a class="btn btn-outline" href="tel:574-931-2119">Call 574-931-2119</a>
+<!-- Locked Template: Hero -->
+<section class="hero bg-white pt-12 pb-8">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h1 class="text-4xl font-bold text-gray-900 mb-6"><?= htmlspecialchars($pageData['h1']) ?></h1>
+        <div class="prose prose-lg text-gray-700 mb-8">
+            <p class="lead">
+                Hoosier Cladding LLC is a dedicated <strong><?= htmlspecialchars(strtolower($pageData['service'])) ?></strong> serving homeowners in <strong><?= htmlspecialchars($pageData['city']) ?>, <?= htmlspecialchars($pageData['state']) ?></strong>. We provide complete exterior envelope solutions, specializing in the removal of failing siding and the precision installation of modern, weather-resistant materials designed for Northern Indiana winters.
+            </p>
+                <div class="mt-8">
+                    <a href="/contact" class="btn btn-primary">Contact Us Today</a>
+                    <a href="/home-siding-blog/siding-replacement-costs-indiana-2025" class="btn btn-outline">Check Indiana Siding Costs</a>
+                    <div class="mt-4 text-sm">
+                        <a href="/service-area" class="text-gray-600 hover:text-blue-600 underline">View all service areas</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<!-- Locked Template: 5 Answer Blocks -->
+<section class="py-12 bg-gray-50 border-y border-gray-100">
+    <div class="container mx-auto px-4 max-w-4xl space-y-12">
+        
+        <!-- Block 1: Installation -->
+        <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Siding Installation in <?= htmlspecialchars($pageData['city']) ?></h2>
+            <p class="text-gray-700 leading-relaxed">
+                Proper installation is the single most important factor in siding longevity. Our crew adheres to strict manufacturer specifications for fastener placement, flashing integration, and expansion gaps. This attention to detail ensures your home in <?= htmlspecialchars($pageData['city']) ?> remains protected against wind-driven rain and thermal movement.
+            </p>
+        </div>
+
+        <!-- Block 2: Replacement -->
+        <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Full Siding Replacement Process</h2>
+            <p class="text-gray-700 leading-relaxed">
+                We manage the entire replacement lifecycle. This includes the safe removal and disposal of old aluminum, wood, or vinyl cladding; inspection of the underlying sheathing for rot; and the installation of high-performance house wrap before your new siding goes on. We leave your property clean and debris-free daily.
+            </p>
+        </div>
+
+        <!-- Block 3: Repair -->
+        <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Siding Repair Service</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Not every project requires a full tear-off. If your home has isolated storm damage, loose panels, or minor rot, we offer targeted repair services. We match existing textures and colors as closely as possible to restore your home's curb appeal and structural integrity without the cost of a full replacement.
+            </p>
+        </div>
+
+        <!-- Block 4: Materials -->
+        <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Vinyl and Fiber Cement Options</h2>
+            <p class="text-gray-700 leading-relaxed">
+                We install premium vinyl siding (including insulated options for better energy efficiency) and James Hardie fiber cement products. Fiber cement is particularly popular in <?= htmlspecialchars($pageData['city']) ?> for its superior resistance to fire, pests, and the extreme freeze-thaw cycles typical of our region.
+            </p>
+        </div>
+
+        <!-- Block 5: Insurance/Storm -->
+        <div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Storm Damage Assistance</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Northern Indiana weather can be unpredictable. If your home has suffered wind or hail damage, we can provide detailed inspection reports and photographic evidence to assist with your insurance claim, ensuring you receive the coverage necessary to restore your exterior properly.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Locked Template: FAQ Block -->
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b pb-4">Common Questions</h2>
+        <div class="space-y-8">
+            <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Do you work in <?= htmlspecialchars($pageData['city']) ?> year-round?</h3>
+                <p class="text-gray-700">Yes, we install siding throughout the year, provided weather conditions allow for safe and proper material handling. Vinyl cold-cracking and paint curing limits are strictly observed.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">How much does siding cost in <?= htmlspecialchars($pageData['city']) ?>?</h3>
+                <p class="text-gray-700">Costs vary by material and home size. Vinyl projects in <?= htmlspecialchars($pageData['city']) ?> typically range from $12k-$20k, while fiber cement projects often land between $20k-$35k.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Are you licensed in <?= htmlspecialchars($pageData['city']) ?>?</h3>
+                <p class="text-gray-700">Absolutely. Hoosier Cladding LLC maintains all necessary state and local licenses to operate compliant job sites in <?= htmlspecialchars($pageData['city']) ?> and surrounding municipalities.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="container w-full text-left">
-        <div class="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="prose prose-lg max-w-none">
-                <h2>Why Choose Hoosier Cladding for <?= htmlspecialchars($pageData['service']) ?> in <?= htmlspecialchars($pageData['city']) ?>?</h2>
-                <p>We are your trusted local experts for <?= htmlspecialchars(strtolower($pageData['service'])) ?> in <?= htmlspecialchars($pageData['city']) ?>, <?= htmlspecialchars($pageData['state']) ?>. With years of experience serving Northern Indiana, we deliver quality craftsmanship and reliable service.</p>
-                
-                <h3>Our <?= htmlspecialchars($pageData['service']) ?> Services Include:</h3>
-                <ul>
-                    <li>Professional installation and replacement</li>
-                    <li>Expert repair and maintenance</li>
-                    <li>Quality materials and craftsmanship</li>
-                    <li>Licensed and insured contractors</li>
-                    <li>Free estimates and consultations</li>
-                </ul>
-                
-                <h3>Service Area</h3>
-                <p>We proudly serve <?= htmlspecialchars($pageData['city']) ?>, <?= htmlspecialchars($pageData['state']) ?> and surrounding areas, including South Bend, Mishawaka, Elkhart, Granger, and throughout Michiana.</p>
-                
-                <div class="mt-8">
-                    <a href="/contact" class="btn btn-primary">Contact Us Today</a>
-                    <a href="/service-area" class="btn btn-outline">View All Service Areas</a>
-                </div>
-            </div>
+<!-- Locked Template: Internal Links -->
+<section class="py-12 bg-gray-50 text-center">
+    <div class="container mx-auto px-4 max-w-4xl">
+        <h3 class="text-gray-900 font-bold uppercase tracking-wide mb-6">Related Services</h3>
+        <div class="flex flex-wrap justify-center gap-4">
+            <?php foreach ($pageData['adjacencies'] as $link): ?>
+                <a href="<?= htmlspecialchars($link['url']) ?>" class="bg-white border border-gray-200 px-6 py-3 rounded hover:border-blue-600 hover:text-blue-700 transition font-medium">
+                    <?= htmlspecialchars($link['anchor']) ?>
+                </a>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
 
 <?php
-// Structured Data: LocalBusiness + Service (following data ontology guidelines)
-// Reference: MATRIX-SCHEMA-IMPLEMENTATION.md
-
-// 1. LocalBusiness Schema (always-on for local SEO)
-$localBusinessSchema = [
+// Schema: LocalBusiness + Service + FAQPage
+$schema = [
     '@context' => 'https://schema.org',
-    '@type' => 'LocalBusiness',
-    'name' => 'Hoosier Cladding LLC',
-    'description' => "Professional {$pageData['service']} services in {$pageData['city']}, {$pageData['state']}",
-    'url' => 'https://www.hoosiercladding.com',
-    'telephone' => '+15749312119',
-    'email' => 'David@Hoosier.works',
-    'address' => [
-        '@type' => 'PostalAddress',
-        'streetAddress' => '721 Lincoln Way E',
-        'addressLocality' => 'South Bend',
-        'addressRegion' => 'IN',
-        'postalCode' => '46601',
-        'addressCountry' => 'US'
-    ],
-    'geo' => [
-        '@type' => 'GeoCoordinates',
-        'latitude' => 41.6764,
-        'longitude' => -86.2520
-    ],
-    'areaServed' => [
+    '@graph' => [
         [
-            '@type' => 'City',
-            'name' => $pageData['city'],
-            'containedInPlace' => [
-                '@type' => 'State',
-                'name' => $pageData['state']
+            '@type' => 'LocalBusiness',
+            '@id' => 'https://www.hoosiercladding.com/#localbusiness',
+            'name' => 'Hoosier Cladding LLC',
+            'url' => 'https://www.hoosiercladding.com',
+            'telephone' => '+15749312119',
+            'areaServed' => [
+                '@type' => 'City',
+                'name' => $pageData['city']
             ]
         ],
         [
-            '@type' => 'City',
-            'name' => 'South Bend',
-            'containedInPlace' => [
-                '@type' => 'State',
-                'name' => 'Indiana'
-            ]
+            '@type' => 'Service',
+            'serviceType' => $pageData['service'],
+            'provider' => ['@id' => 'https://www.hoosiercladding.com/#localbusiness'],
+            'areaServed' => [
+                '@type' => 'City',
+                'name' => $pageData['city']
+            ],
+            'name' => $pageData['h1']
         ],
         [
-            '@type' => 'City',
-            'name' => 'Mishawaka',
-            'containedInPlace' => [
-                '@type' => 'State',
-                'name' => 'Indiana'
-            ]
-        ],
-        [
-            '@type' => 'City',
-            'name' => 'Elkhart',
-            'containedInPlace' => [
-                '@type' => 'State',
-                'name' => 'Indiana'
-            ]
-        ]
-    ],
-    'priceRange' => '$$',
-    'openingHours' => 'Mo-Fr 07:00-18:00',
-    'sameAs' => [
-        'https://www.facebook.com/hoosiercladding',
-        'https://www.instagram.com/hoosiercladding'
-    ]
-];
-
-// 2. Service Schema (page-specific service intent)
-$serviceSchema = [
-    '@context' => 'https://schema.org',
-    '@type' => 'Service',
-    '@id' => 'https://www.hoosiercladding.com/' . $pageKey . '#service',
-    'name' => "{$pageData['service']} in {$pageData['city']}, {$pageData['state']}",
-    'description' => "Professional {$pageData['service']} services in {$pageData['city']}, {$pageData['state']}. Licensed, insured contractors with local expertise. Free estimates available.",
-    'provider' => [
-        '@type' => 'LocalBusiness',
-        'name' => 'Hoosier Cladding LLC',
-        'url' => 'https://www.hoosiercladding.com',
-        'telephone' => '+15749312119',
-        'address' => [
-            '@type' => 'PostalAddress',
-            'streetAddress' => '721 Lincoln Way E',
-            'addressLocality' => 'South Bend',
-            'addressRegion' => 'IN',
-            'postalCode' => '46601',
-            'addressCountry' => 'US'
-        ]
-    ],
-    'serviceType' => $pageData['service'],
-    'areaServed' => [
-        [
-            '@type' => 'City',
-            'name' => $pageData['city'],
-            'containedInPlace' => [
-                '@type' => 'State',
-                'name' => $pageData['state']
+            '@type' => 'FAQPage',
+            'mainEntity' => [
+                [
+                    '@type' => 'Question',
+                    'name' => "Do you work in {$pageData['city']} year-round?",
+                    'acceptedAnswer' => ['@type' => 'Answer', 'text' => "Yes, we install siding throughout the year, weather permitting."]
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => "How much does siding cost in {$pageData['city']}?",
+                    'acceptedAnswer' => ['@type' => 'Answer', 'text' => "Vinyl projects typically range from $12k-$20k, fiber cement from $20k-$35k."]
+                ],
+                [
+                    '@type' => 'Question',
+                    'name' => "Are you licensed in {$pageData['city']}?",
+                    'acceptedAnswer' => ['@type' => 'Answer', 'text' => "Yes, fully licensed and insured for {$pageData['city']} operations."]
+                ]
             ]
         ]
-    ],
-    'availableChannel' => [
-        '@type' => 'ServiceChannel',
-        'serviceUrl' => 'https://www.hoosiercladding.com/' . $pageKey,
-        'servicePhone' => '+15749312119'
     ]
 ];
 ?>
-<!-- LocalBusiness Schema (always-on for local SEO) -->
 <script type="application/ld+json">
-<?= json_encode($localBusinessSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
+<?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
 </script>
 
-<!-- Service Schema (page-specific service intent) -->
-<script type="application/ld+json">
-<?= json_encode($serviceSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
-</script>
-
-<?php include __DIR__ . '/../../partials/footer.php'; 
-return true; // Signal that we handled this route
+<?php
+include __DIR__ . '/../../partials/footer.php';
+return true;
 ?>
-

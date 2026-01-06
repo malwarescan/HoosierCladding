@@ -39,6 +39,20 @@ if ($host === 'hoosiercladding.com' && strpos($host, 'www.') !== 0) {
     }
 }
 
+// PRIORITY 1.5: Force HTTPS
+// Ensure all traffic uses secure connection
+$isHttps = (
+    (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ||
+    ($_SERVER['SERVER_PORT'] ?? 0) == 443 ||
+    ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https'
+);
+
+if (!$isHttps && strpos($host, 'localhost') !== 0 && strpos($host, '127.0.0.1') === false) {
+    $redirectUrl = "https://" . ($host ?: 'www.hoosiercladding.com') . ($_SERVER['REQUEST_URI'] ?? '/');
+    header("Location: $redirectUrl", true, 301);
+    exit;
+}
+
 // PRIORITY: Handle favicon and icon files SECOND (before any routing logic)
 
 // Serve favicon files with proper content-type headers
@@ -324,13 +338,132 @@ switch ($request_uri) {
         
     case 'service-area':
     case 'service-area.php':
-        include __DIR__ . '/service-area.php';
+        // Strict Entity Definition (Day 6 Rules)
+        $pageTitle = "Service Areas for Siding Contractors in Northern Indiana | Hoosier Cladding";
+        $pageDescription = "Hoosier Cladding provides siding installation and repair services across Northern Indiana. Service areas include South Bend, Plymouth, Warsaw, and Granger.";
+        include __DIR__ . '/partials/header.php';
+?>
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl">
+        <h1 class="text-3xl font-bold mb-6">Service Areas for Siding Contractors in Northern Indiana</h1>
+        
+        <div class="prose prose-lg text-gray-800 mb-8">
+            <p>
+                Hoosier Cladding provides siding installation, siding replacement, and siding repair services across Northern Indiana. All service areas listed below are locations where crews are actively dispatched for residential siding projects.
+            </p>
+        </div>
+
+        <h2 class="text-2xl font-bold mb-4">Primary Service Areas</h2>
+        <div class="mb-8">
+            <ul class="list-none pl-0 space-y-2 text-lg">
+                <li><a href="/siding-contractor-south-bend-in" class="text-blue-600 hover:underline">South Bend, IN</a></li>
+                <li><a href="/siding-companies-plymouth-in" class="text-blue-600 hover:underline">Plymouth, IN</a></li>
+                <li><a href="/siding-replacement-warsaw-indiana" class="text-blue-600 hover:underline">Warsaw, IN</a></li>
+                <li><a href="/siding-contractor-granger-in" class="text-blue-600 hover:underline">Granger, IN</a></li>
+            </ul>
+        </div>
+
+        <h2 class="text-2xl font-bold mb-4">Service Coverage Notes</h2>
+        <div class="prose prose-lg text-gray-800 mb-8">
+            <p>
+                Service availability varies by project type, material, and scheduling. All estimates and inspections are based on confirmed service coverage within the listed cities and surrounding areas.
+            </p>
+        </div>
+        
+        <p class="mt-8 pt-8 border-t border-gray-200">
+            Return to <a href="/" class="text-blue-600 hover:underline">siding contractor services</a>.
+        </p>
+    </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.hoosiercladding.com/#localbusiness",
+  "name": "Hoosier Cladding",
+  "url": "https://www.hoosiercladding.com/",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "South Bend",
+      "address": { "@type": "PostalAddress", "addressRegion": "IN" }
+    },
+    {
+      "@type": "City",
+      "name": "Plymouth",
+      "address": { "@type": "PostalAddress", "addressRegion": "IN" }
+    },
+    {
+      "@type": "City",
+      "name": "Warsaw",
+      "address": { "@type": "PostalAddress", "addressRegion": "IN" }
+    },
+    {
+      "@type": "City",
+      "name": "Granger",
+      "address": { "@type": "PostalAddress", "addressRegion": "IN" }
+    }
+  ]
+}
+</script>
+<?php
+        include __DIR__ . '/partials/footer.php';
         break;
         
     case 'siding':
     case 'siding-page':
     case 'siding-page.php':
         include __DIR__ . '/siding-page.php';
+        break;
+
+    case 'siding/repair':
+    case 'siding/installation':
+        header('Location: /siding', true, 301);
+        exit;
+
+    case 'siding/replacement':
+        header('Location: /house-siding-replacement', true, 301);
+        exit;
+
+    case 'terms':
+        $pageTitle = "Terms of Service | Hoosier Cladding LLC";
+        $pageDescription = "Terms and conditions for using Hoosier Cladding LLC services.";
+        include __DIR__ . '/partials/header.php';
+?>
+<section class="hero bg-white py-16">
+    <div class="container mx-auto px-6 max-w-4xl">
+        <h1 class="text-4xl font-bold text-gray-900 mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400">Terms of Service</h1>
+        <div class="prose prose-lg text-gray-700">
+            <p class="mb-6">Welcome to Hoosier Cladding LLC. By accessing our website and using our services, you agree to comply with and be bound by the following terms and conditions.</p>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">1. Services</h2>
+            <p class="mb-6">Hoosier Cladding LLC provides professional siding, window installation, and general home exterior services in South Bend, IN and surrounding areas.</p>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">2. Estimates</h2>
+            <p class="mb-6">All project estimates are valid for 30 days. Final pricing may vary based on material costs and discovery during installation.</p>
+            <h2 class="text-2xl font-bold mb-4 text-gray-900">3. Liability</h2>
+            <p class="mb-6">Hoosier Cladding LLC is fully licensed and insured. We are responsible for property protection during our installation process.</p>
+        </div>
+    </div>
+</section>
+<?php
+        include __DIR__ . '/partials/footer.php';
+        break;
+
+    case 'privacy':
+        $pageTitle = "Privacy Policy | Hoosier Cladding LLC";
+        include __DIR__ . '/partials/header.php';
+?>
+<section class="hero bg-white py-16">
+    <div class="container mx-auto px-6 max-w-4xl">
+        <h1 class="text-4xl font-bold text-gray-900 mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400">Privacy Policy</h1>
+        <div class="prose prose-lg text-gray-700">
+            <p class="mb-6">Your privacy is important to us. It is Hoosier Cladding LLC's policy to respect your privacy regarding any information we may collect from you across our website.</p>
+            <p class="mb-6">We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent.</p>
+        </div>
+    </div>
+</section>
+<?php
+        include __DIR__ . '/partials/footer.php';
         break;
         
     default:

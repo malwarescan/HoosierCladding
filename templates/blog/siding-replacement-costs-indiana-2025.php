@@ -1,23 +1,160 @@
 <?php
-$pageTitle = "Siding Replacement Costs Indiana 2025 | Hoosier Cladding";
-$pageDescription = "Expert siding services across Northern Indiana. Repairs, full replacements, and insulation upgrades done right. Get a same‑week estimate from Hoosier Cladding.";
+$pageTitle = "Siding Replacement Cost Indiana (2025) | Per Sq Ft Prices";
+$pageDescription = "2025 Siding Replacement Costs for Indiana. Vinyl: $8k-$16k. Fiber Cement: $14k-$28k. Actionable price data per square foot for South Bend and Michiana.";
 include __DIR__ . '/../../partials/header.php';
 ?>
 
 <article class="max-w-4xl mx-auto px-4 py-12">
   <header class="mb-8">
-    <h1 class="text-4xl font-bold mb-4">Siding Replacement Costs in Indiana (2025 Guide)</h1>
-    <p class="text-gray-600">Published September 25, 2025 | By Hoosier Cladding LLC</p>
+    <h1 class="text-4xl font-bold mb-4">Siding Replacement Costs in Indiana (2025)</h1>
+    <p class="text-gray-600">Updated: September 25, 2025 | Region: Northern Indiana</p>
   </header>
 
-  <div class="prose max-w-none">
-    <p class="lead text-xl mb-6">
-      Planning a siding replacement project in Northern Indiana? Understanding the costs involved helps you budget 
-      effectively and make informed decisions. This comprehensive guide breaks down 2025 siding replacement costs 
-      for South Bend, Mishawaka, Elkhart, and surrounding areas.
+  <div class="prose max-w-none text-gray-800">
+    
+    <!-- Extraction Zone: Top Answer -->
+    <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-10">
+      <p class="font-bold text-lg mb-2">Quick Answer: Total Cost</p>
+      <p>
+        The average cost for siding replacement in Indiana in 2025 ranges from <strong>$8,000 to $16,000</strong> for standard vinyl siding and <strong>$14,000 to $28,000</strong> for James Hardie fiber cement siding on a typical 2,000 sq. ft. home. Prices average <strong>$6.00 to $14.00 per square foot installed</strong>.
+      </p>
+    </div>
+
+    <!-- H2: Exact Match Query -->
+    <h2 class="text-2xl font-bold mt-8 mb-4">Siding replacement cost in Indiana (2025)</h2>
+    <p>
+      Siding replacement costs in Indiana have stabilized in 2025. For a standard 2-story home (approx. 20 squares or 2,000 sq. ft. of wall area), homeowners can expect to pay between $10,000 and $22,000 total. This price includes old siding removal, house wrap installation/inspection, and new material installation.
+    </p>
+    
+    <!-- Micro-Fact Crouton -->
+    <div class="my-6 p-4 bg-gray-50 rounded border border-gray-200">
+      <ul class="text-sm space-y-1">
+        <li><strong>Statistic:</strong> Average Project Cost</li>
+        <li><strong>Scope:</strong> Indiana, 2025</li>
+        <li><strong>Range:</strong> $10,000 - $22,000</li>
+        <li><strong>Trend:</strong> +3-5% vs 2024</li>
+      </ul>
+    </div>
+
+    <!-- H2: Exact Match Query -->
+    <h2 class="text-2xl font-bold mt-8 mb-4">Cost per square foot for siding replacement in Indiana</h2>
+    <p>
+      Contractors in Indiana typically charge by the "square" (100 sq. ft.) or by the square foot. In 2025, installed costs per square foot are:
+    </p>
+    <ul class="list-disc pl-6 mb-4">
+      <li><strong>Standard Vinyl Siding:</strong> $5.50 - $8.50 per sq. ft.</li>
+      <li><strong>Insulated Vinyl Siding:</strong> $7.50 - $10.50 per sq. ft.</li>
+      <li><strong>James Hardie (Fiber Cement):</strong> $9.00 - $14.00 per sq. ft.</li>
+      <li><strong>Engineered Wood (LP SmartSide):</strong> $8.50 - $13.00 per sq. ft.</li>
+    </ul>
+    <p>Compare with <a href="/siding-companies-plymouth-in" class="text-blue-600 hover:underline">Plymouth siding companies</a> pricing averages.</p>
+
+    <!-- Micro-Fact Crouton -->
+    <div class="my-6 p-4 bg-gray-50 rounded border border-gray-200">
+      <ul class="text-sm space-y-1">
+        <li><strong>Metric:</strong> Installed Price per sq. ft.</li>
+        <li><strong>Lowest:</strong> $5.50 (Standard Vinyl)</li>
+        <li><strong>Highest:</strong> $14.00+ (Premium Fiber Cement)</li>
+      </ul>
+    </div>
+
+    <!-- H2: Exact Match Query -->
+    <h2 class="text-2xl font-bold mt-8 mb-4">Vinyl siding replacement cost in Indiana</h2>
+    <p>
+      Vinyl remains the most popular choice in Northern Indiana due to affordability. A full vinyl replacement on a 2,500 sq. ft. home typically costs between $13,750 and $21,250. This price point often includes upgraded trim options and foam insulation backing for energy efficiency. See <a href="/siding-replacement-warsaw-indiana" class="text-blue-600 hover:underline">Warsaw siding replacement</a> standards.
     </p>
 
-    <h2 class="text-2xl font-semibold mt-8 mb-4">Average Siding Replacement Costs in Indiana</h2>
+    <!-- H2: Exact Match Query -->
+    <h2 class="text-2xl font-bold mt-8 mb-4">Fiber cement (James Hardie) siding replacement cost in Indiana</h2>
+    <p>
+      James Hardie fiber cement offers superior durability against Indiana's freeze-thaw cycles but comes at a premium. Installation is more labor-intensive. Expect to pay 30-50% more than vinyl, with total project costs for a 2,500 sq. ft. home landing between $22,500 and $35,000. We offer specialized <a href="/siding-contractor-granger-in" class="text-blue-600 hover:underline">Granger siding installation</a> for fiber cement.
+    </p>
+
+    <!-- H2: Exact Match Query -->
+    <h2 class="text-2xl font-bold mt-8 mb-4">What increases siding replacement cost</h2>
+    <p>Several site-specific factors will push your quote toward the higher end of the range:</p>
+    <ul class="list-disc pl-6 mb-4">
+      <li><strong>Rot Repair:</strong> Replacing damaged OSB sheathing ($60-$100 per sheet).</li>
+      <li><strong>Complex Architecture:</strong> Gables, eaves, and multiple corners increase labor time.</li>
+      <li><strong>Trim & Soffits:</strong> Full replacement of aluminum soffits and fascia adds $2,000-$5,000.</li>
+      <li><strong>Waste Factors:</strong> Homes with many windows require more cutting, increasing material waste.</li>
+    </ul>
+
+    <!-- H2: Exact Match Query -->
+    <h2 class="text-2xl font-bold mt-8 mb-4">How to get an accurate siding replacement quote in Indiana</h2>
+    <p>
+      Online calculators are rough estimates. To get an actionable quote, you need a site visit where a contractor can measure wall area (excluding windows/doors) and inspect for structural rot.
+    </p>
+    <p class="mt-4">
+      <a href="/contact" class="btn btn-primary inline-block font-semibold">Request Your Exact Quote</a>
+    </p>
+  </div>
+    
+    <div class="mt-12 pt-8 border-t border-gray-200 bg-gray-50 p-6 rounded">
+        <h3 class="text-lg font-bold mb-4">Looking for local service?</h3>
+        <p class="mb-4">Check our specialized service pages:</p>
+        <div class="flex flex-wrap gap-4">
+            <a href="/siding-contractor-south-bend-in" class="text-blue-600 hover:underline font-semibold">South Bend Siding</a>
+            <a href="/siding-replacement-warsaw-indiana" class="text-blue-600 hover:underline font-semibold">Warsaw Siding</a>
+            <a href="/siding-companies-plymouth-in" class="text-blue-600 hover:underline font-semibold">Plymouth Siding</a>
+        </div>
+    </div>
+</article>
+
+<!-- Schema: Article + FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Siding Replacement Costs in Indiana (2025)",
+      "datePublished": "2025-09-25",
+      "dateModified": "2025-09-25",
+      "author": {
+        "@type": "Organization",
+        "name": "Hoosier Cladding LLC"
+      },
+      "description": "Comprehensive 2025 guide to siding replacement costs in Indiana. Vinyl averages $6-$10/sq ft, Fiber Cement $9-$14/sq ft.",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.hoosiercladding.com/home-siding-blog/siding-replacement-costs-indiana-2025"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the average cost of siding replacement in Indiana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In 2025, the average cost for siding replacement in Indiana ranges from $8,000 to $16,000 for standard vinyl and $14,000 to $28,000 for fiber cement on a typical 2,000 sq ft home."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does vinyl siding cost per square foot installed in Indiana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Installed vinyl siding in Indiana typically costs between $5.50 and $8.50 per square foot for standard grades, rising to $10.50 for insulated options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is James Hardie siding more expensive than vinyl?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, James Hardie fiber cement siding typically costs 30-50% more than vinyl siding installed, ranging from $9.00 to $14.00 per square foot in Indiana."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<?php include __DIR__ . '/../../partials/footer.php'; ?>
     
     <div class="bg-gray-50 p-6 rounded-lg mb-6">
       <h3 class="text-xl font-semibold mb-4">Cost Ranges by Material (2025)</h3>
@@ -27,6 +164,7 @@ include __DIR__ . '/../../partials/header.php';
         <li><strong>Engineered Wood:</strong> $12,000 - $24,000</li>
         <li><strong>Cedar Wood:</strong> $18,000 - $35,000</li>
       </ul>
+      <p class="text-sm mt-4 text-gray-600">Review localized pricing for <a href="/siding-contractor-south-bend-in" class="text-blue-600 hover:underline">South Bend siding replacement</a>.</p>
     </div>
 
     <h2 class="text-2xl font-semibold mt-8 mb-4">Factors Affecting Cost</h2>

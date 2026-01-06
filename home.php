@@ -1,5 +1,9 @@
-<?php
-// Homepage - use AdvancedMetaManager for unique metadata
+// Homepage - GSC Priority 1 Optimization (Step Id: 332)
+// Title: "Contractors" matches high-intent query. Phone number in description builds trust.
+$pageTitle = "Siding Contractors in South Bend, IN | Licensed & Insured";
+$pageDescription = "Licensed siding contractors serving South Bend, Mishawaka, and Northern Indiana. Expert installation, repair, and replacement. Free estimates. Call (574) 931-2119 today.";
+
+// Fallback logic for header.php to use these specific overrides
 $pageType = 'homepage';
 include __DIR__ . '/partials/header.php';
 ?>

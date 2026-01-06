@@ -166,6 +166,13 @@ $servicePages = [
         'service' => 'Exterior Painting',
         'location' => 'South Bend, Indiana'
     ],
+    'drywall-services-south-bend' => [
+        'title' => 'Drywall Services in South Bend, IN | Hoosier Cladding LLC',
+        'description' => 'Professional drywall installation and repair services in South Bend, Indiana. Expert finishing, patching, and texturing. Call 574-931-2119 for a free estimate.',
+        'h1' => 'Professional Drywall Services in South Bend',
+        'service' => 'Drywall Services',
+        'location' => 'South Bend, Indiana'
+    ],
     'home-improvement-blog/repair-house-siding' => [
         'title' => 'How to Repair House Siding | Home Improvement Blog | Hoosier Cladding LLC',
         'description' => 'Learn how to repair house siding, identify common issues, and when to call a professional. Expert tips from Hoosier Cladding LLC.',

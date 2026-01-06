@@ -1,0 +1,32 @@
+# Production URLs - Ready for QA
+
+## Blog Pages (Priority 1)
+https://www.hoosiercladding.com/home-siding-blog
+https://www.hoosiercladding.com/home-siding-blog/install-a-metal-roof-ridge-cap
+https://www.hoosiercladding.com/home-siding-blog/siding-replacement-costs-indiana-2025
+https://www.hoosiercladding.com/home-siding-blog/does-home-insurance-cover-broken-windows-what-indiana-homeowners-need-to-know
+
+## Core Pages (Priority 2)
+https://www.hoosiercladding.com/
+https://www.hoosiercladding.com/service-area
+https://www.hoosiercladding.com/contact
+
+## Service Pages (Priority 3)
+https://www.hoosiercladding.com/vinyl-siding-michiana-south-bend
+https://www.hoosiercladding.com/house-siding-replacement
+https://www.hoosiercladding.com/residential-siding-contractor
+https://www.hoosiercladding.com/vinyl-siding-installers
+https://www.hoosiercladding.com/door-replacement-south-bend
+https://www.hoosiercladding.com/window-replacement-south-bend
+https://www.hoosiercladding.com/trimwork-south-bend
+
+## City-Service Pages (Priority 4)
+https://www.hoosiercladding.com/siding-replacement-warsaw
+https://www.hoosiercladding.com/vinyl-siding-south-bend
+https://www.hoosiercladding.com/siding-installation-granger
+
+## Canonical/Parameter Tests (Priority 5)
+https://www.hoosiercladding.com/home-siding-blog?author=test
+https://www.hoosiercladding.com/home-siding-blog?page=2
+https://www.hoosiercladding.com/?test=123
+
