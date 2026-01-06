@@ -1,3 +1,4 @@
+<?php
 // Homepage - GSC Priority 1 Optimization (Step Id: 332)
 // Title: "Contractors" matches high-intent query. Phone number in description builds trust.
 $pageTitle = "Siding Contractors in South Bend, IN | Licensed & Insured";
