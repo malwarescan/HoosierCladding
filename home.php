@@ -1,8 +1,8 @@
 <?php
-// Homepage - GSC Priority 1 Optimization (Step Id: 332)
-// Title: "Contractors" matches high-intent query. Phone number in description builds trust.
-$pageTitle = "Siding Contractors in South Bend, IN | Licensed & Insured";
-$pageDescription = "Licensed siding contractors serving South Bend, Mishawaka, and Northern Indiana. Expert installation, repair, and replacement. Free estimates. Call (574) 931-2119 today.";
+// Homepage - SEO Optimized (2025)
+// Title: Emphasizes primary commercial intent with concise branding + target keywords
+$pageTitle = "Hoosier Cladding — Licensed Siding Contractor in South Bend & Northern Indiana";
+$pageDescription = "Licensed siding contractor serving South Bend, Mishawaka, and Northern Indiana. Expert installation, repair, and replacement. Certified installers, free estimates. Call (574) 931-2119.";
 
 // Fallback logic for header.php to use these specific overrides
 $pageType = 'homepage';

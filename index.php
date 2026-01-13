@@ -336,6 +336,10 @@ switch ($request_uri) {
         include __DIR__ . '/partials/footer.php';
         break;
         
+    case 'storm-damage-siding-repair':
+        include __DIR__ . '/storm-damage-siding-repair.php';
+        break;
+        
     case 'service-area':
     case 'service-area.php':
         // Strict Entity Definition (Day 6 Rules)

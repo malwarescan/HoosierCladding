@@ -1,5 +1,7 @@
 <?php
-// Service area page - use AdvancedMetaManager for unique metadata
+// Service area page - optimized for local SEO
+$pageTitle = "Service Areas | Siding Contractors in Northern Indiana & Michiana";
+$pageDescription = "Hoosier Cladding provides siding installation, repair, and replacement across Northern Indiana and Southwest Michigan. Serving South Bend, Mishawaka, Elkhart, Granger, Warsaw, and more.";
 $pageType = 'city';
 include __DIR__ . '/partials/header.php';
 ?>

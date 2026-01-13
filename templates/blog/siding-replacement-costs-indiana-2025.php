@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "Siding Replacement Cost Indiana (2025) | Per Sq Ft Prices";
-$pageDescription = "2025 Siding Replacement Costs for Indiana. Vinyl: $8k-$16k. Fiber Cement: $14k-$28k. Actionable price data per square foot for South Bend and Michiana.";
+$pageDescription = "Average siding replacement costs in Northern Indiana for 2025, with material, labor, and upgrade breakdown. Vinyl: $8k-$16k. Fiber Cement: $14k-$28k. Per sq ft pricing data.";
 include __DIR__ . '/../../partials/header.php';
 ?>
 
@@ -90,13 +90,23 @@ include __DIR__ . '/../../partials/header.php';
     </p>
   </div>
     
+    <!-- Authority Hierarchy Links - Cost Guide -->
     <div class="mt-12 pt-8 border-t border-gray-200 bg-gray-50 p-6 rounded">
-        <h3 class="text-lg font-bold mb-4">Looking for local service?</h3>
-        <p class="mb-4">Check our specialized service pages:</p>
-        <div class="flex flex-wrap gap-4">
-            <a href="/siding-contractor-south-bend-in" class="text-blue-600 hover:underline font-semibold">South Bend Siding</a>
-            <a href="/siding-replacement-warsaw-indiana" class="text-blue-600 hover:underline font-semibold">Warsaw Siding</a>
-            <a href="/siding-companies-plymouth-in" class="text-blue-600 hover:underline font-semibold">Plymouth Siding</a>
+        <h3 class="text-lg font-bold mb-4">Ready to Get Started?</h3>
+        <p class="mb-4">Connect with our licensed contractors for professional siding replacement services:</p>
+        <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg border border-gray-200">
+                <h4 class="font-semibold text-gray-900 mb-2">
+                    <a href="/house-siding-replacement" class="text-blue-600 hover:text-blue-800">siding replacement services</a>
+                </h4>
+                <p class="text-sm text-gray-700">Professional house siding replacement with vinyl, fiber cement, and James Hardie materials in Northern Indiana.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg border border-gray-200">
+                <h4 class="font-semibold text-gray-900 mb-2">
+                    <a href="/vinyl-siding-michiana-south-bend" class="text-blue-600 hover:text-blue-800">vinyl siding installation</a>
+                </h4>
+                <p class="text-sm text-gray-700">Expert vinyl siding installation and repair services in South Bend and Michiana with energy-efficient options.</p>
+            </div>
         </div>
     </div>
 </article>

@@ -62,8 +62,8 @@ $servicePages = [
         'location' => 'South Bend, Indiana'
     ],
     'vinyl-siding-michiana-south-bend' => [
-        'title' => 'Vinyl Siding Installers in South Bend, IN | Free Quote',
-        'description' => 'Professional vinyl siding installation in South Bend, IN. Licensed installers with 15+ years experience. Same-day quotes. Call (574) 931-2119 for free estimate.',
+        'title' => 'Vinyl Siding Installation in South Bend & Michiana | Free Quote',
+        'description' => 'Expert vinyl siding installation in South Bend, IN and Michiana. Energy-efficient options, repair, and replacement. Licensed contractors. Free estimates. Call (574) 931-2119.',
         'h1' => 'Vinyl Siding Installers in South Bend, IN',
         'service' => 'Vinyl Siding',
         'location' => 'South Bend, Indiana'
@@ -139,25 +139,36 @@ $servicePages = [
         'location' => 'Northern Indiana'
     ],
     'vinyl-siding-installers' => [
-        'title' => 'Vinyl Siding Installers Near Me | South Bend, IN',
-        'description' => 'Licensed vinyl siding installers serving South Bend, IN and Northern Indiana. Expert installation, same-day quotes. Free estimates. Call (574) 931-2119.',
-        'h1' => 'Vinyl Siding Installers Near Me',
+        'title' => 'Vinyl Siding Installation Services | South Bend, IN',
+        'description' => 'Supporting information about vinyl siding installation services in South Bend, IN. For main services, see our vinyl siding hub page. Licensed contractors.',
+        'h1' => 'Vinyl Siding Installation Services',
         'service' => 'Vinyl Siding Installation',
-        'location' => 'Northern Indiana'
+        'location' => 'Northern Indiana',
+        'support_only' => true // Support page, not competing with hub
     ],
     'house-siding-replacement' => [
-        'title' => 'House Siding Replacement Contractors South Bend',
-        'description' => 'House siding replacement contractors in South Bend, IN. Complete installation, quality materials, licensed & insured. Free estimates. Call (574) 931-2119.',
+        'title' => 'House Siding Replacement in South Bend | Fiber Cement & Vinyl',
+        'description' => 'Professional house siding replacement in South Bend, IN. Vinyl, fiber cement, and James Hardie installation. Licensed contractors, free estimates. Call (574) 931-2119.',
         'h1' => 'House Siding Replacement Contractors South Bend',
         'service' => 'Siding Replacement',
-        'location' => 'Northern Indiana'
+        'location' => 'Northern Indiana',
+        'is_primary_commercial' => true // Sole commercial target for replacement intent
+    ],
+    'storm-damage-siding-repair' => [
+        'title' => 'Storm Damage Siding Repair in Northern Indiana | Insurance Claims',
+        'description' => 'Expert storm damage siding repair in Northern Indiana. Hail, wind, and weather damage restoration. Insurance claim assistance. Licensed contractors. Free inspections. Call (574) 931-2119.',
+        'h1' => 'Storm Damage Siding Repair in Northern Indiana',
+        'service' => 'Storm Damage Repair',
+        'location' => 'Northern Indiana',
+        'is_primary_commercial' => true // Hub for storm damage intent
     ],
     'residential-siding-contractor' => [
-        'title' => 'Residential Siding Contractor South Bend, IN',
-        'description' => 'Licensed residential siding contractor in South Bend, IN. Expert installation, repair, replacement. 15+ years experience. Free estimates. (574) 931-2119.',
-        'h1' => 'Residential Siding Contractor South Bend, IN',
-        'service' => 'Siding Contractor',
-        'location' => 'Northern Indiana'
+        'title' => 'Residential Siding Services in South Bend, IN',
+        'description' => 'Residential siding installation, repair, and replacement services in South Bend, IN. Supporting page for homeowners seeking siding solutions. Licensed contractors.',
+        'h1' => 'Residential Siding Services in South Bend, IN',
+        'service' => 'Residential Siding Services',
+        'location' => 'Northern Indiana',
+        'noindex' => false // Support page, but keep indexable for long-tail
     ],
     'exterior-painting-south-bend' => [
         'title' => 'Exterior Painting in South Bend, IN | Hoosier Cladding LLC',

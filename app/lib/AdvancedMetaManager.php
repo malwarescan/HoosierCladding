@@ -112,8 +112,8 @@ final class AdvancedMetaManager
 
     private static function generateHomepageTitle(string $path, ?array $context): string
     {
-        // Commercial language: "Contractors" matches query intent better than "Installers"
-        return "Siding Contractors in South Bend, IN | Licensed & Insured";
+        // SEO Optimized: Emphasizes primary commercial intent with concise branding + target keywords
+        return "Hoosier Cladding — Licensed Siding Contractor in South Bend & Northern Indiana";
     }
 
     private static function generateServiceTitle(string $path, ?array $context): string
@@ -169,6 +169,12 @@ final class AdvancedMetaManager
     {
         $segments = explode('/', $path);
         $slug = end($segments);
+        
+        // Handle blog hub
+        if (empty($slug) || $slug === 'home-siding-blog') {
+            return "Hoosier Cladding Home Siding Blog — Tips, Guides & Costs";
+        }
+        
         $title = ucwords(str_replace('-', ' ', $slug));
         
         // Remove "Hoosier Cladding" from blog titles
@@ -206,8 +212,8 @@ final class AdvancedMetaManager
 
     private static function generateHomepageDescription(): string
     {
-        // Commercial language with phone number for trust signal
-        return "Licensed siding contractors serving South Bend, Mishawaka, and Northern Indiana. Expert installation, repair, and replacement. Free estimates. Call (574) 931-2119 today.";
+        // Clear description specifying services, locations, and core differentiators
+        return "Licensed siding contractor serving South Bend, Mishawaka, and Northern Indiana. Expert installation, repair, and replacement. Certified installers, free estimates. Call (574) 931-2119.";
     }
 
     private static function generateServiceDescription(string $path, ?array $context): string
@@ -287,7 +293,7 @@ final class AdvancedMetaManager
         
         // Handle blog hub
         if (empty($slug) || $slug === 'home-siding-blog') {
-            return "Expert advice on siding installation, repair, and maintenance for Northern Indiana homes. Comprehensive guides from licensed contractors covering vinyl, fiber cement, and storm damage solutions.";
+            return "Hoosier Cladding Home Siding Blog — Tips, Guides & Costs for Indiana Homes. Expert advice from licensed contractors on installation, repair, and maintenance.";
         }
         
         $topic = ucwords(str_replace('-', ' ', $slug));

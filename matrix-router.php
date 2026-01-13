@@ -380,6 +380,59 @@ function renderMatrixLandingPage(array $row): void {
             </div>
         </div>
     </section>
+    
+    <!-- Authority Hierarchy: Matrix Page Links UP to ONE Parent Service Page -->
+    <?php
+    // Determine parent service page based on matrix page content
+    $parentUrl = null;
+    $parentAnchor = null;
+    $slug = $row['url'] ?? '';
+    
+    // Extract service type from slug or primary keyword
+    $serviceType = strtolower($primaryKeyword ?? '');
+    $slugLower = strtolower($slug);
+    
+    // Map matrix pages to parent service pages
+    if (strpos($slugLower, 'siding-replacement') !== false || 
+        strpos($serviceType, 'siding replacement') !== false ||
+        strpos($serviceType, 'replacement') !== false) {
+        $parentUrl = '/house-siding-replacement';
+        $parentAnchor = 'house siding replacement';
+    } elseif (strpos($slugLower, 'vinyl-siding') !== false || 
+              strpos($serviceType, 'vinyl') !== false) {
+        $parentUrl = '/vinyl-siding-michiana-south-bend';
+        $parentAnchor = 'vinyl siding installation';
+    } elseif (strpos($slugLower, 'storm-damage') !== false || 
+              strpos($slugLower, 'hail-wind-damage') !== false ||
+              strpos($slugLower, 'insurance-claim') !== false ||
+              strpos($serviceType, 'storm') !== false ||
+              strpos($serviceType, 'hail') !== false ||
+              strpos($serviceType, 'wind') !== false) {
+        $parentUrl = '/storm-damage-siding-repair';
+        $parentAnchor = 'storm damage siding repair in Northern Indiana';
+    }
+    
+    // Only show parent link if we have a valid parent
+    if ($parentUrl && $parentAnchor):
+    ?>
+    <section class="py-16 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white border border-gray-200 rounded-xl p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Professional <?= htmlspecialchars($primaryKeyword, ENT_QUOTES) ?> Services</h2>
+                <p class="text-gray-700 mb-6">
+                    For comprehensive <?= htmlspecialchars(strtolower($primaryKeyword), ENT_QUOTES) ?> services across Northern Indiana, visit our main service page:
+                </p>
+                <a href="<?= htmlspecialchars($parentUrl, ENT_QUOTES) ?>" 
+                   class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold text-lg">
+                    <span><?= htmlspecialchars($parentAnchor, ENT_QUOTES) ?></span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <?php endif; ?>
 </main>
 
 <!-- Footer -->
