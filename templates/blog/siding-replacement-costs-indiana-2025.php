@@ -86,7 +86,7 @@ include __DIR__ . '/../../partials/header.php';
       Online calculators are rough estimates. To get an actionable quote, you need a site visit where a contractor can measure wall area (excluding windows/doors) and inspect for structural rot.
     </p>
     <p class="mt-4">
-      <a href="/contact" class="btn btn-primary inline-block font-semibold">Request Your Exact Quote</a>
+      <button type="button" onclick="openContactModal()" class="btn btn-primary inline-block font-semibold">Request Your Exact Quote</button>
     </p>
   </div>
     

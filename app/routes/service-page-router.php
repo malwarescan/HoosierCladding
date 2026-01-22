@@ -269,12 +269,12 @@ include __DIR__ . '/../../partials/header.php';
             
             <!-- Primary CTAs -->
             <div class="hero-cta flex flex-wrap gap-4 justify-center">
-                <a class="btn btn-primary bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-4 font-bold" href="tel:5749312119">
+                <button type="button" onclick="openContactModal()" class="btn btn-primary bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-4 font-bold">
                     Call Now: (574) 931-2119
-                </a>
-                <a class="btn btn-outline border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-lg px-8 py-4 font-bold" href="/contact">
+                </button>
+                <button type="button" onclick="openContactModal()" class="btn btn-outline border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-lg px-8 py-4 font-bold">
                     Get Free Estimate
-                </a>
+                </button>
             </div>
             
             <p class="text-gray-600 text-sm mt-4">Available 7 days a week • Serving Northern Indiana since 2010</p>
@@ -410,12 +410,12 @@ include __DIR__ . '/../../partials/header.php';
                 <h3 class="h3 text-gray-900 mb-4">Ready to Get Started?</h3>
                 <p class="text-lg mb-6 text-gray-700">Call us today for a free, no-obligation estimate</p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="tel:5749312119" class="btn bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-4 font-bold">
+                    <button type="button" onclick="openContactModal()" class="btn bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-4 font-bold">
                         Call (574) 931-2119
-                    </a>
-                    <a href="/contact" class="btn border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-lg px-8 py-4 font-bold">
+                    </button>
+                    <button type="button" onclick="openContactModal()" class="btn border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-lg px-8 py-4 font-bold">
                         Get Free Estimate
-                    </a>
+                    </button>
                 </div>
             </div>
                 
@@ -460,12 +460,12 @@ include __DIR__ . '/../../partials/header.php';
             <h2 class="h2 text-gray-900 mb-4">Ready to Transform Your Home?</h2>
             <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">Get your free estimate today. No obligation, just honest pricing and expert advice.</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="tel:5749312119" class="btn bg-blue-600 text-white hover:bg-blue-700 text-xl px-10 py-5 font-bold shadow-lg">
+                <button type="button" onclick="openContactModal()" class="btn bg-blue-600 text-white hover:bg-blue-700 text-xl px-10 py-5 font-bold shadow-lg">
                     Call (574) 931-2119
-                </a>
-                <a href="/contact" class="btn border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-xl px-10 py-5 font-bold">
+                </button>
+                <button type="button" onclick="openContactModal()" class="btn border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white text-xl px-10 py-5 font-bold">
                     Get Free Estimate
-                </a>
+                </button>
             </div>
             <p class="text-gray-600 text-sm mt-6">Available 7 days a week • Same-day quotes available</p>
         </div>

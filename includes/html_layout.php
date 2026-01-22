@@ -16,7 +16,7 @@ function breadcrumbs($a){$h='<nav>';foreach($a as$i=>$x)$h.="<a href='{$x['href'
 function introBlock($r){
   $b=$r['brand_name']??'Brand'; $l=$r['location']??''; $k=$r['primary_keyword']??''; $p=$r['pain_point']??'';
   $pain = $p ? " to address <strong>".htmlspecialchars($p,ENT_QUOTES)."</strong>" : "";
-  return "<p>$b – ".htmlspecialchars($k,ENT_QUOTES)." in ".htmlspecialchars($l,ENT_QUOTES)."$pain.</p><p><a class='btn' href='/contact'>Get Started</a></p>";
+  return "<p>$b – ".htmlspecialchars($k,ENT_QUOTES)." in ".htmlspecialchars($l,ENT_QUOTES)."$pain.</p><p><button type='button' onclick='openContactModal()' class='btn'>Get Started</button></p>";
 }
 
 function faqFromRow($r){

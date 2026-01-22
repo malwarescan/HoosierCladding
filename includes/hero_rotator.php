@@ -32,9 +32,9 @@
 
     <!-- Primary CTAs -->
     <div class="mt-8 flex flex-wrap gap-3">
-      <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
+      <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-white font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
         Get a Free Estimate
-      </a>
+      </button>
       <a href="/our-services" class="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-white bg-blue-600 hover:bg-blue-700">
         View Services
       </a>

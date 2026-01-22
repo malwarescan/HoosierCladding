@@ -11,8 +11,8 @@ include __DIR__ . '/partials/header.php';
             <h1 class="h1">Professional Siding Services</h1>
             <p class="hero-description">Quality siding installation, repair, and replacement for homes and businesses across Northern Indiana</p>
             <div class="hero-cta">
-                <a class="btn btn-primary" href="tel:<?= preg_replace('/[^0-9]/', '', $PHONE) ?>">Call <?= $PHONE ?></a>
-                <a class="btn btn-outline" href="/contact">Get Free Estimate</a>
+                <button type="button" onclick="openContactModal()" class="btn btn-primary">Call <?= $PHONE ?></button>
+                <button type="button" onclick="openContactModal()" class="btn btn-outline">Get Free Estimate</button>
             </div>
         </div>
     </div>

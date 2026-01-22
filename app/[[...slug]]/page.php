@@ -108,8 +108,8 @@ if (count($segments) >= 3) {
       Licensed & insured local contractors with quality craftsmanship and honest pricing.
     </p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="tel:5749312119">Call (574) 931-2119</a>
-      <a class="btn btn-outline" href="/contact">Get Free Estimate</a>
+      <button type="button" onclick="openContactModal()" class="btn btn-primary">Call (574) 931-2119</button>
+      <button type="button" onclick="openContactModal()" class="btn btn-outline">Get Free Estimate</button>
     </div>
     <div class="trust-strip">
       <span>Licensed & Insured</span> • 

@@ -16,12 +16,12 @@ include __DIR__ . '/partials/header.php';
             Expert storm damage siding repair and restoration services for Northern Indiana homes. We handle hail damage, wind damage, and insurance claims with licensed contractors and free inspections.
         </p>
         <div class="flex flex-wrap gap-4">
-            <a href="tel:5749312119" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+            <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                 Call (574) 931-2119
-            </a>
-            <a href="/contact" class="inline-flex items-center justify-center rounded-lg border-2 border-blue-600 px-8 py-4 text-blue-600 font-semibold hover:bg-blue-50 transition-all duration-200">
+            </button>
+            <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-lg border-2 border-blue-600 px-8 py-4 text-blue-600 font-semibold hover:bg-blue-50 transition-all duration-200">
                 Free Inspection
-            </a>
+            </button>
         </div>
     </div>
 </section>
@@ -85,9 +85,9 @@ include __DIR__ . '/partials/header.php';
                             <a href="mailto:David@Hoosier.works" class="text-blue-600 hover:text-blue-800">David@Hoosier.works</a>
                         </p>
                     </div>
-                    <a href="/contact" class="inline-flex items-center justify-center w-full rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+                    <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center w-full rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                         Request Free Inspection
-                    </a>
+                    </button>
                 </div>
                 
                 <div class="flex flex-wrap gap-3">

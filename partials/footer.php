@@ -140,5 +140,8 @@ $SITE = 'Hoosier Cladding LLC';
   </div>
 </footer>
 
+<!-- Contact Modal -->
+<?php include __DIR__ . '/contact-modal.php'; ?>
+
 <!-- Preline UI JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/preline@2.3.0/dist/preline.min.js"></script>

@@ -227,9 +227,9 @@ function renderMatrixLandingPage(array $row): void {
                 <?php endif; ?>
             </p>
             
-            <a href="/contact" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+            <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
                 Get Started
-            </a>
+            </button>
         </div>
     </section>
     
@@ -306,9 +306,9 @@ function renderMatrixLandingPage(array $row): void {
                                 </a>
                             </p>
                         </div>
-                        <a href="/contact" class="inline-flex items-center justify-center w-full rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+                        <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center w-full rounded-lg bg-blue-600 px-8 py-4 text-white font-semibold hover:bg-blue-700 hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
                             Request Estimate
-                        </a>
+                        </button>
                     </div>
                     
                     <!-- Trust Signals -->
@@ -371,12 +371,12 @@ function renderMatrixLandingPage(array $row): void {
                 <?= htmlspecialchars(strtolower($primaryKeyword), ENT_QUOTES) ?> in <?= htmlspecialchars($location, ENT_QUOTES) ?>.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:<?= str_replace(['+', ' ', '-', '(', ')'], '', $phone) ?>" class="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-blue-600 font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl">
+                <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-blue-600 font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl">
                     Call Now
-                </a>
-                <a href="/contact" class="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-200">
+                </button>
+                <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-200">
                     Request Estimate
-                </a>
+                </button>
             </div>
         </div>
     </section>

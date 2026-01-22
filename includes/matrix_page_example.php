@@ -122,12 +122,12 @@ function renderMatrixPage(string $slug): void {
                 <h2>Ready to Get Started?</h2>
                 <p>Contact <?= htmlspecialchars($row['brand_name'] ?? 'us', ENT_QUOTES) ?> today for a free consultation.</p>
                 <div class="cta-buttons">
-                    <a href="tel:<?= str_replace(['+', ' ', '-', '(', ')'], '', $row['contact_phone'] ?? '') ?>" class="btn btn-primary">
+                    <button type="button" onclick="openContactModal()" class="btn btn-primary">
                         Call <?= htmlspecialchars($row['contact_phone'] ?? '', ENT_QUOTES) ?>
-                    </a>
-                    <a href="mailto:<?= htmlspecialchars($row['contact_email'] ?? '', ENT_QUOTES) ?>" class="btn btn-secondary">
+                    </button>
+                    <button type="button" onclick="openContactModal()" class="btn btn-secondary">
                         Email Us
-                    </a>
+                    </button>
                 </div>
             </section>
         </main>
