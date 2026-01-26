@@ -3,6 +3,14 @@ declare(strict_types=1);
 header('Content-Type: application/xml; charset=UTF-8');
 header('X-Robots-Tag: noindex, nofollow');
 
+// Use the static XML file we created
+$staticFile = __DIR__.'/sitemap-static.xml';
+if (file_exists($staticFile)) {
+    readfile($staticFile);
+    exit;
+}
+
+// Fallback: generate dynamically
 $base = 'https://www.hoosiercladding.com';
 $today = gmdate('Y-m-d');
 

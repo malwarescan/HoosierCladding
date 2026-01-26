@@ -3,6 +3,14 @@ declare(strict_types=1);
 header('Content-Type: application/xml; charset=UTF-8');
 header('X-Robots-Tag: noindex, nofollow');
 
+// Use the static XML file we created
+$staticFile = __DIR__.'/sitemap-matrix.xml';
+if (file_exists($staticFile)) {
+    readfile($staticFile);
+    exit;
+}
+
+// Fallback: generate dynamically
 $base = 'https://www.hoosiercladding.com';
 $csv  = __DIR__ . '/data_matrix/convex_matrix_expanded.csv';
 
