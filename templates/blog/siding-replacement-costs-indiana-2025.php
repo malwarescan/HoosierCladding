@@ -1,6 +1,6 @@
 <?php
-$pageTitle = "Siding Replacement Cost Indiana (2025) | Per Sq Ft Prices";
-$pageDescription = "Average siding replacement costs in Northern Indiana for 2025, with material, labor, and upgrade breakdown. Vinyl: $8k-$16k. Fiber Cement: $14k-$28k. Per sq ft pricing data.";
+$pageTitle = "💰 Siding Replacement Cost Indiana 2025 | Best Prices | Free Estimates";
+$pageDescription = "💰 2025 Siding Costs: Indiana's Complete Price Guide | Vinyl $8k-$16k | Hardie $14k-$28k | Get 3 Free Quotes Today | Save $1000s";
 include __DIR__ . '/../../partials/header.php';
 ?>
 
@@ -86,7 +86,9 @@ include __DIR__ . '/../../partials/header.php';
       Online calculators are rough estimates. To get an actionable quote, you need a site visit where a contractor can measure wall area (excluding windows/doors) and inspect for structural rot.
     </p>
     <p class="mt-4">
-      <button type="button" onclick="openContactModal()" class="btn btn-primary inline-block font-semibold">Request Your Exact Quote</button>
+      <button type="button" onclick="openContactModal()" class="btn btn-primary inline-block font-semibold bg-red-600 hover:bg-red-700 animate-pulse">
+        🚨 Limited Time: Get Your Exact Quote Today
+      </button>
     </p>
   </div>
     

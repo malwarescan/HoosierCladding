@@ -363,19 +363,24 @@ function renderMatrixLandingPage(array $row): void {
     </section>
     
     <!-- CTA Strip -->
-    <section class="py-16 bg-blue-600">
+    <section class="py-16 bg-red-600">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Contact <?= htmlspecialchars($brandName, ENT_QUOTES) ?> today for professional 
-                <?= htmlspecialchars(strtolower($primaryKeyword), ENT_QUOTES) ?> in <?= htmlspecialchars($location, ENT_QUOTES) ?>.
+            <h2 class="text-3xl font-bold text-white mb-4">🚨 Limited Time: Get Your Free Quote Today!</h2>
+            <p class="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
+                🏆 <?= htmlspecialchars($brandName, ENT_QUOTES) ?>: #1 <?= htmlspecialchars(strtolower($primaryKeyword), ENT_QUOTES) ?> in <?= htmlspecialchars($location, ENT_QUOTES) ?> | Same-Day Service Available
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-blue-600 font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl">
-                    Call Now
+                <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-red-600 font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-600 transition-all duration-200 shadow-lg hover:shadow-xl animate-pulse">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    Call Now: (574) 931-2119
                 </button>
-                <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-200">
-                    Request Estimate
+                <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-lg border-2 border-white px-8 py-4 text-white font-semibold hover:bg-white hover:text-red-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-600 transition-all duration-200">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Get Instant Estimate
                 </button>
             </div>
         </div>

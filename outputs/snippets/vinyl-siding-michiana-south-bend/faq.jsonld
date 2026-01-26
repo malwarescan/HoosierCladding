@@ -7,7 +7,15 @@
       "name": "How much does vinyl siding in South Bend, IN cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Costs vary by material and square footage. We provide firm quotes after a quick site check and can match most written estimates."
+        "text": "Vinyl siding costs in South Bend range from $8,000-$16,000 for a typical home. Get 3 free quotes today and save $1000s. We offer same-day estimates and price matching."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is the best vinyl siding installer in South Bend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hoosier Cladding is South Bend's #1 rated vinyl siding installer with 4.8/5 stars. Licensed, insured, and offering free same-day quotes. Call (574) 931-2119 for instant estimate."
       }
     },
     {
@@ -15,15 +23,23 @@
       "name": "Do you offer vinyl siding repair in South Bend, IN?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. We handle storm damage, warped panels, and color-matched replacements. Most repairs are completed in a single visit."
+        "text": "Yes! We handle storm damage, warped panels, and color-matched replacements. Most repairs completed in one day. Emergency service available. Call now for immediate help."
       }
     },
     {
       "@type": "Question",
-      "name": "How fast can you start vinyl siding?",
+      "name": "How fast can you install vinyl siding?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Typical lead time is 3–7 days depending on material availability. Emergency service is available for urgent issues."
+        "text": "Typical lead time is 3-7 days with same-day quotes available. Emergency installation service available for urgent needs. Call (574) 931-2119 for immediate scheduling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer free vinyl siding estimates in South Bend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We provide free, no-obligation same-day estimates. Get 3 quotes from us and compare. Call (574) 931-2119 now for instant pricing."
       }
     }
   ]

@@ -21,16 +21,16 @@ final class AdvancedMetaManager
         'plymouth' => 'Plymouth',
     ];
 
-    // Service taxonomy mapping
+    // Service taxonomy mapping with emotional triggers
     private const SERVICE_KEYWORDS = [
-        'siding-installation' => ['siding installation', 'install siding', 'new siding'],
-        'siding-repair' => ['siding repair', 'fix siding', 'siding replacement'],
-        'vinyl-siding' => ['vinyl siding', 'vinyl siding installation', 'vinyl siding repair'],
-        'fiber-cement-siding' => ['fiber cement siding', 'hardie board', 'hardie siding'],
-        'storm-damage' => ['storm damage repair', 'hail damage siding', 'wind damage'],
-        'fascia-soffit' => ['fascia repair', 'soffit repair', 'fascia soffit'],
-        'gutter-replacement' => ['gutter replacement', 'new gutters', 'gutter installation'],
-        'exterior-repair' => ['exterior repair', 'home exterior', 'exterior renovation'],
+        'siding-installation' => ['🏆 siding installation', 'install siding', 'new siding'],
+        'siding-repair' => ['⚡ siding repair', 'fix siding', 'siding replacement'],
+        'vinyl-siding' => ['🥇 vinyl siding', 'vinyl siding installation', 'vinyl siding repair'],
+        'fiber-cement-siding' => ['💰 fiber cement siding', 'hardie board', 'hardie siding'],
+        'storm-damage' => ['🚨 storm damage repair', 'hail damage siding', 'wind damage'],
+        'fascia-soffit' => ['⚡ fascia repair', 'soffit repair', 'fascia soffit'],
+        'gutter-replacement' => ['💰 gutter replacement', 'new gutters', 'gutter installation'],
+        'exterior-repair' => ['🏠 exterior repair', 'home exterior', 'exterior renovation'],
     ];
 
     // Unique metadata cache to prevent duplicates
@@ -112,8 +112,8 @@ final class AdvancedMetaManager
 
     private static function generateHomepageTitle(string $path, ?array $context): string
     {
-        // SEO Optimized: Emphasizes primary commercial intent with concise branding + target keywords
-        return "Hoosier Cladding — Licensed Siding Contractor in South Bend & Northern Indiana";
+        // SEO Optimized: Emphasizes emotional triggers and local dominance
+        return "🏆 Hoosier Cladding | South Bend's #1 Siding Contractor | Free Same-Day Quotes";
     }
 
     private static function generateServiceTitle(string $path, ?array $context): string
@@ -127,10 +127,10 @@ final class AdvancedMetaManager
         
         if ($city) {
             $cityName = self::PRIMARY_CITIES[$city] ?? ucwords(str_replace('-', ' ', $city));
-            return "$serviceKeyword in $cityName – Expert Installation & Repair";
+            return "$serviceKeyword $cityName | 🥇 #1 Installers | Free Quotes";
         }
         
-        return "$serviceKeyword in Northern Indiana – Licensed Contractors";
+        return "$serviceKeyword Northern Indiana | 🏆 Best Rates | Free Estimates";
     }
 
     private static function generateCityTitle(string $path, ?array $context): string
@@ -159,7 +159,7 @@ final class AdvancedMetaManager
             $service = ucwords(str_replace('-', ' ', $serviceSlug));
             $problem = ucwords(str_replace('-', ' ', $problemSlug));
             
-            return "$service in $cityName – $problem Solutions";
+            return "🏆 $service $cityName | 🥇 $problem Solutions | Free Quotes";
         }
         
         return self::generateDefaultTitle($path, $context);
@@ -212,8 +212,8 @@ final class AdvancedMetaManager
 
     private static function generateHomepageDescription(): string
     {
-        // Clear description specifying services, locations, and core differentiators
-        return "Licensed siding contractor serving South Bend, Mishawaka, and Northern Indiana. Expert installation, repair, and replacement. Certified installers, free estimates. Call (574) 931-2119.";
+        // Enhanced description with emotional triggers and urgency
+        return "🏆 South Bend's #1 Siding Contractor | Free Same-Day Quotes | Save 30% on Energy Bills | Licensed & Insured | Call (574) 931-2119 for Instant Estimate";
     }
 
     private static function generateServiceDescription(string $path, ?array $context): string
@@ -226,17 +226,17 @@ final class AdvancedMetaManager
         if ($city) {
             $cityName = self::PRIMARY_CITIES[$city] ?? ucwords(str_replace('-', ' ', $city));
             $benefits = [
-                "Durable materials and expert installation",
-                "Fast turnaround with certified crews",
-                "Licensed installers with local expertise",
-                "Storm damage specialists with insurance help",
-                "Energy-efficient solutions for Indiana winters"
+                "🥇 #1 Rated Service | Free Same-Day Quotes",
+                "⚡ Emergency Service Available | Save 30% Energy",
+                "🏆 Licensed & Insured | Best Price Guarantee",
+                "🚨 Storm Damage Specialists | Insurance Help",
+                "💰 Energy-Efficient Solutions | Save $1000s"
             ];
             $benefit = $benefits[array_rand($benefits)];
-            return "Professional $serviceKeyword in $cityName. $benefit. Free estimates and same-week service available.";
+            return "$serviceKeyword $cityName | $benefit | Call (574) 931-2119 Now";
         }
         
-        return "Expert $serviceKeyword across Northern Indiana. Licensed contractors delivering quality craftsmanship and reliable exterior solutions for your home.";
+        return "🏆 $serviceKeyword Northern Indiana | 🥇 Best Rates | Free Estimates | Licensed Contractors | Call Now";
     }
 
     private static function generateCityDescription(string $path, ?array $context): string
@@ -272,15 +272,17 @@ final class AdvancedMetaManager
             $service = ucwords(str_replace('-', ' ', $serviceSlug));
             $problem = ucwords(str_replace('-', ' ', $problemSlug));
             
-            // Ensure minimum length with additional context
-            $base = "Expert $service solutions for $problem in $cityName. Local contractors specializing in targeted repairs and professional installation.";
-            if (mb_strlen($base) < 120) {
-                $base .= " Licensed, insured, and committed to quality craftsmanship. Free estimates available.";
-            } else {
-                $base .= " Free estimates available.";
-            }
+            // Enhanced with emotional triggers and urgency
+            $benefits = [
+                "🏆 #1 Rated Service | Free Same-Day Quotes",
+                "⚡ Emergency Service Available | Save 30% Energy", 
+                "🥇 Licensed & Insured | Best Price Guarantee",
+                "🚨 Storm Damage Specialists | Insurance Help",
+                "💰 Energy-Efficient Solutions | Save $1000s"
+            ];
+            $benefit = $benefits[array_rand($benefits)];
             
-            return $base;
+            return "🏆 $service $cityName | 🥇 $problem Solutions | $benefit | Call (574) 931-2119 Now";
         }
         
         return self::generateDefaultDescription($path, $context);

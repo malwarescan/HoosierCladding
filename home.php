@@ -1,8 +1,8 @@
 <?php
 // Homepage - SEO Optimized (2025)
 // Title: Emphasizes primary commercial intent with concise branding + target keywords
-$pageTitle = "Hoosier Cladding — Licensed Siding Contractor in South Bend & Northern Indiana";
-$pageDescription = "Licensed siding contractor serving South Bend, Mishawaka, and Northern Indiana. Expert installation, repair, and replacement. Certified installers, free estimates. Call (574) 931-2119.";
+$pageTitle = "🏆 Hoosier Cladding | South Bend's #1 Siding Contractor | Free Same-Day Quotes";
+$pageDescription = "🏆 South Bend's #1 Siding Contractor | Free Same-Day Quotes | Save 30% on Energy Bills | Licensed & Insured | Call (574) 931-2119 for Instant Estimate";
 
 // Fallback logic for header.php to use these specific overrides
 $pageType = 'homepage';
@@ -35,6 +35,28 @@ include __DIR__ . '/partials/header.php';
         <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 mb-6">
           Cut Your Energy Bills by <span class="text-green-600">30%</span>
         </h2>
+        
+        <div class="flex flex-wrap gap-3 mb-6">
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-green-100 text-green-800">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            #1 Rated in South Bend
+          </span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-blue-100 text-blue-800">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+            </svg>
+            Same-Day Quotes
+          </span>
+          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-orange-100 text-orange-800">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+            </svg>
+            Licensed & Insured
+          </span>
+        </div>
         
         <p class="text-xl text-gray-700 leading-relaxed mb-8">
           Our insulated siding systems create a thermal barrier that keeps your Northern Indiana home warm in winter and cool in summer. See immediate savings on your utility bills.
@@ -73,17 +95,17 @@ include __DIR__ . '/partials/header.php';
         </div>
         
         <div class="flex flex-col sm:flex-row gap-4">
-          <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-lg bg-gray-900 px-8 py-4 text-white font-semibold hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl">
+          <button type="button" onclick="openContactModal()" class="inline-flex items-center justify-center rounded-lg bg-red-600 px-8 py-4 text-white font-semibold hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 transition-all duration-200 shadow-lg hover:shadow-xl animate-pulse">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            Calculate Your Savings
+            Limited Time: Get Free Quote Today
           </button>
           <a href="/service-area" class="inline-flex items-center justify-center rounded-lg border-2 border-gray-900 px-8 py-4 text-gray-900 font-semibold hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 transition-all duration-200">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
-            Learn More
+            Check Service Area
           </a>
         </div>
       </div>

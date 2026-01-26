@@ -1,7 +1,7 @@
 <?php
 // Service area page - optimized for local SEO
-$pageTitle = "Service Areas | Siding Contractors in Northern Indiana & Michiana";
-$pageDescription = "Hoosier Cladding provides siding installation, repair, and replacement across Northern Indiana and Southwest Michigan. Serving South Bend, Mishawaka, Elkhart, Granger, Warsaw, and more.";
+$pageTitle = "🏆 Service Areas | #1 Siding Contractors Northern Indiana | Free Quotes";
+$pageDescription = "🥇 Hoosier Cladding: #1 Siding Installation Across Northern Indiana & Michigan | Same-Day Quotes | Save 30% Energy | Licensed & Insured | Call (574) 931-2119";
 $pageType = 'city';
 include __DIR__ . '/partials/header.php';
 ?>
